@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.sidebar.markdown("""
 # 📊 
@@ -26,30 +27,15 @@ Esta página fornece informações detalhadas sobre os imóveis em cada bairro d
 """)
 
 
-import pandas as pd
-import numpy as np
-
-# Criando um array aleatório com números de quartos, banheiros e preços
-num_imoveis = 50
-num_quartos = np.random.randint(1, 5, num_imoveis)
-num_banheiros = np.random.randint(1, 4, num_imoveis)
-bairros = ['Centro', 'Pauliceia', 'Alto', 'Vila Rezende', 'Nova América', 'Santa Terezinha']
-local = np.random.choice(bairros, num_imoveis)
-precos = np.random.randint(50000, 500000, num_imoveis)
-
-# Criando o DataFrame
-imoveis = pd.DataFrame({
-    'Quartos': num_quartos,
-    'Banheiros': num_banheiros,
-    'Bairro': local,
-    'Preço': precos
-})
-
+df = pd.read_csv('imoveis.csv', sep=';')
 # Exibindo as primeiras linhas do DataFrame
 
-
-bairro = st.selectbox("Selecione o bairro",['Centro', 'Pauliceia', 'Alto', 'Vila Rezende', 'Nova América', 'Santa Terezinha'])
+bairros = df['bairro'].unique()
+bairro = st.selectbox("Selecione o bairro",[x for x in bairros])
 quartos = st.selectbox("Selecione o numero minimo de quartos",[i for i in range(10)])
 banheiros = st.selectbox("Selecione o numero minimo de banheiros",[i for i in range(10)])
 
-st.table(imoveis[(imoveis['Bairro'] == bairro) & (imoveis['Quartos'] >= quartos) & (imoveis['Banheiros'] >= banheiros)] )
+resultados = df[(df['bairro'] == bairro) & (df['quartos'] >= quartos) & (df['banheiros'] >= banheiros)]
+resultados_sem_data_scrape = resultados.drop('Data_scrape', axis=1).reset_index(drop=True)
+st.write(resultados_sem_data_scrape[['preco', 'area', 'quartos', 'banheiros', 'vagas', 'bairro', 'Imobiliaria']])
+

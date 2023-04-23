@@ -1,1 +1,5 @@
-python -m pip install folium
+numpy
+scikit-learn
+streamlit
+folium
+pandas

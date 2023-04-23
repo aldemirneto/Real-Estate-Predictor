@@ -1,1 +1,1 @@
-pip install folium
+python -m pip install folium

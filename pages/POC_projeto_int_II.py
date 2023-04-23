@@ -46,7 +46,7 @@ imoveis = pd.DataFrame({
 })
 
 # Exibindo as primeiras linhas do DataFrame
-print(imoveis.head())
+
 
 bairro = st.selectbox("Selecione o bairro",['Centro', 'Pauliceia', 'Alto', 'Vila Rezende', 'Nova América', 'Santa Terezinha'])
 quartos = st.selectbox("Selecione o numero minimo de quartos",[i for i in range(10)])

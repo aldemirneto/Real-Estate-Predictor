@@ -44,7 +44,7 @@ for bairro in bairros:
     imoveis = bairro['properties']['imoveis']
     dados.append({'Bairro': nome, 'Imoveis': imoveis})
 df = pd.DataFrame(dados)
-print(df)
+
 
 # Criação do mapa
 m = folium.Map(location=[lat, lon], zoom_start=12)

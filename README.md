@@ -46,5 +46,5 @@ Se você deseja contribuir para este projeto, siga os seguintes passos:
 
 Este projeto está licenciado sob a licença [tipo de licença]. Veja o arquivo LICENSE para mais detalhes.
 
-Agradecimentos
+# Agradecimentos
 Gostaríamos de agradecer ao professor Dr. Gustavo Voltani Von Atzingen pela orientação e disponibilidade durante o desenvolvimento do projeto.

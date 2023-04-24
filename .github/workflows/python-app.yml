@@ -25,9 +25,12 @@ jobs:
     - name: Run Orchestrator
       run: |
         python orchestrator.py
-
+    - name: Configure Git
+      run: |
         git config --global user.email "humbertoaldemir@gmail.com"
         git config --global user.name "aldemirneto"
+    - name: Merge changes into main
+      run: |
         git checkout main
-        git merge --no-ff your-branch
-        git push
+        git merge --no-ff origin/your-branch
+        git push origin main

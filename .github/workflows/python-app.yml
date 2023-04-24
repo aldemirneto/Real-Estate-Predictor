@@ -34,7 +34,7 @@ jobs:
 
     - name: Commit and push changes to your-branch
     env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git add .
         git commit -m "inserindo dados"

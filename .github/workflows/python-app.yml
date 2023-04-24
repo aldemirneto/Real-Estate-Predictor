@@ -24,17 +24,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Create and checkout your-branch
-      run: |
-        git checkout -b your-branch
     - name: Run Orchestrator
       run: |
         python orchestrator.py
     - name: Commit and push changes to your-branch
       run: |
         git add .
-        git commit -m "Added changes from orchestrator.py"
-        git push -u origin your-branch
-    - name: Checkout main
-      run: |
-        git checkout main
+        git commit -m "inserindo dados"
+        git push -u origin main

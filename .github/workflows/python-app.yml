@@ -27,6 +27,11 @@ jobs:
     - name: Run Orchestrator
       run: |
         python orchestrator.py
+    - name: Adicionando configs
+      run: |
+        git config --global user.email "humbertoaldemir@gmail.com"
+        git config --global user.name "aldemirneto"
+
     - name: Commit and push changes to your-branch
       run: |
         git add .

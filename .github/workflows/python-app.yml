@@ -11,6 +11,7 @@ permissions:
 jobs:
   run_orchestrator:
     runs-on: ubuntu-latest
+    steps:
     - name: Set up Python 3.10
       uses: actions/setup-python@v2
       with:

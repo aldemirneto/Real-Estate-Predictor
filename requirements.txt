@@ -4,3 +4,4 @@ streamlit
 folium
 pandas
 streamlit_folium
+beautifulsoup4

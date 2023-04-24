@@ -52,7 +52,7 @@ def extract_property_info(property_html):
 
     price_element = property_html.find('span', class_='price')
     price = price_element.text.strip().replace('Venda:R$ ', '') if price_element and 'consultar' not in price_element.text else None
-    price = price.replace(',', '.').replace('.', '') if price
+    price = price.replace(',', '.').replace('.', '') if price else None
 
 
     location_element = property_html.find_all('span', class_='extra')

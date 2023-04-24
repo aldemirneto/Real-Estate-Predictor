@@ -51,7 +51,7 @@ def extract_property_info(property_html):
 
 
     price_element = property_html.find('span', class_='price')
-    price = price_element.text.strip().replace('Venda:R$ ', '') if price_element else None
+    price = price_element.text.strip().replace('Venda:R$ ', '') if price_element and 'consultar' not in price_element.text else None
     price = price.replace(',', '.').replace('.', '')
 
 

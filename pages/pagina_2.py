@@ -33,7 +33,13 @@ with open('piracicaba.json', 'r') as f:
 
 # Coordenadas da cidade de Piracicaba
 lat, lon = data['piracicaba']['geometry']['coordinates'][::-1]
+df = pd.read_csv('imoveis.csv', sep=';')
+#from this df, create a new df with the avg price per neighborhood
+df_bairros = df.groupby('bairro').agg({'preco': 'mean'}).reset_index()
+df_bairros.columns = ['bairro', 'preco_medio']
 
+
+print(df_bairros['bairro'])
 # Informações dos bairros de Piracicaba
 bairros = data['bairros']['features']
 
@@ -41,8 +47,10 @@ bairros = data['bairros']['features']
 dados = []
 for bairro in bairros:
     nome = bairro['properties']['name']
-    imoveis = bairro['properties']['imoveis']
-    dados.append({'Bairro': nome, 'Imoveis': imoveis})
+
+    preco_medio = round((df_bairros.loc[df_bairros['bairro'] == nome, 'preco_medio'].values[0]/1000000), 2) if df_bairros.loc[df_bairros['bairro'] == nome, 'preco_medio'].any() else 0
+
+    dados.append({'Bairro': nome, 'preco_medio': preco_medio})
 df = pd.DataFrame(dados)
 
 
@@ -53,7 +61,8 @@ m = folium.Map(location=[lat, lon], zoom_start=12)
 for bairro in bairros:
     nome = bairro['properties']['name']
     coords = bairro['properties']['centroid']
-    tooltip = f"{nome}: {df.loc[df['Bairro'] == nome, 'Imoveis'].values[0]} imóveis"
+    preco_medio_values = df.loc[df['Bairro'] == nome, 'preco_medio'].values
+    tooltip = f"o preço médio desse bairro é: {preco_medio_values[0] if len(preco_medio_values) > 0 else 'N/A'} mil reais"
     folium.Marker(
         location=[coords[1], coords[0]],  # inverte a ordem das coordenadas
         tooltip=tooltip,
@@ -63,12 +72,12 @@ for bairro in bairros:
 choropleth = folium.Choropleth(
     geo_data=data['bairros'],
     data=df,
-    columns=['Bairro', 'Imoveis'],
+    columns=['Bairro', 'preco_medio'],
     key_on='feature.properties.name',
     fill_color='YlGn',
     fill_opacity=0.7,
     line_opacity=0.2,
-    legend_name='Quantidade de Imóveis'
+    legend_name='Preço Médio por bairro'
 ).add_to(m)
 
 # # Renderiza o mapa no Streamlit

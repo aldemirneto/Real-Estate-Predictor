@@ -36,7 +36,7 @@ lat, lon = data['piracicaba']['geometry']['coordinates'][::-1]
 
 # Informações dos bairros de Piracicaba
 bairros = data['bairros']['features']
-print(bairros)
+
 # Cria um DataFrame com as informações dos imóveis em cada bairro
 dados = []
 for bairro in bairros:

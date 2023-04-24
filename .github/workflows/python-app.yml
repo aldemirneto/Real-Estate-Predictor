@@ -24,3 +24,9 @@ jobs:
         pip install -r requirements.txt
     - name: Run Orchestrator
       run: python orchestrator.py
+
+    git config --global user.email "humbertoaldemir@gmail.com"
+          git config --global user.name "aldemirneto"
+          git checkout main
+          git merge --no-ff your-branch
+          git push

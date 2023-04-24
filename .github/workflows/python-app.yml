@@ -14,6 +14,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        ref: main
     - name: Set up Python 3.10
       uses: actions/setup-python@v2
       with:
@@ -22,15 +24,17 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+    - name: Create and checkout your-branch
+      run: |
+        git checkout -b your-branch
     - name: Run Orchestrator
       run: |
         python orchestrator.py
-    - name: Configure Git
+    - name: Commit and push changes to your-branch
       run: |
-        git config --global user.email "humbertoaldemir@gmail.com"
-        git config --global user.name "aldemirneto"
-    - name: Merge changes into main
+        git add .
+        git commit -m "Added changes from orchestrator.py"
+        git push -u origin your-branch
+    - name: Checkout main
       run: |
         git checkout main
-        git merge --no-ff origin/your-branch
-        git push origin main

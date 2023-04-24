@@ -9,11 +9,11 @@ st.sidebar.markdown("""
 
 # 🗺️ 
 
-Nesta página, você encontrará dados sobre cada bairro de Piracicaba, representados no mapa com a quantidade de imóveis em cada um deles.
+Nesta página, você encontrará dados sobre cada bairro de Piracicaba, representados no mapa com o preço médio de venda de imóvel em cada um deles.
 
 ## Visualização no Mapa
 
-Utilizando dados geoespaciais, é possível visualizar no mapa os bairros de Piracicaba e a quantidade de imóveis em cada um deles. Essa visualização é útil para entender como o mercado imobiliário está distribuído na cidade.
+Utilizando dados geoespaciais, é possível visualizar no mapa os bairros de Piracicaba e o preço médio de venda de imóvel em cada um deles. Essa visualização é útil para entender como o mercado imobiliário está distribuído na cidade.
 
 ## Análise de Dados
 
@@ -62,7 +62,7 @@ for bairro in bairros:
     nome = bairro['properties']['name']
     coords = bairro['properties']['centroid']
     preco_medio_values = df.loc[df['Bairro'] == nome, 'preco_medio'].values
-    tooltip = f"o preço médio desse bairro é: {preco_medio_values[0] if len(preco_medio_values) > 0 else 'N/A'} mil reais"
+    tooltip = f"o preço médio do bairro {nome} é: {preco_medio_values[0] if len(preco_medio_values) > 0 else 'N/A'} mil reais"
     folium.Marker(
         location=[coords[1], coords[0]],  # inverte a ordem das coordenadas
         tooltip=tooltip,

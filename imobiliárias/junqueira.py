@@ -13,6 +13,14 @@ def extract_property_info(property_html):
         info_list = property_html.find("div", class_= "theInfos").find('ul', class_='attr').find_all('li')
     except:
         print('página zoada')
+        return {
+        'preco':0,
+        'area': 0,
+        'quartos': 0,
+        'vagas': 0,
+        'banheiros': 0,
+        'bairro': 'Sem Bairro'
+    }
 
     quartos = None
     vagas = None

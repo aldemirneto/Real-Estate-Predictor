@@ -25,7 +25,9 @@ def extract_property_info(property_html):
                                         .replace('suítes','')\
                                         .replace('quartos', '')\
                                         .replace('quarto', '') \
-                                        .replace('suíte', '')
+                                        .replace('suíte', '')\
+                                        .replace('Quartos', '')
+
         elif 'vaga' in info.text:
             vagas = info.text.strip().replace('\n','')\
                                      .replace(' ', '')\

@@ -1,4 +1,4 @@
-import imobiliárias.junqueira, imobiliárias.frias_neto
+import imobiliárias.junqueira, imobiliárias.frias_neto, imobiliárias.sao_judas
 
 import csv
 
@@ -13,6 +13,10 @@ try:
     imobiliárias.frias_neto.run()
 except Exception as e:
     print('frias_neto', e)
+try:
+    imobiliárias.sao_judas.run()
+except Exception as e:
+    print('sao_judas', e)
 
 # Read the CSV file and store the header row
 with open(filename, 'r', encoding='utf-8') as csv_file:

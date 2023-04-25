@@ -9,9 +9,10 @@ def get_page_content(request_url):
 
 
 def extract_property_info(property_html):
-
-    info_list = property_html.find("div", class_= "theInfos").find('ul', class_='attr').find_all('li')
-
+    try:
+        info_list = property_html.find("div", class_= "theInfos").find('ul', class_='attr').find_all('li')
+    except:
+        print('página zoada')
 
     quartos = None
     vagas = None
@@ -25,8 +26,8 @@ def extract_property_info(property_html):
                                         .replace('suítes','')\
                                         .replace('quartos', '')\
                                         .replace('quarto', '') \
-                                        .replace('suíte', '')\
-                                        .replace('Quartos', '')
+                                        .replace('suíte', '')
+                                        
 
         elif 'vaga' in info.text:
             vagas = info.text.strip().replace('\n','')\

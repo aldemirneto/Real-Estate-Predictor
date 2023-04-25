@@ -3,13 +3,8 @@ name: Run Orchestrator every 6 hours
 on:
   schedule:
     - cron: "0 */6 * * *"
-  push:
-    branches: [ main ]
   workflow_dispatch:
-
-permissions:
-    actions: write
-    contents: read
+  
 
 jobs:
   run_orchestrator:

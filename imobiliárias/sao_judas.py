@@ -37,15 +37,7 @@ def extract_property_info(property_html):
                 price = float(price.replace('R$', '').replace('.', '').replace(',', '.').replace(' ', '').replace('\n', '').replace(',00', '')) if price else None
             elif 'Bairro' in i.text:
                 location = i.find_next('span').text.strip()
-    print({
-            'preco': price,
-            'area': area,
-            'quartos': quartos,
-            'vagas': vagas,
-            'banheiros': banheiros,
-            'bairro': location
-        }
-)
+
     return{
             'preco': price,
             'area': area,

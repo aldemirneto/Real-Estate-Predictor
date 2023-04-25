@@ -22,7 +22,7 @@ def extract_property_info(property_html):
 
     for info in info_list:
         if 'Quarto' in info.text:
-            quartos = info.find('span').text.strip().replace('\n','').replace('Quartos', '').replace('Quarto', '').replace(' ', '')
+            quartos = info.find('span').text.strip().replace('\n','').replace('Quartos', '').replace('Quarto', '').replace(' ', '').replace('2Quartos','2')
         elif 'Vaga' in info.text:
             vagas = info.find('span').text.strip().replace('Vagas', '').replace('Vaga', '').replace(' ', '')
         elif 'Banheiro' in info.text:

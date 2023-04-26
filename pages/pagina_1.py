@@ -30,8 +30,8 @@ Esta página fornece informações detalhadas sobre os imóveis em cada bairro d
 df = pd.read_csv('imoveis.csv', sep=';')
 # Exibindo as primeiras linhas do DataFrame
 
-bairros = df['bairro'].unique()
-bairro = st.selectbox("Selecione o bairro",[x for x in bairros])
+bairro_options = df['bairro'].unique()
+bairro = st.selectbox("Selecione o bairro", sorted([x for x in bairro_options]))
 quartos = st.selectbox("Selecione o numero minimo de quartos",[i for i in range(10)])
 banheiros = st.selectbox("Selecione o numero minimo de banheiros",[i for i in range(10)])
 

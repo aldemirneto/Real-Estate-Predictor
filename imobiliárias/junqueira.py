@@ -89,8 +89,6 @@ def run():
     full_property_info = []
 
     for i in range(300):
-        print(i)
-
         page_content = None
         old_page_content = None
         try:

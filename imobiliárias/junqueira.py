@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+
 def get_page_content(request_url):
     # faz o request
     page_response = requests.get(request_url, timeout=5)
@@ -19,7 +20,8 @@ def extract_property_info(property_html):
         'quartos': 0,
         'vagas': 0,
         'banheiros': 0,
-        'bairro': 'Sem Bairro'
+        'bairro': 'Sem Bairro',
+        'link': 'Sem link'
     }
 
     quartos = None
@@ -70,6 +72,7 @@ def extract_property_info(property_html):
     location_element = location_element[1]
     location = location_element.text.strip()\
                                      .replace('Bairro: ', '')if location_element else None
+    link = property_html.find("div", class_= "theInfos").find('a')['href']
 
     return {
         'preco': price,
@@ -77,13 +80,16 @@ def extract_property_info(property_html):
         'quartos': quartos,
         'vagas': vagas,
         'banheiros': banheiros,
-        'bairro': location
+        'bairro': location,
+        'link': link
     }
 
 
 def run():
     full_property_info = []
+
     for i in range(300):
+        print(i)
 
         page_content = None
         old_page_content = None
@@ -94,7 +100,8 @@ def run():
                 old_page_content = get_page_content(f'https://www.imobiliariajunqueira.com.br/comprar/todas?page={i-1}')
 
         except:
-            print('fim de scrape')
+            print('pagina zoada')
+            continue
 
 
         property_listings = page_content.find_all('div', class_='item-wrap')

@@ -30,7 +30,7 @@ def extract_property_info(property_html):
 
 
     price_element = property_html.find('p', class_='price')
-    price = price_element.text.strip().replace(',','.').replace(' ', '').replace('Venda:R$', '') if 'Loca' not in price_element.text and 'Consulte' not in price_element.text else None
+    price = price_element.text.strip().replace(',','.').replace(' ', '').replace('Venda:R$', '') if 'Loca' not in price_element.text and 'Consulte' not in price_element.text and 'Quartos' not in price_element.text else None
     price = price.replace('.', '') if price else None
     price = price[:-2] + '000' if price else None
 
@@ -40,22 +40,23 @@ def extract_property_info(property_html):
 
 
     area_element = property_html.find('li').find('span')
-    area = area_element.text.strip().replace(',','.').replace('M²', '').replace(' ', '') if area_element else None
+    area = area_element.text.strip().replace(',','.').replace('M²', '').replace(' ', '') if area_element  and 'Quartos' not in area_element.text else None
 
     area = float(area) if area else None
 
     location_element = property_html.find('p', class_='neighborhood-city-titles')
     location = location_element.text.strip().replace(', Piracicaba', '') if location_element else None
 
-    return {
+    print( {
         'preco': price,
         'area': area,
         'quartos': quartos,
         'vagas': vagas,
         'banheiros': banheiros,
 
-        'bairro': location
-    }
+        'bairro': location,
+        'link': 'https://www.friasneto.com.br'+property_html.find('a')['href']
+    })
 
 
 def run():
@@ -104,3 +105,5 @@ def run():
         #now, i write on a parquet file name imoveis
     df.to_csv('imoveis.csv', index=False, sep=';', mode='a', header=False)
     return 1
+
+

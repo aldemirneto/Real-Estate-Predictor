@@ -8,7 +8,7 @@ def get_page_content(request_url):
     return BeautifulSoup(page_response.content, "html.parser")
 
 
-def extract_property_info(property_html):
+def extract_property_info(property_html, link):
     quartos = None
     vagas = None
     banheiros = None
@@ -44,7 +44,8 @@ def extract_property_info(property_html):
             'quartos': quartos,
             'vagas': vagas,
             'banheiros': banheiros,
-            'bairro': location
+            'bairro': location,
+            'link': link
         }
 
 
@@ -81,7 +82,7 @@ def run():
             for property_listing in property_listings:
                     property = get_page_content(property_listing.find('a')['href'])
                     property = property.find('div', class_='prop_addinfo')
-                    property_info = extract_property_info(property)
+                    property_info = extract_property_info(property, property_listing.find('a')['href'])
                     full_property_info.append(property_info)
 
         #now i do a dataframe with the full_property_info, and a column with the name 'Junqueira' and the date of today

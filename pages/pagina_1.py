@@ -31,11 +31,11 @@ df = pd.read_csv('imoveis.csv', sep=';')
 # Exibindo as primeiras linhas do DataFrame
 
 bairro_options = df['bairro'].unique()
-bairro = st.selectbox("Selecione o bairro", sorted([x for x in bairro_options]))
+bairro = st.selectbox("Selecione o bairro", sorted([x.replace('_', ' ') for x in bairro_options]))
 quartos = st.selectbox("Selecione o numero minimo de quartos",[i for i in range(10)])
 banheiros = st.selectbox("Selecione o numero minimo de banheiros",[i for i in range(10)])
 
-resultados = df[(df['bairro'] == bairro) & (df['quartos'] >= quartos) & (df['banheiros'] >= banheiros)]
+resultados = df[(df['bairro'] == bairro.replace(' ', '_')) & (df['quartos'] >= quartos) & (df['banheiros'] >= banheiros)]
 resultados_sem_data_scrape = resultados.drop('Data_scrape', axis=1).reset_index(drop=True)
 st.write(resultados_sem_data_scrape[['preco', 'area', 'quartos', 'banheiros', 'vagas', 'bairro', 'Imobiliaria']])
 

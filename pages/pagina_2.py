@@ -68,7 +68,6 @@ for bairro in bairros:
         tooltip=tooltip,
     ).add_to(m)
 
-
 choropleth = folium.Choropleth(
     geo_data=data['bairros'],
     data=df,

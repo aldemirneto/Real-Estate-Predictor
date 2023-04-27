@@ -16,7 +16,7 @@ def run():
                  'loteamento', '-', 'park', 'parque', 'nucleo'}
 
     # Open the CSV file for reading and writing with the 'utf-8-sig' encoding
-    with open('../imoveis.csv', 'r', encoding='utf-8-sig') as input_file, open('output.csv', 'w', newline='', encoding='utf-8') as output_file:
+    with open('imoveis.csv', 'r', encoding='utf-8-sig') as input_file, open('output.csv', 'w', newline='', encoding='utf-8') as output_file:
         # Create a CSV reader and writer objects
         reader = csv.DictReader(input_file, delimiter=';')
         writer = csv.writer(output_file, delimiter=';')

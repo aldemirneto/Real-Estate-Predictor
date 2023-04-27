@@ -47,7 +47,7 @@ def extract_property_info(property_html):
     location_element = property_html.find('p', class_='neighborhood-city-titles')
     location = location_element.text.strip().replace(', Piracicaba', '') if location_element else None
 
-    print( {
+    return {
         'preco': price,
         'area': area,
         'quartos': quartos,
@@ -56,7 +56,7 @@ def extract_property_info(property_html):
 
         'bairro': location,
         'link': 'https://www.friasneto.com.br'+property_html.find('a')['href']
-    })
+    }
 
 
 def run():

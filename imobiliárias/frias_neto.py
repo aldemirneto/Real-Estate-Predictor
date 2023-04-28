@@ -90,6 +90,7 @@ def run():
     df = df.fillna(0)
     #converte a coluna price para float
     df['preco'] = df['preco'].astype(float)
+    df['preco'] = df['preco']/1000
     #converte a coluna area para float
     df['area'] = df['area'].astype(float)
 

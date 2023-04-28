@@ -119,6 +119,7 @@ def run():
     df = df.fillna(0)
     #converte a coluna price para float
     df['preco'] = df['preco'].astype(float)
+    df['preco'] = df['preco']/100
     #converte a coluna area para float
     df['area'] = df['area'].astype(float)
     #divido a area por 1000 e arredondo uma casa para todos os valores da coluna area

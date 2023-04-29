@@ -37,5 +37,5 @@ banheiros = st.selectbox("Selecione o numero minimo de banheiros",[i for i in ra
 
 resultados = df[(df['bairro'] == bairro.replace(' ', '_')) & (df['quartos'] >= quartos) & (df['banheiros'] >= banheiros)]
 resultados_sem_data_scrape = resultados.drop('Data_scrape', axis=1).reset_index(drop=True)
-st.write(resultados_sem_data_scrape[['preco', 'area', 'quartos', 'banheiros', 'vagas', 'bairro','link', 'Imobiliaria']])
+st.write(resultados_sem_data_scrape[['preco', 'area', 'quartos', 'banheiros', 'vagas','link', 'Imobiliaria']])
 

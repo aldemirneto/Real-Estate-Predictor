@@ -38,9 +38,4 @@ banheiros = st.selectbox("Selecione o numero minimo de banheiros",[i for i in ra
 
 resultados = df[(df['bairro'] == bairro.replace(' ', '_')) & (df['quartos'] >= quartos) & (df['banheiros'] >= banheiros)]
 resultados_sem_data_scrape = resultados.drop('Data_scrape', axis=1).reset_index(drop=True)
-
-# Create a new column with the link formatted as HTML
-resultados_sem_data_scrape['link_html'] = resultados_sem_data_scrape['link'].apply(lambda x: f'<a href="{x}">{x}</a>')
-
-# Use st.write to render the DataFrame with the link formatted as HTML
-st.write(resultados_sem_data_scrape[['preco', 'area', 'quartos', 'banheiros', 'vagas', 'Imobiliaria', 'link_html']], unsafe_allow_html=True)
+st.write(resultados_sem_data_scrape[['preco', 'area', 'quartos', 'banheiros', 'vagas','link', 'Imobiliaria']])

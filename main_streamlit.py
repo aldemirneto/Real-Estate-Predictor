@@ -1,9 +1,6 @@
 from st_pages import Page, add_page_title, show_pages
 import streamlit as st
 
-st.set_page_config("Real Estate",   page_icon="🗺️")
-
-
 show_pages(
     [
         Page("main_streamlit.py", "Home", "🏠"),

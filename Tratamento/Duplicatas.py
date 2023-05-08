@@ -20,7 +20,7 @@ def run(filename):
         header = next(reader)
 
         # Find the index of the "Data_scrape" column
-        date_col_index = header.index('Data_scrape')
+        link_idx = header.index('link')
 
         # Create a set to store the unique rows
         unique_rows = set()
@@ -35,7 +35,7 @@ def run(filename):
                 continue
 
             # Check if the row is already in the set without the date
-            if tuple(row[:date_col_index] + row[date_col_index + 1:]) not in [(u[:date_col_index] + u[date_col_index + 1:]) for u in unique_rows]:
+            if tuple(row[link_idx]) not in [(u[link_idx] for u in unique_rows]:
                 # Add the row to the set
                 unique_rows.add(tuple(row))
 

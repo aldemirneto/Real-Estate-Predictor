@@ -12,6 +12,8 @@ show_pages(
     ]
 )
 
+add_page_title()
+
 
 st.markdown("""
 # Classificador de Imóveis em Piracicaba

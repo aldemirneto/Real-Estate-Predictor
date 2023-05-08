@@ -35,7 +35,7 @@ def run(filename):
                 continue
 
             # Check if the row is already in the set without the date
-            if tuple(row[link_idx]) not in [(u[link_idx] for u in unique_rows]:
+            if tuple(row[link_idx]) not in [u[link_idx] for u in unique_rows]:
                 # Add the row to the set
                 unique_rows.add(tuple(row))
 

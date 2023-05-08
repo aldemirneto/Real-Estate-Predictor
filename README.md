@@ -22,7 +22,7 @@ O projeto é composto por um código em Python que realiza o webscraping das pri
 
 Para utilizar o Classificador acesse o link abaixo:
 
-https://aldemir-real-estate-predictor.streamlit.app/
+https://real-estate-predictor.streamlit.app/
 
 ## Funções
 

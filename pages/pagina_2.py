@@ -4,9 +4,11 @@ import pandas as pd
 import json
 from streamlit_folium import st_folium
 
+from st_pages import add_page_title
+
+add_page_title()
 
 st.sidebar.markdown("""
-
 # 🗺️ 
 
 Nesta página, você encontrará dados sobre cada bairro de Piracicaba, representados no mapa com o preço médio de venda de imóvel em cada um deles.

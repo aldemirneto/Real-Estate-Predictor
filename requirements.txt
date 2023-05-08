@@ -6,3 +6,4 @@ pandas
 streamlit_folium
 beautifulsoup4
 pydantic
+st-pages

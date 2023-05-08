@@ -1,7 +1,7 @@
 
 import streamlit as st
 
-st.set_page_config("Projeto IA",   page_icon="🗺️")
+st.set_page_config("Real Estate",   page_icon="🗺️")
 st.sidebar.markdown("# 🏠 ")
 
 st.markdown("""

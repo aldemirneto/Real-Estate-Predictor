@@ -49,6 +49,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [run_scraper, run_transform]
     steps:
+      - name: Initialize Git repository
+        run: |
+          git init
       - name: Configure Git
         run: |
           git config --global user.email "humbertoaldemir@gmail.com"

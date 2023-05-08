@@ -7,18 +7,17 @@ Este projeto tem como objetivo oferecer uma visão abrangente do mercado imobili
 - Python
 - BeautifulSoup
 - Pandas
-- Scikit-Learn
 - Streamlit
 
 ### Pré-requisitos
 
 - Python 3.x
-- Bibliotecas BeautifulSoup, Pandas e Scikit-Learn instaladas
+- Bibliotecas BeautifulSoup e Pandas instaladas
 - Streamlit instalado
 
 ## Como utilizar
 
-O projeto é composto por um código em Python que realiza o webscraping das principais imobiliárias da região de Piracicaba, coleta os dados dos imóveis e utiliza algoritmos de classificação para prever o preço de mercado dos imóveis.
+O projeto é composto por um código em Python que realiza o webscraping das principais imobiliárias da região de Piracicaba, coleta os dados dos imóveis e agrega os mesmos em uma visualização de fácil compreensão.
 
 Para utilizar o Classificador acesse o link abaixo:
 
@@ -29,8 +28,7 @@ https://real-estate-predictor.streamlit.app/
 O código contém as seguintes funções:
 
 - webscraping: coleta os dados dos imóveis nas principais imobiliárias de Piracicaba;
-- previsão: utiliza algoritmos de classificação para prever o preço de mercado dos imóveis com base em diversos fatores;
-- apresentação: apresenta os resultados das previsões em um arquivo .csv e um arquivo .html.
+- apresentação: apresenta os resultados das previsões em uma tabela dentro do aplicativo e em um arquivo csv
 
 ## Contribuição
 
@@ -44,7 +42,7 @@ Se você deseja contribuir para este projeto, siga os seguintes passos:
 
 ## Licença
 
-Este projeto está licenciado sob a licença [tipo de licença]. Veja o arquivo LICENSE para mais detalhes.
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 # Agradecimentos
-Gostaríamos de agradecer ao professor Dr. Gustavo Voltani Von Atzingen pela orientação e disponibilidade durante o desenvolvimento do projeto.
+Gostaría de agradecer ao professor Dr. Gustavo Voltani Von Atzingen pela orientação e disponibilidade durante o desenvolvimento do projeto.

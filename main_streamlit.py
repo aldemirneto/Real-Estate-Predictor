@@ -1,18 +1,7 @@
 from st_pages import Page, add_page_title, show_pages
 import streamlit as st
 
-show_pages(
-    [
-        Page("main_streamlit.py", "Home", "🏠"),
-        # Can use :<icon-name>: or the actual icon
-        Page("pages/pagina_1.py", "Grafico Imoveis", "📊"),
-        # The pages appear in the order you pass them
-        Page("pages/pagina_2.py", "Mapa Imoveis", "🗺️"),
-
-    ]
-)
-
-add_page_title()
+st.set_page_config('Home', '🗺️')
 
 
 st.markdown("""

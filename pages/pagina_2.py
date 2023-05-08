@@ -4,9 +4,7 @@ import pandas as pd
 import json
 from streamlit_folium import st_folium
 
-from st_pages import add_page_title
 
-add_page_title()
 
 st.sidebar.markdown("""
 # 🗺️ 

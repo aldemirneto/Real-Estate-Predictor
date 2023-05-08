@@ -7,7 +7,7 @@ on:
   
 
 jobs:
-  run_scraper:
+  run_orchestrator:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

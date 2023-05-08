@@ -34,16 +34,13 @@ def extract_property_info(property_html):
     price = price.replace('.', '') if price else None
     price = price[:-2] + '000' if price else None
 
-    price = float(price) if price else None
-
-
-
-
     area_element = property_html.find('li').find('span')
     area = area_element.text.strip().replace(',','.').replace('M²', '').replace(' ', '') if area_element  and 'Quartos' not in area_element.text else None
-
-    area = float(area) if area else None
-
+    try:
+        price = float(price) if price else None
+        area = float(area) if area else None
+    except:
+        pass
     location_element = property_html.find('p', class_='neighborhood-city-titles')
     location = location_element.text.strip().replace(', Piracicaba', '') if location_element else None
 

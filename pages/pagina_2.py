@@ -62,9 +62,11 @@ for bairro in bairros:
     nome = bairro['properties']['name']
     coords = bairro['properties']['centroid']
     preco_medio_values = df.loc[df['Bairro'] == nome, 'preco_medio'].values
-    tooltip = f"o preço médio do bairro {nome} é: {preco_medio_values[0] if len(preco_medio_values) > 0 else 'N/A'} mil reais"
+    tooltip = f"Preço médio venda bairro {nome.replace('_', ' ')}<br>" \
+              f"<div style='text-align: center;'>{preco_medio_values[0] if len(preco_medio_values) > 0 else 'N/A'} milhões de reais</div>"
+
     folium.Marker(
-        location=[coords[1], coords[0]],  # inverte a ordem das coordenadas
+        location=[coords[1], coords[0]],
         tooltip=tooltip,
     ).add_to(m)
 

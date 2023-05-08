@@ -5,3 +5,6 @@ folium
 pandas
 streamlit_folium
 beautifulsoup4
+pydantic
+datetime
+time

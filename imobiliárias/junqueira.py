@@ -88,7 +88,7 @@ def extract_property_info(property_html):
 def run():
     full_property_info = []
 
-    for i in range(300):
+    for i in range(10):
         page_content = None
         old_page_content = None
         try:
@@ -117,18 +117,21 @@ def run():
     #dropa linhas com a coluna price vazia
     df = df.dropna(subset=['preco'])
     df = df.fillna(0)
-    #converte a coluna price para float
-    df['preco'] = df['preco'].astype(float)
-    df['preco'] = df['preco']/100
-    #converte a coluna area para float
-    df['area'] = df['area'].astype(float)
-    #divido a area por 1000 e arredondo uma casa para todos os valores da coluna area
-    df['area'] = round(df['area']/1000, 1)
-    #converte valores de quartos, vagas e banheiros para int
-    df['quartos'] = df['quartos'].astype(int)
-    df['vagas'] = df['vagas'].astype(int)
-    df['banheiros'] = df['banheiros'].astype(int)
-
+    try:
+        #converte a coluna price para float
+        df['preco'] = df['preco'].astype(float)
+        df['preco'] = df['preco']/100
+        #converte a coluna area para float
+        df['area'] = df['area'].astype(float)
+        #divido a area por 1000 e arredondo uma casa para todos os valores da coluna area
+        df['area'] = round(df['area']/1000, 1)
+        #converte valores de quartos, vagas e banheiros para int
+        df['quartos'] = df['quartos'].astype(int)
+        df['vagas'] = df['vagas'].astype(int)
+        df['banheiros'] = df['banheiros'].astype(int)
+    except:
+        print('erro na conversão de tipos junqueira')
+        pass
     df['Imobiliaria'] = 'Junqueira'
     df['Data_scrape'] = pd.to_datetime('today').strftime('%Y-%m-%d')
     df.to_csv('imoveis.csv', index=False, sep=';', mode='a',  header=False)

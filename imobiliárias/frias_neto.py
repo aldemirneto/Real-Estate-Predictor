@@ -89,21 +89,24 @@ def run():
     df = df.dropna(subset=['preco'])
     df = df.fillna(0)
     #converte a coluna price para float
-    df['preco'] = df['preco'].astype(float)
-    df['preco'] = df['preco']/1000
-    #converte a coluna area para float
-    df['area'] = df['area'].astype(float)
+    try:
+        df['preco'] = df['preco'].astype(float)
+        df['preco'] = df['preco']/1000
+        #converte a coluna area para float
+        df['area'] = df['area'].astype(float)
 
-    #converte valores de quartos, vagas e banheiros para int
-    df['quartos'] = df['quartos'].astype(int)
-    df['vagas'] = df['vagas'].astype(int)
-    df['banheiros'] = df['banheiros'].astype(int)
-    #trocar valores nulos por 0
+        #converte valores de quartos, vagas e banheiros para int
+        df['quartos'] = df['quartos'].astype(int)
+        df['vagas'] = df['vagas'].astype(int)
+        df['banheiros'] = df['banheiros'].astype(int)
 
+    except Exception as e:
+        print('erro na conversão de tipos')
+        pass
 
     df['Imobiliaria'] = 'Frias Neto'
     df['Data_scrape'] = pd.to_datetime('today').strftime('%Y-%m-%d')
-        #now, i write on a parquet file name imoveis
+
     df.to_csv('imoveis.csv', index=False, sep=';', mode='a', header=False)
     return 1
 

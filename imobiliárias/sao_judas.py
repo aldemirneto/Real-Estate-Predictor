@@ -29,6 +29,9 @@ def extract_property_info(property_html, link):
             elif 'Garagens' in i.text:
                 vagas = i.find_next('span').text
                 vagas = vagas.replace(' ', '') if vagas else None
+            elif 'Área útil' in i.text:
+                area = i.find_next('span').text
+                area = area.replace('m2', '').replace(' ', '') if area else None
             elif 'Área Total' in i.text:
                 area = i.find_next('span').text
                 area = area.replace('m2', '').replace(' ', '') if area else None
@@ -90,17 +93,17 @@ def run():
     #dropa linhas com a coluna price vazia
     df = df.dropna(subset=['preco'])
     df = df.fillna(0)
-    #converte a coluna price para float
-    df['preco'] = df['preco'].astype(float)
-    #converte a coluna area para float
-    df['area'] = df['area'].astype(float)
-    #divido a area por 1000 e arredondo uma casa para todos os valores da coluna area
-    df['area'] = round(df['area']/1000, 1)
-    #converte valores de quartos, vagas e banheiros para int
-    df['quartos'] = df['quartos'].astype(int)
-    df['vagas'] = df['vagas'].astype(int)
-    df['banheiros'] = df['banheiros'].astype(int)
-
+    try:
+        #converte a coluna price para float
+        df['preco'] = df['preco'].astype(float)
+        #converte a coluna area para float
+        df['area'] = df['area'].astype(float)
+        #converte valores de quartos, vagas e banheiros para int
+        df['quartos'] = df['quartos'].astype(int)
+        df['vagas'] = df['vagas'].astype(int)
+        df['banheiros'] = df['banheiros'].astype(int)
+    except:
+        pass
     df['Imobiliaria'] = 'Sâo Judas'
     df['Data_scrape'] = pd.to_datetime('today').strftime('%Y-%m-%d')
 

@@ -1,4 +1,4 @@
-name: Run Orchestrator every 6 hours
+name: Extract Data
 
 on:
   schedule:

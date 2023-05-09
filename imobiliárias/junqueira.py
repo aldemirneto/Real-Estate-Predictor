@@ -88,7 +88,7 @@ def extract_property_info(property_html):
 def run():
     full_property_info = []
 
-    for i in range(10):
+    for i in range(300):
         page_content = None
         old_page_content = None
         try:

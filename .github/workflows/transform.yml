@@ -4,7 +4,6 @@ on:
   schedule:
     - cron: "5 */6 * * *"
   workflow_dispatch:
-  
 
 jobs:
   run_orchestrator:
@@ -35,6 +34,11 @@ jobs:
           git commit -m "Tratando dados"
           git push origin main
 
-
-
-
+  wait_for_extract:
+    needs: run_orchestrator
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Extract Data workflow to finish
+        uses: styfle/wait-for@v1
+        with:
+          url: ${{ github.event.repository.html_url }}/actions/runs/${{ needs.run_orchestrator.id }}

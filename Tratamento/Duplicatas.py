@@ -4,6 +4,7 @@ import os
 from pydantic import BaseModel
 from datetime import datetime
 
+
 # Define a Pydantic model for each row in the CSV file
 class imovel(BaseModel):
     preco: float

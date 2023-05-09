@@ -1,4 +1,4 @@
-name: Extract Data
+name: Extract & Transform Data
 
 on:
   schedule:
@@ -25,6 +25,9 @@ jobs:
       - name: Run Orchestrator Extract
         run: |
           python orchestrator_extract.py
+      - name: Run Orchestrator Transform
+        run: |
+          python orchestrator_transform.py
       - name: Configure Git
         run: |
           git config --global user.email "humbertoaldemir@gmail.com"

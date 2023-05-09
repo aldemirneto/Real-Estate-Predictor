@@ -22,12 +22,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: Run Orchestrator Scrape
+      - name: Run Orchestrator Extract
         run: |
-          python orchestrator_scrape.py
-      - name: Run Orchestrator Transform
-        run: |
-          python orchestrator_transform.py
+          python orchestrator_extract.py
       - name: Configure Git
         run: |
           git config --global user.email "humbertoaldemir@gmail.com"

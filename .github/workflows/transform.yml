@@ -6,7 +6,32 @@ on:
   workflow_dispatch:
 
 jobs:
+  wait_for_extract:
+    needs: extract_data.run_orchestrator
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Extract Data workflow to finish
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const { Octokit } = require("@octokit/core");
+            const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+            const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
+            const workflowRuns = await octokit.request(`GET /repos/${owner}/${repo}/actions/workflows/extract_data.yml/runs`);
+            const lastWorkflowRun = workflowRuns.data.workflow_runs[0];
+            console.log(`Last Extract Data workflow run: ${lastWorkflowRun.status}`);
+            if (lastWorkflowRun.status === "completed" && lastWorkflowRun.conclusion === "success") {
+              console.log("Extract Data workflow completed successfully");
+              return true;
+            } else {
+              console.log("Extract Data workflow still running or failed");
+              return false;
+            }
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   run_orchestrator:
+    needs: wait_for_extract
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -33,12 +58,3 @@ jobs:
           git add .
           git commit -m "Tratando dados"
           git push origin main
-
-  wait_for_extract:
-    needs: run_orchestrator
-    runs-on: ubuntu-latest
-    steps:
-      - name: Wait for Extract Data workflow to finish
-        uses: styfle/wait-for@v1
-        with:
-          url: ${{ github.event.repository.html_url }}/actions/runs/${{ needs.run_orchestrator.id }}

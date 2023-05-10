@@ -65,7 +65,7 @@ def run():
     urls = ['https://www.duoimoveis.com.br/imoveis/a-venda/piracicaba?pagina=']
     full_property_info = []
     for url in urls:
-        for i in range(1, 200):
+        for i in range(1, 10):
             time.sleep(2)
             page_content = None
             old_page_content = None
@@ -112,7 +112,7 @@ def run():
     df['Imobiliaria'] = 'duo imoveis'
     df['Data_scrape'] = pd.to_datetime('today').strftime('%Y-%m-%d')
 
-    df.to_csv('imoveis.csv', index=False, sep=';', mode='a',  header=False)
+    df.to_csv('temp_imoveis.csv', index=False, sep=';', mode='a',  header=False)
     return 1
 
 

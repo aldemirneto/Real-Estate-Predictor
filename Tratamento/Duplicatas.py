@@ -3,7 +3,7 @@ import os
 
 from pydantic import BaseModel
 from datetime import datetime
-
+import pandas as pd
 
 # Define a Pydantic model for each row in the CSV file
 class imovel(BaseModel):
@@ -13,62 +13,44 @@ class imovel(BaseModel):
     vagas: str
     banheiros: str
     link: str
+    Imobiliaria:str
+    bairro:str
     Data_scrape: str
+
 def run(filename):
-    # Read the CSV file and store the header row
-    with open(filename, 'r', encoding='utf-8') as csv_file:
-        reader = csv.reader(csv_file, delimiter=';')
-        header = next(reader)
+    # Read the existing CSV file and store it in a Pandas dataframe
+    existing_data = pd.read_csv(filename, delimiter=';')
 
-        # Find the index of the "Data_scrape" column
-        link_idx = header.index('link')
+    # Read in the new data to be inserted into a separate Pandas dataframe
+    new_data = pd.read_csv('temp_imoveis.csv', delimiter=';')
 
-        # Create a set to store the unique rows
-        unique_rows = set()
+    # Iterate over the rows in the new data and validate the format
+    valid_rows = []
+    for _, row in new_data.iterrows():
+        # Parse the row into a Pydantic model
+        try:
+            imv = imovel(preco=float(row['preco']), area=float(row['area']), quartos=int(row['quartos']), bairro = row['bairro'] ,vagas=row['vagas'], banheiros=row['banheiros'], link=row['link'], Data_scrape=row['Data_scrape'], Imobiliaria = row['Imobiliaria'])
+        except Exception as e:
+            # If the row cannot be parsed, skip it
+            print('Erro na conversão de tipos', e)
+            continue
 
-        # Iterate over the rows in the CSV file
-        for row in reader:
-            # Parse the row into a Pydantic model
-            try:
-                imovel(preco=float(row[0]), area=float(row[1]), quartos=int(row[2]), vagas=row[3], banheiros=row[4], link=row[5], Data_scrape=row[6])
-            except:
-                # If the row cannot be parsed, skip it
-                continue
+        # Add the validated row to the list
+        valid_rows.append(imv)
 
-            # Check if the row is already in the set without the date
-            if tuple(row[link_idx]) not in [u[link_idx] for u in unique_rows]:
-                # Add the row to the set
-                unique_rows.add(tuple(row))
+    # Convert the list of validated rows to a Pandas dataframe
+    new_data = pd.DataFrame([row.dict() for row in valid_rows])
 
-    # Write the header and unique rows back to the CSV file
-    with open(filename, 'w', newline='', encoding='utf-8') as csv_file:
-        writer = csv.writer(csv_file, delimiter=';')
-        writer.writerow(header)
-        for row in unique_rows:
-            # Add the "Data_scrape" column back to the row before writing it to the file
-            writer.writerow(row)
+    #update the existing data with the new data with the link column as the key
+    merged_data = pd.concat([existing_data, new_data], ignore_index=True, sort=False)
+    merged_data = merged_data.drop_duplicates(keep='last')
 
-    # Open the CSV file for reading and writing with the 'utf-8-sig' encoding
-    with open(filename, 'r', encoding='utf-8-sig') as input_file, open('output.csv', 'w', newline='', encoding='utf-8') as output_file:
-        # Create a CSV reader and writer objects with the delimiter set to ';'
-        reader = csv.reader(input_file, delimiter=';')
-        writer = csv.writer(output_file, delimiter=';')
-        # Loop through each row in the input CSV file
-        for row in reader:
-            # Parse the row into a Pydantic model
-            if row[0] == 'preco':
-                writer.writerow(row)
-                continue
-            try:
-                imovel(preco=float(row[0]), area=float(row[1]), quartos=int(row[2]), vagas=row[3], banheiros=row[4], link=row[5], Data_scrape=datetime.today().strftime('%Y-%m-%d'))
-            except:
-                # If the row cannot be parsed, skip it
-                continue
 
-            # Replace all instances of ' ;' and '; ' with ';'
-            new_row = [cell.strip() for cell in row]
-            # Write the new row to the output CSV file
-            writer.writerow(new_row)
+    # Write the final data to a new CSV file
+    merged_data.to_csv('output.csv', index=False, sep=';')
 
     # Overwrite the original CSV file with the modified version
     os.replace('output.csv', filename)
+
+    # Delete the temporary CSV file
+    os.remove('temp_imoveis.csv')

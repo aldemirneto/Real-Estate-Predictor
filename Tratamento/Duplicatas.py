@@ -21,12 +21,9 @@ def run(filename):
     # Read the existing CSV file and store it in a Pandas dataframe
     existing_data = pd.read_csv(filename, delimiter=';')
 
-    # Read in the new data to be inserted into a separate Pandas dataframe
-    new_data = pd.read_csv('temp_imoveis.csv', delimiter=';')
-
     # Iterate over the rows in the new data and validate the format
     valid_rows = []
-    for _, row in new_data.iterrows():
+    for _, row in existing_data.iterrows():
         # Parse the row into a Pydantic model
         try:
             imv = imovel(preco=float(row['preco']), area=float(row['area']), quartos=int(row['quartos']), bairro = row['bairro'] ,vagas=row['vagas'], banheiros=row['banheiros'], link=row['link'], Data_scrape=row['Data_scrape'], Imobiliaria = row['Imobiliaria'])
@@ -42,8 +39,7 @@ def run(filename):
     new_data = pd.DataFrame([row.dict() for row in valid_rows])
 
     #update the existing data with the new data with the link column as the key
-    merged_data = pd.concat([existing_data, new_data], ignore_index=True, sort=False)
-    merged_data = merged_data.drop_duplicates(subset=['preco','area','quartos','vagas','banheiros','bairro','link','Imobiliaria'])
+    merged_data = new.drop_duplicates(subset=['preco','area','quartos','vagas','banheiros','bairro','link','Imobiliaria'])
 
 
     # Write the final data to a new CSV file
@@ -52,5 +48,5 @@ def run(filename):
     # Overwrite the original CSV file with the modified version
     os.replace('output.csv', filename)
 
-    # Delete the temporary CSV file
-    os.remove('temp_imoveis.csv')
+    
+    

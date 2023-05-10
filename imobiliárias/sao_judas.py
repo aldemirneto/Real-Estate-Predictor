@@ -107,7 +107,7 @@ def run():
     df['Imobiliaria'] = 'Sâo Judas'
     df['Data_scrape'] = pd.to_datetime('today').strftime('%Y-%m-%d')
 
-    df.to_csv('temp_imoveis.csv', index=False, sep=';', mode='a',  header=False)
+    df.to_csv('imoveis.csv', index=False, sep=';', mode='a',  header=False)
     return 1
 
 

@@ -43,7 +43,7 @@ def run(filename):
 
     #update the existing data with the new data with the link column as the key
     merged_data = pd.concat([existing_data, new_data], ignore_index=True, sort=False)
-    merged_data = merged_data.drop_duplicates(keep='last')
+    merged_data = merged_data.drop_duplicates(subset=['preco','area','quartos','vagas','banheiros','bairro','link','Imobiliaria'],keep='last')
 
 
     # Write the final data to a new CSV file

@@ -39,7 +39,7 @@ df_bairros = df.groupby('bairro').agg({'preco': 'mean'}).reset_index()
 df_bairros.columns = ['bairro', 'preco_medio']
 
 
-print(df_bairros['bairro'])
+
 # Informações dos bairros de Piracicaba
 bairros = data['bairros']['features']
 
@@ -47,7 +47,6 @@ bairros = data['bairros']['features']
 dados = []
 for bairro in bairros:
     nome = bairro['properties']['name']
-
     preco_medio = round((df_bairros.loc[df_bairros['bairro'] == nome, 'preco_medio'].values[0]/1000000), 2) if df_bairros.loc[df_bairros['bairro'] == nome, 'preco_medio'].any() else 0
 
     dados.append({'Bairro': nome, 'preco_medio': preco_medio})

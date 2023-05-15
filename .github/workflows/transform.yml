@@ -4,6 +4,9 @@ on:
   push:
     branches:
      - '**'
+    message:
+      - 'extraindo dados'
+      - 'Testando action'
 
   workflow_dispatch:
   

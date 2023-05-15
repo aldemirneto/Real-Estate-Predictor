@@ -5,7 +5,7 @@ on:
     branches:
      - '**'
     paths:
-      -'Real-Estate-Predictor\imoveis.csv'
+      -'Real-Estate-Predictor/imoveis.csv'
 
   workflow_dispatch:
   

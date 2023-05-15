@@ -39,8 +39,9 @@ def run(filename):
     new_data = pd.DataFrame([row.dict() for row in valid_rows])
 
     #update the existing data with the new data with the link column as the key
-    merged_data = new_data.drop_duplicates(subset=['preco','area','quartos','vagas','banheiros','bairro','link','Imobiliaria'])
+    merged_data = new_data.drop_duplicates(subset=['preco','area','quartos','vagas','banheiros','link','Imobiliaria','bairro'])
 
+    merged_data = merged_data[['preco','area','quartos','vagas','banheiros','link','Imobiliaria','bairro','Data_scrape']]
 
     # Write the final data to a new CSV file
     merged_data.to_csv('output.csv', index=False, sep=';')

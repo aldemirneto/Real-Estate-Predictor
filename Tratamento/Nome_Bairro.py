@@ -7,8 +7,10 @@ def replace_chars(string):
     # Replace accented characters with their unaccented equivalents
     string = unicodedata.normalize('NFKD', string).encode('ASCII', 'ignore').decode('utf-8')
     # Replace spaces with underscores
-    string = string.replace(', piracicaba', '').replace(', PIRACICABA', '').replace(' ', '_')
-    return string.capitalize()
+    string = string.replace(', piracicaba', '').replace(', PIRACICABA', '')
+    string = string.replace(' ', '_')
+    string = string.capitalize()
+    return string
 
 def run():
     # Define the blacklisted substrings

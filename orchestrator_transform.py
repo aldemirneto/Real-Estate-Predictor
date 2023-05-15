@@ -7,6 +7,13 @@ try:
 except:
     pass
 
+print('Iniciando tratamento de nomes de bairros')
+try:
+    Tratamento.Nome_Bairro.run()
+    print('Fim de tratamento de nomes de bairros')
+except Exception as e:
+    print('Nome_Bairro', e)
+
 print('Iniciando tratamento de duplicatas')
 try:
     Tratamento.Duplicatas.run(filename)
@@ -15,9 +22,3 @@ except Exception as e:
     print('Duplicata', e)
 
 
-print('Iniciando tratamento de nomes de bairros')
-try:
-    Tratamento.Nome_Bairro.run()
-    print('Fim de tratamento de nomes de bairros')
-except Exception as e:
-    print('Nome_Bairro', e)

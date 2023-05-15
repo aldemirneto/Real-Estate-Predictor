@@ -4,8 +4,6 @@ on:
   push:
     branches:
      - '**'
-    paths:
-      -'Real-Estate-Predictor/imoveis.csv'
 
   workflow_dispatch:
   

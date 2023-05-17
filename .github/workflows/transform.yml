@@ -3,9 +3,10 @@ name: Transform Data
 on:
   push:
     branches:
-     - '**'
+     - 'main'
     paths:
       - '**imoveis.csv'
+
 
   workflow_dispatch:
   

@@ -33,6 +33,6 @@ jobs:
         run: |
           git add .
           git commit -m "extraindo dados"
-          git push origin main
+          git push https://${{ secrets.GH_TOKEN }}@github.com/aldemirneto/Real-Estate-Predictor/.git main
         env:
             GH_TOKEN: ${{ secrets.MY_PAT }}

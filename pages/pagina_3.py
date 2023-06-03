@@ -18,7 +18,7 @@ def load_model():
 xgb_model = load_model()
 
 # Load the neighborhood encoding mapping
-with open(st.secrets['encoding']['NEIGHBORHOOD_ENCODING '], 'r') as f:
+with open(st.secrets['encoding']['NEIGHBORHOOD_ENCODING'], 'r') as f:
     neighborhood_encoding = json.load(f)
 
 

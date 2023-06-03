@@ -1,3 +1,5 @@
+import _thread
+
 import pandas as pd
 import streamlit as st
 import json
@@ -5,7 +7,7 @@ from xgboost import XGBRegressor
 
 
 # Function to load the XGBoost model
-@st.cache(allow_output_mutation=True)
+@st.cache_resource(allow_output_mutation=True)
 def load_model():
     xgb_model = XGBRegressor()
     xgb_model.load_model(st.secrets['model']['MODEL'])

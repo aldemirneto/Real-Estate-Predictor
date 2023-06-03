@@ -1,4 +1,3 @@
-from st_pages import Page, add_page_title, show_pages
 import streamlit as st
 
 st.set_page_config('Home', '🗺️')

@@ -1,11 +1,43 @@
-import _thread
-
 import numpy as np
 import pandas as pd
 import streamlit as st
 import json
 from xgboost import XGBRegressor
 
+
+st.sidebar.markdown("""
+# 🏠 Predição de Preço de Imóvel
+
+Nesta página, você poderá obter uma estimativa do preço de um imóvel com base em suas características.
+
+## Características do Imóvel
+
+Para realizar a predição do preço, serão consideradas as seguintes características do imóvel:
+
+- Área do imóvel
+- Número de quartos
+- Número de banheiros
+- Número de vagas de estacionamento
+
+## Modelo de Machine Learning
+
+Utilizamos um modelo de Machine Learning treinado com dados de imóveis para fazer a predição do preço. O modelo aprendeu padrões nos dados e pode fornecer uma estimativa com base nas características fornecidas.
+
+## Como Usar
+
+1. Preencha as características do imóvel nos campos à direita.
+2. Clique no botão "Prever" para obter a estimativa do preço.
+3. O resultado será exibido na página principal.
+
+## Limitações
+
+É importante ressaltar que essa estimativa é baseada em dados históricos e em um modelo preditivo. O preço real do imóvel pode variar de acordo com fatores externos e condições do mercado imobiliário.
+
+## Conclusão
+
+Essa página foi criada para ajudar usuários a terem uma ideia aproximada do preço de um imóvel com base em suas características. Lembre-se de considerar outros fatores relevantes ao tomar decisões relacionadas à compra ou venda de um imóvel.
+
+""")
 
 # Function to load the XGBoost model
 @st.cache_resource()

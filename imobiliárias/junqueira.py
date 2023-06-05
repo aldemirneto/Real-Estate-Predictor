@@ -124,7 +124,7 @@ def run():
         #converte a coluna area para float
         df['area'] = df['area'].astype(float)
         #divido a area por 1000 e arredondo uma casa para todos os valores da coluna area
-        df['area'] = round(df['area']/1000, 1)
+        df['area'] = round(df['area']/100, 1)
         #converte valores de quartos, vagas e banheiros para int
         df['quartos'] = df['quartos'].astype(int)
         df['vagas'] = df['vagas'].astype(int)

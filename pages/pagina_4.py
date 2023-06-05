@@ -9,10 +9,6 @@ data = pd.read_csv('imoveis.csv', sep=';')
 # Set page title
 st.title('Data Analysis and Visualization')
 
-# Display the dataset
-st.subheader('Dataset')
-st.dataframe(data)
-
 # Chart 1: Histogram of Prices, with edgecolor black, instead of 1e^7, show as 10,000,000
 st.subheader('Histogram of Prices')
 fig, ax = plt.subplots()
@@ -96,7 +92,9 @@ st.pyplot(fig)
 
 #Chart8: normal distribution of areas, with a title and labels and description and making it interactive, make the bins 20
 st.subheader('Distribuição Normal de Áreas')
+# taking the outliers out
+data = data[data['area'] < data['area'].quantile(0.99)]
 fig, ax = plt.subplots()
-ax.hist(data['area'], bins=1000, edgecolor='black', density=True)
+ax.hist(data['area'], bins=10, edgecolor='black', density=True)
 ax.set(xlabel='Area', ylabel='Density', title='Distribution of Areas')
 st.pyplot(fig)

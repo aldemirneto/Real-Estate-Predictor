@@ -7,10 +7,10 @@ import matplotlib.pyplot as plt
 data = pd.read_csv('imoveis.csv', sep=';')
 
 # Set page title
-st.title('Data Analysis and Visualization')
+st.title('Analise e Visualização de Dados')
 
 # Chart 1: Histogram of Prices, with edgecolor black, instead of 1e^7, show as 10,000,000
-st.subheader('Histogram of Prices')
+st.subheader('Histograma de Preços')
 fig, ax = plt.subplots()
 ax.hist(data['preco'], bins=10, edgecolor='black')
 st.pyplot(fig)
@@ -18,10 +18,12 @@ st.pyplot(fig)
 
 
 # Chart 2: Scatter Plot: Price vs. Area with an no transparency, edgecolor black, instead of 1e^7, show as 10,000,000 and an correlation line
-st.subheader('Scatter Plot: Price vs. Area')
+st.subheader('Preço vs. Área')
 # Create the scatter plot
 fig, ax = plt.subplots()
 ax.scatter(data['area'], data['preco'], alpha=0.5, edgecolor='black')
+ax.set(xlabel='Preço', ylabel='Área',
+       title='Preço vs. Área')
 st.pyplot(fig)
 
 
@@ -30,16 +32,16 @@ st.pyplot(fig)
 
 fig, ax = plt.subplots()
 ax.bar(data['quartos'].unique(), data['quartos'].value_counts())
-ax.set(xlabel='Number of Bedrooms', ylabel='Number of Properties',
-       title='Number of Properties by Number of Bedrooms')
+ax.set(xlabel='Numero de quartos', ylabel='Numero de imoveis',
+       title='Numero de imoveis por numero de quartos')
 st.pyplot(fig)
 
 
 # Chart 4: Bar Chart: Number of Properties by Number of Bathrooms
 fig, ax = plt.subplots()
 ax.bar(data['banheiros'].unique(), data['banheiros'].value_counts())
-ax.set(xlabel='Number of  Bathrooms', ylabel='Number of Properties',
-       title='Number of Properties by Number of Bathrooms')
+ax.set(xlabel='Numero de banheiros', ylabel='Numero de imoveis',
+       title='Numero de imoveis por numero de banheiros')
 st.pyplot(fig)
 
 
@@ -47,7 +49,8 @@ st.pyplot(fig)
 fig, ax = plt.subplots()
 parking_counts = data['vagas'].dropna().value_counts()
 ax.bar(parking_counts.index, parking_counts)
-ax.set(xlabel='Number of Parking Spaces', ylabel='Number of Properties', title='Number of Properties by Number of Parking Spaces')
+ax.set(xlabel='Numero de vagas', ylabel='Numero de imoveis',
+       title='Numero de imoveis por numero de vagas')
 st.pyplot(fig)
 
 #Chart 6: normal distribution of prices, with a title and labels and description and making it interactive, make the bins 20

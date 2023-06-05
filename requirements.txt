@@ -8,4 +8,4 @@ beautifulsoup4
 pydantic
 xgboost
 streamlit-aggrid
-matplotlib.pyplot
+matplotlib

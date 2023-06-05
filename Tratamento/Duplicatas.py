@@ -43,6 +43,14 @@ def run(filename):
 
     merged_data = merged_data[['preco','area','quartos','vagas','banheiros','link','Imobiliaria','bairro','Data_scrape']]
 
+    #remove all the records with area < 2
+    merged_data = merged_data[merged_data['area'] > 2]
+
+    #replace nan with 0 in vagas, banheiros and quartos
+    merged_data['vagas'] = merged_data['vagas'].fillna(0)
+    merged_data['banheiros'] = merged_data['banheiros'].fillna(0)
+    merged_data['quartos'] = merged_data['quartos'].fillna(0)
+
     # Write the final data to a new CSV file
     merged_data.to_csv('output.csv', index=False, sep=';')
 

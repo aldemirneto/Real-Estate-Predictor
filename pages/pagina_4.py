@@ -2,67 +2,185 @@ import scipy.stats as stats
 import numpy as np
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+
 import plotly.graph_objects as go
 # Read the dataset
 data = pd.read_csv('imoveis.csv', sep=';')
-#
-# # Set page title
-# st.title('Analise e Visualização de Dados')
-#
-# # Chart 1: Histogram of Prices, with edgecolor black, instead of 1e^7, show as 10,000,000
-fig = go.Figure(data=[go.Histogram(x=data['preco'], marker_color='#EB89B5', opacity=0.75)])
-fig.update_layout(title_text='Histograma de Preços', xaxis_title_text='Preço', yaxis_title_text='Contagem')
-st.plotly_chart(fig, use_container_width=True)
+def treated_chart(data):
+    # Calculate the IQR
+    Q1 = np.percentile(data['preco'], 1)
+    Q3 = np.percentile(data['preco'], 99)
+    IQR = Q3 - Q1
+
+    # Define the lower and upper bounds
+    lower_bound = Q1 - 1.5 * IQR
+    upper_bound = Q3 + 1.5 * IQR
+
+    # Filter out the outliers
+    filtered_data = data[(data['preco'] >= lower_bound) & (data['preco'] <= upper_bound)]
+
+    # Create the treated version of the chart
+    fig = go.Figure(data=[go.Histogram(x=filtered_data['preco'], marker_color='#EB89B5', opacity=0.75)])
+    fig.update_layout(title_text='Histograma de Preços', xaxis_title_text='Preço', yaxis_title_text='Contagem')
+
+    return fig
+
+# Function to create the raw version of the chart
+def raw_chart(data):
+    # Create the raw version of the chart
+    fig = go.Figure(data=[go.Histogram(x=data['preco'], marker_color='#EB89B5', opacity=0.75)])
+    fig.update_layout(title_text='Histograma de Preços ', xaxis_title_text='Preço', yaxis_title_text='Contagem')
+
+    return fig
 
 
 # # Chart 2: Scatter Plot: Price vs. Area with an no transparency, edgecolor black, instead of 1e^7, show as 10,000,000 and an correlation line
 
-# Create the scatter plot
-fig = go.Figure(data=go.Scatter(x=data['area'], y=data['preco'], mode='markers'))
 
-# Update axes lines
-fig.update_xaxes(showline=True, linewidth=1, linecolor='black', mirror=True)
-fig.update_yaxes(showline=True, linewidth=1, linecolor='black', mirror=True)
-# Update chart layout
-fig.update_layout(
-    title='Preço vs. Área',
-    xaxis_title='Área',
-    yaxis_title='Preço')
-# Show chart
-st.plotly_chart(fig)
+def treated_scatter(data):
+    # Calculate the IQR for 'preco' column
+    Q1 = data['preco'].quantile(0.1)
+    Q3 = data['preco'].quantile(0.99)
+    IQR = Q3 - Q1
+
+    # Define the lower and upper bounds
+    lower_bound = Q1 - 1.5 * IQR
+    upper_bound = Q3 + 1.5 * IQR
+
+    # Filter out the outliers
+    filtered_data = data[(data['preco'] >= lower_bound) & (data['preco'] <= upper_bound)]
+
+    # Create the treated scatter plot
+    fig = go.Figure(data=go.Scatter(x=filtered_data['area'], y=filtered_data['preco'], mode='markers'))
+    fig.update_xaxes(showline=True, linewidth=1, linecolor='black', mirror=True)
+    fig.update_yaxes(showline=True, linewidth=1, linecolor='black', mirror=True)
+    fig.update_layout(title='Preço vs. Área', xaxis_title='Área', yaxis_title='Preço')
+
+    return fig
+
+# Function to create the raw version of the scatter plot
+def raw_scatter(data):
+    # Create the raw scatter plot
+    fig = go.Figure(data=go.Scatter(x=data['area'], y=data['preco'], mode='markers'))
+    fig.update_xaxes(showline=True, linewidth=1, linecolor='black', mirror=True)
+    fig.update_yaxes(showline=True, linewidth=1, linecolor='black', mirror=True)
+    fig.update_layout(title='Preço vs. Área', xaxis_title='Área', yaxis_title='Preço')
+
+    return fig
 
 
-# Chart 3: Bar Chart: Number of Properties by Number of Rooms
-fig = go.Figure(data=[go.Bar(x=sorted(data['quartos'].unique().tolist()), y=data['quartos'].value_counts())])
-fig.update_layout(title='Número de Propriedades por Número de Quartos',
-                     xaxis_title='Número de Quartos',
-                        yaxis_title='Número de Propriedades')
-st.plotly_chart(fig)
+
+
+# Chart 3: Bar Chart: Number of Properties by Number of Rooms, with a button to take the outliars out of the dataset
+
+def treated_bar_bedrooms(data):
+    # Filter out any outliers or unwanted data manipulation
+    # (since it's a bar chart, outliers may not be applicable, but you can customize this function as needed)
+    filtered_data = data[data['quartos'] < data['quartos'].quantile(0.99)]
+
+    # Create the treated bar chart
+    fig = go.Figure(data=[go.Bar(x=sorted(filtered_data['quartos'].unique().tolist()), y=filtered_data['quartos'].value_counts())])
+    fig.update_layout(title='Número de Propriedades por Número de Quartos',
+                      xaxis_title='Número de Quartos',
+                      yaxis_title='Número de Propriedades')
+
+    return fig
+
+# Function to create the raw version of the bar chart
+def raw_bar_bedrooms(data):
+    # Create the raw bar chart
+    fig = go.Figure(data=[go.Bar(x=sorted(data['quartos'].unique().tolist()), y=data['quartos'].value_counts())])
+    fig.update_layout(title='Número de Propriedades por Número de Quartos',
+                      xaxis_title='Número de Quartos',
+                      yaxis_title='Número de Propriedades')
+
+    return fig
 
 
 # # Chart 4: Bar Chart: Number of Properties by Number of Bathrooms
+# Function to create the treated version of the bar chart for number of bathrooms
+def treated_bar_bathrooms(data):
+    # Filter out outliers by removing the outliers number of bathrooms
+
+    filtered_data = data[data['banheiros'] < data['banheiros'].quantile(0.99)]
 
 
-bathrooms = sorted(data['banheiros'].unique().tolist())
-value_counts = data['banheiros'].value_counts()
-fig = go.Figure(data=[go.Bar(x=bathrooms, y=value_counts)])
-fig.update_layout(title='Numero de imoveis por numero de banheiros',
-                    xaxis_title='Numero de banheiros',
-                    yaxis_title='Numero de imoveis')
-st.plotly_chart(fig)
+    # Create the treated bar chart
+    fig = go.Figure(data=[go.Bar(x=sorted(filtered_data['banheiros'].unique().tolist()), y=filtered_data['banheiros'].value_counts())])
+    fig.update_layout(title='Número de Propriedades por Número de Banheiros ',
+                      xaxis_title='Número de Banheiros',
+                      yaxis_title='Número de Propriedades')
+
+    return fig
+
+# Function to create the raw version of the bar chart for number of bathrooms
+def raw_bar_bathrooms(data):
+    # Create the raw bar chart
+    fig = go.Figure(data=[go.Bar(x=sorted(data['banheiros'].unique().tolist()), y=data['banheiros'].value_counts())])
+    fig.update_layout(title='Número de Propriedades por Número de Banheiros ',
+                      xaxis_title='Número de Banheiros',
+                      yaxis_title='Número de Propriedades')
+
+    return fig
 
 
 
 # Chart 5: Bar Chart: Number of Properties by Number of Parking Spaces adding title and labels and description and making it interactive
 
-parking_counts = data['vagas'].dropna().value_counts()
+def treated_bar_parking_spots(data):
+    # Filter out outliers by removing the outliers number of bathrooms
 
-fig = go.Figure(data=[go.Bar(x=parking_counts.index, y=parking_counts)])
-fig.update_layout(title='Numero de imoveis por numero de vagas de garagem',
-                     xaxis_title='Numero de vagas de garagem',
-                        yaxis_title='Numero de imoveis')
-st.plotly_chart(fig)
+    filtered_data = data[data['vagas'] < data['vagas'].quantile(0.99)]
+
+
+    # Create the treated bar chart
+    fig = go.Figure(data=[go.Bar(x=sorted(filtered_data['vagas'].unique().tolist()), y=filtered_data['vagas'].value_counts())])
+    fig.update_layout(title='Número de Propriedades por Número de Vagas ',
+                      xaxis_title='Número de Banheiros',
+                      yaxis_title='Número de Propriedades')
+
+    return fig
+
+# Function to create the raw version of the bar chart for number of bathrooms
+def raw_bar_parking_spots(data):
+    # Create the raw bar chart
+    fig = go.Figure(data=[go.Bar(x=sorted(data['vagas'].unique().tolist()), y=data['vagas'].value_counts())])
+    fig.update_layout(title='Número de Propriedades por Número de Vagas ',
+                      xaxis_title='Número de vagas',
+                      yaxis_title='Número de Propriedades')
+
+    return fig
+
+st.markdown('## **Análise Exploratória de Dados**')
+st.sidebar.markdown("""
+#  🔍 Análise de Dados Imobiliários
+## Outliers na Análise de Dados
+
+Outliers são pontos de dados que se desviam significativamente do restante dos dados. Eles podem ter um impacto significativo na análise e visualização de dados, potencialmente distorcendo os resultados ou conduzindo a interpretações equivocadas. É importante considerar os outliers e lidar com eles de maneira adequada para garantir a integridade da análise.
+
+Nesta página, você pode explorar o impacto dos outliers na visualização de dados. Você pode escolher entre as versões tratada e bruta do gráfico para observar a diferença.
+
+A versão tratada aplica filtragem de outliers ou outras modificações nos dados para reduzir a influência dos outliers, enquanto a versão bruta mostra os dados como estão, sem nenhuma modificação.
+
+""")
+
+# Botão para alternar entre as versões tratada e bruta do gráfico de barras
+version = st.sidebar.radio("Versão do Gráfico", ('Bruta', 'Tratada'))
+if version == 'Tratada':
+    st.plotly_chart(treated_chart(data), use_container_width=True)
+    st.plotly_chart(treated_scatter(data), use_container_width=True)
+    st.plotly_chart(treated_bar_bedrooms(data), use_container_width=True)
+    st.plotly_chart(treated_bar_bathrooms(data), use_container_width=True)
+    st.plotly_chart(treated_bar_parking_spots(data), use_container_width=True)
+else:
+    st.plotly_chart(raw_chart(data), use_container_width=True)
+    st.plotly_chart(raw_scatter(data), use_container_width=True)
+    st.plotly_chart(raw_bar_bedrooms(data), use_container_width=True)
+    st.plotly_chart(raw_bar_bathrooms(data), use_container_width=True)
+    st.plotly_chart(raw_bar_parking_spots(data), use_container_width=True)
+
+
+
 
 # Calculate mean and median
 mean_price = np.mean(data['preco'])

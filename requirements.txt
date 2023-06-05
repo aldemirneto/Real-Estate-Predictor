@@ -7,3 +7,5 @@ streamlit_folium
 beautifulsoup4
 pydantic
 xgboost
+streamlit-aggrid
+matplotlib.pyplot

@@ -1,5 +1,6 @@
 import _thread
 
+import numpy as np
 import pandas as pd
 import streamlit as st
 import json
@@ -40,11 +41,8 @@ def preprocess_input(data):
 # Function to predict prices using the loaded model
 def predict_prices(data):
     print('Predicting prices...')
-    print(data)
     input_data = preprocess_input(data)
-    print(input_data.head())
-
-    predictions = xgb_model.predict(input_data)
+    predictions = np.exp(xgb_model.predict(input_data))
     return predictions
 
 

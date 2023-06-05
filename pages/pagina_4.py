@@ -43,8 +43,6 @@ fig, ax = plt.subplots()
 bathrooms = sorted(data['banheiros'].unique().tolist())
 
 value_counts = data['banheiros'].value_counts()
-
-print(bathrooms, value_counts)
 #plot the bar chart
 ax.bar(bathrooms, value_counts)
 

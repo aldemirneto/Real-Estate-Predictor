@@ -9,3 +9,5 @@ pydantic
 xgboost
 streamlit-aggrid
 matplotlib
+plotly
+scipy

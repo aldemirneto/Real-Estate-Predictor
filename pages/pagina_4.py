@@ -1,8 +1,9 @@
+import scipy.stats as stats
 import numpy as np
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-
+import plotly.graph_objects as go
 # Read the dataset
 data = pd.read_csv('imoveis.csv', sep=';')
 #
@@ -43,8 +44,9 @@ fig, ax = plt.subplots()
 bathrooms = sorted(data['banheiros'].unique().tolist())
 
 value_counts = data['banheiros'].value_counts()
-#plot the bar chart
+#plot the bar chart, limit the x axis to the 0.99 quantile
 ax.bar(bathrooms, value_counts)
+
 
 ax.set(xlabel='Numero de banheiros', ylabel='Numero de imoveis', title='Numero de imoveis por numero de banheiros')
 st.pyplot(fig)
@@ -57,12 +59,49 @@ ax.set(xlabel='Numero de vagas', ylabel='Numero de imoveis',
        title='Numero de imoveis por numero de vagas')
 st.pyplot(fig)
 
-#Chart 6: normal distribution of prices, with a title and labels and description and making it interactive, make the bins 20
-st.subheader('Distribuição Normal de Preços')
-fig, ax = plt.subplots()
-ax.hist(data['preco'], bins=20, edgecolor='black', density=True)
-ax.set(xlabel='Price', ylabel='Density', title='Distribution of Prices')
-st.pyplot(fig)
+# Calculate mean and median
+mean_price = np.mean(data['preco'])
+median_price = np.median(data['preco'])
+std_price = np.std(data['preco'])
+# Chart 6: Normal Distribution of Prices displaying the quartiles
+# Calculate mean, median, and quantiles
+
+quantiles = np.percentile(data['preco'], [1,25, 50, 75, 99])
+
+# Chart 6: Normal Distribution of Prices
+#the linspace should be between the 1% quantile and the 99% quantile
+
+x = np.linspace(quantiles[0], quantiles[-1], 100)
+y = stats.norm.pdf(x, mean_price, std_price)
+# Create the figure using Plotly graph objects
+fig = go.Figure()
+
+## Add the normal distribution curve
+fig.add_trace(go.Scatter(x=x, y=y, mode='lines', name='Curva Normal', line=dict(color='blue')))
+
+# Add vertical lines for mean and quantiles using go.Line
+fig.add_trace(go.Scatter(x=[mean_price, mean_price], y=[0, max(y)],
+                         mode='lines', name='Média', line=dict(color='red', dash='dash')))
+
+fig.add_trace(go.Scatter(x=[quantiles[0], quantiles[0]], y=[0, max(y)],
+                         mode='lines', name='1º Percentil', line=dict(color='green', dash='dash')))
+fig.add_trace(go.Scatter(x=[quantiles[1], quantiles[1]], y=[0, max(y)],
+                         mode='lines', name='25º Percentil', line=dict(color='blue', dash='dash')))
+fig.add_trace(go.Scatter(x=[quantiles[2], quantiles[2]], y=[0, max(y)],
+                         mode='lines', name='50º Percentil', line=dict(color='orange', dash='dash')))
+fig.add_trace(go.Scatter(x=[quantiles[3], quantiles[3]], y=[0, max(y)],
+                         mode='lines', name='75º Percentil', line=dict(color='pink', dash='dash')))
+fig.add_trace(go.Scatter(x=[quantiles[4], quantiles[4]], y=[0, max(y)],
+                         mode='lines', name='99º Percentil', line=dict(color='purple', dash='dash')))
+
+# Update layout and axis labels
+fig.update_layout(title='Distribuição de Preços',
+                  xaxis_title='Preço',
+                  yaxis_title='Densidade')
+
+# Display the plot
+st.plotly_chart(fig)
+
 
 st.markdown('''
 # Distribuição Assimétrica e Tratamento Logarítmico
@@ -90,12 +129,53 @@ Por exemplo, ao aplicar o tratamento logarítmico a uma distribuição assimétr
 Em resumo, ao se deparar com uma distribuição assimétrica, o tratamento logarítmico pode ser uma técnica útil para transformar a distribuição e melhorar a interpretação e análise dos dados, especialmente quando há presença de valores extremos.
 
 ''')
-#Chart 7: normal distribution after log transformation of prices, with a title and labels and description and making it interactive, only for prices > 0
-st.subheader('Distribuição Normal de Preços (Pós Transformação Logarítmica)')
-fig, ax = plt.subplots()
-ax.hist(np.log(data[data['preco'] > 0]['preco']), bins=10, edgecolor='black', density=True)
-ax.set(xlabel='Price', ylabel='Density', title='Distribution of Prices')
-st.pyplot(fig)
+# Filter data for prices greater than 0
+filtered_data = data[data['preco'] > 0]
+
+# Calculate the log-transformed prices
+log_prices = np.log(filtered_data['preco'])
+
+
+
+# Generate data for the normal distribution curve
+
+# Calculate the mean, median, and quantiles of log-transformed prices
+mean_log_price = np.mean(log_prices)
+
+std_log_price = np.std(log_prices)
+quantiles_log_price = np.percentile(log_prices, [1, 25, 50, 75, 99])
+
+x = np.linspace(quantiles_log_price[0], quantiles_log_price[-1], 100)
+y = stats.norm.pdf(x, mean_log_price, std_log_price)
+# Create the figure using Plotly graph objects
+fig = go.Figure()
+
+## Add the normal distribution curve
+fig.add_trace(go.Scatter(x=x, y=y, mode='lines', name='Curva Normal', line=dict(color='blue')))
+
+# Add vertical lines for mean and quantiles using go.Line
+fig.add_trace(go.Scatter(x=[mean_log_price, mean_log_price], y=[0, max(y)],
+                         mode='lines', name='Média', line=dict(color='red', dash='dash')))
+
+fig.add_trace(go.Scatter(x=[quantiles_log_price[0], quantiles_log_price[0]], y=[0, max(y)],
+                         mode='lines', name='1º Percentil', line=dict(color='green', dash='dash')))
+fig.add_trace(go.Scatter(x=[quantiles_log_price[1], quantiles_log_price[1]], y=[0, max(y)],
+                         mode='lines', name='25º Percentil', line=dict(color='blue', dash='dash')))
+fig.add_trace(go.Scatter(x=[quantiles_log_price[2], quantiles_log_price[2]], y=[0, max(y)],
+                         mode='lines', name='50º Percentil', line=dict(color='orange', dash='dash')))
+fig.add_trace(go.Scatter(x=[quantiles_log_price[3], quantiles_log_price[3]], y=[0, max(y)],
+                         mode='lines', name='75º Percentil', line=dict(color='pink', dash='dash')))
+fig.add_trace(go.Scatter(x=[quantiles_log_price[4], quantiles_log_price[4]], y=[0, max(y)],
+                         mode='lines', name='99º Percentil', line=dict(color='purple', dash='dash')))
+
+# Update layout and axis labels
+fig.update_layout(title='Distribuição de Preços transformados em Log',
+                  xaxis_title='Preço (Transformação Logarítmica)',
+                  yaxis_title='Densidade')
+
+
+# Display the plot
+st.plotly_chart(fig)
 
 #Chart8: normal distribution of areas, with a title and labels and description and making it interactive, make the bins 20
 st.subheader('Distribuição Normal de Áreas')

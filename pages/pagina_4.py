@@ -202,19 +202,20 @@ fig = go.Figure()
 ## Add the normal distribution curve
 fig.add_trace(go.Scatter(x=x, y=y, mode='lines', name='Curva Normal', line=dict(color='blue')))
 
-# Add vertical lines for mean and quantiles using go.Line
-fig.add_trace(go.Scatter(x=[mean_price, mean_price], y=[0, max(y)],
+# Add vertical lines for mean and quantiles using go.Line stopping on the normal distribution curve
+
+fig.add_trace(go.Scatter(x=[mean_price, mean_price], y=[0, stats.norm.pdf(mean_price,mean_price, std_price)],
                          mode='lines', name='Média', line=dict(color='red', dash='dash')))
 
-fig.add_trace(go.Scatter(x=[quantiles[0], quantiles[0]], y=[0, max(y)],
+fig.add_trace(go.Scatter(x=[quantiles[0], quantiles[0]], y=[0,stats.norm.pdf(quantiles[0], mean_price, std_price)],
                          mode='lines', name='1º Percentil', line=dict(color='green', dash='dash')))
-fig.add_trace(go.Scatter(x=[quantiles[1], quantiles[1]], y=[0, max(y)],
+fig.add_trace(go.Scatter(x=[quantiles[1], quantiles[1]], y=[0, stats.norm.pdf(quantiles[1], mean_price, std_price)],
                          mode='lines', name='25º Percentil', line=dict(color='blue', dash='dash')))
-fig.add_trace(go.Scatter(x=[quantiles[2], quantiles[2]], y=[0, max(y)],
+fig.add_trace(go.Scatter(x=[quantiles[2], quantiles[2]], y=[0,stats.norm.pdf(quantiles[2], mean_price, std_price)],
                          mode='lines', name='50º Percentil', line=dict(color='orange', dash='dash')))
-fig.add_trace(go.Scatter(x=[quantiles[3], quantiles[3]], y=[0, max(y)],
+fig.add_trace(go.Scatter(x=[quantiles[3], quantiles[3]], y=[0, stats.norm.pdf(quantiles[3], mean_price, std_price)],
                          mode='lines', name='75º Percentil', line=dict(color='pink', dash='dash')))
-fig.add_trace(go.Scatter(x=[quantiles[4], quantiles[4]], y=[0, max(y)],
+fig.add_trace(go.Scatter(x=[quantiles[4], quantiles[4]], y=[0, stats.norm.pdf(quantiles[4], mean_price, std_price)],
                          mode='lines', name='99º Percentil', line=dict(color='purple', dash='dash')))
 
 # Update layout and axis labels
@@ -277,18 +278,18 @@ fig = go.Figure()
 fig.add_trace(go.Scatter(x=x, y=y, mode='lines', name='Curva Normal', line=dict(color='blue')))
 
 # Add vertical lines for mean and quantiles using go.Line
-fig.add_trace(go.Scatter(x=[mean_log_price, mean_log_price], y=[0, max(y)],
+fig.add_trace(go.Scatter(x=[mean_log_price, mean_log_price], y=[0, stats.norm.pdf(mean_log_price, mean_log_price, std_log_price)],
                          mode='lines', name='Média', line=dict(color='red', dash='dash')))
 
-fig.add_trace(go.Scatter(x=[quantiles_log_price[0], quantiles_log_price[0]], y=[0, max(y)],
+fig.add_trace(go.Scatter(x=[quantiles_log_price[0], quantiles_log_price[0]], y=[0, stats.norm.pdf(quantiles_log_price[0], mean_log_price, std_log_price)],
                          mode='lines', name='1º Percentil', line=dict(color='green', dash='dash')))
-fig.add_trace(go.Scatter(x=[quantiles_log_price[1], quantiles_log_price[1]], y=[0, max(y)],
+fig.add_trace(go.Scatter(x=[quantiles_log_price[1], quantiles_log_price[1]], y=[0, stats.norm.pdf(quantiles_log_price[1], mean_log_price, std_log_price)],
                          mode='lines', name='25º Percentil', line=dict(color='blue', dash='dash')))
-fig.add_trace(go.Scatter(x=[quantiles_log_price[2], quantiles_log_price[2]], y=[0, max(y)],
+fig.add_trace(go.Scatter(x=[quantiles_log_price[2], quantiles_log_price[2]], y=[0, stats.norm.pdf(quantiles_log_price[2], mean_log_price, std_log_price)],
                          mode='lines', name='50º Percentil', line=dict(color='orange', dash='dash')))
-fig.add_trace(go.Scatter(x=[quantiles_log_price[3], quantiles_log_price[3]], y=[0, max(y)],
+fig.add_trace(go.Scatter(x=[quantiles_log_price[3], quantiles_log_price[3]], y=[0, stats.norm.pdf(quantiles_log_price[3], mean_log_price, std_log_price)],
                          mode='lines', name='75º Percentil', line=dict(color='pink', dash='dash')))
-fig.add_trace(go.Scatter(x=[quantiles_log_price[4], quantiles_log_price[4]], y=[0, max(y)],
+fig.add_trace(go.Scatter(x=[quantiles_log_price[4], quantiles_log_price[4]], y=[0, stats.norm.pdf(quantiles_log_price[4], mean_log_price, std_log_price)],
                          mode='lines', name='99º Percentil', line=dict(color='purple', dash='dash')))
 
 # Update layout and axis labels

@@ -61,7 +61,7 @@ def run():
     urls = ['https://www.imobiliariasjudas.com.br/venda-de-casa/', 'https://www.imobiliariasjudas.com.br/venda-de-apartamento/', 'https://www.imobiliariasjudas.com.br/venda-de-imovel-comercial/']
     full_property_info = []
     for url in urls:
-        for i in range(0, 20, 20):
+        for i in range(0, 200, 20):
 
             page_content = None
             old_page_content = None
@@ -106,7 +106,8 @@ def run():
         pass
     df['Imobiliaria'] = 'Sâo Judas'
     df['Data_scrape'] = pd.to_datetime('today').strftime('%Y-%m-%d')
-    df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape']]
+    df['last-seen'] = pd.to_datetime('today').strftime('%Y-%m-%d')
+    df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape', 'last-seen']]
     df.to_csv('imoveis.csv', index=False, sep=';', mode='a',  header=False)
     return 1
 

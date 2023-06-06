@@ -58,7 +58,7 @@ def extract_property_info(property_html):
 
 def run():
     full_property_info = []
-    for i in range(10):
+    for i in range(300):
         old_page_content = None
         try:
             page_content = get_page_content(
@@ -103,7 +103,8 @@ def run():
 
     df['Imobiliaria'] = 'Frias Neto'
     df['Data_scrape'] = pd.to_datetime('today').strftime('%Y-%m-%d')
-    df = df[['preco','area','quartos','vagas','banheiros','link','Imobiliaria','bairro','Data_scrape']]
+    df['last-seen'] = pd.to_datetime('today').strftime('%Y-%m-%d')
+    df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape', 'last-seen']]
     df.to_csv('imoveis.csv', index=False, sep=';', mode='a', header=False)
     return 1
 

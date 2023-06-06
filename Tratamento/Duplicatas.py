@@ -2,7 +2,7 @@ import csv
 import os
 
 from pydantic import BaseModel
-from datetime import datetime
+from datetime import datetime, date
 import pandas as pd
 
 # Define a Pydantic model for each row in the CSV file
@@ -38,10 +38,15 @@ def run(filename):
     # Convert the list of validated rows to a Pandas dataframe
     new_data = pd.DataFrame([row.dict() for row in valid_rows])
 
+    merged_data = new_data.copy()
+    merged_data.loc[merged_data.duplicated(
+        subset=['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro'],
+        keep=False), 'last-seen'] = date.today().strftime('%Y-%m-%d')
     #update the existing data with the new data with the link column as the key
-    merged_data = new_data.drop_duplicates(subset=['preco','area','quartos','vagas','banheiros','link','Imobiliaria','bairro'])
 
-    merged_data = merged_data[['preco','area','quartos','vagas','banheiros','link','Imobiliaria','bairro','Data_scrape']]
+    merged_data = merged_data.drop_duplicates(subset=['preco','area','quartos','vagas','banheiros','link','Imobiliaria','bairro'])
+
+    merged_data = merged_data[['preco','area','quartos','vagas','banheiros','link','Imobiliaria','bairro','Data_scrape', 'last-seen']]
 
     #remove all the records with area < 2
     merged_data = merged_data[merged_data['area'] > 2]
@@ -57,5 +62,4 @@ def run(filename):
     # Overwrite the original CSV file with the modified version
     os.replace('output.csv', filename)
 
-    
     

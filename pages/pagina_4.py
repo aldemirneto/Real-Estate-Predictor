@@ -9,7 +9,7 @@ data = pd.read_csv('imoveis.csv', sep=';')
 def treated_chart(data):
     # Calculate the IQR
     Q1 = np.percentile(data['preco'], 1)
-    Q3 = np.percentile(data['preco'], 99)
+    Q3 = np.percentile(data['preco'], 75)
     IQR = Q3 - Q1
 
     # Define the lower and upper bounds
@@ -40,7 +40,7 @@ def raw_chart(data):
 def treated_scatter(data):
     # Calculate the IQR for 'preco' column
     Q1 = data['preco'].quantile(0.1)
-    Q3 = data['preco'].quantile(0.99)
+    Q3 = data['preco'].quantile(0.75)
     IQR = Q3 - Q1
 
     # Define the lower and upper bounds

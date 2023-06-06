@@ -167,7 +167,7 @@ Ao passo que na versao tratada estamos pegando dados ate o 75 percentil, na vers
 
 
 # Botão para alternar entre as versões tratada e bruta do gráfico de barras
-version = st.sidebar.radio("Versão do Gráfico", ('Bruta', 'Tratada'))
+version = st.sidebar.radio("Versão do Gráfico", ('Tratada', 'Bruta'))
 if version == 'Bruta':
     st.plotly_chart(raw_chart(data), use_container_width=True)
     st.plotly_chart(raw_scatter(data), use_container_width=True)

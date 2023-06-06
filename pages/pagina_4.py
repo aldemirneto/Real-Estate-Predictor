@@ -158,27 +158,28 @@ st.sidebar.markdown("""
 
 Outliers são pontos de dados que se desviam significativamente do restante dos dados. Eles podem ter um impacto significativo na análise e visualização de dados, potencialmente distorcendo os resultados ou conduzindo a interpretações equivocadas. É importante considerar os outliers e lidar com eles de maneira adequada para garantir a integridade da análise.
 
-Nesta página, você pode explorar o impacto dos outliers na visualização de dados. Você pode escolher entre as versões tratada e bruta do gráfico para observar a diferença.
-
-A versão tratada aplica filtragem de outliers ou outras modificações nos dados para reduzir a influência dos outliers, enquanto a versão bruta mostra os dados como estão, sem nenhuma modificação.
+Nesta página, você pode explorar o impacto dos outliers na visualização de dados, Como? alterne entre as versões tratada e bruta para ver.
+ 
+Ao passo que na versao tratada estamos pegando dados ate o 75 percentil, na versao bruta estamos pegando todos os dados, o impacto é instantâneo!
 
 """)
 
+
+
 # Botão para alternar entre as versões tratada e bruta do gráfico de barras
 version = st.sidebar.radio("Versão do Gráfico", ('Bruta', 'Tratada'))
-if version == 'Tratada':
-    st.plotly_chart(treated_chart(data), use_container_width=True)
-    st.plotly_chart(treated_scatter(data), use_container_width=True)
-    st.plotly_chart(treated_bar_bedrooms(data), use_container_width=True)
-    st.plotly_chart(treated_bar_bathrooms(data), use_container_width=True)
-    st.plotly_chart(treated_bar_parking_spots(data), use_container_width=True)
-else:
+if version == 'Bruta':
     st.plotly_chart(raw_chart(data), use_container_width=True)
     st.plotly_chart(raw_scatter(data), use_container_width=True)
     st.plotly_chart(raw_bar_bedrooms(data), use_container_width=True)
     st.plotly_chart(raw_bar_bathrooms(data), use_container_width=True)
     st.plotly_chart(raw_bar_parking_spots(data), use_container_width=True)
-
+else:
+    st.plotly_chart(treated_chart(data), use_container_width=True)
+    st.plotly_chart(treated_scatter(data), use_container_width=True)
+    st.plotly_chart(treated_bar_bedrooms(data), use_container_width=True)
+    st.plotly_chart(treated_bar_bathrooms(data), use_container_width=True)
+    st.plotly_chart(treated_bar_parking_spots(data), use_container_width=True)
 
 
 

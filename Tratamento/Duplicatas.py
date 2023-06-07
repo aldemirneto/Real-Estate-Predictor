@@ -16,6 +16,8 @@ class imovel(BaseModel):
     Imobiliaria:str
     bairro:str
     Data_scrape: str
+    #last_seen is a str or None
+    last_seen: str = None
 
 def run(filename):
     # Read the existing CSV file and store it in a Pandas dataframe
@@ -26,7 +28,7 @@ def run(filename):
     for _, row in existing_data.iterrows():
         # Parse the row into a Pydantic model
         try:
-            imv = imovel(preco=float(row['preco']), area=float(row['area']), quartos=int(row['quartos']), bairro = row['bairro'] ,vagas=row['vagas'], banheiros=row['banheiros'], link=row['link'], Data_scrape=row['Data_scrape'], Imobiliaria = row['Imobiliaria'])
+            imv = imovel(preco=float(row['preco']), area=float(row['area']), quartos=int(row['quartos']), bairro = row['bairro'] ,vagas=row['vagas'], banheiros=row['banheiros'], link=row['link'], Data_scrape=row['Data_scrape'], Imobiliaria = row['Imobiliaria'], last_seen=row['last_seen'])
         except Exception as e:
             # If the row cannot be parsed, skip it
             print('Erro na conversão de tipos', e)
@@ -41,12 +43,12 @@ def run(filename):
     merged_data = new_data.copy()
     merged_data.loc[merged_data.duplicated(
         subset=['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro'],
-        keep=False), 'last-seen'] = date.today().strftime('%Y-%m-%d')
+        keep=False), 'last_seen'] = date.today().strftime('%Y-%m-%d')
     #update the existing data with the new data with the link column as the key
 
     merged_data = merged_data.drop_duplicates(subset=['preco','area','quartos','vagas','banheiros','link','Imobiliaria','bairro'])
 
-    merged_data = merged_data[['preco','area','quartos','vagas','banheiros','link','Imobiliaria','bairro','Data_scrape', 'last-seen']]
+    merged_data = merged_data[['preco','area','quartos','vagas','banheiros','link','Imobiliaria','bairro','Data_scrape','last_seen']]
 
     #remove all the records with area < 2
     merged_data = merged_data[merged_data['area'] > 2]

@@ -126,7 +126,7 @@ if st.button('Predict'):
     prediction = predict_prices(input_data)
     st.subheader('Preço Estimado')
     #write the price in thousands with 2 decimals
-    st.success(f"O Preço do seu imóvel é R${prediction[0]/1000:.3f} mil reais")
+    st.success(f"O Preço estimado do seu imóvel é R${prediction[0]/1000:.3f} mil reais")
 
 
 

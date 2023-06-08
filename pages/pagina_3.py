@@ -123,7 +123,7 @@ input_data = {
 # Make the prediction
 if st.button('Predict'):
     xgb_model = load_model()
-    explainer = shap.Explainer(xgb_model)
+    explainer = shap.KernelExplainer(xgb_model)
     shap_values = explainer(preprocess_input(input_data))
 
     # Create a summary plot

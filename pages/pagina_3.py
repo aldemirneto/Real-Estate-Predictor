@@ -6,7 +6,6 @@ import json
 import shap
 from xgboost import XGBRegressor
 
-
 st.sidebar.markdown("""
 # 🏠 Predição de Preço de Imóvel
 
@@ -42,33 +41,34 @@ Essa página foi criada para ajudar usuários a terem uma ideia aproximada do pr
 """)
 
 st.markdown(
-        """
-        <style>
-        
-        h1, h2{
-            color: #3b5998;
-        }
-        h2 {
-            margin-top: 40px;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+    """
+    <style>
+
+    h1, h2{
+        color: #3b5998;
+    }
+    h2 {
+        margin-top: 40px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 # Function to load the XGBoost model
 @st.cache_resource()
 def load_model():
     xgb_model = XGBRegressor()
-    xgb_model.load_model(st.secrets['model']['MODEL'])
+    xgb_model.load_model('Model/xgb_model.json')
     return xgb_model
 
 
 # Load the XGBoost model
-
+xgb_model = load_model()
 
 # Load the neighborhood encoding mapping
-with open(st.secrets['encoding']['NEIGHBORHOOD_ENCODING'], 'r') as f:
+with open('Model/neighborhood_encoding.json', 'r') as f:
     neighborhood_encoding = json.load(f)
 
 
@@ -86,15 +86,11 @@ def preprocess_input(data):
     return df
 
 
-
 # Function to predict prices using the loaded model
 def predict_prices(data):
-    xgb_model = load_model()
     input_data = preprocess_input(data)
     predictions = np.exp(xgb_model.predict(input_data))
     return predictions
-
-
 
 
 st.title('Real Estate Price Prediction')
@@ -122,14 +118,48 @@ input_data = {
 
 # Make the prediction
 if st.button('Predict'):
+    explainer = shap.Explainer(xgb_model)
+    shap_values = explainer(preprocess_input(input_data))
+
+    # Create a summary plot
 
     prediction = predict_prices(input_data)
+
     st.subheader('Preço Estimado')
-    #write the price in thousands with 2 decimals
-    st.success(f"O Preço estimado do seu imóvel é R${prediction[0]/1000:.3f} mil reais")
+    # write the price in thousands with 2 decimals
 
+    st.success(f"O Preço do seu imóvel é R${prediction[0] / 1000:.3f} mil reais")
+    st.markdown("---")
 
+    st.title("Interpretação Abrangente do Modelo")
 
+    st.subheader('Entendendo a Importância das Características')
+    st.write('''
+    Quando treinamos um modelo de IA, ele aprende a tomar decisões com base nas informações fornecidas por diferentes características ou variáveis. Essas características podem ser coisas como idade, gênero, renda, entre outras, dependendo do problema que o modelo está tentando resolver.
+    Ao analisar o modelo e interpretar suas previsões, podemos querer entender quais características têm mais influência nos resultados. Isso nos ajuda a entender como o modelo está tomando suas decisões e quais aspectos são mais importantes para o resultado final.
+    Uma maneira de visualizar essa importância é por meio de gráficos. O gráfico de enxame de abelhas, por exemplo, mostra a distribuição dos impactos de cada característica em diferentes exemplos. Cada ponto no gráfico representa um exemplo, e a posição ao longo do eixo vertical indica o impacto daquela característica na previsão. Quanto mais acima o ponto estiver, maior é o impacto positivo da característica. Por outro lado, quanto mais abaixo o ponto estiver, maior é o impacto negativo da característica.       
+    ''')
+
+    fig1, ax1 = plt.subplots()
+    shap.summary_plot(shap_values, show=False)
+    plt.xlabel('Valor SHAP (Impacto na Saída do Modelo)')
+    st.pyplot(fig1)
+
+    st.markdown("---")
+
+    st.subheader('Analisando as Contribuições Individuais das Características')
+    st.write(
+        ''' O gráfico em cascata, também conhecido como waterfall plot, mostra como cada característica contribui passo a passo para a previsão do modelo. Cada barra no gráfico representa a contribuição de uma característica específica. Se a barra estiver acima da linha de base, indica que essa característica está aumentando a previsão em relação ao valor base. Por outro lado, se a barra estiver abaixo da linha de base, indica que essa característica está diminuindo a previsão.    
+    ''')
+
+    fig2, ax2 = plt.subplots()
+    shap.waterfall_plot(shap_values[0], show=False)
+    plt.title('Contribuições Individuais das Características')
+    st.pyplot(fig2)
+
+    st.write('''
+    Essas visualizações e interpretações nos ajudam a entender quais características são mais relevantes para o modelo e como elas afetam as previsões. Com essa compreensão, podemos fazer ajustes ou melhorias no modelo, se necessário, para garantir que ele esteja levando em consideração as características mais importantes para a tomada de decisões.
+    ''')
 
 # Attribution
 st.markdown("---")

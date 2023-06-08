@@ -11,3 +11,4 @@ streamlit-aggrid
 matplotlib
 plotly
 scipy
+shap

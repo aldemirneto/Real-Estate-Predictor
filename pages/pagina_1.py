@@ -1,8 +1,9 @@
 from datetime import datetime, timedelta
 
-import streamlit as st
 import pandas as pd
+import streamlit as st
 
+from st_aggrid import AgGrid
 
 st.sidebar.markdown("""
 # 📊 
@@ -38,13 +39,12 @@ bairro = st.selectbox("Selecione o bairro", sorted([x.replace('_', ' ') for x in
 quartos = st.selectbox("Selecione o numero minimo de quartos",[i for i in range(10)])
 banheiros = st.selectbox("Selecione o numero minimo de banheiros",[i for i in range(10)])
 
-def cor_sinc():
 
+def cor_sinc(df):
     ultima_data_scrape = df['Data_scrape'].max()
-    #convert string to datetime.date
     ultima_data_scrape = datetime.strptime(ultima_data_scrape, '%Y-%m-%d').date()
-    today = datetime.today()
-    diff = today.date() - ultima_data_scrape
+    today = datetime.today().date()
+    diff = today - ultima_data_scrape
     if diff <= timedelta(days=1):
         return '#a8d8b9'  # green
     elif diff <= timedelta(days=3):
@@ -52,7 +52,7 @@ def cor_sinc():
     elif diff <= timedelta(days=5):
         return '#f9b4ab'  # red
 
-bg = cor_sinc()
+bg = cor_sinc(df)
 st.markdown(f"""<div style= 'background-color: rgba({int(bg[1:3], 16)}, {int(bg[3:5], 16)}, {int(bg[5:7], 16)}, 0.3);
                             backdrop-filter: blur(10px);
                             box-shadow: 0 8px 32px 0 rgba({int(bg[1:3], 16)}, {int(bg[3:5], 16)}, {int(bg[5:7], 16)}, 0);
@@ -65,5 +65,6 @@ st.markdown(f"""<div style= 'background-color: rgba({int(bg[1:3], 16)}, {int(bg[
             "</div>", unsafe_allow_html=True)
 
 resultados = df[(df['bairro'] == bairro.replace(' ', '_')) & (df['quartos'] >= quartos) & (df['banheiros'] >= banheiros)]
-resultados_sem_data_scrape = resultados.drop('Data_scrape', axis=1).reset_index(drop=True)
-st.write(resultados_sem_data_scrape[['preco', 'area', 'quartos', 'banheiros', 'vagas','link', 'Imobiliaria']])
+resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro'], axis=1).reset_index(drop=True)
+
+AgGrid(resultados_sem_data_scrape, height=300, width='100%', theme='alpine', allow_unsafe_jscode=True)

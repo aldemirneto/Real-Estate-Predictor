@@ -44,22 +44,8 @@ Essa página foi criada para ajudar usuários a terem uma ideia aproximada do pr
 st.markdown(
         """
         <style>
-        body {
-            color: #4f4f4f;
-            font-family: Arial, sans-serif;
-        }
-        .st-cu {
-            display: flex;
-            justify-content: space-between;
-        }
-        .st-cu > div {
-            flex-basis: 48%;
-            padding: 20px;
-            background-color: #f5f5f5;
-            border-radius: 5px;
-            box-shadow: 1px 1px 5px #ddd;
-        }
-        h1, h2 {
+        
+        h1, h2{
             color: #3b5998;
         }
         h2 {
@@ -103,7 +89,7 @@ def preprocess_input(data):
 
 # Function to predict prices using the loaded model
 def predict_prices(data):
-    print('Predicting prices...')
+
     input_data = preprocess_input(data)
     predictions = np.exp(xgb_model.predict(input_data))
     return predictions
@@ -144,7 +130,7 @@ if st.button('Predict'):
 
     prediction = predict_prices(input_data)
 
-    st.subheader('Price Prediction')
+    st.subheader('Preço Estimado')
     #write the price in thousands with 2 decimals
 
 

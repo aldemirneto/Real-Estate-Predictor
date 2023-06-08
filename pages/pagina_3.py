@@ -118,6 +118,8 @@ input_data = {
 
 # Make the prediction
 if st.button('Predict'):
+    xgb_model = XGBRegressor()
+    xgb_model.load_model('Model/xgb_model.json')
     explainer = shap.Explainer(xgb_model)
     shap_values = explainer(preprocess_input(input_data))
 

@@ -106,8 +106,8 @@ def run():
         pass
     df['Imobiliaria'] = 'Sâo Judas'
     df['Data_scrape'] = pd.to_datetime('today').strftime('%Y-%m-%d')
-    df['last-seen'] = pd.to_datetime('today').strftime('%Y-%m-%d')
-    df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape', 'last-seen']]
+    df['last_seen'] = pd.to_datetime('today').strftime('%Y-%m-%d')
+    df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape', 'last_seen']]
     df.to_csv('imoveis.csv', index=False, sep=';', mode='a',  header=False)
     return 1
 

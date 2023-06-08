@@ -508,4 +508,3 @@ def run():
     # Cria o arquivo JSON
     with open('piracicaba.json', 'w') as f:
         json.dump({"piracicaba": piracicaba, "bairros": bairros}, f)
-run()

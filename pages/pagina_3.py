@@ -124,7 +124,7 @@ input_data = {
 if st.button('Predict'):
     xgb_model = load_model()
 
-    explainer = shap.DeepExplainer(xgb_model)
+    explainer = shap.TreeExplainer(xgb_model, input_data)
     shap_values = explainer.shap_values(input_data)
 
     # Create a summary plot

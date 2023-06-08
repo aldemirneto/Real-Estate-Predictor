@@ -88,8 +88,8 @@ def preprocess_input(data):
 
 
 # Function to predict prices using the loaded model
-def predict_prices(xgb_model,data):
-
+def predict_prices(data):
+    xgb_model = load_model()
     input_data = preprocess_input(data)
     predictions = np.exp(xgb_model.predict(input_data))
     return predictions
@@ -123,13 +123,13 @@ input_data = {
 # Make the prediction
 if st.button('Predict'):
     xgb_model = load_model()
-    explainer = shap.KernelExplainer(xgb_model)
-    shap_values = explainer(preprocess_input(input_data))
+    explainer = shap.TreeExplainer(xgb_model)
+    shap_values = explainer.shap_values(preprocess_input(input_data))
 
     # Create a summary plot
 
 
-    prediction = predict_prices(xgb_model, input_data)
+    prediction = predict_prices(input_data)
 
     st.subheader('Preço Estimado')
     #write the price in thousands with 2 decimals

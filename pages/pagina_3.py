@@ -60,15 +60,15 @@ st.markdown(
 @st.cache_resource()
 def load_model():
     xgb_model = XGBRegressor()
-    xgb_model.load_model('Model/xgb_model.json')
+    xgb_model.load_model(st.secrets['model']['MODEL'])
     return xgb_model
 
 
 # Load the XGBoost model
-xgb_model = load_model()
+
 
 # Load the neighborhood encoding mapping
-with open('Model/neighborhood_encoding.json', 'r') as f:
+with open(st.secrets['encding']['NEIGHBORHOOD_ENCODING'], 'r') as f:
     neighborhood_encoding = json.load(f)
 
 
@@ -88,7 +88,7 @@ def preprocess_input(data):
 
 
 # Function to predict prices using the loaded model
-def predict_prices(data):
+def predict_prices(xgb_model,data):
 
     input_data = preprocess_input(data)
     predictions = np.exp(xgb_model.predict(input_data))
@@ -122,13 +122,14 @@ input_data = {
 
 # Make the prediction
 if st.button('Predict'):
+    xgb_model = load_model()
     explainer = shap.Explainer(xgb_model)
     shap_values = explainer(preprocess_input(input_data))
 
     # Create a summary plot
 
 
-    prediction = predict_prices(input_data)
+    prediction = predict_prices(xgb_model, input_data)
 
     st.subheader('Preço Estimado')
     #write the price in thousands with 2 decimals

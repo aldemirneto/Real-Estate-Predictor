@@ -149,7 +149,11 @@ if st.button('Predict'):
 
     st.subheader('Analisando as Contribuições Individuais das Características')
     st.write(
-        ''' O gráfico em cascata, também conhecido como waterfall plot, mostra como cada característica contribui passo a passo para a previsão do modelo. Cada barra no gráfico representa a contribuição de uma característica específica. Se a barra estiver acima da linha de base, indica que essa característica está aumentando a previsão em relação ao valor base. Por outro lado, se a barra estiver abaixo da linha de base, indica que essa característica está diminuindo a previsão.    
+        '''O gráfico de cascata, conhecido como waterfall plot, é uma visualização que descreve a contribuição individual de cada característica para a previsão do modelo. Cada barra no gráfico representa uma característica específica e mostra o peso atribuído a ela. As barras são divididas em segmentos positivos e negativos, indicando a direção do impacto na previsão. Segmentos positivos mostram que a característica contribui positivamente para a previsão, enquanto segmentos negativos indicam uma contribuição negativa.
+
+    Ao observar o gráfico de cascata, é possível identificar as características que mais influenciam a previsão do modelo, uma vez que as barras mais longas representam as maiores contribuições. Além disso, a ordem das características no gráfico também é relevante, pois a contribuição de uma característica pode ser afetada pelas características anteriores.
+
+    Essa visualização é útil para entender como cada característica contribui para as decisões do modelo, permitindo uma interpretação mais detalhada dos resultados. Com o gráfico de cascata, é possível analisar o impacto relativo de cada característica e identificar padrões ou insights importantes sobre a influência das características na previsão final do modelo.
     ''')
 
     fig2, ax2 = plt.subplots()

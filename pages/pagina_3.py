@@ -150,11 +150,17 @@ if st.button('Predict'):
     st.subheader('Analisando as Contribuições Individuais das Características')
     st.write(
         '''
-        No contexto da aplicação, o gráfico de cascata ajudar a entender como cada característica contribui para a previsão final. Cada valor no gráfico de cascata representaria a contribuição individual de uma característica específica para o preço do imóvel.
-        Por exemplo, se considerarmos a característica "bairro_encoded" com um valor de +0,43, isso indicaria que, em média, propriedades localizadas nesse bairro têm uma contribuição positiva de 0,43 unidades monetárias para o preço do imóvel. Isso significa que estar nesse bairro específico tende a aumentar o preço do imóvel em comparação com um valor de referência, como a média geral dos preços.
-        A magnitude dos valores seria uma indicação da força de influência de cada característica.
-        Por exemplo, um valor maior para "área" sugeriria que a dimensão do imóvel tem uma contribuição mais significativa para o preço em comparação com outras características.
+        No contexto da aplicação, o gráfico de cascata ajudar a entender como cada característica contribui para a previsão final. 
         
+        Cada valor no gráfico de cascata representaria a contribuição individual de uma característica específica para o preço do imóvel.
+        
+        Por exemplo, se considerarmos a característica "bairro_encoded" com um valor de +0,43, isso indicaria que, em média, propriedades localizadas nesse bairro têm uma contribuição positiva de 0,43 unidades monetárias para o preço do imóvel. 
+        
+        Isso significa que estar nesse bairro específico tende a aumentar o preço do imóvel em comparação com um valor de referência, como a média geral dos preços.
+        
+        A magnitude dos valores seria uma indicação da força de influência de cada característica.
+        
+        Por exemplo, um valor maior para "área" sugeriria que a dimensão do imóvel tem uma contribuição mais significativa para o preço em comparação com outras características.  
     ''')
 
     fig2, ax2 = plt.subplots()

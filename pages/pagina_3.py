@@ -158,9 +158,7 @@ if st.button('Predict'):
         
         Isso significa que estar nesse bairro específico tende a aumentar o preço do imóvel em comparação com um valor de referência, como a média geral dos preços.
         
-        A magnitude dos valores seria uma indicação da força de influência de cada característica.
-        
-        Por exemplo, um valor maior para "área" sugeriria que a dimensão do imóvel tem uma contribuição mais significativa para o preço em comparação com outras características.  
+        A magnitude dos valores seria uma indicação da força de influência de cada característica.  
     ''')
 
     fig2, ax2 = plt.subplots()

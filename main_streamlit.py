@@ -15,7 +15,8 @@ Webscraping é uma técnica utilizada para coletar dados na web de forma automat
 ## Algoritmos de Classificação
 Imagine agora que você é um corretor de imóveis e precisa avaliar o preço de mercado de uma casa. Você sabe que existem diversos fatores que impactam o valor de um imóvel, como localização, tamanho, idade e comodidades. Mas como saber qual é o valor justo para aquele imóvel?
 
-Nesse cenário, entram em cena os algoritmos de classificação, como o utilizado no Preditor de Preço de Imóveis em Piracicaba. Através da análise de diversos fatores que impactam o preço de mercado dos imóveis, como localização, tipo de imóvel, tamanho, idade e comodidades, os algoritmos de classificação são capazes de prever o preço de mercado dos imóveis com uma boa precisão.
+Nesse cenário, entram em cena os algoritmos de classificação, como o utilizado no Preditor de Preço de Imóveis em Piracicaba. 
+Através da análise de diversos fatores que impactam o preço de mercado dos imóveis, como localização, tipo de imóvel, tamanho, idade e comodidades, os algoritmos de classificação são capazes de prever o preço de mercado dos imóveis com uma boa precisão.
 
 O seu trabalho no Preditor de Preço de Imóveis em Piracicaba é exatamente esse: utilizar esses algoritmos para predizer o preço dos imóveis de acordo com suas características. Com base em uma base de dados completa e atualizada sobre o mercado imobiliário na região de Piracicaba, o Preditor oferece previsões precisas sobre o preço de mercado dos imóveis.
 

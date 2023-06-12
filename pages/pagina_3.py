@@ -89,7 +89,7 @@ def preprocess_input(data):
 # Function to predict prices using the loaded model
 def predict_prices(data):
     input_data = preprocess_input(data)
-    predictions = np.exp(xgb_model.predict(input_data))
+    predictions = xgb_model.predict(input_data)
     return predictions
 
 
@@ -135,30 +135,22 @@ if st.button('Predict'):
 
     st.subheader('Entendendo a Importância das Características')
     st.write('''
-    Quando treinamos um modelo de IA, ele aprende a tomar decisões com base nas informações fornecidas por diferentes características ou variáveis. Essas características podem ser coisas como idade, gênero, renda, entre outras, dependendo do problema que o modelo está tentando resolver.
-    Ao analisar o modelo e interpretar suas previsões, podemos querer entender quais características têm mais influência nos resultados. Isso nos ajuda a entender como o modelo está tomando suas decisões e quais aspectos são mais importantes para o resultado final.
-    Uma maneira de visualizar essa importância é por meio de gráficos. O gráfico de enxame de abelhas, por exemplo, mostra a distribuição dos impactos de cada característica em diferentes exemplos. Cada ponto no gráfico representa um exemplo, e a posição ao longo do eixo vertical indica o impacto daquela característica na previsão. Quanto mais acima o ponto estiver, maior é o impacto positivo da característica. Por outro lado, quanto mais abaixo o ponto estiver, maior é o impacto negativo da característica.       
-    ''')
+    Quando treinamos um modelo de IA, ele aprende a tomar decisões com base nas informações fornecidas por diferentes características ou variáveis, como idade, gênero, renda, entre outras, dependendo do problema que o modelo está tentando resolver.
+    
+    Ao analisar o modelo e interpretar suas previsões, podemos querer entender quais características têm mais influência nos resultados.
+     
+    Isso nos ajuda a entender como o modelo está tomando suas decisões e quais aspectos são mais importantes para o resultado final.''')
 
-    fig1, ax1 = plt.subplots()
-    shap.summary_plot(shap_values, show=False)
-    plt.xlabel('Valor SHAP (Impacto na Saída do Modelo)')
-    st.pyplot(fig1)
-
-    st.markdown("---")
-
-    st.subheader('Analisando as Contribuições Individuais das Características')
+    st.write('---')
     st.write(
         '''
-        No contexto da aplicação, o gráfico de cascata ajudar a entender como cada característica contribui para a previsão final. 
+        A seguir, podemos ver um gráfico que mostra a importância das características para o modelo.
         
-        Cada valor no gráfico de cascata representaria a contribuição individual de uma característica específica para o preço do imóvel.
+        No contexto da aplicação, este grafico ajuda a entender como cada característica contribui para a previsão final, tendo em cada valor no gráfico  a contribuição individual de uma característica específica para o preço do imóvel.
         
-        Por exemplo, se considerarmos a característica "bairro_encoded" com um valor de +0,43, isso indicaria que, em média, propriedades localizadas nesse bairro têm uma contribuição positiva de 0,43 unidades monetárias para o preço do imóvel. 
+        Por exemplo, se considerarmos a característica "bairro_encoded" com um valor de +5571.17, isso indicaria que, em média, propriedades localizadas nesse bairro têm uma contribuição positiva de 5571.17 reais para o preço do imóvel. 
         
-        Isso significa que estar nesse bairro específico tende a aumentar o preço do imóvel em comparação com um valor de referência, como a média geral dos preços.
-        
-        A magnitude dos valores seria uma indicação da força de influência de cada característica.  
+        Isso significa que estar nesse bairro específico tende a aumentar o preço do imóvel em comparação com um valor de referência, como a média geral dos preços.  
     ''')
 
     fig2, ax2 = plt.subplots()

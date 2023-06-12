@@ -254,11 +254,11 @@ Por exemplo, ao aplicar o tratamento logarítmico a uma distribuição assimétr
 Em resumo, ao se deparar com uma distribuição assimétrica, o tratamento logarítmico pode ser uma técnica útil para transformar a distribuição e melhorar a interpretação e análise dos dados, especialmente quando há presença de valores extremos.
 
 ''')
-# Filter data for prices greater than 0
-filtered_data = data[data['preco'] > 0]
+# Filter data for prices greater than 0 and between the 25 and 75 percentiles
+filtered_data = data[(data['preco'] > 0) & (data['preco'] >= data['preco'].quantile(0.1)) & (data['preco'] <= data['preco'].quantile(0.75))]
 
 # Calculate the log-transformed prices
-log_prices = np.log(filtered_data['preco'])
+log_prices = filtered_data['preco']
 
 
 
@@ -271,6 +271,7 @@ std_log_price = np.std(log_prices)
 quantiles_log_price = np.percentile(log_prices, [1, 25, 50, 75, 99])
 
 x = np.linspace(quantiles_log_price[0], quantiles_log_price[-1], 100)
+# Calculate the normal distribution curve with the mean and standard deviation of the log-transformed prices, and the y being the count of the prices
 y = stats.norm.pdf(x, mean_log_price, std_log_price)
 # Create the figure using Plotly graph objects
 fig = go.Figure()

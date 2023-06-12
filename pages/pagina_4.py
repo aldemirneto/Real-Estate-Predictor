@@ -4,8 +4,11 @@ import streamlit as st
 import pandas as pd
 
 import plotly.graph_objects as go
+
 # Read the dataset
 data = pd.read_csv('imoveis.csv', sep=';')
+
+
 def treated_chart(data):
     # Calculate the IQR
     Q1 = np.percentile(data['preco'], 1)
@@ -24,6 +27,7 @@ def treated_chart(data):
     fig.update_layout(title_text='Histograma de Preços', xaxis_title_text='Preço', yaxis_title_text='Contagem')
 
     return fig
+
 
 # Function to create the raw version of the chart
 def raw_chart(data):
@@ -58,6 +62,7 @@ def treated_scatter(data):
 
     return fig
 
+
 # Function to create the raw version of the scatter plot
 def raw_scatter(data):
     # Create the raw scatter plot
@@ -69,8 +74,6 @@ def raw_scatter(data):
     return fig
 
 
-
-
 # Chart 3: Bar Chart: Number of Properties by Number of Rooms, with a button to take the outliars out of the dataset
 
 def treated_bar_bedrooms(data):
@@ -79,12 +82,14 @@ def treated_bar_bedrooms(data):
     filtered_data = data[data['quartos'] < data['quartos'].quantile(0.99)]
 
     # Create the treated bar chart
-    fig = go.Figure(data=[go.Bar(x=sorted(filtered_data['quartos'].unique().tolist()), y=filtered_data['quartos'].value_counts())])
+    fig = go.Figure(
+        data=[go.Bar(x=sorted(filtered_data['quartos'].unique().tolist()), y=filtered_data['quartos'].value_counts())])
     fig.update_layout(title='Número de Propriedades por Número de Quartos',
                       xaxis_title='Número de Quartos',
                       yaxis_title='Número de Propriedades')
 
     return fig
+
 
 # Function to create the raw version of the bar chart
 def raw_bar_bedrooms(data):
@@ -104,14 +109,15 @@ def treated_bar_bathrooms(data):
 
     filtered_data = data[data['banheiros'] < data['banheiros'].quantile(0.99)]
 
-
     # Create the treated bar chart
-    fig = go.Figure(data=[go.Bar(x=sorted(filtered_data['banheiros'].unique().tolist()), y=filtered_data['banheiros'].value_counts())])
+    fig = go.Figure(data=[
+        go.Bar(x=sorted(filtered_data['banheiros'].unique().tolist()), y=filtered_data['banheiros'].value_counts())])
     fig.update_layout(title='Número de Propriedades por Número de Banheiros ',
                       xaxis_title='Número de Banheiros',
                       yaxis_title='Número de Propriedades')
 
     return fig
+
 
 # Function to create the raw version of the bar chart for number of bathrooms
 def raw_bar_bathrooms(data):
@@ -124,7 +130,6 @@ def raw_bar_bathrooms(data):
     return fig
 
 
-
 # Chart 5: Bar Chart: Number of Properties by Number of Parking Spaces adding title and labels and description and making it interactive
 
 def treated_bar_parking_spots(data):
@@ -132,14 +137,15 @@ def treated_bar_parking_spots(data):
 
     filtered_data = data[data['vagas'] < data['vagas'].quantile(0.99)]
 
-
     # Create the treated bar chart
-    fig = go.Figure(data=[go.Bar(x=sorted(filtered_data['vagas'].unique().tolist()), y=filtered_data['vagas'].value_counts())])
+    fig = go.Figure(
+        data=[go.Bar(x=sorted(filtered_data['vagas'].unique().tolist()), y=filtered_data['vagas'].value_counts())])
     fig.update_layout(title='Número de Propriedades por Número de Vagas ',
                       xaxis_title='Número de Banheiros',
                       yaxis_title='Número de Propriedades')
 
     return fig
+
 
 # Function to create the raw version of the bar chart for number of bathrooms
 def raw_bar_parking_spots(data):
@@ -151,6 +157,7 @@ def raw_bar_parking_spots(data):
 
     return fig
 
+
 st.markdown('## **Análise Exploratória de Dados**')
 st.sidebar.markdown("""
 #  🔍 Análise de Dados Imobiliários
@@ -159,12 +166,10 @@ st.sidebar.markdown("""
 Outliers são pontos de dados que se desviam significativamente do restante dos dados. Eles podem ter um impacto significativo na análise e visualização de dados, potencialmente distorcendo os resultados ou conduzindo a interpretações equivocadas. É importante considerar os outliers e lidar com eles de maneira adequada para garantir a integridade da análise.
 
 Nesta página, você pode explorar o impacto dos outliers na visualização de dados, Como? alterne entre as versões tratada e bruta para ver.
- 
+
 Ao passo que na versao tratada estamos pegando dados ate o 75 percentil, na versao bruta estamos pegando todos os dados, o impacto é instantâneo!
 
 """)
-
-
 
 # Botão para alternar entre as versões tratada e bruta do gráfico de barras
 version = st.sidebar.radio("Versão do Gráfico", ('Tratada', 'Bruta'))
@@ -181,8 +186,6 @@ else:
     st.plotly_chart(treated_bar_bathrooms(data), use_container_width=True)
     st.plotly_chart(treated_bar_parking_spots(data), use_container_width=True)
 
-
-
 # Calculate mean and median
 mean_price = np.mean(data['preco'])
 median_price = np.median(data['preco'])
@@ -190,10 +193,10 @@ std_price = np.std(data['preco'])
 # Chart 6: Normal Distribution of Prices displaying the quartiles
 # Calculate mean, median, and quantiles
 
-quantiles = np.percentile(data['preco'], [1,25, 50, 75, 99])
+quantiles = np.percentile(data['preco'], [1, 25, 50, 75, 99])
 
 # Chart 6: Normal Distribution of Prices
-#the linspace should be between the 1% quantile and the 99% quantile
+# the linspace should be between the 1% quantile and the 99% quantile
 
 x = np.linspace(quantiles[0], quantiles[-1], 100)
 y = stats.norm.pdf(x, mean_price, std_price)
@@ -205,14 +208,14 @@ fig.add_trace(go.Scatter(x=x, y=y, mode='lines', name='Curva Normal', line=dict(
 
 # Add vertical lines for mean and quantiles using go.Line stopping on the normal distribution curve
 
-fig.add_trace(go.Scatter(x=[mean_price, mean_price], y=[0, stats.norm.pdf(mean_price,mean_price, std_price)],
+fig.add_trace(go.Scatter(x=[mean_price, mean_price], y=[0, stats.norm.pdf(mean_price, mean_price, std_price)],
                          mode='lines', name='Média', line=dict(color='red', dash='dash')))
 
-fig.add_trace(go.Scatter(x=[quantiles[0], quantiles[0]], y=[0,stats.norm.pdf(quantiles[0], mean_price, std_price)],
+fig.add_trace(go.Scatter(x=[quantiles[0], quantiles[0]], y=[0, stats.norm.pdf(quantiles[0], mean_price, std_price)],
                          mode='lines', name='1º Percentil', line=dict(color='green', dash='dash')))
 fig.add_trace(go.Scatter(x=[quantiles[1], quantiles[1]], y=[0, stats.norm.pdf(quantiles[1], mean_price, std_price)],
                          mode='lines', name='25º Percentil', line=dict(color='blue', dash='dash')))
-fig.add_trace(go.Scatter(x=[quantiles[2], quantiles[2]], y=[0,stats.norm.pdf(quantiles[2], mean_price, std_price)],
+fig.add_trace(go.Scatter(x=[quantiles[2], quantiles[2]], y=[0, stats.norm.pdf(quantiles[2], mean_price, std_price)],
                          mode='lines', name='50º Percentil', line=dict(color='orange', dash='dash')))
 fig.add_trace(go.Scatter(x=[quantiles[3], quantiles[3]], y=[0, stats.norm.pdf(quantiles[3], mean_price, std_price)],
                          mode='lines', name='75º Percentil', line=dict(color='pink', dash='dash')))
@@ -226,7 +229,6 @@ fig.update_layout(title='Distribuição de Preços',
 
 # Display the plot
 st.plotly_chart(fig)
-
 
 st.markdown('''
 # Distribuição Assimétrica e Tratamento Logarítmico
@@ -255,12 +257,11 @@ Em resumo, ao se deparar com uma distribuição assimétrica, o tratamento logar
 
 ''')
 # Filter data for prices greater than 0 and between the 25 and 75 percentiles
-filtered_data = data[(data['preco'] > 0) & (data['preco'] >= data['preco'].quantile(0.1)) & (data['preco'] <= data['preco'].quantile(0.75))]
+filtered_data = data[(data['preco'] > 0) & (data['preco'] >= data['preco'].quantile(0.1)) & (
+            data['preco'] <= data['preco'].quantile(0.75))]
 
 # Calculate the log-transformed prices
 log_prices = filtered_data['preco']
-
-
 
 # Generate data for the normal distribution curve
 
@@ -280,25 +281,30 @@ fig = go.Figure()
 fig.add_trace(go.Scatter(x=x, y=y, mode='lines', name='Curva Normal', line=dict(color='blue')))
 
 # Add vertical lines for mean and quantiles using go.Line
-fig.add_trace(go.Scatter(x=[mean_log_price, mean_log_price], y=[0, stats.norm.pdf(mean_log_price, mean_log_price, std_log_price)],
-                         mode='lines', name='Média', line=dict(color='red', dash='dash')))
+fig.add_trace(
+    go.Scatter(x=[mean_log_price, mean_log_price], y=[0, stats.norm.pdf(mean_log_price, mean_log_price, std_log_price)],
+               mode='lines', name='Média', line=dict(color='red', dash='dash')))
 
-fig.add_trace(go.Scatter(x=[quantiles_log_price[0], quantiles_log_price[0]], y=[0, stats.norm.pdf(quantiles_log_price[0], mean_log_price, std_log_price)],
+fig.add_trace(go.Scatter(x=[quantiles_log_price[0], quantiles_log_price[0]],
+                         y=[0, stats.norm.pdf(quantiles_log_price[0], mean_log_price, std_log_price)],
                          mode='lines', name='1º Percentil', line=dict(color='green', dash='dash')))
-fig.add_trace(go.Scatter(x=[quantiles_log_price[1], quantiles_log_price[1]], y=[0, stats.norm.pdf(quantiles_log_price[1], mean_log_price, std_log_price)],
+fig.add_trace(go.Scatter(x=[quantiles_log_price[1], quantiles_log_price[1]],
+                         y=[0, stats.norm.pdf(quantiles_log_price[1], mean_log_price, std_log_price)],
                          mode='lines', name='25º Percentil', line=dict(color='blue', dash='dash')))
-fig.add_trace(go.Scatter(x=[quantiles_log_price[2], quantiles_log_price[2]], y=[0, stats.norm.pdf(quantiles_log_price[2], mean_log_price, std_log_price)],
+fig.add_trace(go.Scatter(x=[quantiles_log_price[2], quantiles_log_price[2]],
+                         y=[0, stats.norm.pdf(quantiles_log_price[2], mean_log_price, std_log_price)],
                          mode='lines', name='50º Percentil', line=dict(color='orange', dash='dash')))
-fig.add_trace(go.Scatter(x=[quantiles_log_price[3], quantiles_log_price[3]], y=[0, stats.norm.pdf(quantiles_log_price[3], mean_log_price, std_log_price)],
+fig.add_trace(go.Scatter(x=[quantiles_log_price[3], quantiles_log_price[3]],
+                         y=[0, stats.norm.pdf(quantiles_log_price[3], mean_log_price, std_log_price)],
                          mode='lines', name='75º Percentil', line=dict(color='pink', dash='dash')))
-fig.add_trace(go.Scatter(x=[quantiles_log_price[4], quantiles_log_price[4]], y=[0, stats.norm.pdf(quantiles_log_price[4], mean_log_price, std_log_price)],
+fig.add_trace(go.Scatter(x=[quantiles_log_price[4], quantiles_log_price[4]],
+                         y=[0, stats.norm.pdf(quantiles_log_price[4], mean_log_price, std_log_price)],
                          mode='lines', name='99º Percentil', line=dict(color='purple', dash='dash')))
 
 # Update layout and axis labels
 fig.update_layout(title='Distribuição de Preços transformados em Log',
                   xaxis_title='Preço (Transformação Logarítmica)',
                   yaxis_title='Densidade')
-
 
 # Display the plot
 st.plotly_chart(fig)

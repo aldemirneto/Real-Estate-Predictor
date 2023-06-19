@@ -1,4 +1,6 @@
 import time
+from math import ceil
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -58,22 +60,28 @@ def extract_property_info(property_html, link):
 
 
 
+def set_breakpoint(url: str):
+    content = get_page_content(f'{url}1')
+    bp = content.find('span', class_='h-money')
+    #slice the content untill the first '\'
+    bp = bp.text.split('/')[0]
+
+
+    return ceil(int(bp.replace('.','').strip())/12)
 
 
 
 def run():
     urls = ['https://www.duoimoveis.com.br/imoveis/a-venda/piracicaba?pagina=']
     full_property_info = []
+
     for url in urls:
-        for i in range(1, 300):
-            time.sleep(2)
+        break_point = set_breakpoint(url)
+        for i in range(1, break_point+1):
             page_content = None
-            old_page_content = None
             try:
                 page_content = get_page_content(
                     f'{url}{i}')
-                if i > 1:
-                    old_page_content = get_page_content(f'{url}{i-1}')
 
             except Exception as e:
                 print(e)
@@ -81,12 +89,6 @@ def run():
 
 
             property_listings = page_content.find_all('a', class_='card-with-buttons borderHover')
-            if old_page_content:
-                old_property_listings = old_page_content.find_all('a', class_='card-with-buttons borderHover')
-                if property_listings == old_property_listings:
-                    print('fim de scrape')
-                    break
-
             for property_listing in property_listings:
                     link = property_listing['href']
                     property = property_listing.find('div', class_='card-with-buttons__footer')
@@ -115,5 +117,3 @@ def run():
     df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape', 'last_seen']]
     df.to_csv('imoveis.csv', index=False, sep=';', mode='a',  header=False)
     return 1
-
-

@@ -1,3 +1,5 @@
+from math import ceil
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -84,18 +86,20 @@ def extract_property_info(property_html):
         'link': link
     }
 
-
+def set_breakpoint(url:str):
+    content = get_page_content(url)
+    bp=content.find('div',class_='total').text
+    #replace untill the first letter is found
+    first_non_digit_index = next((i for i, char in enumerate(bp) if not char.isdigit()), None)
+    bp = bp[:first_non_digit_index]
+    return ceil(int(bp)/12)
 def run():
     full_property_info = []
-
-    for i in range(300):
-        page_content = None
-        old_page_content = None
+    break_point = set_breakpoint(f'https://www.imobiliariajunqueira.com.br/comprar/todas?page=0')
+    for i in range(break_point):
         try:
             page_content = get_page_content(
                 f'https://www.imobiliariajunqueira.com.br/comprar/todas?page={i}')
-            if i > 1:
-                old_page_content = get_page_content(f'https://www.imobiliariajunqueira.com.br/comprar/todas?page={i-1}')
 
         except:
             print('pagina zoada')
@@ -103,12 +107,6 @@ def run():
 
 
         property_listings = page_content.find_all('div', class_='item-wrap')
-        if old_page_content:
-            old_property_listings = old_page_content.find_all('div', class_='item-wrap')
-            if property_listings == old_property_listings:
-                print('fim de scrape')
-                break
-
         for property_listing in property_listings:
                 property_info = extract_property_info(property_listing)
                 full_property_info.append(property_info)
@@ -138,3 +136,4 @@ def run():
     df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape', 'last_seen']]
     df.to_csv('imoveis.csv', index=False, sep=';', mode='a', header = False)
     return 1
+

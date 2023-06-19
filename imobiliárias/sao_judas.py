@@ -53,6 +53,13 @@ def extract_property_info(property_html, link):
 
 
 
+def set_breakpoint(url: str):
+    content = get_page_content(url)
+    breakpoint = content.find('li', class_='paginate_button')
+    x = breakpoint.find('a')['href']
+    x = x.split('/')[-1]
+    return int(x)
+
 
 
 
@@ -61,7 +68,8 @@ def run():
     urls = ['https://www.imobiliariasjudas.com.br/venda-de-casa/', 'https://www.imobiliariasjudas.com.br/venda-de-apartamento/', 'https://www.imobiliariasjudas.com.br/venda-de-imovel-comercial/']
     full_property_info = []
     for url in urls:
-        for i in range(0, 200, 20):
+        break_point = set_breakpoint(url)
+        for i in range(0, break_point, 20):
 
             page_content = None
             old_page_content = None
@@ -110,5 +118,3 @@ def run():
     df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape', 'last_seen']]
     df.to_csv('imoveis.csv', index=False, sep=';', mode='a',  header=False)
     return 1
-
-

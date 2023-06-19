@@ -10,6 +10,13 @@ def get_page_content(request_url):
     # retorna o conteúdo da página em html
     return BeautifulSoup(page_response.content, "html.parser")
 
+def set_breakpoint(url:str):
+    bp = get_page_content(url)
+    content = bp.find('ul',class_="pagination" ).find_all('a', {'data-page': True})
+    return int(content[-1].text.strip())
+
+
+
 
 def extract_property_info(property_html):
 
@@ -58,24 +65,16 @@ def extract_property_info(property_html):
 
 def run():
     full_property_info = []
-    for i in range(300):
-        old_page_content = None
+    breakpoint = set_breakpoint(f'https://www.friasneto.com.br/imoveis/todos-os-imoveis/comprar-ou-alugar/piracicaba/?locacao_venda=V&id_cidade=2&pag=0)')
+    for i in range(breakpoint+1):
         try:
             page_content = get_page_content(
                 f'https://www.friasneto.com.br/imoveis/todos-os-imoveis/comprar-ou-alugar/piracicaba/?locacao_venda=V&id_cidade=2&pag={i}')
 
-            if i > 1:
-                old_page_content = get_page_content(
-                f'https://www.friasneto.com.br/imoveis/todos-os-imoveis/comprar-ou-alugar/piracicaba/?locacao_venda=V&id_cidade=2&pag={i-1}')
         except:
             print('fim de scrape')
             break
         property_listings = page_content.find_all('div', class_='col-xs-12 col-sm-4 col-md-3 container-enterprises-item')
-        if old_page_content:
-            old_property_listings = old_page_content.find_all('div', class_='col-xs-12 col-sm-4 col-md-3 container-enterprises-item')
-            if property_listings == old_property_listings:
-                print('fim de scrape por repetição')
-                break
         for property_listing in property_listings:
             property_info = extract_property_info(property_listing)
             full_property_info.append(property_info)

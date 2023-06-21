@@ -1,3 +1,6 @@
+import concurrent.futures
+import time
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -8,48 +11,43 @@ def get_page_content(request_url):
     return BeautifulSoup(page_response.content, "html.parser")
 
 
-def extract_property_info(property_html, link):
-    quartos = None
-    vagas = None
-    banheiros = None
-    area = None
-    price = None
-    location = 'Sem Bairro'
-    info_list = property_html.find_all('ul')
-    for info in info_list:
-        info = info.find_all('p', class_='infos')
-        for i in info:
-            #if the string 'Quartos' is in the element, i want to get the span element that is next to it
-            if 'Quartos' in i.text:
-                quartos = i.find_next('span').text
-                quartos = quartos.replace(' ', '') if quartos else None
-            elif 'Banheiros' in i.text:
-                banheiros = i.find_next('span').text
-                banheiros = banheiros.replace(' ', '') if banheiros else None
-            elif 'Garagens' in i.text:
-                vagas = i.find_next('span').text
-                vagas = vagas.replace(' ', '') if vagas else None
-            elif 'Área útil' in i.text:
-                area = i.find_next('span').text
-                area = area.replace('m2', '').replace(' ', '') if area else None
-            elif 'Área Total' in i.text:
-                area = i.find_next('span').text
-                area = area.replace('m2', '').replace(' ', '') if area else None
-            elif 'Preço' in i.text:
-                price = i.find_next('span').text
-                price = float(price.replace('R$', '').replace('.', '').replace(',', '.').replace(' ', '').replace('\n', '').replace(',00', '')) if price else None
-            elif 'Bairro' in i.text:
-                location = i.find_next('span').text.strip()
+import re
 
-    return{
-            'preco': price,
-            'area': area,
-            'quartos': quartos,
-            'vagas': vagas,
-            'banheiros': banheiros,
-            'bairro': location,
-            'link': link
-        }
+def extract_property_info(link):
+
+    info_list = get_page_content(link).find_all('ul')
+    property_info = {
+        'preco': None,
+        'area': None,
+        'quartos': None,
+        'vagas': None,
+        'banheiros': None,
+        'bairro': 'Sem Bairro',
+        'link': link
+    }
+
+    for info in info_list:
+        for i in info.find_all('p', class_='infos'):
+            text = i.text
+            value = i.find_next('span').text.strip()
+
+            if 'Quartos' in text:
+                property_info['quartos'] = value.replace(' ', '') if value else None
+            elif 'Banheiros' in text:
+                property_info['banheiros'] = value.replace(' ', '') if value else None
+            elif 'Garagens' in text:
+                property_info['vagas'] = value.replace(' ', '') if value else None
+            elif 'Área' in text:
+                area = re.search(r"[\d.,]+", value)
+                property_info['area'] = area.group() if area else None
+            elif 'Preço' in text:
+                price = re.search(r"[\d.,]+", value)
+                property_info['preco'] = float(price.group().replace('.', '').replace(',', '.')) if price else None
+            elif 'Bairro' in text:
+                property_info['bairro'] = value
+
+    return property_info
+
 
 
 
@@ -67,36 +65,22 @@ def set_breakpoint(url: str):
 def run():
     urls = ['https://www.imobiliariasjudas.com.br/venda-de-casa/', 'https://www.imobiliariasjudas.com.br/venda-de-apartamento/', 'https://www.imobiliariasjudas.com.br/venda-de-imovel-comercial/']
     full_property_info = []
+    raw_property_info = []
     for url in urls:
         break_point = set_breakpoint(url)
-        for i in range(0, break_point, 20):
 
-            page_content = None
-            old_page_content = None
-            try:
-                page_content = get_page_content(
-                    f'{url}{i}')
-                if i > 1:
-                    old_page_content = get_page_content(f'{url}{i-1}')
+        # We can use a with statement to ensure threads are cleaned up promptly
+        with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+            # Start the load operations and mark each future with its URL
+            future_to_url = {executor.submit(get_page_content, f'{url}{i}'): i for i in range(0,break_point,20)}
+            for future in concurrent.futures.as_completed(future_to_url):
+                try:
+                    raw_property_info.append(future.result().find_all('p', class_='readmore text-right'))
+                except Exception as exc:
+                    print('%r generated an exception: %s' % (url, exc))
 
-            except:
-                print('fim de scrape')
-
-
-            property_listings = page_content.find_all('p', class_='readmore text-right')
-            if old_page_content:
-                old_property_listings = old_page_content.find_all('p', class_='readmore text-right')
-                if property_listings == old_property_listings:
-                    print('fim de scrape')
-                    break
-
-            for property_listing in property_listings:
-                    property = get_page_content(property_listing.find('a')['href'])
-                    property = property.find('div', class_='prop_addinfo')
-                    property_info = extract_property_info(property, property_listing.find('a')['href'])
-                    full_property_info.append(property_info)
-
-        #now i do a dataframe with the full_property_info, and a column with the name 'Junqueira' and the date of today
+    raw_property_info = [item for sublist in raw_property_info for item in sublist]
+    full_property_info = [extract_property_info(property.find('a')['href']) for property in raw_property_info]
     df = pd.DataFrame(full_property_info)
     #dropa linhas com a coluna price vazia
     df = df.dropna(subset=['preco'])
@@ -118,3 +102,4 @@ def run():
     df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape', 'last_seen']]
     df.to_csv('imoveis.csv', index=False, sep=';', mode='a',  header=False)
     return 1
+

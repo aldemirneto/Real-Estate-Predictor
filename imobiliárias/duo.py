@@ -1,3 +1,4 @@
+import concurrent.futures
 import time
 from math import ceil
 
@@ -74,28 +75,21 @@ def set_breakpoint(url: str):
 def run():
     urls = ['https://www.duoimoveis.com.br/imoveis/a-venda/piracicaba?pagina=']
     full_property_info = []
-
+    raw_property_info = []
     for url in urls:
         break_point = set_breakpoint(url)
-        for i in range(1, break_point+1):
-            page_content = None
-            try:
-                page_content = get_page_content(
-                    f'{url}{i}')
+        with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+            # Start the load operations and mark each future with its URL
+            future_to_url = {
+                executor.submit(get_page_content, f'https://www.duoimoveis.com.br/imoveis/a-venda/piracicaba?pagina={i}'): i
+                for
+                i in range(break_point+1)}
+            for future in concurrent.futures.as_completed(future_to_url):
+                raw_property_info.append(
+                    future.result().find_all('a', class_='card-with-buttons borderHover'))
 
-            except Exception as e:
-                print(e)
-                print('fim de scrape')
-
-
-            property_listings = page_content.find_all('a', class_='card-with-buttons borderHover')
-            for property_listing in property_listings:
-                    link = property_listing['href']
-                    property = property_listing.find('div', class_='card-with-buttons__footer')
-                    property_info = extract_property_info(property, f'https://www.duoimoveis.com.br{link}?from=sale')
-                    full_property_info.append(property_info)
-
-        #now i do a dataframe with the full_property_info, and a column with the name 'Junqueira' and the date of today
+    raw_property_info = [item for sublist in raw_property_info for item in sublist]
+    full_property_info = [extract_property_info(property_html=property_html, link=property_html['href']) for property_html in raw_property_info]
     df = pd.DataFrame(full_property_info)
     #dropa linhas com a coluna price vazia
     df = df.dropna(subset=['preco'])
@@ -117,3 +111,5 @@ def run():
     df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape', 'last_seen']]
     df.to_csv('imoveis.csv', index=False, sep=';', mode='a',  header=False)
     return 1
+
+

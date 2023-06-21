@@ -1,3 +1,6 @@
+import concurrent.futures
+import time
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -64,22 +67,19 @@ def extract_property_info(property_html):
 
 
 def run():
-    full_property_info = []
+
+    raw_property_info = []
     breakpoint = set_breakpoint(f'https://www.friasneto.com.br/imoveis/todos-os-imoveis/comprar-ou-alugar/piracicaba/?locacao_venda=V&id_cidade=2&pag=0)')
-    for i in range(breakpoint+1):
-        try:
-            page_content = get_page_content(
-                f'https://www.friasneto.com.br/imoveis/todos-os-imoveis/comprar-ou-alugar/piracicaba/?locacao_venda=V&id_cidade=2&pag={i}')
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+        # Start the load operations and mark each future with its URL
+        future_to_url = {
+            executor.submit(get_page_content, f'https://www.friasneto.com.br/imoveis/todos-os-imoveis/comprar-ou-alugar/piracicaba/?locacao_venda=V&id_cidade=2&pag={i}'): i for
+            i in range(breakpoint)}
+        for future in concurrent.futures.as_completed(future_to_url):
+            raw_property_info.append(future.result().find_all('div', class_='col-xs-12 col-sm-4 col-md-3 container-enterprises-item'))
 
-        except:
-            print('fim de scrape')
-            break
-        property_listings = page_content.find_all('div', class_='col-xs-12 col-sm-4 col-md-3 container-enterprises-item')
-        for property_listing in property_listings:
-            property_info = extract_property_info(property_listing)
-            full_property_info.append(property_info)
-
-
+    raw_property_info = [item for sublist in raw_property_info for item in sublist]
+    full_property_info = [extract_property_info(property_html) for property_html in raw_property_info]
     df = pd.DataFrame(full_property_info)
     #dropa linhas com a coluna price vazia
     df = df.dropna(subset=['preco'])
@@ -106,5 +106,3 @@ def run():
     df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape', 'last_seen']]
     df.to_csv('imoveis.csv', index=False, sep=';', mode='a', header=False)
     return 1
-
-

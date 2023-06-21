@@ -89,7 +89,7 @@ def run():
                     future.result().find_all('a', class_='card-with-buttons borderHover'))
 
     raw_property_info = [item for sublist in raw_property_info for item in sublist]
-    full_property_info = [extract_property_info(property_html=property_html, link=property_html['href']) for property_html in raw_property_info]
+    full_property_info = [extract_property_info(property_html=property_html, link=f"https://www.duoimoveis.com.br{property_html['href']}?from=sale") for property_html in raw_property_info]
     df = pd.DataFrame(full_property_info)
     #dropa linhas com a coluna price vazia
     df = df.dropna(subset=['preco'])

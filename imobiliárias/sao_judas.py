@@ -33,18 +33,24 @@ def extract_property_info(link):
 
             if 'Quartos' in text:
                 property_info['quartos'] = value.replace(' ', '') if value else None
+                continue
             elif 'Banheiros' in text:
                 property_info['banheiros'] = value.replace(' ', '') if value else None
+                continue
             elif 'Garagens' in text:
                 property_info['vagas'] = value.replace(' ', '') if value else None
+                continue
             elif 'Área' in text:
                 area = re.search(r"[\d.,]+", value)
                 property_info['area'] = area.group() if area else None
+                continue
             elif 'Preço' in text:
                 price = re.search(r"[\d.,]+", value)
                 property_info['preco'] = float(price.group().replace('.', '').replace(',', '.')) if price else None
+                continue
             elif 'Bairro' in text:
                 property_info['bairro'] = value
+                continue
 
     return property_info
 

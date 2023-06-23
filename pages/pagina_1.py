@@ -68,23 +68,5 @@ resultados = df[(df['bairro'] == bairro.replace(' ', '_')) & (df['quartos'] >= q
 resultados = resultados.drop_duplicates(subset=['link'])
 resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro', 'last_seen'], axis=1).reset_index(drop=True)
 
-num_columns = len(resultados_sem_data_scrape.columns)
-
-# Calculate the maximum width for each column
-max_column_width = 100 / num_columns  # Assuming an equal width distribution
-
-# Create a list of column definitions with the maximum width
-column_defs = []
-for column_name in resultados_sem_data_scrape.columns:
-    column_def = {"headerName": column_name, "field": column_name, "width": max_column_width}
-    column_defs.append(column_def)
-
-# Set the column definitions and other options
-grid_options = {
-    "theme": "alpine",
-    "allow_unsafe_jscode": True,
-    "columnDefs": column_defs
-}
-
-AgGrid(resultados_sem_data_scrape, grid_options=grid_options)
+AgGrid(resultados_sem_data_scrape, fit_columns_on_grid_load=True, theme='streamlit')
 

@@ -67,6 +67,25 @@ st.markdown(f"""<div style= 'background-color: rgba({int(bg[1:3], 16)}, {int(bg[
 resultados = df[(df['bairro'] == bairro.replace(' ', '_')) & (df['quartos'] >= quartos) & (df['banheiros'] >= banheiros)]
 resultados = resultados.drop_duplicates(subset=['link'])
 resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro', 'last_seen'], axis=1).reset_index(drop=True)
+#instead of text, an mouse icon
+resultados_sem_data_scrape['link'] = resultados_sem_data_scrape['link'].apply(lambda x: f'<a href="{x}">Imovel</a>')
+#write the table with the clickable link fitting the screen
+table_style = """
+<style>
+    table {{
+        width: 100%;
+        border-collapse: collapse;
+    }}
+    
+</style>
+"""
 
-AgGrid(resultados_sem_data_scrape, fit_columns_on_grid_load=True, theme='streamlit')
 
+
+# Get the theme colors based on the selected theme
+
+
+# Create the styled container and display the table
+st.markdown(table_style.format(), unsafe_allow_html=True)
+
+st.write(resultados_sem_data_scrape.to_html(escape=False, index=False), unsafe_allow_html=True)

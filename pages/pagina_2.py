@@ -28,8 +28,15 @@ Esta página fornece uma visão geral dos dados de cada bairro de Piracicaba no 
 
 df = gpd.read_file('piracicaba.json')
 
-#create a column with the centroid of each polygon
+# Specify the target projected CRS
+target_crs = 'urn:ogc:def:crs:OGC:1.3:CRS84'
+
+# Reproject the geometry column
+df['geometry'] = df['geometry'].to_crs(target_crs)
+
+# Calculate centroids
 df['centroid'] = df['geometry'].centroid
+
 # create a column with the average price per neighborhood(if the neighborhood has more than 10 estates), read from the csv file
 df_bairros = pd.read_csv('imoveis.csv', sep=';')
 df_bairros = df_bairros.groupby('bairro').filter(lambda x: len(x) > 10)
@@ -41,6 +48,11 @@ df_bairros = df_bairros.groupby('bairro').agg({'preco': 'mean'}).reset_index()
 df['Name'] = df['Name'].str.replace(' ', '_')
 df['Name'] = df['Name'].str.capitalize()
 df['Name'] = df['Name'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
+
+
+#replace 'Bairro Alto' with 'Alto' in the df dataframe
+df['Name'] = df['Name'].str.replace('Bairro_alto', 'Alto')
+
 
 #now i want the column preco of the df_bairros dataframe to be in the df dataframe
 df = df.merge(df_bairros, left_on='Name', right_on='bairro', how='left')

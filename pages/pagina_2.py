@@ -1,7 +1,7 @@
 import streamlit as st
 import folium
 import pandas as pd
-import json
+import geopandas as gpd
 from streamlit_folium import st_folium
 
 
@@ -26,59 +26,57 @@ Esta página fornece uma visão geral dos dados de cada bairro de Piracicaba no 
     
 """)
 
-# Lê o arquivo GeoJSON com as coordenadas da cidade de Piracicaba e de seus bairros
-with open('piracicaba.json', 'r') as f:
-    data = json.load(f)
+df = gpd.read_file('piracicaba.json')
 
+#create a column with the centroid of each polygon
+df['centroid'] = df['geometry'].centroid
+# create a column with the average price per neighborhood(if the neighborhood has more than 10 estates), read from the csv file
+df_bairros = pd.read_csv('imoveis.csv', sep=';')
+df_bairros = df_bairros.groupby('bairro').filter(lambda x: len(x) > 10)
+df_bairros = df_bairros.groupby('bairro').agg({'preco': 'mean'}).reset_index()
 
-# Coordenadas da cidade de Piracicaba
-lat, lon = data['piracicaba']['geometry']['coordinates'][::-1]
-df = pd.read_csv('imoveis.csv', sep=';')
-#from this df, create a new df with the avg price per neighborhood
-df_bairros = df.groupby('bairro').agg({'preco': 'mean'}).reset_index()
-df_bairros.columns = ['bairro', 'preco_medio']
+#comparing the two dataframes, we can see that the neighborhood names are not the same
+#so we need to change the names in one of the dataframes
 
+df['Name'] = df['Name'].str.replace(' ', '_')
+df['Name'] = df['Name'].str.capitalize()
+df['Name'] = df['Name'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
 
+#now i want the column preco of the df_bairros dataframe to be in the df dataframe
+df = df.merge(df_bairros, left_on='Name', right_on='bairro', how='left')
 
-# Informações dos bairros de Piracicaba
-bairros = data['bairros']['features']
+#drop the column bairro and switch NA values to 0
+df = df.drop(columns=['bairro'])
+df['preco'] = df['preco'].fillna(0)
+df['preco'] = df['preco']/1000000
 
-# Cria um DataFrame com as informações dos imóveis em cada bairro
-dados = []
-for bairro in bairros:
-    nome = bairro['properties']['name']
-    preco_medio = round((df_bairros.loc[df_bairros['bairro'] == nome, 'preco_medio'].values[0]/1000000), 2) if df_bairros.loc[df_bairros['bairro'] == nome, 'preco_medio'].any() else 0
+#create the folium map
+#the starting point is the centroid of the 'centro' neighborhood
+m = folium.Map(location=[df.loc[df['Name'] == 'Centro', 'centroid'].values[0].y, df.loc[df['Name'] == 'Centro', 'centroid'].values[0].x], zoom_start=12.5)
 
-    dados.append({'Bairro': nome, 'preco_medio': preco_medio})
-df = pd.DataFrame(dados)
-
-
-# Criação do mapa
-m = folium.Map(location=[lat, lon], zoom_start=12)
-
-# Adiciona marcadores para cada bairro
-for bairro in bairros:
-    nome = bairro['properties']['name']
-    coords = bairro['properties']['centroid']
-    preco_medio_values = df.loc[df['Bairro'] == nome, 'preco_medio'].values
-    tooltip = f"Preço médio venda bairro {nome.replace('_', ' ')}<br>" \
-              f"<div style='text-align: center;'>{preco_medio_values[0] if len(preco_medio_values) > 0 else 'N/A'} milhões de reais</div>"
-
+#marker for each neighborhood with the color based on the average price of the neighborhood
+for i in range(len(df)):
     folium.Marker(
-        location=[coords[1], coords[0]],
-        tooltip=tooltip,
+        location=[df.loc[i, 'centroid'].y, df.loc[i, 'centroid'].x],
+        tooltip=f"Preço médio venda bairro {df.loc[i,'Name'].replace('_', ' ')}<br>" \
+              f"<div style='text-align: center;'>{float(round(df.loc[i, 'preco'],2)) if df.loc[i, 'preco'] > 0.0 else 'N/A'} milhões de reais</div>",
+        icon=folium.Icon(color='green' if df.loc[i, 'preco'] < 1 else 'orange' if df.loc[i, 'preco'] < 2 else 'red')
     ).add_to(m)
-
+# m.show_in_browser()
+#plot the choropleth map
 choropleth = folium.Choropleth(
-    geo_data=data['bairros'],
+    geo_data=df[['Name', 'geometry']],
     data=df,
-    columns=['Bairro', 'preco_medio'],
-    key_on='feature.properties.name',
-    fill_color='YlGn',
+    columns=['Name', 'preco'],
+    key_on='feature.properties.Name',
+    fill_color='YlOrRd',
     fill_opacity=0.7,
     line_opacity=0.2,
-    legend_name='Preço Médio por bairro'
+    line_weight=3,
+    legend_name='Preço médio dos imóveis (milhões de reais)'
 ).add_to(m)
+
+
 
 # # Renderiza o mapa no Streamlit
 st_folium(m)

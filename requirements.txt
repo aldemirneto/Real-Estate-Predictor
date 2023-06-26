@@ -2,6 +2,7 @@ numpy==1.23.5
 scikit-learn==1.2.0
 streamlit
 folium
+geopandas
 pandas
 streamlit_folium
 beautifulsoup4

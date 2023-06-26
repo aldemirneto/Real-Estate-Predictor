@@ -65,7 +65,9 @@ st.markdown(f"""<div style= 'background-color: rgba({int(bg[1:3], 16)}, {int(bg[
             "</div>", unsafe_allow_html=True)
 
 resultados = df[(df['bairro'] == bairro.replace(' ', '_')) & (df['quartos'] >= quartos) & (df['banheiros'] >= banheiros)]
-resultados = resultados.drop_duplicates(subset=['link'])
+#drop duplicates with the link but keeping the one with the last date on the column 'last-seen'
+resultados = resultados.drop_duplicates(subset=['link'], keep='last')
+
 resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro', 'last_seen'], axis=1).reset_index(drop=True)
 #instead of text, an mouse icon
 resultados_sem_data_scrape['link'] = resultados_sem_data_scrape['link'].apply(lambda x: f'<a href="{x}">Imovel</a>')

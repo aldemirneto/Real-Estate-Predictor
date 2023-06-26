@@ -65,6 +65,8 @@ st.markdown(f"""<div style= 'background-color: rgba({int(bg[1:3], 16)}, {int(bg[
             "</div>", unsafe_allow_html=True)
 
 resultados = df[(df['bairro'] == bairro.replace(' ', '_')) & (df['quartos'] >= quartos) & (df['banheiros'] >= banheiros)]
-resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro'], axis=1).reset_index(drop=True)
+resultados = resultados.drop_duplicates(subset=['link'])
+resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro', 'last_seen'], axis=1).reset_index(drop=True)
 
-AgGrid(resultados_sem_data_scrape, height=300, width='100%', theme='alpine', allow_unsafe_jscode=True)
+AgGrid(resultados_sem_data_scrape, fit_columns_on_grid_load=True, theme='streamlit')
+

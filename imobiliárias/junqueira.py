@@ -42,13 +42,14 @@ def extract_property_info(property_html):
                 .replace('quartos', '') \
                 .replace('quarto', '') \
                 .replace('suíte', '')
-
+            continue
 
         elif 'vaga' in info.text:
             vagas = info.text.strip().replace('\n', '') \
                 .replace(' ', '') \
                 .replace('vagas', '') \
                 .replace('vaga', '')
+            continue
         elif 'suíte' in info.text:
             if quartos is None:
                 quartos = info.text.strip().replace('\n', '') \
@@ -59,6 +60,7 @@ def extract_property_info(property_html):
                 .replace(' ', '') \
                 .replace('suítes', '') \
                 .replace('suíte', '')
+            continue
         elif 'm²' in info.text:
             area = info.text.strip().replace('\n', '') \
                 .replace(' ', '') \
@@ -66,6 +68,7 @@ def extract_property_info(property_html):
                 .replace(',', '.') \
                 .replace('.', '')
             area = float(area) if area else None
+            continue
 
     price_element = property_html.find('span', class_='price')
     price = price_element.text.strip().replace('Venda:R$ ',

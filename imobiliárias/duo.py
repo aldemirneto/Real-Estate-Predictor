@@ -24,15 +24,19 @@ def extract_property_info(property_html, link):
         if 'Quarto' in i.text:
             quartos = i.text
             quartos = quartos.replace('\n','').replace('Quartos', '').replace('Quarto', '').replace(' ', '').replace('2Quartos','2') if quartos else None
+            continue
         elif 'Banheiro' in i.text:
             banheiros = i.text
             banheiros = banheiros.replace('Banheiros', '').replace('Banheiro', '').replace(' ', '') if banheiros else None
+            continue
         elif 'Vaga' in i.text:
             vagas = i.text
             vagas = vagas.replace('Vagas', '').replace('Vaga', '').replace(' ', '') if vagas else None
+            continue
         elif 'm²' in i.text:
             area = i.text
             area = area.replace('m²', '').replace(' ', '') if area else None
+            continue
 
     location = property_html.find('h3')
     location = location.text.strip() if location else 'Sem Bairro'

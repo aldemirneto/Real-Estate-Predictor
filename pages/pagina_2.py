@@ -51,11 +51,11 @@ df['Name'] = df['Name'].str.normalize('NFKD').str.encode('ascii', errors='ignore
 
 
 #replace 'Bairro Alto' with 'Alto' in the df dataframe
-df['name'] = df['name'].str.replace('Bairro_alto', 'Alto')
+df['Name'] = df['Name'].str.replace('Bairro_alto', 'Alto')
 
 
 #now i want the column preco of the df_bairros dataframe to be in the df dataframe
-df = df.merge(df_bairros, left_on='name', right_on='bairro', how='left')
+df = df.merge(df_bairros, left_on='Name', right_on='bairro', how='left')
 
 #drop the column bairro and switch NA values to 0
 df = df.drop(columns=['bairro'])

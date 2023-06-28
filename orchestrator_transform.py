@@ -1,4 +1,3 @@
-import  piracicaba_json
 import Tratamento.Nome_Bairro, Tratamento.Duplicatas
 
 filename = 'imoveis.csv'

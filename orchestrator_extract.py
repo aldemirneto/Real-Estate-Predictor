@@ -2,10 +2,6 @@ import imobiliárias.junqueira, imobiliárias.frias_neto, imobiliárias.sao_juda
 
 
 filename = 'imoveis.csv'
-try:
-    piracicaba_json.run()
-except:
-    pass
 
 print('Iniciando scrape de imobiliárias')
 try:

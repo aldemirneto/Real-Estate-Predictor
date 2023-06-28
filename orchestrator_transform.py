@@ -2,10 +2,6 @@ import  piracicaba_json
 import Tratamento.Nome_Bairro, Tratamento.Duplicatas
 
 filename = 'imoveis.csv'
-try:
-    piracicaba_json.run()
-except:
-    pass
 
 print('Iniciando tratamento de nomes de bairros')
 try:

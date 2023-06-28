@@ -45,9 +45,9 @@ df_bairros = df_bairros.groupby('bairro').agg({'preco': 'mean'}).reset_index()
 #comparing the two dataframes, we can see that the neighborhood names are not the same
 #so we need to change the names in one of the dataframes
 
-df['name'] = df['name'].str.replace(' ', '_')
-df['name'] = df['name'].str.capitalize()
-df['name'] = df['name'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
+df['Name'] = df['Name'].str.replace(' ', '_')
+df['Name'] = df['Name'].str.capitalize()
+df['Name'] = df['Name'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
 
 
 #replace 'Bairro Alto' with 'Alto' in the df dataframe
@@ -64,23 +64,23 @@ df['preco'] = df['preco']/1000000
 
 #create the folium map
 #the starting point is the centroid of the 'centro' neighborhood
-m = folium.Map(location=[df.loc[df['name'] == 'Centro', 'centroid'].values[0].y, df.loc[df['name'] == 'Centro', 'centroid'].values[0].x], zoom_start=12.5)
+m = folium.Map(location=[df.loc[df['Name'] == 'Centro', 'centroid'].values[0].y, df.loc[df['Name'] == 'Centro', 'centroid'].values[0].x], zoom_start=12.5)
 
 #marker for each neighborhood with the color based on the average price of the neighborhood
 for i in range(len(df)):
     folium.Marker(
         location=[df.loc[i, 'centroid'].y, df.loc[i, 'centroid'].x],
-        tooltip=f"Preço médio venda bairro {df.loc[i,'name'].replace('_', ' ')}<br>" \
+        tooltip=f"Preço médio venda bairro {df.loc[i,'Name'].replace('_', ' ')}<br>" \
               f"<div style='text-align: center;'>{float(round(df.loc[i, 'preco'],2)) if df.loc[i, 'preco'] > 0.0 else 'N/A'} milhões de reais</div>",
         icon=folium.Icon(color='green' if df.loc[i, 'preco'] < 1 else 'orange' if df.loc[i, 'preco'] < 2 else 'red')
     ).add_to(m)
 # m.show_in_browser()
 #plot the choropleth map
 choropleth = folium.Choropleth(
-    geo_data=df[['name', 'geometry']],
+    geo_data=df[['Name', 'geometry']],
     data=df,
-    columns=['name', 'preco'],
-    key_on='feature.properties.name',
+    columns=['Name', 'preco'],
+    key_on='feature.properties.Name',
     fill_color='YlOrRd',
     fill_opacity=0.7,
     line_opacity=0.2,

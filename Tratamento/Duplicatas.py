@@ -31,7 +31,7 @@ def run(filename):
             imv = imovel(preco=float(row['preco']), area=float(row['area']), quartos=int(row['quartos']), bairro = row['bairro'] ,vagas=row['vagas'], banheiros=row['banheiros'], link=row['link'], Data_scrape=row['Data_scrape'], Imobiliaria = row['Imobiliaria'], last_seen=row['last_seen'])
         except Exception as e:
             # If the row cannot be parsed, skip it
-            print('Erro na conversão de tipos', e)
+            print('Erro na conversão de tipos')
             continue
 
         # Add the validated row to the list

@@ -1,7 +1,11 @@
 import os
+
+import numpy
 import pandas as pd
 
 from typing import Optional, List
+
+from numpy import NaN
 from pydantic import BaseModel, ValidationError
 from datetime import date
 
@@ -9,18 +13,19 @@ from datetime import date
 class Imovel(BaseModel):
     preco: float
     area: float
-    quartos: int
-    vagas: str
-    banheiros: str
-    link: str
-    Imobiliaria: str
-    bairro: str
-    Data_scrape: str
-    last_seen: str = None
+    quartos: float | int
+    vagas: float | int
+    banheiros: float | int
+    link: str=None
+    Imobiliaria: str=None
+    bairro: str=None
+    Data_scrape: str=None
+    last_seen: Optional[str]=None
 
 
 
 def validate_data(row: pd.Series) -> Optional[Imovel]:
+    row = row.where(pd.notnull(row), None)
     try:
         return Imovel(**row.to_dict())
     except ValidationError as e:

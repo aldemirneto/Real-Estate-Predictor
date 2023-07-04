@@ -39,9 +39,14 @@ df['centroid'] = df['geometry'].centroid
 
 # create a column with the average price per neighborhood(if the neighborhood has more than 10 estates), read from the csv file
 df_bairros = pd.read_csv('imoveis.csv', sep=';')
-df_bairros = df_bairros.groupby('bairro').filter(lambda x: len(x) > 10)
-df_bairros = df_bairros.groupby('bairro').agg({'preco': 'mean'}).reset_index()
+# Remove non-numeric values from 'preco' column
+df_bairros['preco'] = pd.to_numeric(df_bairros['preco'], errors='coerce')
 
+# Filter out groups with less than 10 rows
+df_bairros = df_bairros.groupby('bairro').filter(lambda x: len(x) > 10)
+
+# Calculate the mean of 'preco' after grouping
+df_bairros = df_bairros.groupby('bairro')['preco'].mean().reset_index()
 #comparing the two dataframes, we can see that the neighborhood names are not the same
 #so we need to change the names in one of the dataframes
 

@@ -122,7 +122,6 @@ if st.button('Predict'):
     st.subheader('Preço Estimado')
     # write the price in thousands with 2 decimals
     st.success(f"O Preço do seu imóvel é R${prediction[0] / 1000:.3f} mil reais")
-    st.markdown("---")
 
 
 # Attribution

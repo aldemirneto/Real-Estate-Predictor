@@ -37,13 +37,14 @@ df = pd.read_csv('imoveis.csv', sep=';')
 
 bairro_options = df['bairro'].unique()
 bairro = st.selectbox("Selecione o bairro", sorted([x.replace('_', ' ') for x in bairro_options]))
+Tipo = st.selectbox("Selecione o tipo do imóvel", ['Casa', 'Apartamento', 'Terreno', 'Comercial', 'Rural', 'Flat', 'Loft', 'Studio'])
 
 # Create 4 columns to place the widgets
 col1, col2, col3, col4 = st.columns(4)
 
 # Dropdowns for rooms in Column 1
 # Number input for rooms in Column 1
-quartos = col1.number_input("Mínimo de quartos", min_value=0, max_value=9, value=0, step=1)
+quartos = col1.number_input("Mínimo de quartos", min_value=0, max_value=10, value=0, step=1)
 
 # Number input for bathrooms in Column 2
 banheiros = col2.number_input("Mínimo de banheiros", min_value=0, max_value=9, value=0, step=1)
@@ -96,14 +97,14 @@ if modal_alerta.is_open():
 
         # Campo para inserção do e-mail
         email = st.text_input("Endereço de E-mail")
-
         # Botão de confirmação
         if st.button("Confirmar"):
-            # Aqui você pode adicionar a lógica para salvar o e-mail do usuário e seus critérios de busca para futuras notificações.
-            st.write(f"Alerta criado para o e-mail: {email}")
-            #espero 2 segundos para fechar o modal
+            st.toast('Enviando alerta ')
             time.sleep(3)
+            st.toast('Alerta cadastrado!', icon='🎉')
+            time.sleep(.5)
             modal_alerta.close()
+
 def cor_sinc(df):
     ultima_data_scrape = df['Data_scrape'].max()
     ultima_data_scrape = datetime.strptime(ultima_data_scrape, '%Y-%m-%d').date()

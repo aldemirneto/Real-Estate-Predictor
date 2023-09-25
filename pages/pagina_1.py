@@ -37,7 +37,7 @@ df = pd.read_csv('imoveis.csv', sep=';')
 
 bairro_options = df['bairro'].unique()
 bairro = st.selectbox("Selecione o bairro", sorted([x.replace('_', ' ') for x in bairro_options]))
-Tipo = st.selectbox("Selecione o tipo do imóvel", ['Casa', 'Apartamento', 'Terreno', 'Comercial', 'Rural', 'Flat', 'Loft', 'Studio'])
+# Tipo = st.selectbox("Selecione o tipo do imóvel", ['Casa', 'Apartamento', 'Terreno', 'Comercial', 'Rural', 'Flat', 'Loft', 'Studio'])
 
 # Create 4 columns to place the widgets
 col1, col2, col3, col4 = st.columns(4)
@@ -53,10 +53,10 @@ banheiros = col2.number_input("Mínimo de banheiros", min_value=0, max_value=9, 
 vagas = col3.number_input("Mínimo de vagas", min_value=0, max_value=9, value=0, step=1)
 
 # Number input for price in Column 4
-area = col4.number_input('Área em m2', min_value=0, max_value=1000, value=0, step=10)
+area = col4.number_input('Área mínima em m2', min_value=0, max_value=1000, value=0, step=10)
 
 # Slider for area below the columns since it might be more visually appealing as a wider widget
-preco = st.slider("Preço máximo", min_value=0, max_value=1000000, value=0, step=50000)
+preco = st.slider("Preço máximo", min_value=0, max_value=1000000, value=100000, step=50000)
 
 
 
@@ -129,7 +129,7 @@ st.markdown(f"""<div style= 'background-color: rgba({int(bg[1:3], 16)}, {int(bg[
             f"Ultimo Scrape: {df['Data_scrape'].max()}"
             "</div>", unsafe_allow_html=True)
 
-resultados = df[(df['bairro'] == bairro.replace(' ', '_')) & (df['quartos'] >= quartos) & (df['banheiros'] >= banheiros)]
+resultados = df[(df['bairro'] == bairro.replace(' ', '_')) & (df['quartos'] >= quartos) & (df['banheiros'] >= banheiros) & (df['banheiros'] >= banheiros) & (df['area'] >= area) & (df['preco'] <= preco)]
 #drop duplicates with the link but keeping the one with the last date on the column 'last-seen'
 resultados = resultados.drop_duplicates(subset=['link'], keep='last')
 

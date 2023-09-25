@@ -1,9 +1,7 @@
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import streamlit as st
 import json
-import shap
 from xgboost import XGBRegressor
 
 st.sidebar.markdown("""
@@ -118,49 +116,13 @@ input_data = {
 
 # Make the prediction
 if st.button('Predict'):
-    explainer = shap.Explainer(xgb_model)
-    shap_values = explainer(preprocess_input(input_data))
-
-    # Create a summary plot
 
     prediction = predict_prices(input_data)
 
     st.subheader('Preço Estimado')
     # write the price in thousands with 2 decimals
-
     st.success(f"O Preço do seu imóvel é R${prediction[0] / 1000:.3f} mil reais")
-    st.markdown("---")
 
-    st.title("Interpretação Abrangente do Modelo")
-
-    st.subheader('Entendendo a Importância das Características')
-    st.write('''
-    Quando treinamos um modelo de IA, ele aprende a tomar decisões com base nas informações fornecidas por diferentes características ou variáveis, como idade, gênero, renda, entre outras, dependendo do problema que o modelo está tentando resolver.
-    
-    Ao analisar o modelo e interpretar suas previsões, podemos querer entender quais características têm mais influência nos resultados.
-     
-    Isso nos ajuda a entender como o modelo está tomando suas decisões e quais aspectos são mais importantes para o resultado final.''')
-
-    st.write('---')
-    st.write(
-        '''
-        A seguir, podemos ver um gráfico que mostra a importância das características para o modelo.
-        
-        No contexto da aplicação, este grafico ajuda a entender como cada característica contribui para a previsão final, tendo em cada valor no gráfico  a contribuição individual de uma característica específica para o preço do imóvel.
-        
-        Por exemplo, se considerarmos a característica "bairro_encoded" com um valor de +5571.17, isso indicaria que, em média, propriedades localizadas nesse bairro têm uma contribuição positiva de 5571.17 reais para o preço do imóvel. 
-        
-        Isso significa que estar nesse bairro específico tende a aumentar o preço do imóvel em comparação com um valor de referência, como a média geral dos preços.  
-    ''')
-
-    fig2, ax2 = plt.subplots()
-    shap.waterfall_plot(shap_values[0], show=False)
-    plt.title('Contribuições Individuais das Características')
-    st.pyplot(fig2)
-
-    st.write('''
-    Essas visualizações e interpretações nos ajudam a entender quais características são mais relevantes para o modelo e como elas afetam as previsões. Com essa compreensão, podemos fazer ajustes ou melhorias no modelo, se necessário, para garantir que ele esteja levando em consideração as características mais importantes para a tomada de decisões.
-    ''')
 
 # Attribution
 st.markdown("---")

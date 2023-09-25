@@ -1,5 +1,6 @@
+import time
 from datetime import datetime, timedelta
-
+from streamlit_modal import Modal
 import pandas as pd
 import streamlit as st
 
@@ -36,10 +37,73 @@ df = pd.read_csv('imoveis.csv', sep=';')
 
 bairro_options = df['bairro'].unique()
 bairro = st.selectbox("Selecione o bairro", sorted([x.replace('_', ' ') for x in bairro_options]))
-quartos = st.selectbox("Selecione o numero minimo de quartos",[i for i in range(10)])
-banheiros = st.selectbox("Selecione o numero minimo de banheiros",[i for i in range(10)])
+
+# Create 4 columns to place the widgets
+col1, col2, col3, col4 = st.columns(4)
+
+# Dropdowns for rooms in Column 1
+# Number input for rooms in Column 1
+quartos = col1.number_input("Mínimo de quartos", min_value=0, max_value=9, value=0, step=1)
+
+# Number input for bathrooms in Column 2
+banheiros = col2.number_input("Mínimo de banheiros", min_value=0, max_value=9, value=0, step=1)
+
+# Number input for parking spots in Column 3
+vagas = col3.number_input("Mínimo de vagas", min_value=0, max_value=9, value=0, step=1)
+
+# Number input for price in Column 4
+area = col4.number_input('Área em m2', min_value=0, max_value=1000, value=0, step=10)
+
+# Slider for area below the columns since it might be more visually appealing as a wider widget
+preco = st.slider("Preço máximo", min_value=0, max_value=1000000, value=0, step=50000)
 
 
+
+# Inicialização do modal
+modal_alerta = Modal("Criar Alerta", key="modal_alerta_key")
+
+# Botão para abrir o modal
+btn_criar_alerta = st.button("Deseja ser notificado quando novos imóveis correspondentes aos critérios acima estiverem disponíveis?")
+if btn_criar_alerta:
+    modal_alerta.open()
+
+st.markdown(
+    f"""
+    <style>
+    div[data-modal-container='true'][key='{modal_alerta.key}'] {{
+        width: calc(100vw - 300px) !important;  <!-- Ajusta a largura -->
+        left: 300px !important; <!-- Posiciona o modal após a barra lateral -->
+    }}
+
+    div[data-modal-container='true'][key='{modal_alerta.key}'] > div:first-child > div:first-child {{
+        background-color: black !important;  <!-- Cor de fundo do modal em preto -->
+        color: #eee !important;  <!-- Cor do texto do modal em modo escuro -->
+    }}
+
+    div[data-modal-container='true'][key='{modal_alerta.key}']::before {{
+        background-color: rgba(0, 0, 0, 0.5) !important;  <!-- Cor do fundo semi-transparente em preto -->
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+# Conteúdo do modal
+if modal_alerta.is_open():
+
+    with modal_alerta.container():
+        st.write(
+            "Informe seu e-mail para receber notificações sobre novos imóveis que correspondam aos seus critérios de busca.")
+
+        # Campo para inserção do e-mail
+        email = st.text_input("Endereço de E-mail")
+
+        # Botão de confirmação
+        if st.button("Confirmar"):
+            # Aqui você pode adicionar a lógica para salvar o e-mail do usuário e seus critérios de busca para futuras notificações.
+            st.write(f"Alerta criado para o e-mail: {email}")
+            #espero 2 segundos para fechar o modal
+            time.sleep(3)
+            modal_alerta.close()
 def cor_sinc(df):
     ultima_data_scrape = df['Data_scrape'].max()
     ultima_data_scrape = datetime.strptime(ultima_data_scrape, '%Y-%m-%d').date()

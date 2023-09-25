@@ -9,6 +9,7 @@ beautifulsoup4
 pydantic
 xgboost==1.7.5
 streamlit-aggrid
+streamlit-modal
 matplotlib==3.7.1
 plotly==5.13.1
 scipy==1.9.3

@@ -10,5 +10,6 @@ pydantic
 xgboost==1.7.5
 streamlit-aggrid
 plotly==5.13.1
+streamlit-modal
 
 

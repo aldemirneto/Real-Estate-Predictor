@@ -12,13 +12,13 @@ def replace_chars(string):
     string = string.capitalize()
     return string
 
-def run():
+def run(filename: str):
     # Define the blacklisted substrings
     blacklist = {'condominio', 'chacara', 'conjunto', 'edificio', 'convivio', 'residencial', 'vivendas', 'terra', 'recanto',
                  'loteamento', '-', 'park', 'parque', 'nucleo'}
 
     # Open the CSV file for reading and writing with the 'utf-8-sig' encoding
-    with open('imoveis.csv', 'r', encoding='utf-8-sig') as input_file, open('output.csv', 'w', newline='', encoding='utf-8') as output_file:
+    with open(filename, 'r', encoding='utf-8-sig') as input_file, open('output.csv', 'w', newline='', encoding='utf-8') as output_file:
         # Create a CSV reader and writer objects
         reader = csv.DictReader(input_file, delimiter=';')
         writer = csv.writer(output_file, delimiter=';')
@@ -43,4 +43,4 @@ def run():
 
 
     # Overwrite the original CSV file with the modified version
-    os.replace('output.csv', 'imoveis.csv')
+    os.replace('output.csv', filename)

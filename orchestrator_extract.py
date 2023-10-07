@@ -1,7 +1,6 @@
 import imobiliárias.junqueira, imobiliárias.frias_neto, imobiliárias.sao_judas, piracicaba_json, imobiliárias.duo, imobiliárias.junqueira_aluguel, imobiliárias.frias_neto_aluguel, imobiliárias.duo_aluguel
 
 
-filename = 'imoveis.csv'
 
 print('Iniciando scrape de imobiliárias')
 try:
@@ -13,7 +12,7 @@ except Exception as e:
     print('junqueira', e)
 try:
     print('Inicio de scrape Frias Neto')
-    imobiliárias.frias_neto.run()
+    # imobiliárias.frias_neto.run()
     imobiliárias.frias_neto_aluguel.run()
     print('Fim de scrape Frias Neto')
 except Exception as e:

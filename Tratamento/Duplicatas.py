@@ -33,6 +33,12 @@ def validate_data(row: pd.Series) -> Optional[Imovel]:
         print('Erro na conversão de tipos', e)
         return None
 
+def update_bairro(group: pd.DataFrame) -> pd.DataFrame:
+    # If there's at least one valid 'bairro' in the group, use it to fill 'Sem_bairro' values
+    valid_bairro = group['bairro'].loc[group['bairro'] != 'Sem_bairro'].unique()
+    if valid_bairro.size > 0:
+        group['bairro'] = group['bairro'].replace('Sem_bairro', valid_bairro[0])
+    return group
 def validate_and_filter_data(df: pd.DataFrame) -> pd.DataFrame:
     valid_rows = [validate_data(row) for _, row in df.iterrows()]
     valid_rows = [row for row in valid_rows if row is not None]  # filter out None values
@@ -41,10 +47,15 @@ def validate_and_filter_data(df: pd.DataFrame) -> pd.DataFrame:
     merged_data.loc[merged_data.duplicated(
         subset=['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro'],
         keep=False), 'last_seen'] = date.today().strftime('%Y-%m-%d')
-    # update the existing data with the new data with the link column as the key
 
+    # Before dropping duplicates, update 'bairro' field
+    grouped_cols = ['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria']
+    merged_data = merged_data.groupby(grouped_cols).apply(update_bairro).reset_index(drop=True)
+
+    # Now, drop duplicates
     merged_data = merged_data.drop_duplicates(
         subset=['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro'])
+
 
 
     merged_data = merged_data[merged_data['area'] > 2]

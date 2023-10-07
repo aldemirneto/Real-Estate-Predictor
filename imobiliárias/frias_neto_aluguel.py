@@ -44,7 +44,7 @@ def extract_property_info(property_html):
 
 
     price_element = property_html.find('p', class_='price')
-    price = price_element.text.strip().replace(',','.').replace(' ', '').replace('Venda:R$', '') if 'Loca' not in price_element.text and 'Consulte' not in price_element.text and 'Quartos' not in price_element.text else None
+    price = price_element.text.strip().replace(',','.').replace(' ', '').replace('Locação:R$', '') if 'Venda' not in price_element.text and 'Consulte' not in price_element.text and 'Quartos' not in price_element.text else None
     price = price.replace('.', '') if price else None
     price = price[:-2] + '000' if price else None
 
@@ -73,11 +73,11 @@ def extract_property_info(property_html):
 def run():
 
     raw_property_info = []
-    breakpoint = set_breakpoint(f'https://www.friasneto.com.br/imoveis/todos-os-imoveis/comprar-ou-alugar/piracicaba/?locacao_venda=V&id_cidade=2&pag=0)')
+    breakpoint = set_breakpoint(f'https://www.friasneto.com.br/imoveis/todos-os-imoveis/comprar-ou-alugar/piracicaba/?locacao_venda=L&id_cidade=2&pag=0)')
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
         # Start the load operations and mark each future with its URL
         future_to_url = {
-            executor.submit(get_page_content, f'https://www.friasneto.com.br/imoveis/todos-os-imoveis/comprar-ou-alugar/piracicaba/?locacao_venda=V&id_cidade=2&pag={i}'): i for
+            executor.submit(get_page_content, f'https://www.friasneto.com.br/imoveis/todos-os-imoveis/comprar-ou-alugar/piracicaba/?locacao_venda=L&id_cidade=2&pag={i}'): i for
             i in range(breakpoint)}
         for future in concurrent.futures.as_completed(future_to_url):
             raw_property_info.append(future.result().find_all('div', class_='col-xs-12 col-sm-4 col-md-3 container-enterprises-item'))
@@ -110,3 +110,4 @@ def run():
     df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape', 'last_seen']]
     df.to_csv('imoveis.csv', index=False, sep=';', mode='a', header=False)
     return 1
+run()

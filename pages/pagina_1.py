@@ -31,9 +31,35 @@ Esta página fornece informações detalhadas sobre os imóveis em cada bairro d
  
 """)
 
+if 'fonte' not in st.session_state:
+    st.session_state['fonte'] = 'Compra'
+c1, c2 = st.columns(2)
+
+container_compra = c1.empty()
+if st.session_state.fonte == 'Compra':
+    Compra = container_compra.button('Compra', type="primary", use_container_width=True)
+else:
+    Compra = container_compra.button('Compra', use_container_width=True)
+if Compra:
+    if st.session_state.fonte == 'Aluguel':
+        st.session_state.fonte = 'Compra'
+    st.rerun()
+
+
+container_2 = c2.empty()
+if st.session_state.fonte == 'Aluguel':
+    Aluguel = container_2.button('Aluguel', type="primary", use_container_width=True)
+else:
+    Aluguel = container_2.button('Aluguel', use_container_width=True)
+if Aluguel:
+    if st.session_state.fonte == 'Compra':
+        st.session_state.fonte = 'Aluguel'
+    st.rerun()
 
 df = pd.read_csv('imoveis.csv', sep=';')
-# Exibindo as primeiras linhas do DataFrame
+if st.session_state.fonte == 'Aluguel':
+    df = pd.read_csv('imoveis_aluguel.csv', sep=';')
+
 
 bairro_options = df['bairro'].unique()
 bairro = st.selectbox("Selecione o bairro", sorted([x.replace('_', ' ') for x in bairro_options]))

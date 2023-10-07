@@ -49,7 +49,7 @@ def extract_property_info(property_html):
     price = price[:-2] + '000' if price else None
 
     area_element = property_html.find('li').find('span')
-    area = area_element.text.strip().replace(',','.').replace('M²', '').replace(' ', '') if area_element  and 'Quartos' not in area_element.text else None
+    area = area_element.text.strip().replace(',','.').replace('M²', '').replace(' ', '') if area_element and 'Quarto' not in area_element.text and 'Banheiro' not in area_element.text and 'Vaga' not in area_element.text and 'COD' not in area_element.text else None
     try:
         price = float(price) if price else None
         area = float(area) if area else None

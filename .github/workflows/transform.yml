@@ -6,6 +6,7 @@ on:
      - 'main'
     paths:
       - '**imoveis.csv'
+      - '**imoveis_aluguel.csv'
 
 
   workflow_dispatch:

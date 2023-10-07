@@ -41,8 +41,17 @@ def extract_property_info(property_html, link):
     location = property_html.find('h2', class_='card-with-buttons__heading')
     location = location.text.strip() if location else 'Sem Bairro'
     location = location.split('-')[0].strip()
-    price = property_html.find('p', class_ = 'card-with-buttons__value').text
-    price = price.replace('R$ ', '').replace('/mês', '').replace('.', '').replace(',', '.').replace(' ', '').replace('\n', '').replace(',00', '')
+    price = property_html.find_all('div', class_ = 'card-with-buttons__value-container')
+    #validate if the price that have the 'Locação' text
+    correct = None
+
+    for p in price:
+        if 'Loca' in p.find('p', class_= 'card-with-buttons__value-title').text:
+            correct = p.find('p', class_= 'card-with-buttons__value').text
+    if correct:
+        price = correct.replace('R$ ', '').replace('/mês', '').replace('.', '').replace(',', '.').replace(' ', '').replace('\n', '').replace(',00', '')
+    else:
+        price = None
     try:
         price = float(price) if price else None
     except:

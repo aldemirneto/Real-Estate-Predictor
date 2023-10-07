@@ -108,6 +108,3 @@ def run():
     df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape', 'last_seen']]
     df.to_csv('imoveis_aluguel.csv', index=False, sep=';', mode='a',  header=False)
     return 1
-
-
-run()

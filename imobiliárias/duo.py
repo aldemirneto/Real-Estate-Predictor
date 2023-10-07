@@ -37,11 +37,8 @@ def extract_property_info(property_html, link):
             area = i.text
             area = area.replace('m²', '').replace(' ', '') if area else None
             continue
-
-    location = property_html.find('h3')
+    location = property_html.find('div', class_='container').find('ol', class_='hidden-mobile').find_all('li')[5].text
     location = location.text.strip() if location else 'Sem Bairro'
-    #Reserva das Paineiras - Piracicaba - SP i want to get untill the first '-'
-    location = location.split('-')[0].strip()
     price = property_html.find('p', class_ = 'card-with-buttons__value').text
     try:
         price = float(price.replace('R$', '')

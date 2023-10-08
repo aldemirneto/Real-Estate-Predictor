@@ -79,14 +79,14 @@ if 'bairro' not in st.session_state:
     bairro = st.selectbox("Selecione o bairro", [x.replace('_', ' ') for x in bairro_options],index=None,placeholder='Selecione o bairro')
     if bairro:
         st.session_state['bairro'] = bairro.replace(' ', '_')
+        st.rerun()
+
 else:
-    #find on the list the index of the bairro in the sessioin state
     try:
         index = int(np.where(bairro_options == st.session_state.bairro)[0][0])
     except:
         index = None
     bairro = st.selectbox("Selecione o bairro", [x.replace('_', ' ') for x in bairro_options],index=index ,placeholder='Selecione o bairro')
-
 
 
 
@@ -141,9 +141,6 @@ if modal_geo.is_open():
         # replace 'Bairro Alto' with 'Alto' in the df dataframe
         df_m['Name'] = df_m['Name'].str.replace('Bairro_alto', 'Alto')
 
-
-
-        # create the folium map
         # create the folium map
         m = folium.Map(location=[df_m.loc[df_m['Name'] == 'Centro', 'centroid'].values[0].y,
                                  df_m.loc[df_m['Name'] == 'Centro', 'centroid'].values[0].x], zoom_start=12.5)
@@ -173,7 +170,6 @@ if modal_geo.is_open():
         if data:
             if st.button(f"esse é o bairro {data.replace('_', ' ')}, quer continuar?"):
                 st.session_state.bairro = data
-
                 modal_geo.close()
 
 # Create 4 columns to place the widgets

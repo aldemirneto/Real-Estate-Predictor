@@ -87,6 +87,9 @@ else:
     except:
         index = None
     bairro = st.selectbox("Selecione o bairro", [x.replace('_', ' ') for x in bairro_options],index=index ,placeholder='Selecione o bairro')
+    st.session_state['bairro'] = bairro.replace(' ', '_')
+    if st.session_state.bairro != bairro.replace(' ', '_'):
+        st.rerun()
 
 
 
@@ -169,8 +172,12 @@ if modal_geo.is_open():
 
         if data:
             if st.button(f"esse é o bairro {data.replace('_', ' ')}, quer continuar?"):
-                st.session_state.bairro = data
+                if 'bairro' not in st.session_state:
+                    st.session_state['bairro'] = data
+                else:
+                    st.session_state['bairro'] = data
                 modal_geo.close()
+                st.rerun()
 
 # Create 4 columns to place the widgets
 col1, col2, col3, col4 = st.columns(4)
@@ -189,13 +196,9 @@ vagas = col3.number_input("Mínimo de vagas", min_value=0, max_value=9, value=0,
 area = col4.number_input('Área mínima em m2', min_value=0, max_value=1000, value=0, step=10)
 
 
-if st.session_state.fonte == 'Aluguel':
-    preco = st.slider("Preço máximo", min_value=0, max_value=1000000, value=1000, step=100)
-else:
-    preco = st.slider("Preço máximo", min_value=0, max_value=10000000, value=1000000, step=50000)
+#value will be the middle value of the dataframe
+preco = st.slider("Preço máximo", min_value=0, max_value=int(df['preco'].max()), value=int(df['preco'].median()), step=100)
 # Slider for area below the columns since it might be more visually appealing as a wider widget
-
-
 
 
 # Inicialização do modal
@@ -269,9 +272,7 @@ if bairro:
                 f"Ultima Atualização: {df['Data_scrape'].max()}"
                 "</div>", unsafe_allow_html=True)
 
-    # Handle the 'bairro' condition separately
-
-    bairro_condition = (df['bairro'] == bairro.replace(' ', '_')) | (bairro == ' Todos')
+    bairro_condition = (df['bairro'] == st.session_state.bairro.replace(' ', '_')) | (st.session_state.bairro == ' Todos')
 
     # Now apply the rest of the conditions
     other_conditions = (

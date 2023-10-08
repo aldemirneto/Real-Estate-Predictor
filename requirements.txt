@@ -8,7 +8,7 @@ streamlit_folium
 beautifulsoup4
 pydantic
 xgboost==1.7.5
-streamlit-aggrid
+shapely
 plotly==5.13.1
 streamlit-modal
 

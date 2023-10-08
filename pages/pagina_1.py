@@ -81,8 +81,11 @@ if 'bairro' not in st.session_state:
         st.session_state['bairro'] = bairro.replace(' ', '_')
 else:
     #find on the list the index of the bairro in the sessioin state
-    index = np.where(bairro_options == st.session_state.bairro)[0][0]
-    bairro = st.selectbox("Selecione o bairro", [x.replace('_', ' ') for x in bairro_options],index=int(index) ,placeholder='Selecione o bairro')
+    try:
+        index = int(np.where(bairro_options == st.session_state.bairro)[0][0])
+    except:
+        index = None
+    bairro = st.selectbox("Selecione o bairro", [x.replace('_', ' ') for x in bairro_options],index=index ,placeholder='Selecione o bairro')
 
 
 

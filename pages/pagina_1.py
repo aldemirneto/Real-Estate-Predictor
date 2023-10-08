@@ -158,8 +158,6 @@ if modal_geo.is_open():
 
 
         def get_pos(lat, lng):
-
-            # check if the lat, long is inside any of the polygons in the df dataframe, if it is, return the name of the neighborhood
             for i in range(len(df_m)):
                 if Point(lng, lat).within(df_m.loc[i, 'geometry']):
                     return df_m.loc[i, 'Name']
@@ -184,20 +182,46 @@ col1, col2, col3, col4 = st.columns(4)
 
 # Dropdowns for rooms in Column 1
 # Number input for rooms in Column 1
-quartos = col1.number_input("Mínimo de quartos", min_value=0, max_value=10, value=0, step=1)
+if 'quartos' not in st.session_state:
+    quartos = col1.number_input("Mínimo de quartos", min_value=0, max_value=10, value=0, step=1)
+    st.session_state['quartos'] = quartos
+else:
+    quartos = col1.number_input("Mínimo de quartos", min_value=0, max_value=10, value=st.session_state.quartos, step=1)
+    st.session_state['quartos'] = quartos
 
 # Number input for bathrooms in Column 2
-banheiros = col2.number_input("Mínimo de banheiros", min_value=0, max_value=9, value=0, step=1)
+if 'banheiros' not in st.session_state:
+    banheiros = col2.number_input("Mínimo de banheiros", min_value=0, max_value=9, value=0, step=1)
+    st.session_state['banheiros'] = banheiros
+else:
+    banheiros = col2.number_input("Mínimo de banheiros", min_value=0, max_value=9, value=st.session_state['banheiros'], step=1)
+    st.session_state['banheiros'] = banheiros
 
 # Number input for parking spots in Column 3
-vagas = col3.number_input("Mínimo de vagas", min_value=0, max_value=9, value=0, step=1)
+if 'vagas' not in st.session_state:
+    vagas = col3.number_input("Mínimo de vagas", min_value=0, max_value=9, value=0, step=1)
+    st.session_state['vagas'] = vagas
+else:
+    vagas = col3.number_input("Mínimo de vagas", min_value=0, max_value=9, value=st.session_state.vagas, step=1)
+    st.session_state['vagas'] = vagas
+
 
 # Number input for price in Column 4
-area = col4.number_input('Área mínima em m2', min_value=0, max_value=1000, value=0, step=10)
+if 'area' not in st.session_state:
+    area = col4.number_input('Área mínima em m2', min_value=0, max_value=1000, value=0, step=10)
+    st.session_state['area'] = area
+else:
+    area = col4.number_input('Área mínima em m2', min_value=0, max_value=1000, value=st.session_state.area, step=10)
+    st.session_state['area'] = area
 
 
 #value will be the middle value of the dataframe
-preco = st.slider("Preço máximo", min_value=0, max_value=int(df['preco'].max()), value=int(df['preco'].median()), step=100)
+if 'preco' not in st.session_state:
+    preco = st.slider("Preço máximo", min_value=0, max_value=int(df['preco'].max()), value=1000, step=100)
+    st.session_state['preco'] = preco
+else:
+    preco = st.slider("Preço máximo", min_value=0, max_value=int(df['preco'].max()), value=st.session_state['preco'], step=100)
+    st.session_state['preco'] = preco
 # Slider for area below the columns since it might be more visually appealing as a wider widget
 
 
@@ -276,11 +300,11 @@ if bairro:
 
     # Now apply the rest of the conditions
     other_conditions = (
-        (df['quartos'] >= quartos) &
-        (df['banheiros'] >= banheiros) &
-        (df['vagas'] >= vagas) &
-        (df['area'] >= area) &
-        (df['preco'] <= preco)
+        (df['quartos'] >= st.session_state.quartos) &
+        (df['banheiros'] >= st.session_state.banheiros) &
+        (df['vagas'] >= st.session_state.vagas) &
+        (df['area'] >= st.session_state.area) &
+        (df['preco'] <= st.session_state.preco)
     )
 
     # Combine the conditions

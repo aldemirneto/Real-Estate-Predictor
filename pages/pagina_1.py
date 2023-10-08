@@ -89,7 +89,7 @@ else:
 
 
 # Inicialização do modal
-modal_geo = Modal("Busca geo", key="modal_geo_key")
+modal_geo = Modal("Busca georreferenciada de bairros!!", key="modal_geo_key")
 
 # Botão para abrir o modal
 btn_geo_busca = st.button("Quer buscar a localização no mapa?", key="btn_geo_busca_key")

@@ -296,7 +296,7 @@ if bairro:
                 f"Ultima Atualização: {df['Data_scrape'].max()}"
                 "</div>", unsafe_allow_html=True)
 
-    bairro_condition = (df['bairro'] == st.session_state.bairro.replace(' ', '_')) | (st.session_state.bairro == ' Todos')
+    bairro_condition = (df['bairro'] == st.session_state.bairro.replace(' ', '_')) | (st.session_state.bairro == '_Todos')
 
     # Now apply the rest of the conditions
     other_conditions = (

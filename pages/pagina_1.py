@@ -1,6 +1,6 @@
 import streamlit as st
 import folium
-
+import locale
 import pandas as pd
 import geopandas as gpd
 import time
@@ -39,9 +39,20 @@ Esta página fornece informações detalhadas sobre os imóveis em cada bairro d
 
  
 """)
+def format_brl(value):
+    # Set the locale to Portuguese, Brazil for BRL formatting
+    locale.setlocale(locale.LC_MONETARY, 'pt_BR.UTF-8')
+
+    # Format the value as BRL currency
+    formatted_value = locale.currency(value, symbol=True, grouping=True, international=False)
+
+    return formatted_value
+
+
 
 if 'fonte' not in st.session_state:
     st.session_state['fonte'] = 'Compra'
+
 c1, c2 = st.columns(2)
 
 container_compra = c1.empty()
@@ -52,7 +63,12 @@ else:
 if Compra:
     if st.session_state.fonte == 'Aluguel':
         st.session_state.fonte = 'Compra'
-    st.rerun()
+        if 'preco' in st.session_state:
+            del st.session_state['preco']
+        if 'page' not in st.session_state:
+            st.session_state['page'] = 1
+
+        st.rerun()
 
 a = folium.map
 
@@ -65,7 +81,12 @@ else:
 if Aluguel:
     if st.session_state.fonte == 'Compra':
         st.session_state.fonte = 'Aluguel'
-    st.rerun()
+        if 'preco' in st.session_state:
+            del st.session_state['preco']
+        if 'page' not in st.session_state:
+            st.session_state['page'] = 1
+        st.rerun()
+
 
 df = pd.read_csv('imoveis.csv', sep=';')
 if st.session_state.fonte == 'Aluguel':
@@ -76,11 +97,7 @@ bairro_options = sorted(df['bairro'].unique())
 #appending the value todos to the bairro_options
 bairro_options = np.append(bairro_options, '_Todos')
 if 'bairro' not in st.session_state:
-    bairro = st.selectbox("Selecione o bairro", [x.replace('_', ' ') for x in bairro_options],index=None,placeholder='Selecione o bairro')
-    if bairro:
-        st.session_state['bairro'] = bairro.replace(' ', '_')
-        st.rerun()
-
+    bairro = st.selectbox("Selecione o bairro", [x.replace('_', ' ') for x in bairro_options],index=0,placeholder='Selecione o bairro')
 else:
     try:
         index = int(np.where(bairro_options == st.session_state.bairro)[0][0])
@@ -156,7 +173,6 @@ if modal_geo.is_open():
         #render the map in streamlit smaller
         map = st_folium(m, height=300, width=600)
 
-
         def get_pos(lat, lng):
             for i in range(len(df_m)):
                 if Point(lng, lat).within(df_m.loc[i, 'geometry']):
@@ -187,7 +203,7 @@ if 'quartos' not in st.session_state:
     st.session_state['quartos'] = quartos
 else:
     quartos = col1.number_input("Mínimo de quartos", min_value=0, max_value=10, value=st.session_state.quartos, step=1)
-    st.session_state['quartos'] = quartos
+
 
 # Number input for bathrooms in Column 2
 if 'banheiros' not in st.session_state:
@@ -195,15 +211,16 @@ if 'banheiros' not in st.session_state:
     st.session_state['banheiros'] = banheiros
 else:
     banheiros = col2.number_input("Mínimo de banheiros", min_value=0, max_value=9, value=st.session_state['banheiros'], step=1)
-    st.session_state['banheiros'] = banheiros
+
 
 # Number input for parking spots in Column 3
 if 'vagas' not in st.session_state:
     vagas = col3.number_input("Mínimo de vagas", min_value=0, max_value=9, value=0, step=1)
     st.session_state['vagas'] = vagas
+
 else:
     vagas = col3.number_input("Mínimo de vagas", min_value=0, max_value=9, value=st.session_state.vagas, step=1)
-    st.session_state['vagas'] = vagas
+
 
 
 # Number input for price in Column 4
@@ -212,7 +229,7 @@ if 'area' not in st.session_state:
     st.session_state['area'] = area
 else:
     area = col4.number_input('Área mínima em m2', min_value=0, max_value=1000, value=st.session_state.area, step=10)
-    st.session_state['area'] = area
+
 
 
 #value will be the middle value of the dataframe
@@ -221,57 +238,21 @@ if 'preco' not in st.session_state:
     st.session_state['preco'] = preco
 else:
     preco = st.slider("Preço máximo", min_value=0, max_value=int(df['preco'].max()), value=st.session_state['preco'], step=100)
-    st.session_state['preco'] = preco
+
 # Slider for area below the columns since it might be more visually appealing as a wider widget
 
-
-# Inicialização do modal
-modal_alerta = Modal("Criar Alerta", key="modal_alerta_key")
-
-# Botão para abrir o modal
-btn_criar_alerta = st.button("Deseja ser notificado quando novos imóveis correspondentes aos critérios acima estiverem disponíveis?")
-if btn_criar_alerta:
-    modal_alerta.open()
-
-st.markdown(
-    f"""
-    <style>
-    div[data-modal-container='true'][key='{modal_alerta.key}'] {{
-        width: calc(100vw - 300px) !important;  <!-- Ajusta a largura -->
-        left: 300px !important; <!-- Posiciona o modal após a barra lateral -->
-    }}
-
-    div[data-modal-container='true'][key='{modal_alerta.key}'] > div:first-child > div:first-child {{
-        background-color: black !important;  <!-- Cor de fundo do modal em preto -->
-        color: #eee !important;  <!-- Cor do texto do modal em modo escuro -->
-    }}
-
-    div[data-modal-container='true'][key='{modal_alerta.key}']::before {{
-        background-color: rgba(0, 0, 0, 0.5) !important;  <!-- Cor do fundo semi-transparente em preto -->
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-# Conteúdo do modal
-if modal_alerta.is_open():
-
-    with modal_alerta.container():
-        st.write(
-            "Informe seu e-mail para receber notificações sobre novos imóveis que correspondam aos seus critérios de busca.")
-
-        # Campo para inserção do e-mail
-        email = st.text_input("Endereço de E-mail")
-        # Botão de confirmação
-        if st.button("Confirmar"):
-            st.toast('Enviando alerta ')
-            time.sleep(3)
-            st.toast('Alerta cadastrado!', icon='🎉')
-            time.sleep(.5)
-            modal_alerta.close()
-
-
-if bairro:
+pesquisa = st.button('Pesquisar', use_container_width=True)
+if pesquisa:
+    st.session_state['bairro'] = bairro.replace(' ', '_')
+    st.session_state['quartos'] = quartos
+    st.session_state['preco'] = preco
+    st.session_state['area'] = area
+    st.session_state['vagas'] = vagas
+    st.session_state['banheiros'] = banheiros
+    # Inicialização do modal
+    st.session_state['page'] = 1
+#write all the st.session_state variables to a dictionary
+if 'bairro' in st.session_state and 'preco' in st.session_state:
     def cor_sinc(df):
         ultima_data_scrape = df['Data_scrape'].max()
         ultima_data_scrape = datetime.strptime(ultima_data_scrape, '%Y-%m-%d').date()
@@ -309,78 +290,161 @@ if bairro:
 
     # Combine the conditions
     resultados = df[bairro_condition & other_conditions]
-
-    #drop duplicates with the link but keeping the one with the last date on the column 'last-seen'
-    resultados = resultados.drop_duplicates(subset=['link'], keep='last')
-
-    #if bairro = 'Todos' then show the bairro column
-    if bairro == ' Todos':
-
-        resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'last_seen'], axis=1).reset_index(drop=True)
-        #replace the _ for space in the column 'bairro'
-        resultados_sem_data_scrape['bairro'] = resultados_sem_data_scrape['bairro'].str.replace('_', ' ')
+    if len(resultados) == 0:
+        st.markdown(f"""<div style=' 
+                        background-color: #red;
+                        backdrop-filter: blur(5px); 
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
+                        border-radius: 10px; 
+                        text-align: center; 
+                        padding: 20px; 
+                        font-size: 1.5em; 
+                        font-family: Arial, sans-serif;'>"""
+                    f"Nenhum resultado encontrado"
+                    "</div>", unsafe_allow_html=True)
 
     else:
-        resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro', 'last_seen'], axis=1).reset_index(drop=True)
-    #instead of text, an mouse icon
-    resultados_sem_data_scrape['link'] = resultados_sem_data_scrape['link'].apply(lambda x: f'<a href="{x}">Imovel</a>')
-    #write the table with the clickable link fitting the screen, justify the name of the columns to the center
+    #drop duplicates with the link but keeping the one with the last date on the column 'last-seen'
 
-    table_style = """
-    <style>
-        table {{
-            width: 100%;
-            border-collapse: collapse;
-        }}
-        th {{
-            Text-Align: Center;
-            Font-Weight: Bold;
-            Border-Bottom: 2px Solid #ddd;  /* Optional: For a Subtle Border Under Headers */
-            Padding: 10px;  /* Optional: For a Touch of Space Around Text */
-        }}
-    </style>
-    """
+        resultados = resultados.drop_duplicates(subset=['link'], keep='last')
+
+        #if bairro = 'Todos' then show the bairro column
+        if bairro == ' Todos':
+
+            resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'last_seen'], axis=1).reset_index(drop=True)
+            #replace the _ for space in the column 'bairro'
+            resultados_sem_data_scrape['bairro'] = resultados_sem_data_scrape['bairro'].str.replace('_', ' ')
+
+        else:
+            resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro', 'last_seen'], axis=1).reset_index(drop=True)
+        #instead of text, an mouse icon
+
+        #write the table with the clickable link fitting the screen, justify the name of the columns to the center
+
+        # i want to display the columns in a pretty way: the price column should have a R$ in front of it and the area should have a m2 after it
+        #apply the function format_brl to the column price
+        resultados_sem_data_scrape['preco'] = resultados_sem_data_scrape['preco'].apply(format_brl)
+
+        resultados_sem_data_scrape['area'] = resultados_sem_data_scrape['area'].apply(lambda x: f'{x} m2')
+
+        table_style = """
+        <style>
+            table {{
+                width: 100%;
+                border-collapse: collapse;
+            }}
+            th {{
+                Text-Align: Center;
+                Font-Weight: Bold;
+                Border-Bottom: 2px Solid #ddd;  /* Optional: For a Subtle Border Under Headers */
+                Padding: 10px;  /* Optional: For a Touch of Space Around Text */
+            }}
+            td {{
+                Text-Align: Center;
+                Border-Bottom: 1px Solid #ddd; /* Optional: For Subtle Borders Between Table Cells */
+                Padding: 10px; /* Optional: For a Touch of Space Around Text */
+            }}
+            tr:hover {{
+                background-color: #a1a1a1; /* Optional: Hover row color */
+                cursor: pointer;
+            }}
+            a {{
+                color: #000000;
+                text-decoration: none;
+            }}
+            
+            
+            
+        </style>
+        """
 
 
 
 
-    # Create the styled container and display the table
-    st.markdown(table_style.format(), unsafe_allow_html=True)
+        # Create the styled container and display the table
+        st.markdown(table_style.format(), unsafe_allow_html=True)
 
-    # Define the number of rows per page
-    rows_per_page = 50
+        # Define the number of rows per page
+        rows_per_page = 50
 
-    # Calculate the number of pages
-    num_pages = len(df) // rows_per_page
-    if len(df) % rows_per_page > 0:
-        num_pages += 1
+        # Calculate the number of pages
+        num_pages = len(df) // rows_per_page
+        if len(df) % rows_per_page > 0:
+            num_pages += 1
 
-    # Set up pagination with session state (if available in your Streamlit version)
-    if 'page' not in st.session_state:
-        st.session_state['page'] = 1
+        # Determine the indices of the rows to display
+        start_idx = (st.session_state['page'] - 1) * rows_per_page
+        end_idx = st.session_state['page'] * rows_per_page
+
+        resultados_sem_data_scrape = resultados_sem_data_scrape.iloc[start_idx:end_idx]
+        #capitalize the first letter of the columns
+        resultados_sem_data_scrape.columns = [col.capitalize() for col in resultados_sem_data_scrape.columns]
+
+        st.data_editor(resultados_sem_data_scrape, use_container_width=True, hide_index=True, column_config=
+                       {
+                           'Link': st.column_config.LinkColumn(
+                               'Link',
+                               help='Clique no link para abrir o imovel',
+                               max_chars=10,
+                               width="small"
 
 
-    # Determine the indices of the rows to display
-    start_idx = (st.session_state['page'] - 1) * rows_per_page
-    end_idx = st.session_state['page'] * rows_per_page
 
-    resultados_sem_data_scrape = resultados_sem_data_scrape.iloc[start_idx:end_idx]
-    #capitalize the first letter of the columns
-    resultados_sem_data_scrape.columns = [col.capitalize() for col in resultados_sem_data_scrape.columns]
-    bt1, bt2 = st.columns(2)
+                           )
+                       },disabled=True)
+        b1, b2 = st.columns(2)
+        Previous = b1.button('Página Anterior', use_container_width=True)
+        Next = b2.button('Próxima Pagina', use_container_width=True)
 
-    Previous_top = bt1.button('Página Anterior', use_container_width=True, key='Previous_top')
-    Next_top = bt2.button('Próxima Pagina', use_container_width=True, key= 'Next_top')
+        # Create Next and Previous buttons
+        if Previous  and st.session_state['page'] > 1:
+            st.session_state['page'] -= 1
 
-    st.write(resultados_sem_data_scrape.to_html(escape=False, index=False), unsafe_allow_html=True)
-    b1, b2 = st.columns(2)
-    Previous = b1.button('Página Anterior', use_container_width=True)
-    Next = b2.button('Próxima Pagina', use_container_width=True)
+        if Next and st.session_state['page'] < num_pages:
+            st.session_state['page'] += 1
 
-    # Create Next and Previous buttons
-    if (Previous or Previous_top) and st.session_state['page'] > 1:
-        st.session_state['page'] -= 1
-        st.rerun()
-    if (Next or Next_top) and st.session_state['page'] < num_pages:
-        st.session_state['page'] += 1
-        st.rerun()
+
+        modal_alerta = Modal("Criar Alerta", key="modal_alerta_key")
+
+        # Botão para abrir o modal
+        btn_criar_alerta = st.button(
+            "Deseja ser notificado quando novos imóveis correspondentes aos critérios acima estiverem disponíveis?")
+        if btn_criar_alerta:
+            modal_alerta.open()
+
+        st.markdown(
+            f"""
+                <style>
+                div[data-modal-container='true'][key='{modal_alerta.key}'] {{
+                    width: calc(100vw - 300px) !important;  <!-- Ajusta a largura -->
+                    left: 300px !important; <!-- Posiciona o modal após a barra lateral -->
+                }}
+    
+                div[data-modal-container='true'][key='{modal_alerta.key}'] > div:first-child > div:first-child {{
+                    background-color: black !important;  <!-- Cor de fundo do modal em preto -->
+                    color: #eee !important;  <!-- Cor do texto do modal em modo escuro -->
+                }}
+    
+                div[data-modal-container='true'][key='{modal_alerta.key}']::before {{
+                    background-color: rgba(0, 0, 0, 0.5) !important;  <!-- Cor do fundo semi-transparente em preto -->
+                }}
+                </style>
+                """,
+            unsafe_allow_html=True
+        )
+        # Conteúdo do modal
+        if modal_alerta.is_open():
+
+            with modal_alerta.container():
+                st.write(
+                    "Informe seu e-mail para receber notificações sobre novos imóveis que correspondam aos seus critérios de busca.")
+
+                # Campo para inserção do e-mail
+                email = st.text_input("Endereço de E-mail")
+                # Botão de confirmação
+                if st.button("Confirmar"):
+                    st.toast('Enviando alerta ')
+                    time.sleep(3)
+                    st.toast('Alerta cadastrado!', icon='🎉')
+                    time.sleep(.5)
+                    modal_alerta.close()

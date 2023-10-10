@@ -1,10 +1,8 @@
 import streamlit as st
 import folium
-import locale
 import pandas as pd
 import geopandas as gpd
 import time
-
 from shapely import Point
 from streamlit_folium import st_folium
 from datetime import datetime, timedelta
@@ -39,15 +37,6 @@ Esta página fornece informações detalhadas sobre os imóveis em cada bairro d
 
  
 """)
-def format_brl(value):
-    # Set the locale to Portuguese, Brazil for BRL formatting
-    locale.setlocale(locale.LC_MONETARY, 'pt_BR.UTF-8')
-
-    # Format the value as BRL currency
-    formatted_value = locale.currency(value, symbol=True, grouping=True, international=False)
-
-    return formatted_value
-
 
 
 if 'fonte' not in st.session_state:
@@ -324,9 +313,9 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
 
         # i want to display the columns in a pretty way: the price column should have a R$ in front of it and the area should have a m2 after it
         #apply the function format_brl to the column price
-        resultados_sem_data_scrape['preco'] = resultados_sem_data_scrape['preco'].apply(format_brl)
 
-        resultados_sem_data_scrape['area'] = resultados_sem_data_scrape['area'].apply(lambda x: f'{x} m2')
+
+        resultados_sem_data_scrape['area'] = resultados_sem_data_scrape['area'].apply(lambda x: f'{x} m²')
 
         table_style = """
         <style>
@@ -388,10 +377,13 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
                                help='Clique no link para abrir o imovel',
                                max_chars=10,
                                width="small"
-
-
-
-                           )
+                           ),
+                           #display the preco column as currency
+                            'Preco': st.column_config.NumberColumn(
+                                    "preco",
+                                    help="Preço do produto em reais",
+                                    format="R$ %f",
+                                )
                        },disabled=True)
         b1, b2 = st.columns(2)
         Previous = b1.button('Página Anterior', use_container_width=True)

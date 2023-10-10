@@ -97,7 +97,8 @@ bairro_options = sorted(df['bairro'].unique())
 #appending the value todos to the bairro_options
 bairro_options = np.append(bairro_options, '_Todos')
 if 'bairro' not in st.session_state:
-    bairro = st.selectbox("Selecione o bairro", [x.replace('_', ' ') for x in bairro_options],index=0,placeholder='Selecione o bairro')
+    index = int(np.where(bairro_options == '_Todos')[0][0])
+    bairro = st.selectbox("Selecione o bairro", [x.replace('_', ' ') for x in bairro_options],index=index,placeholder='Selecione o bairro')
 else:
     try:
         index = int(np.where(bairro_options == st.session_state.bairro)[0][0])

@@ -11,5 +11,6 @@ xgboost==1.7.5
 shapely
 plotly==5.13.1
 streamlit-modal
+locale
 
 

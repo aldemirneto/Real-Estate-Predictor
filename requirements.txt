@@ -12,4 +12,3 @@ shapely
 plotly==5.13.1
 streamlit-modal
 
-

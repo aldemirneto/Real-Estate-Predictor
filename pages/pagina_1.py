@@ -322,9 +322,11 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
             resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'last_seen', 'Imobiliaria'], axis=1).reset_index(drop=True)
             #replace the _ for space in the column 'bairro'
             resultados_sem_data_scrape['bairro'] = resultados_sem_data_scrape['bairro'].str.replace('_', ' ')
+            resultados_sem_data_scrape = resultados_sem_data_scrape[['preco', 'area', 'quartos', 'banheiros', 'vagas', 'bairro', 'link']]
 
         else:
             resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro', 'last_seen', 'Imobiliaria'], axis=1).reset_index(drop=True)
+            resultados_sem_data_scrape = resultados_sem_data_scrape[['preco', 'area', 'quartos', 'banheiros', 'vagas', 'link']]
         #instead of text, an mouse icon
 
         #write the table with the clickable link fitting the screen, justify the name of the columns to the center
@@ -370,11 +372,18 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
         </style>
         """
 
+
         if window_width < 500:
 
             resultados_sem_data_scrape['Detalhes'] = '| '+resultados_sem_data_scrape['quartos'].astype(str) + 'Q | ' + resultados_sem_data_scrape['banheiros'].astype(str) + 'B | ' + \
                              resultados_sem_data_scrape['vagas'].astype(str) + 'V | ' + resultados_sem_data_scrape['area'].astype(str)
             resultados_sem_data_scrape.drop(['quartos', 'banheiros', 'vagas', 'area'], axis=1, inplace=True)
+            if bairro == ' Todos':
+                resultados_sem_data_scrape = resultados_sem_data_scrape[['preco','Detalhes', 'bairro', 'link']]
+            else:
+                resultados_sem_data_scrape = resultados_sem_data_scrape[['preco','Detalhes', 'link']]
+
+        #place the 'link' column in the LAST position
 
         st.markdown(table_style.format(), unsafe_allow_html=True)
         # Define the number of rows per page
@@ -398,45 +407,49 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
         #write the table with the clickable link fitting the screen, justify the name of the columns to the center
         st.markdown(table_style.format(), unsafe_allow_html=True)
         st.write(resultados_sem_data_scrape.to_html(escape=False, index=False), unsafe_allow_html=True)
-        html("""
+        #get the position of the link column
+        link_column = resultados_sem_data_scrape.columns.get_loc('Link')
+
+        html(f"""
         <script>
-        function modifyTable(document) {
+        function modifyTable(document) {{
             // Hide the "Link" column header (assuming it’s the sixth header)
-            document.querySelectorAll('.dataframe th')[5].style.display = 'none';
+            document.querySelectorAll('.dataframe th')[{link_column}].style.display = 'none';
             
             // Select all rows in the table
             const rows = document.querySelectorAll('.dataframe tbody tr');
             
-            rows.forEach(row => {
+            rows.forEach(row => {{
                 // Get all cells in the row
                 const cells = row.querySelectorAll('td');
                 
                 // Get the link from the "Link" column (assuming it’s the sixth cell)
-                const linkCell = cells[5];
+                
+                const linkCell = cells[{link_column}];
                 const link = linkCell.querySelector('a').href;
                 
                 // Hide the "Link" column
                 linkCell.style.display = 'none';
                 
-                console.log("link");
+                
                 // Add a click event to the row to navigate to the link
-                console.log(row);
-                row.addEventListener('click', () => {
+                
+                row.addEventListener('click', () => {{
                     window.open(link, '_blank');
                     
                     
-                });
+                }});
                 
-                row.querySelectorAll('a').forEach(a => {
-            a.addEventListener('click', (e) => {
+                row.querySelectorAll('a').forEach(a => {{
+            a.addEventListener('click', (e) => {{
                 e.stopPropagation();
-            });
-        });
-                console.log(link);
+            }});
+        }});
+                
                 // Style the row to indicate it's clickable
                 row.style.cursor = 'pointer';
-            });
-        }
+            }});
+        }}
         
         modifyTable(parent.window.document);
         </script>

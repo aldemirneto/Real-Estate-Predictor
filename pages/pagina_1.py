@@ -348,21 +348,22 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
         </style>
         """
 
+        if window_width < 500:
 
+            resultados_sem_data_scrape['Detalhes'] = '| '+resultados_sem_data_scrape['quartos'].astype(str) + 'Q | ' + resultados_sem_data_scrape['banheiros'].astype(str) + 'B | ' + \
+                             resultados_sem_data_scrape['vagas'].astype(str) + 'V | ' + resultados_sem_data_scrape['area'].astype(str)
+            resultados_sem_data_scrape.drop(['quartos', 'banheiros', 'vagas', 'area'], axis=1, inplace=True)
 
-
-        # Create the styled container and display the table
         st.markdown(table_style.format(), unsafe_allow_html=True)
-
         # Define the number of rows per page
         rows_per_page = 50
 
         # Calculate the number of pages
-        num_pages = len(df) // rows_per_page
-        if len(df) % rows_per_page > 0:
+        num_pages = len(resultados_sem_data_scrape) // rows_per_page
+        if len(resultados_sem_data_scrape) % rows_per_page > 0:
             num_pages += 1
 
-        # Determine the indices of the rows to display
+
         start_idx = (st.session_state['page'] - 1) * rows_per_page
         end_idx = st.session_state['page'] * rows_per_page
 

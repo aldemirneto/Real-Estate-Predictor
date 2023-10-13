@@ -322,11 +322,11 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
             resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'last_seen', 'Imobiliaria'], axis=1).reset_index(drop=True)
             #replace the _ for space in the column 'bairro'
             resultados_sem_data_scrape['bairro'] = resultados_sem_data_scrape['bairro'].str.replace('_', ' ')
-            resultados_sem_data_scrape = resultados_sem_data_scrape[['preco', 'area', 'quartos', 'banheiros', 'vagas', 'bairro', 'link']]
+            resultados_sem_data_scrape = resultados_sem_data_scrape[['bairro', 'preco', 'area', 'quartos', 'banheiros', 'vagas', 'link']]
 
         else:
-            resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro', 'last_seen', 'Imobiliaria'], axis=1).reset_index(drop=True)
-            resultados_sem_data_scrape = resultados_sem_data_scrape[['preco', 'area', 'quartos', 'banheiros', 'vagas', 'link']]
+            resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro', 'last_seen' ], axis=1).reset_index(drop=True)
+            resultados_sem_data_scrape = resultados_sem_data_scrape[['Imobiliaria' ,'preco', 'area', 'quartos', 'banheiros', 'vagas', 'link']]
         #instead of text, an mouse icon
 
         #write the table with the clickable link fitting the screen, justify the name of the columns to the center
@@ -340,6 +340,12 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
 
         table_style = """
         <style>
+        
+        *,
+        *:before,
+        *:after {{
+          box-sizing: inherit;
+        }}
             table {{
                 width: 100%;
                 border-collapse: collapse;
@@ -348,16 +354,17 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
                 
             }}
             th {{
-                Text-Align: Center;
+                
                 Font-Weight: Bold;
                 Border-Bottom: 2px Solid #ddd;  /* Optional: For a Subtle Border Under Headers */
                 Padding: 10px;  /* Optional: For a Touch of Space Around Text */
             }}
             td {{
-                Text-Align: Center;
+                
                 Border-Bottom: 1px Solid #ddd; /* Optional: For Subtle Borders Between Table Cells */
                 Padding: 10px; /* Optional: For a Touch of Space Around Text */
             }}
+            
             tr:hover {{
                 background-color: #a1a1a1; /* Optional: Hover row color */
                 cursor: pointer;
@@ -366,22 +373,93 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
                 color: #000000;
                 text-decoration: none;
             }}
+           
+           
+        @media (max-width: 500px) {{
+             td, th {{
+            border-bottom: none !important; /* Removing the border and ensuring this rule has high specificity */
+            border-top: none !important; /* Removing the top border as well */
             
+        }}
+            td:first-child, th:first-child {{
+            #background-color: #1C8394;
+                background-color: #1C8394; /* Choose your color */
+                color: white; /* Text color, choose what suits your background color */
+                border-radius: 5px; /* Optional: for rounded corners */
+                padding: 10px; /* Space inside the cell */
+                text-align: left;
+            }}
+            td {{
+            border-bottom: 0; /* Removing the border */
+            display: block;
+            position: relative;
+            padding-left: 0;
+            padding-right: 30px;
+            text-align: right;
+            font-weight: bold;
+            font-style: roboto;
+            }}
+        
+        td:before {{
+            content: attr(data-title);
+            position: absolute;
+            left: 0;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: right;
+            font-weight: normal;
+        }}
+        
+        th {{
+            border-bottom: 0; /* Removing the border */
+            display: block;
+            position: relative;
+            text-align: right;
+            padding-left: 0;
+            font-style: italic;
+;
+        }}
+        
+        th:before {{
+            content: attr(data-title);
+            position: absolute;
+            left: 0;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: left;
+        }}
             
+        .dataframe thead {{
+            display: none; /* Hide headers */
+        }}
+
+        .dataframe tbody td:not(:first-child) {{
+            display: block;
+            position: relative;
+            padding-left: 0; /* Resetting padding to 0 */
+            font-weight: normal;
+        }}
+        
+        .dataframe tbody td:not(:first-child):before {{
+             content: attr(data-title);
+            position: absolute;
+            left: 0;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: normal;
+            
+        }}
+    }}
             
         </style>
         """
 
 
-        if window_width < 500:
 
-            resultados_sem_data_scrape['Detalhes'] = '| '+resultados_sem_data_scrape['quartos'].astype(str) + 'Q | ' + resultados_sem_data_scrape['banheiros'].astype(str) + 'B | ' + \
-                             resultados_sem_data_scrape['vagas'].astype(str) + 'V | ' + resultados_sem_data_scrape['area'].astype(str)
-            resultados_sem_data_scrape.drop(['quartos', 'banheiros', 'vagas', 'area'], axis=1, inplace=True)
-            if bairro == ' Todos':
-                resultados_sem_data_scrape = resultados_sem_data_scrape[['preco','Detalhes', 'bairro', 'link']]
-            else:
-                resultados_sem_data_scrape = resultados_sem_data_scrape[['preco','Detalhes', 'link']]
 
         #place the 'link' column in the LAST position
 
@@ -410,6 +488,8 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
         #get the position of the link column
         link_column = resultados_sem_data_scrape.columns.get_loc('Link')
 
+        b1, b2 = st.columns(2)
+        Previous = b1.button('Página Anterior', use_container_width=True)
         html(f"""
         <script>
         function modifyTable(document) {{
@@ -450,13 +530,35 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
                 row.style.cursor = 'pointer';
             }});
         }}
+        function addDataTitles(document) {{
+            // Assuming your table has a unique id or class
+            
+            
+            const table = document.querySelector('.dataframe');
         
+            const headers = Array.from(table.querySelectorAll('thead th'))
+                .map(th => th.textContent);
+            
+            
+            const rows = table.querySelectorAll('tbody tr');            
+            rows.forEach(row => {{
+                const cells = row.querySelectorAll('td');
+                cells.forEach((cell, index) => {{
+                if (index === 0) {{
+                     cell.setAttribute('row-scope', '1');
+                }}
+                else{{
+                    cell.setAttribute('data-title', headers[index]);
+                    }}
+                }});
+            }});
+        }}
+        addDataTitles(parent.window.document);
         modifyTable(parent.window.document);
+        
         </script>
         
         """, width=0, height=0)
-        b1, b2 = st.columns(2)
-        Previous = b1.button('Página Anterior', use_container_width=True)
         Next = b2.button('Próxima Pagina', use_container_width=True)
 
         # Create Next and Previous buttons

@@ -1,3 +1,6 @@
+
+from streamlit.components.v1 import html
+from streamlit_js_eval import streamlit_js_eval
 import streamlit as st
 import folium
 import pandas as pd
@@ -10,6 +13,21 @@ import numpy as np
 from streamlit_modal import Modal
 
 
+
+@st.cache_data
+def convert_df(df):
+    # IMPORTANT: Cache the conversion to prevent computation on every rerun
+    return df.to_csv().encode('utf-8')
+
+def format_brl(amount):
+    formatted_amount = f'R$ {amount:,.2f}'.replace(',', 'x').replace('.', ',').replace('x', '.')
+    return formatted_amount
+
+
+ # hidden iframe to run the script
+# Get the screen height
+screen_height = streamlit_js_eval(js_expressions='screen.height')
+window_width = streamlit_js_eval(js_expressions='window.innerWidth')
 
 
 
@@ -301,12 +319,12 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
         #if bairro = 'Todos' then show the bairro column
         if bairro == ' Todos':
 
-            resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'last_seen'], axis=1).reset_index(drop=True)
+            resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'last_seen', 'Imobiliaria'], axis=1).reset_index(drop=True)
             #replace the _ for space in the column 'bairro'
             resultados_sem_data_scrape['bairro'] = resultados_sem_data_scrape['bairro'].str.replace('_', ' ')
 
         else:
-            resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro', 'last_seen'], axis=1).reset_index(drop=True)
+            resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro', 'last_seen', 'Imobiliaria'], axis=1).reset_index(drop=True)
         #instead of text, an mouse icon
 
         #write the table with the clickable link fitting the screen, justify the name of the columns to the center
@@ -316,12 +334,16 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
 
 
         resultados_sem_data_scrape['area'] = resultados_sem_data_scrape['area'].apply(lambda x: f'{x} m²')
+        resultados_sem_data_scrape['preco'] = resultados_sem_data_scrape['preco'].apply(lambda x: format_brl(x))
 
         table_style = """
         <style>
             table {{
                 width: 100%;
                 border-collapse: collapse;
+                #border should have a rounder border
+                border: 2px solid #000000;
+                
             }}
             th {{
                 Text-Align: Center;
@@ -356,7 +378,7 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
 
         st.markdown(table_style.format(), unsafe_allow_html=True)
         # Define the number of rows per page
-        rows_per_page = 50
+        rows_per_page = 30
 
         # Calculate the number of pages
         num_pages = len(resultados_sem_data_scrape) // rows_per_page
@@ -370,22 +392,56 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
         resultados_sem_data_scrape = resultados_sem_data_scrape.iloc[start_idx:end_idx]
         #capitalize the first letter of the columns
         resultados_sem_data_scrape.columns = [col.capitalize() for col in resultados_sem_data_scrape.columns]
+        #make the link clickable, the text of the link is the name between the www. and .com
+        resultados_sem_data_scrape['Link'] = resultados_sem_data_scrape['Link'].apply(lambda x: f"<a href='{x}' target='_blank'>{x[12:x.find('.com')].capitalize().replace('Imobiliariajunqueira', 'Junqueira')}</a>")
 
-        st.data_editor(resultados_sem_data_scrape, use_container_width=True, hide_index=True, column_config=
-                       {
-                           'Link': st.column_config.LinkColumn(
-                               'Link',
-                               help='Clique no link para abrir o imovel',
-                               max_chars=10,
-                               width="small"
-                           ),
-                           #display the preco column as currency
-                            'Preco': st.column_config.NumberColumn(
-                                    "preco",
-                                    help="Preço do produto em reais",
-                                    format="R$ %f",
-                                )
-                       },disabled=True)
+        #write the table with the clickable link fitting the screen, justify the name of the columns to the center
+        st.markdown(table_style.format(), unsafe_allow_html=True)
+        st.write(resultados_sem_data_scrape.to_html(escape=False, index=False), unsafe_allow_html=True)
+        html("""
+        <script>
+        function modifyTable(document) {
+            // Hide the "Link" column header (assuming it’s the sixth header)
+            document.querySelectorAll('.dataframe th')[5].style.display = 'none';
+            
+            // Select all rows in the table
+            const rows = document.querySelectorAll('.dataframe tbody tr');
+            
+            rows.forEach(row => {
+                // Get all cells in the row
+                const cells = row.querySelectorAll('td');
+                
+                // Get the link from the "Link" column (assuming it’s the sixth cell)
+                const linkCell = cells[5];
+                const link = linkCell.querySelector('a').href;
+                
+                // Hide the "Link" column
+                linkCell.style.display = 'none';
+                
+                console.log("link");
+                // Add a click event to the row to navigate to the link
+                console.log(row);
+                row.addEventListener('click', () => {
+                    window.open(link, '_blank');
+                    
+                    
+                });
+                
+                row.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        });
+                console.log(link);
+                // Style the row to indicate it's clickable
+                row.style.cursor = 'pointer';
+            });
+        }
+        
+        modifyTable(parent.window.document);
+        </script>
+        
+        """, width=0, height=0)
         b1, b2 = st.columns(2)
         Previous = b1.button('Página Anterior', use_container_width=True)
         Next = b2.button('Próxima Pagina', use_container_width=True)
@@ -413,12 +469,12 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
                     width: calc(100vw - 300px) !important;  <!-- Ajusta a largura -->
                     left: 300px !important; <!-- Posiciona o modal após a barra lateral -->
                 }}
-    
+
                 div[data-modal-container='true'][key='{modal_alerta.key}'] > div:first-child > div:first-child {{
                     background-color: black !important;  <!-- Cor de fundo do modal em preto -->
                     color: #eee !important;  <!-- Cor do texto do modal em modo escuro -->
                 }}
-    
+
                 div[data-modal-container='true'][key='{modal_alerta.key}']::before {{
                     background-color: rgba(0, 0, 0, 0.5) !important;  <!-- Cor do fundo semi-transparente em preto -->
                 }}

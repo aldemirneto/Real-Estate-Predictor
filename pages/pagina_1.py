@@ -20,7 +20,7 @@ def convert_df(df):
     return df.to_csv().encode('utf-8')
 
 def format_brl(amount):
-    formatted_amount = f'R$ {amount:,.2f}'.replace(',', 'x').replace('.', ',').replace('x', '.')
+    formatted_amount = f'{amount:,.2f}'.replace(',', 'x').replace('.', ',').replace('x', '.')
     return formatted_amount
 
 
@@ -99,6 +99,9 @@ df = pd.read_csv('imoveis.csv', sep=';')
 if st.session_state.fonte == 'Aluguel':
     df = pd.read_csv('imoveis_aluguel.csv', sep=';')
 
+
+
+df = df[((datetime.today().date() - pd.to_datetime(df['last_seen']).dt.date) < timedelta(days=4))]
 
 bairro_options = sorted(df['bairro'].unique())
 #appending the value todos to the bairro_options
@@ -201,7 +204,7 @@ if modal_geo.is_open():
                 modal_geo.close()
                 st.rerun()
 
-# Create 4 columns to place the widgets
+# Create 4 columns to pla   ce the widgets
 col1, col2, col3, col4 = st.columns(4)
 
 # Dropdowns for rooms in Column 1
@@ -327,16 +330,9 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
         else:
             resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro', 'last_seen' ], axis=1).reset_index(drop=True)
             resultados_sem_data_scrape = resultados_sem_data_scrape[['Imobiliaria' ,'preco', 'area', 'quartos', 'banheiros', 'vagas', 'link']]
-        #instead of text, an mouse icon
 
-        #write the table with the clickable link fitting the screen, justify the name of the columns to the center
-
-        # i want to display the columns in a pretty way: the price column should have a R$ in front of it and the area should have a m2 after it
-        #apply the function format_brl to the column price
-
-
-        resultados_sem_data_scrape['area'] = resultados_sem_data_scrape['area'].apply(lambda x: f'{x} m²')
         resultados_sem_data_scrape['preco'] = resultados_sem_data_scrape['preco'].apply(lambda x: format_brl(x))
+
 
         table_style = """
         <style>
@@ -353,11 +349,13 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
                 Font-Weight: Bold;
                 Border-Bottom: 2px Solid #ddd;  /* Optional: For a Subtle Border Under Headers */
                 Padding: 10px;  /* Optional: For a Touch of Space Around Text */
+                text-align: center;
             }}
             td {{
                 
                 Border-Bottom: 1px Solid #ddd; /* Optional: For Subtle Borders Between Table Cells */
                 Padding: 10px; /* Optional: For a Touch of Space Around Text */
+                text-align: center;
             }}
             
             tr:hover {{
@@ -453,11 +451,6 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
         </style>
         """
 
-
-
-
-        #place the 'link' column in the LAST position
-
         st.markdown(table_style.format(), unsafe_allow_html=True)
         # Define the number of rows per page
         rows_per_page = 30
@@ -474,10 +467,11 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
         resultados_sem_data_scrape = resultados_sem_data_scrape.iloc[start_idx:end_idx]
         #capitalize the first letter of the columns
         resultados_sem_data_scrape.columns = [col.capitalize() for col in resultados_sem_data_scrape.columns]
+        #rename the columns area to include an (m²)
+        resultados_sem_data_scrape = resultados_sem_data_scrape.rename(columns={'Area': 'Area (m²)', 'Preco': 'Preço (R$)'})
         #make the link clickable, the text of the link is the name between the www. and .com
         resultados_sem_data_scrape['Link'] = resultados_sem_data_scrape['Link'].apply(lambda x: f"<a href='{x}' target='_blank'>{x[12:x.find('.com')].capitalize().replace('Imobiliariajunqueira', 'Junqueira')}</a>")
 
-        #write the table with the clickable link fitting the screen, justify the name of the columns to the center
         st.markdown(table_style.format(), unsafe_allow_html=True)
         st.write(resultados_sem_data_scrape.to_html(escape=False, index=False), unsafe_allow_html=True)
         #get the position of the link column

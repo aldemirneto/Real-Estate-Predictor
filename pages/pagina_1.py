@@ -490,79 +490,11 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
 
         b1, b2 = st.columns(2)
         Previous = b1.button('Página Anterior', use_container_width=True)
-        html(f"""
-        <script>
-        function modifyTable(document) {{
-            // Hide the "Link" column header (assuming it’s the sixth header)
-            document.querySelectorAll('.dataframe th')[{link_column}].style.display = 'none';
-            
-            // Select all rows in the table
-            const rows = document.querySelectorAll('.dataframe tbody tr');
-            
-            rows.forEach(row => {{
-                // Get all cells in the row
-                const cells = row.querySelectorAll('td');
-                
-                // Get the link from the "Link" column (assuming it’s the sixth cell)
-                
-                const linkCell = cells[{link_column}];
-                const link = linkCell.querySelector('a').href;
-                
-                // Hide the "Link" column
-                linkCell.style.display = 'none';
-                
-                
-                // Add a click event to the row to navigate to the link
-                
-                row.addEventListener('click', () => {{
-                    window.open(link, '_blank');
-                    
-                    
-                }});
-                
-                row.querySelectorAll('a').forEach(a => {{
-            a.addEventListener('click', (e) => {{
-                e.stopPropagation();
-            }});
-        }});
-                
-                // Style the row to indicate it's clickable
-                row.style.cursor = 'pointer';
-            }});
-        }}
-        function addDataTitles(document) {{
-            // Assuming your table has a unique id or class
-            
-            
-            const table = document.querySelector('.dataframe');
-        
-            const headers = Array.from(table.querySelectorAll('thead th'))
-                .map(th => th.textContent);
-            
-            
-            const rows = table.querySelectorAll('tbody tr');            
-            rows.forEach(row => {{
-                const cells = row.querySelectorAll('td');
-                cells.forEach((cell, index) => {{
-                if (index === 0) {{
-                     cell.setAttribute('row-scope', '1');
-                }}
-                else{{
-                    cell.setAttribute('data-title', headers[index]);
-                    }}
-                }});
-            }});
-        }}
-        addDataTitles(parent.window.document);
-        modifyTable(parent.window.document);
-        
-        </script>
-        
-        """, width=0, height=0)
+
         Next = b2.button('Próxima Pagina', use_container_width=True)
 
         # Create Next and Previous buttons
-        if Previous  and st.session_state['page'] > 1:
+        if Previous and st.session_state['page'] > 1:
             st.session_state['page'] -= 1
 
         if Next and st.session_state['page'] < num_pages:
@@ -576,6 +508,37 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
             "Deseja ser notificado quando novos imóveis correspondentes aos critérios acima estiverem disponíveis?")
         if btn_criar_alerta:
             modal_alerta.open()
+
+        html(f"""
+                <script>
+                
+                
+                function addDataTitles(document) {{
+
+                    const table = document.querySelector('.dataframe');
+                    const headers = Array.from(table.querySelectorAll('thead th'))
+                        .map(th => th.textContent);
+
+
+                    const rows = table.querySelectorAll('tbody tr');            
+                    rows.forEach(row => {{
+                        const cells = row.querySelectorAll('td');
+                        cells.forEach((cell, index) => {{
+                        if (index === 0) {{
+                             cell.setAttribute('row-scope', '1');
+                        }}
+                        else{{
+                            cell.setAttribute('data-title', headers[index]);
+                            }}
+                        }});
+                    }});
+                }}
+                addDataTitles(parent.window.document);
+
+
+                </script>
+
+                """, width=0, height=0)
 
         st.markdown(
             f"""

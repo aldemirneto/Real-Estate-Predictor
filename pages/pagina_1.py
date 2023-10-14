@@ -341,11 +341,6 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
         table_style = """
         <style>
         
-        *,
-        *:before,
-        *:after {{
-          box-sizing: inherit;
-        }}
             table {{
                 width: 100%;
                 border-collapse: collapse;

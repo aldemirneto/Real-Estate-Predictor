@@ -245,9 +245,9 @@ if 'preco' not in st.session_state:
     preco = st.slider("Preço máximo", min_value=0, max_value=int(df['preco'].max()), value=1000, step=100)
     st.session_state['preco'] = preco
 else:
-    preco = st.slider("Preço máximo", min_value=0, max_value=int(df['preco'].max()), value=st.session_state['preco'], step=100)
-
-# Slider for area below the columns since it might be more visually appealing as a wider widget
+    #the max value will be the max value of the dataframe with the characteristics selected
+    max_value = df[(df['quartos'] == quartos) & (df['banheiros'] >= banheiros) & (df['vagas'] == vagas) & (df['area'] >= area)]['preco'].max()
+    preco = st.slider("Preço máximo", min_value=0, max_value=int(max_value), value=st.session_state['preco'], step=100)
 
 pesquisa = st.button('Pesquisar', use_container_width=True)
 if pesquisa:

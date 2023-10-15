@@ -223,27 +223,27 @@ col1, col2, col3, col4 = st.columns(4)
 # Dropdowns for rooms in Column 1
 # Number input for rooms in Column 1
 if 'quartos' not in st.session_state:
-    quartos = col1.number_input("Mínimo de quartos", min_value=0, max_value=10, value=0, step=1)
+    quartos = col1.number_input("Quartos", min_value=0, max_value=10, value=0, step=1)
     st.session_state['quartos'] = quartos
 else:
-    quartos = col1.number_input("Mínimo de quartos", min_value=0, max_value=10, value=st.session_state.quartos, step=1)
+    quartos = col1.number_input("Quartos", min_value=0, max_value=10, value=st.session_state.quartos, step=1)
 
 
 # Number input for bathrooms in Column 2
 if 'banheiros' not in st.session_state:
-    banheiros = col2.number_input("Mínimo de banheiros", min_value=0, max_value=9, value=0, step=1)
+    banheiros = col2.number_input("Banheiros", min_value=0, max_value=9, value=0, step=1)
     st.session_state['banheiros'] = banheiros
 else:
-    banheiros = col2.number_input("Mínimo de banheiros", min_value=0, max_value=9, value=st.session_state['banheiros'], step=1)
+    banheiros = col2.number_input("Banheiros", min_value=0, max_value=9, value=st.session_state['banheiros'], step=1)
 
 
 # Number input for parking spots in Column 3
 if 'vagas' not in st.session_state:
-    vagas = col3.number_input("Mínimo de vagas", min_value=0, max_value=9, value=0, step=1)
+    vagas = col3.number_input("Vagas", min_value=0, max_value=9, value=0, step=1)
     st.session_state['vagas'] = vagas
 
 else:
-    vagas = col3.number_input("Mínimo de vagas", min_value=0, max_value=9, value=st.session_state.vagas, step=1)
+    vagas = col3.number_input("Vagas", min_value=0, max_value=9, value=st.session_state.vagas, step=1)
 
 
 

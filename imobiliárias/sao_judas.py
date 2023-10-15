@@ -102,7 +102,7 @@ def run():
         df['banheiros'] = df['banheiros'].astype(int)
     except:
         pass
-    df['Imobiliaria'] = 'Sâo Judas'
+    df['Imobiliaria'] = 'Sao Judas'
     df['Data_scrape'] = pd.to_datetime('today').strftime('%Y-%m-%d')
     df['last_seen'] = pd.to_datetime('today').strftime('%Y-%m-%d')
     df = df[['preco', 'area', 'quartos', 'vagas', 'banheiros', 'link', 'Imobiliaria', 'bairro', 'Data_scrape', 'last_seen']]

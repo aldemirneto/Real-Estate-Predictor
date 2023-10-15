@@ -172,17 +172,30 @@ if modal_geo.is_open():
         # replace 'Bairro Alto' with 'Alto' in the df dataframe
         df_m['Name'] = df_m['Name'].str.replace('Bairro_alto', 'Alto')
 
+        # Create a feature group
+        feature_group = folium.FeatureGroup(name='My Polygons')
+
+        # Add your polygons to the feature group
+        for _, row in df_m.iterrows():
+            folium.GeoJson(
+                row['geometry'],
+                name=row['Name'],
+                style_function=lambda x: {'color': 'black', 'weight': 0, 'fillOpacity': 0.05},
+                highlight_function=lambda x: {'weight': 4, 'color': 'red'}
+            ).add_to(feature_group)
+
         # create the folium map
         m = folium.Map(location=[df_m.loc[df_m['Name'] == 'Centro', 'centroid'].values[0].y,
                                  df_m.loc[df_m['Name'] == 'Centro', 'centroid'].values[0].x], zoom_start=12.5)
 
+        feature_group.add_to(m)
         # plot the choropleth map
         choropleth = folium.GeoJson(
             data=df_m[['Name', 'geometry']].to_json()
         ).add_to(m)
 
         #render the map in streamlit smaller
-        map = st_folium(m, height=300, width=600)
+        map = st_folium(m, height=300, width=600, feature_group_to_add=feature_group)
 
         def get_pos(lat, lng):
             for i in range(len(df_m)):
@@ -340,20 +353,19 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
             table {{
                 width: 100%;
                 border-collapse: collapse;
-                #border should have a rounder border
-                border: 2px solid #000000;
+                border: none;
                 
             }}
             th {{
                 
                 Font-Weight: Bold;
-                Border-Bottom: 2px Solid #ddd;  /* Optional: For a Subtle Border Under Headers */
+                Border-Bottom: 4px Solid #FAFAFA;  /* Optional: For a Subtle Border Under Headers */
                 Padding: 10px;  /* Optional: For a Touch of Space Around Text */
                 text-align: center;
             }}
             td {{
                 
-                Border-Bottom: 1px Solid #ddd; /* Optional: For Subtle Borders Between Table Cells */
+                Border-Bottom: 4px Solid #ddd; /* Optional: For Subtle Borders Between Table Cells */
                 Padding: 10px; /* Optional: For a Touch of Space Around Text */
                 text-align: center;
             }}
@@ -367,9 +379,9 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
                 text-decoration: none;
             }}
            
-           
         @media (max-width: 500px) {{
-             td, th {{
+             td, th, tr {{
+            border:none; !important;
             border-bottom: none !important; /* Removing the border and ensuring this rule has high specificity */
             border-top: none !important; /* Removing the top border as well */
             
@@ -433,6 +445,8 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
             position: relative;
             padding-left: 0; /* Resetting padding to 0 */
             font-weight: normal;
+            font-style: roboto;
+            border: none;
         }}
         
         .dataframe tbody td:not(:first-child):before {{
@@ -474,6 +488,18 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
 
         st.markdown(table_style.format(), unsafe_allow_html=True)
         st.write(resultados_sem_data_scrape.to_html(escape=False, index=False), unsafe_allow_html=True)
+        html("""
+        <script>
+        /*if the size of the window is over 600px*/
+        if (parent.window.innerWidth > 600) {{
+        var links = parent.window.document.querySelectorAll('tbody tr td a');
+                    for (var i = 0; i < links.length; i++) {{
+                          
+                        links[i].innerHTML = '🏠';
+                    }}
+                    }}
+        </script>
+        """, height=0, width=0)
         #get the position of the link column
         link_column = resultados_sem_data_scrape.columns.get_loc('Link')
 
@@ -501,6 +527,17 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
         html(f"""
                 <script>
                 
+
+                function replaceText(document) {{
+                    if (parent.window.innerWidth > 600) {{
+                    var links = document.querySelectorAll('tbody tr td a');
+                    for (var i = 0; i < links.length; i++) {{
+                        
+                        links[i].innerHTML = '🏠';
+                    }}
+                    }}
+                }}
+                         
                 
                 function addDataTitles(document) {{
 
@@ -522,6 +559,27 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
                         }});
                     }});
                 }}
+                const elements = parent.window.document.querySelectorAll('.stButton > button');
+                elements[3].addEventListener('click', function() {{
+                    console.log('executing');
+                    /*wait 1 second and exec the functions*/
+                    setTimeout(function() {{
+                        console.log('executed');
+                        replaceText(parent.window.document);
+                        addDataTitles(parent.window.document);
+                    }}, 1000);
+                    
+                }});
+                elements[4].addEventListener('click', function() {{
+                    addDataTitles(parent.window.document);
+                    replaceText(parent.window.document);
+                    
+                }});
+                elements[5].addEventListener('click', function() {{
+                    addDataTitles(parent.window.document);
+                    replaceText(parent.window.document);
+                    
+                }});
                 addDataTitles(parent.window.document);
 
 

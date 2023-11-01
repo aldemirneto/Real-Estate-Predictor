@@ -1671,3 +1671,886 @@ preco;area;quartos;vagas;banheiros;link;Imobiliaria;bairro;Data_scrape;last_seen
 185000.0;10000.0;0;0;0;https://www.imobiliariajunqueira.com.br/imovel/aluguel-rio_claro-jardim_novo_ii-galpao-25386;Junqueira;Jardim_novo_ii;2023-10-07;2023-10-07
 200000.0;11000.0;0;200;0;https://www.imobiliariajunqueira.com.br/imovel/aluguel-piracicaba-vila_industrial-galpao-23048;Junqueira;Vila_industrial;2023-10-07;2023-10-07
 215000.0;52214.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/unileste/comercial-alugar-unileste-em-piracicaba/32629;Frias Neto;Unileste;2023-10-07;2023-10-30
+6300.0;390.0;3;4;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/damha/residencial-alugar-damha-em-piracicaba/147399;Frias Neto;Damha;2023-11-01;2023-11-01
+1150.0;56.55;2;2;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/conjunto-residencial-mario-dedini/residencial-alugar-conjunto-residencial-mario-dedini-em-piracicaba/147328;Frias Neto;Conjunto Residencial Mário Dedini;2023-11-01;2023-11-01
+2700.0;72.0;2;2;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/centro/residencial-alugar-centro-em-piracicaba/147323;Frias Neto;Centro;2023-11-01;2023-11-01
+2800.0;232.0;0;2;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/147288;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+2500.0;89.0;2;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/pauliceia/residencial-alugar-pauliceia-em-piracicaba/147286;Frias Neto;Pauliceia;2023-11-01;2023-11-01
+6800.0;450.0;4;3;6;https://www.friasneto.com.br/alugar/residencial/piracicaba/parque-santa-cecilia/residencial-alugar-parque-santa-cecilia-em-piracicaba/147281;Frias Neto;Parque Santa Cecília;2023-11-01;2023-11-01
+12000.0;554.0;0;3;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/147260;Frias Neto;Centro;2023-11-01;2023-11-01
+3600.0;154.0;0;0;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/147252;Frias Neto;Alto;2023-11-01;2023-11-01
+850.0;51.19;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-nova-republica/residencial-alugar-jardim-nova-republica-em-piracicaba/147251;Frias Neto;Jardim Nova República;2023-11-01;2023-11-01
+1200.0;94.5;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-alta/comercial-alugar-cidade-alta-em-piracicaba/147197;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+7500.0;1039.03;0;7;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/pauliceia/comercial-alugar-pauliceia-em-piracicaba/147097;Frias Neto;Pauliceia;2023-11-01;2023-11-01
+18000.0;1293.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/agua-santa/comercial-alugar-agua-santa-em-piracicaba/147092;Frias Neto;Água Santa;2023-11-01;2023-11-01
+15000.0;1390.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/agua-santa/comercial-alugar-agua-santa-em-piracicaba/147077;Frias Neto;Água Santa;2023-11-01;2023-11-01
+2800.0;70.0;3;2;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/agua-branca/residencial-alugar-agua-branca-em-piracicaba/148114;Frias Neto;Água Branca;2023-11-01;2023-11-01
+5200.0;109.79;3;3;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-judas/residencial-alugar-sao-judas-em-piracicaba/148113;Frias Neto;São Judas;2023-11-01;2023-11-01
+3800.0;352.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/areao/comercial-alugar-areao-em-piracicaba/148090;Frias Neto;Areão;2023-11-01;2023-11-01
+18000.0;1193.0;0;0;6;https://www.friasneto.com.br/alugar/comercial/piracicaba/unileste/comercial-alugar-unileste-em-piracicaba/148062;Frias Neto;Unileste;2023-11-01;2023-11-01
+3300.0;87.0;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/vila-prudente/residencial-alugar-vila-prudente-em-piracicaba/148056;Frias Neto;Vila Prudente;2023-11-01;2023-11-01
+1150.0;49.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/pompeia/residencial-alugar-pompeia-em-piracicaba/148054;Frias Neto;Pompeia;2023-11-01;2023-11-01
+1800.0;66.7;2;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/pauliceia/residencial-alugar-pauliceia-em-piracicaba/148030;Frias Neto;Pauliceia;2023-11-01;2023-11-01
+22000.0;1128.15;0;0;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-algodoal/comercial-alugar-jardim-algodoal-em-piracicaba/148025;Frias Neto;Jardim Algodoal;2023-11-01;2023-11-01
+10200.0;244.0;4;4;6;https://www.friasneto.com.br/alugar/residencial/piracicaba/centro/residencial-alugar-centro-em-piracicaba/148024;Frias Neto;Centro;2023-11-01;2023-11-01
+2000.0;300.0;3;1;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/castelinho/residencial-alugar-castelinho-em-piracicaba/148019;Frias Neto;Castelinho;2023-11-01;2023-11-01
+650.0;40.0;1;0;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/parque-taquaral/residencial-alugar-parque-taquaral-em-piracicaba/148017;Frias Neto;Parque Taquaral;2023-11-01;2023-11-01
+2500.0;250.0;0;4;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-pacaembu/comercial-alugar-jardim-pacaembu-em-piracicaba/147681;Frias Neto;Jardim Pacaembu;2023-11-01;2023-11-01
+8500.0;1000.0;3;4;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/park-campestre/residencial-alugar-park-campestre-em-piracicaba/147637;Frias Neto;Park Campestre;2023-11-01;2023-11-01
+3200.0;267.0;4;4;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/vila-independencia/residencial-alugar-vila-independencia-em-piracicaba/147424;Frias Neto;Vila Independência;2023-11-01;2023-11-01
+4800.0;1200.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-sao-francisco/residencial-alugar-jardim-sao-francisco-em-piracicaba/147412;Frias Neto;Jardim São Francisco;2023-11-01;2023-11-01
+2600.0;300.0;4;2;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-america/residencial-alugar-nova-america-em-piracicaba/148434;Frias Neto;Nova América;2023-11-01;2023-11-01
+2900.0;175.0;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/agua-branca/residencial-alugar-agua-branca-em-piracicaba/148416;Frias Neto;Água Branca ;2023-11-01;2023-11-01
+4200.0;65.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/loteamento-santa-rosa/comercial-alugar-loteamento-santa-rosa-em-piracicaba/148415;Frias Neto;Loteamento Santa Rosa ;2023-11-01;2023-11-01
+10000.0;222.82;0;3;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/dois-corregos/comercial-alugar-dois-corregos-em-piracicaba/148406;Frias Neto;Dois Córregos;2023-11-01;2023-11-01
+18000.0;1000.0;0;0;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/agua-santa/comercial-alugar-agua-santa-em-piracicaba/148404;Frias Neto;Água Santa;2023-11-01;2023-11-01
+8000.0;500.0;0;4;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/agua-branca/comercial-alugar-agua-branca-em-piracicaba/148402;Frias Neto;Água Branca ;2023-11-01;2023-11-01
+1200.0;52.14;2;2;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/dois-corregos/residencial-alugar-dois-corregos-em-piracicaba/148382;Frias Neto;Dois Córregos;2023-11-01;2023-11-01
+600.0;55.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/148359;Frias Neto;Centro;2023-11-01;2023-11-01
+700.0;55.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-parque-jupia/residencial-alugar-jardim-parque-jupia-em-piracicaba/148346;Frias Neto;Jardim Parque Jupiá;2023-11-01;2023-11-01
+600.0;48.18;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/vila-sonia/residencial-alugar-vila-sonia-em-piracicaba/148343;Frias Neto;Vila Sônia;2023-11-01;2023-11-01
+850.0;46.0;2;2;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/piracicamirim/residencial-alugar-piracicamirim-em-piracicaba/148337;Frias Neto;Piracicamirim;2023-11-01;2023-11-01
+2200.0;84.0;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/paulista/residencial-alugar-paulista-em-piracicaba/148328;Frias Neto;Paulista;2023-11-01;2023-11-01
+5000.0;109.79;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-judas/residencial-alugar-sao-judas-em-piracicaba/148316;Frias Neto;São Judas;2023-11-01;2023-11-01
+900.0;49.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/campestre/residencial-alugar-campestre-em-piracicaba/148313;Frias Neto;Campestre;2023-11-01;2023-11-01
+1050.0;53.27;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/piracicamirim/residencial-alugar-piracicamirim-em-piracicaba/148312;Frias Neto;Piracicamirim;2023-11-01;2023-11-01
+1900.0;147.5;2;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/vila-resende/residencial-alugar-vila-resende-em-piracicaba/148303;Frias Neto;Vila Resende;2023-11-01;2023-11-01
+6000.0;327.6;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/148261;Frias Neto;Centro;2023-11-01;2023-11-01
+5000.0;109.79;3;3;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-judas/residencial-alugar-sao-judas-em-piracicaba/148260;Frias Neto;São Judas;2023-11-01;2023-11-01
+1100.0;70.5;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/dois-corregos/residencial-alugar-dois-corregos-em-piracicaba/148251;Frias Neto;Dois Córregos;2023-11-01;2023-11-01
+1500.0;126.0;2;2;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/vila-prudente/residencial-alugar-vila-prudente-em-piracicaba/148245;Frias Neto;Vila Prudente;2023-11-01;2023-11-01
+3200.0;420.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/nova-piracicaba/comercial-alugar-nova-piracicaba-em-piracicaba/148227;Frias Neto;Nova Piracicaba;2023-11-01;2023-11-01
+7200.0;350.0;3;2;5;https://www.friasneto.com.br/alugar/residencial/piracicaba/campestre/residencial-alugar-campestre-em-piracicaba/148218;Frias Neto;Campestre;2023-11-01;2023-11-01
+3500.0;300.0;3;4;4;https://www.friasneto.com.br/alugar/residencial/piracicaba/taquaral/residencial-alugar-taquaral-em-piracicaba/148214;Frias Neto;Taquaral ;2023-11-01;2023-11-01
+8000.0;580.0;0;1;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/148213;Frias Neto;Centro;2023-11-01;2023-11-01
+1500.0;55.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/agua-branca/residencial-alugar-agua-branca-em-piracicaba/148204;Frias Neto;Água Branca;2023-11-01;2023-11-01
+1200.0;52.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/pompeia/residencial-alugar-pompeia-em-piracicaba/148199;Frias Neto;Pompeia;2023-11-01;2023-11-01
+5500.0;300.0;4;4;6;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-piracicaba/residencial-alugar-nova-piracicaba-em-piracicaba/148198;Frias Neto;Nova Piracicaba;2023-11-01;2023-11-01
+680.0;47.27;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/noiva-da-colina/residencial-alugar-noiva-da-colina-em-piracicaba/148191;Frias Neto;Noiva da Colina;2023-11-01;2023-11-01
+1200.0;27.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/148189;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+625.0;0.0;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-nova-iguacu/residencial-alugar-jardim-nova-iguacu-em-piracicaba/148169;Frias Neto;Jardim Nova Iguaçú;2023-11-01;2023-11-01
+812.0;0.0;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-nova-iguacu/residencial-alugar-jardim-nova-iguacu-em-piracicaba/148168;Frias Neto;Jardim Nova Iguaçú;2023-11-01;2023-11-01
+9000.0;436.87;0;4;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/148149;Frias Neto;Centro;2023-11-01;2023-11-01
+2600.0;300.0;4;2;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-america/residencial-alugar-nova-america-em-piracicaba/148434;Frias Neto;Nova América;2023-11-01;2023-11-01
+2900.0;175.0;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/agua-branca/residencial-alugar-agua-branca-em-piracicaba/148416;Frias Neto;Água Branca ;2023-11-01;2023-11-01
+4200.0;65.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/loteamento-santa-rosa/comercial-alugar-loteamento-santa-rosa-em-piracicaba/148415;Frias Neto;Loteamento Santa Rosa ;2023-11-01;2023-11-01
+10000.0;222.82;0;3;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/dois-corregos/comercial-alugar-dois-corregos-em-piracicaba/148406;Frias Neto;Dois Córregos;2023-11-01;2023-11-01
+18000.0;1000.0;0;0;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/agua-santa/comercial-alugar-agua-santa-em-piracicaba/148404;Frias Neto;Água Santa;2023-11-01;2023-11-01
+8000.0;500.0;0;4;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/agua-branca/comercial-alugar-agua-branca-em-piracicaba/148402;Frias Neto;Água Branca ;2023-11-01;2023-11-01
+1200.0;52.14;2;2;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/dois-corregos/residencial-alugar-dois-corregos-em-piracicaba/148382;Frias Neto;Dois Córregos;2023-11-01;2023-11-01
+600.0;55.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/148359;Frias Neto;Centro;2023-11-01;2023-11-01
+700.0;55.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-parque-jupia/residencial-alugar-jardim-parque-jupia-em-piracicaba/148346;Frias Neto;Jardim Parque Jupiá;2023-11-01;2023-11-01
+600.0;48.18;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/vila-sonia/residencial-alugar-vila-sonia-em-piracicaba/148343;Frias Neto;Vila Sônia;2023-11-01;2023-11-01
+850.0;46.0;2;2;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/piracicamirim/residencial-alugar-piracicamirim-em-piracicaba/148337;Frias Neto;Piracicamirim;2023-11-01;2023-11-01
+2200.0;84.0;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/paulista/residencial-alugar-paulista-em-piracicaba/148328;Frias Neto;Paulista;2023-11-01;2023-11-01
+5000.0;109.79;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-judas/residencial-alugar-sao-judas-em-piracicaba/148316;Frias Neto;São Judas;2023-11-01;2023-11-01
+900.0;49.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/campestre/residencial-alugar-campestre-em-piracicaba/148313;Frias Neto;Campestre;2023-11-01;2023-11-01
+1050.0;53.27;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/piracicamirim/residencial-alugar-piracicamirim-em-piracicaba/148312;Frias Neto;Piracicamirim;2023-11-01;2023-11-01
+1900.0;147.5;2;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/vila-resende/residencial-alugar-vila-resende-em-piracicaba/148303;Frias Neto;Vila Resende;2023-11-01;2023-11-01
+3000.0;486.0;3;2;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/dois-corregos/residencial-alugar-dois-corregos-em-piracicaba/147076;Frias Neto;Dois Córregos;2023-11-01;2023-11-01
+35000.0;5560.0;0;1;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/agua-seca/comercial-alugar-agua-seca-em-piracicaba/147067;Frias Neto;Água Seca;2023-11-01;2023-11-01
+6000.0;170.45;0;3;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/campestre/comercial-alugar-campestre-em-piracicaba/147010;Frias Neto;Campestre;2023-11-01;2023-11-01
+5000.0;170.57;0;3;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/campestre/comercial-alugar-campestre-em-piracicaba/147009;Frias Neto;Campestre;2023-11-01;2023-11-01
+2500.0;427.0;3;6;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/campestre/residencial-alugar-campestre-em-piracicaba/147004;Frias Neto;Campestre;2023-11-01;2023-11-01
+2100.0;40.0;2;0;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-judas/residencial-alugar-sao-judas-em-piracicaba/146957;Frias Neto;São Judas;2023-11-01;2023-11-01
+1200.0;42.0;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/loteamento-santa-rosa/comercial-alugar-loteamento-santa-rosa-em-piracicaba/146938;Frias Neto;Loteamento Santa Rosa;2023-11-01;2023-11-01
+1100.0;126.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/146936;Frias Neto;Alto;2023-11-01;2023-11-01
+1200.0;126.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/146934;Frias Neto;Alto;2023-11-01;2023-11-01
+1000.0;0.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/146932;Frias Neto;Alto;2023-11-01;2023-11-01
+4500.0;187.5;3;1;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/ondas/residencial-alugar-ondas-em-piracicaba/146903;Frias Neto;Ondas;2023-11-01;2023-11-01
+1700.0;62.5;2;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/paulista/residencial-alugar-paulista-em-piracicaba/146898;Frias Neto;Paulista;2023-11-01;2023-11-01
+1700.0;62.5;2;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/paulista/residencial-alugar-paulista-em-piracicaba/146897;Frias Neto;Paulista;2023-11-01;2023-11-01
+1700.0;62.5;2;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/paulista/residencial-alugar-paulista-em-piracicaba/146896;Frias Neto;Paulista;2023-11-01;2023-11-01
+3500.0;363.35;4;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/santa-terezinha/residencial-alugar-santa-terezinha-em-piracicaba/146852;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+2300.0;523.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/146830;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+1150.0;100.0;2;0;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/pauliceia/residencial-alugar-pauliceia-em-piracicaba/146818;Frias Neto;Pauliceia;2023-11-01;2023-11-01
+660.0;20.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/146814;Frias Neto;Centro;2023-11-01;2023-11-01
+3500.0;220.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro-(artemis)/comercial-alugar-centro-(artemis)-em-piracicaba/146808;Frias Neto;Centro (Ártemis);2023-11-01;2023-11-01
+2200.0;270.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-independencia/comercial-alugar-vila-independencia-em-piracicaba/146791;Frias Neto;Vila Independência;2023-11-01;2023-11-01
+20000.0;1114.6;0;7;5;https://www.friasneto.com.br/alugar/comercial/piracicaba/agua-santa/comercial-alugar-agua-santa-em-piracicaba/146761;Frias Neto;Água Santa;2023-11-01;2023-11-01
+1400.0;125.0;2;2;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-ibirapuera/residencial-alugar-jardim-ibirapuera-em-piracicaba/146751;Frias Neto;Jardim Ibirapuera;2023-11-01;2023-11-01
+8600.0;510.0;0;4;5;https://www.friasneto.com.br/alugar/comercial/piracicaba/loteamento-santa-rosa/comercial-alugar-loteamento-santa-rosa-em-piracicaba/146699;Frias Neto;Loteamento Santa Rosa;2023-11-01;2023-11-01
+8500.0;1305.0;4;6;5;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-piracicaba/residencial-alugar-nova-piracicaba-em-piracicaba/146693;Frias Neto;Nova Piracicaba;2023-11-01;2023-11-01
+4000.0;177.39;0;0;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/146686;Frias Neto;Centro;2023-11-01;2023-11-01
+4700.0;320.0;4;4;4;https://www.friasneto.com.br/alugar/residencial/piracicaba/vila-monteiro/residencial-alugar-vila-monteiro-em-piracicaba/146668;Frias Neto;Vila Monteiro;2023-11-01;2023-11-01
+18000.0;1750.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-caxambu/comercial-alugar-jardim-caxambu-em-piracicaba/146654;Frias Neto;Jardim Caxambu;2023-11-01;2023-11-01
+2800.0;250.0;3;3;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-america/residencial-alugar-nova-america-em-piracicaba/146300;Frias Neto;Nova América;2023-11-01;2023-11-01
+3000.0;54.0;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/146281;Frias Neto;Centro;2023-11-01;2023-11-01
+4500.0;320.0;4;2;4;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-judas/residencial-alugar-sao-judas-em-piracicaba/146266;Frias Neto;São Judas;2023-11-01;2023-11-01
+2700.0;162.5;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-petropolis/residencial-alugar-jardim-petropolis-em-piracicaba/146240;Frias Neto;Jardim Petrópolis;2023-11-01;2023-11-01
+20000.0;1371.33;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/146220;Frias Neto;Centro;2023-11-01;2023-11-01
+3900.0;100.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/146178;Frias Neto;Centro;2023-11-01;2023-11-01
+9500.0;570.0;0;5;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-industrial/comercial-alugar-vila-industrial-em-piracicaba/146092;Frias Neto;Vila Industrial;2023-11-01;2023-11-01
+9000.0;201.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-terezinha/comercial-alugar-santa-terezinha-em-piracicaba/146070;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+15000.0;1000.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/loteamento-distrito-industrial-uninorte/comercial-alugar-loteamento-distrito-industrial-uninorte-em-piracicaba/145891;Frias Neto;Loteamento Distrito Industrial Uninorte;2023-11-01;2023-11-01
+2200.0;180.0;0;2;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/higienopolis/comercial-alugar-higienopolis-em-piracicaba/145875;Frias Neto;Higienópolis;2023-11-01;2023-11-01
+2200.0;180.0;0;3;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/higienopolis/comercial-alugar-higienopolis-em-piracicaba/145874;Frias Neto;Higienópolis;2023-11-01;2023-11-01
+12000.0;1600.0;0;10;10;https://www.friasneto.com.br/alugar/comercial/piracicaba/castelinho/comercial-alugar-castelinho-em-piracicaba/145853;Frias Neto;Castelinho;2023-11-01;2023-11-01
+8000.0;2300.0;4;50;5;https://www.friasneto.com.br/alugar/rural/piracicaba/chacara-sao-jorge/rural-alugar-chacara-sao-jorge-em-piracicaba/145820;Frias Neto;Chácara São Jorge;2023-11-01;2023-11-01
+700.0;57.52;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/vila-sonia/residencial-alugar-vila-sonia-em-piracicaba/145793;Frias Neto;Vila Sônia;2023-11-01;2023-11-01
+8000.0;691.0;0;2;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/alemaes/comercial-alugar-alemaes-em-piracicaba/145734;Frias Neto;Alemães;2023-11-01;2023-11-01
+7000.0;520.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/parque-residencial-piracicaba/comercial-alugar-parque-residencial-piracicaba-em-piracicaba/145659;Frias Neto;Parque Residencial Piracicaba;2023-11-01;2023-11-01
+16000.0;596.0;0;8;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/145624;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+16000.0;400.0;0;3;9;https://www.friasneto.com.br/alugar/comercial/piracicaba/sao-judas/comercial-alugar-sao-judas-em-piracicaba/145610;Frias Neto;São Judas;2023-11-01;2023-11-01
+12500.0;500.0;0;30;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/chacara-nazareth/comercial-alugar-chacara-nazareth-em-piracicaba/146592;Frias Neto;Chácara Nazareth;2023-11-01;2023-11-01
+2900.0;690.0;0;20;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/ary-coelho/comercial-alugar-ary-coelho-em-piracicaba/146585;Frias Neto;Ary Coelho;2023-11-01;2023-11-01
+600.0;94.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-suica/residencial-alugar-nova-suica-em-piracicaba/146583;Frias Neto;Nova Suíça;2023-11-01;2023-11-01
+700.0;187.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-monteiro/comercial-alugar-vila-monteiro-em-piracicaba/146569;Frias Neto;Vila Monteiro;2023-11-01;2023-11-01
+5000.0;3300.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/pauliceia/residencial-alugar-pauliceia-em-piracicaba/146480;Frias Neto;Pauliceia;2023-11-01;2023-11-01
+2500.0;168.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/jaragua/comercial-alugar-jaragua-em-piracicaba/146460;Frias Neto;Jaraguá;2023-11-01;2023-11-01
+800.0;50.0;1;0;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/alemaes/residencial-alugar-alemaes-em-piracicaba/146426;Frias Neto;Alemães;2023-11-01;2023-11-01
+7200.0;420.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/alphanorte/comercial-alugar-alphanorte-em-piracicaba/146399;Frias Neto;Alphanorte;2023-11-01;2023-11-01
+10000.0;538.41;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/loteamento-santa-rosa/comercial-alugar-loteamento-santa-rosa-em-piracicaba/146396;Frias Neto;Loteamento Santa Rosa;2023-11-01;2023-11-01
+14000.0;890.31;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/loteamento-santa-rosa/comercial-alugar-loteamento-santa-rosa-em-piracicaba/146395;Frias Neto;Loteamento Santa Rosa;2023-11-01;2023-11-01
+3300.0;88.74;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-dimas/residencial-alugar-sao-dimas-em-piracicaba/146385;Frias Neto;São Dimas;2023-11-01;2023-11-01
+8900.0;349.65;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/146367;Frias Neto;Centro;2023-11-01;2023-11-01
+3200.0;224.0;3;3;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-europa/residencial-alugar-jardim-europa-em-piracicaba/145502;Frias Neto;Jardim Europa;2023-11-01;2023-11-01
+2500.0;100.0;0;0;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/145268;Frias Neto;Centro;2023-11-01;2023-11-01
+1500.0;130.0;3;1;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/alto/residencial-alugar-alto-em-piracicaba/145129;Frias Neto;Alto;2023-11-01;2023-11-01
+5500.0;525.0;4;3;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/centro/residencial-alugar-centro-em-piracicaba/145082;Frias Neto;Centro;2023-11-01;2023-11-01
+2500.0;195.0;3;2;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/cidade-alta/residencial-alugar-cidade-alta-em-piracicaba/145079;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+1600.0;20.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/145076;Frias Neto;Centro;2023-11-01;2023-11-01
+1200.0;25.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/145075;Frias Neto;Centro;2023-11-01;2023-11-01
+7000.0;243.45;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/145054;Frias Neto;Centro;2023-11-01;2023-11-01
+2500.0;40.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/145046;Frias Neto;Centro;2023-11-01;2023-11-01
+4200.0;163.0;0;0;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-alta/comercial-alugar-cidade-alta-em-piracicaba/145030;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+1800.0;18.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-jardim/comercial-alugar-cidade-jardim-em-piracicaba/145009;Frias Neto;Cidade Jardim;2023-11-01;2023-11-01
+550.0;25.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/145000;Frias Neto;Centro;2023-11-01;2023-11-01
+2200.0;40.0;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-europa/comercial-alugar-jardim-europa-em-piracicaba/144980;Frias Neto;Jardim Europa;2023-11-01;2023-11-01
+6000.0;500.0;0;10;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-independencia/comercial-alugar-vila-independencia-em-piracicaba/144955;Frias Neto;Vila Independência;2023-11-01;2023-11-01
+2500.0;86.0;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/pauliceia/residencial-alugar-pauliceia-em-piracicaba/144872;Frias Neto;Pauliceia;2023-11-01;2023-11-01
+4000.0;1620.0;0;10;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/piracicamirim/comercial-alugar-piracicamirim-em-piracicaba/144788;Frias Neto;Piracicamirim;2023-11-01;2023-11-01
+550.0;208.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-oriente/residencial-alugar-jardim-oriente-em-piracicaba/144787;Frias Neto;Jardim Oriente;2023-11-01;2023-11-01
+1500.0;54.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/agua-branca/residencial-alugar-agua-branca-em-piracicaba/144737;Frias Neto;Água Branca;2023-11-01;2023-11-01
+2800.0;250.0;0;0;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/parque-sao-jorge/comercial-alugar-parque-sao-jorge-em-piracicaba/144699;Frias Neto;Parque São Jorge;2023-11-01;2023-11-01
+1950.0;64.0;0;1;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/144615;Frias Neto;Alto;2023-11-01;2023-11-01
+7000.0;250.0;0;4;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-sao-luiz/comercial-alugar-jardim-sao-luiz-em-piracicaba/144609;Frias Neto;Jardim São Luiz;2023-11-01;2023-11-01
+1900.0;307.5;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/conjunto-residencial-mario-dedini/comercial-alugar-conjunto-residencial-mario-dedini-em-piracicaba/144600;Frias Neto;Conjunto Residencial Mário Dedini;2023-11-01;2023-11-01
+3000.0;1100.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/paulista/comercial-alugar-paulista-em-piracicaba/144345;Frias Neto;Paulista;2023-11-01;2023-11-01
+3400.0;40.0;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-europa/residencial-alugar-jardim-europa-em-piracicaba/144317;Frias Neto;Jardim Europa;2023-11-01;2023-11-01
+9000.0;236.0;0;4;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-elite/comercial-alugar-jardim-elite-em-piracicaba/144295;Frias Neto;Jardim Elite;2023-11-01;2023-11-01
+3500.0;100.0;3;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alemaes/comercial-alugar-alemaes-em-piracicaba/144217;Frias Neto;Alemães;2023-11-01;2023-11-01
+1550.0;250.0;2;2;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-america/residencial-alugar-nova-america-em-piracicaba/144182;Frias Neto;Nova América;2023-11-01;2023-11-01
+3000.0;270.0;0;2;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-alta/comercial-alugar-cidade-alta-em-piracicaba/144003;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+3600.0;62.75;0;2;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/143905;Frias Neto;Centro;2023-11-01;2023-11-01
+3600.0;63.4;0;2;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/143904;Frias Neto;Centro;2023-11-01;2023-11-01
+2000.0;258.17;0;1;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/loteamento-sao-francisco/comercial-alugar-loteamento-sao-francisco-em-piracicaba/143864;Frias Neto;Loteamento São Francisco;2023-11-01;2023-11-01
+3500.0;258.0;0;4;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-rosa/comercial-alugar-santa-rosa-em-piracicaba/143833;Frias Neto;Santa Rosa;2023-11-01;2023-11-01
+2900.0;142.0;3;1;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/cidade-alta/residencial-alugar-cidade-alta-em-piracicaba/143812;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+3100.0;418.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/143738;Frias Neto;Centro;2023-11-01;2023-11-01
+2500.0;197.34;2;1;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-alta/comercial-alugar-cidade-alta-em-piracicaba/143731;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+2500.0;87.04;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/pauliceia/residencial-alugar-pauliceia-em-piracicaba/143645;Frias Neto;Pauliceia;2023-11-01;2023-11-01
+1300.0;35.0;0;1;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alemaes/comercial-alugar-alemaes-em-piracicaba/143627;Frias Neto;Alemães;2023-11-01;2023-11-01
+5500.0;840.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-terezinha/comercial-alugar-santa-terezinha-em-piracicaba/143626;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+1200.0;35.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-terezinha/comercial-alugar-santa-terezinha-em-piracicaba/143615;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+1350.0;35.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-terezinha/comercial-alugar-santa-terezinha-em-piracicaba/143614;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+1900.0;1100.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/glebas-novo-recanto/residencial-alugar-glebas-novo-recanto-em-piracicaba/143510;Frias Neto;Glebas Novo Recanto;2023-11-01;2023-11-01
+2700.0;224.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-terezinha/comercial-alugar-santa-terezinha-em-piracicaba/143493;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+4200.0;250.0;3;4;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-sao-luiz/residencial-alugar-jardim-sao-luiz-em-piracicaba/143488;Frias Neto;Jardim São Luiz;2023-11-01;2023-11-01
+5200.0;300.0;0;0;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/143474;Frias Neto;Centro;2023-11-01;2023-11-01
+2000.0;420.0;0;8;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/areao/comercial-alugar-areao-em-piracicaba/143468;Frias Neto;Areão;2023-11-01;2023-11-01
+1000.0;350.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-terezinha/comercial-alugar-santa-terezinha-em-piracicaba/143381;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+9500.0;414.43;3;2;5;https://www.friasneto.com.br/alugar/residencial/piracicaba/damha/residencial-alugar-damha-em-piracicaba/143338;Frias Neto;Damha;2023-11-01;2023-11-01
+3000.0;260.0;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-piracicaba/residencial-alugar-nova-piracicaba-em-piracicaba/143303;Frias Neto;Nova Piracicaba;2023-11-01;2023-11-01
+1350.0;229.5;0;2;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-terezinha/comercial-alugar-santa-terezinha-em-piracicaba/143296;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+1200.0;450.0;0;1;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-alta/comercial-alugar-cidade-alta-em-piracicaba/143248;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+3500.0;210.0;0;2;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-maria/comercial-alugar-jardim-maria-em-piracicaba/143139;Frias Neto;Jardim Maria;2023-11-01;2023-11-01
+650.0;46.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-sao-francisco/residencial-alugar-jardim-sao-francisco-em-piracicaba/143048;Frias Neto;Jardim São Francisco;2023-11-01;2023-11-01
+38000.0;8000.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/campestre/comercial-alugar-campestre-em-piracicaba/142893;Frias Neto;Campestre;2023-11-01;2023-11-01
+6000.0;107.29;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/142765;Frias Neto;Centro;2023-11-01;2023-11-01
+2682.0;41.25;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/142526;Frias Neto;Centro;2023-11-01;2023-11-01
+1100.0;30.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/142508;Frias Neto;Centro;2023-11-01;2023-11-01
+1100.0;0.0;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/142505;Frias Neto;Centro;2023-11-01;2023-11-01
+700.0;48.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-america/residencial-alugar-nova-america-em-piracicaba/142483;Frias Neto;Nova América;2023-11-01;2023-11-01
+2500.0;86.0;3;2;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/pauliceia/residencial-alugar-pauliceia-em-piracicaba/142479;Frias Neto;Pauliceia;2023-11-01;2023-11-01
+650.0;20.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-jardim/comercial-alugar-cidade-jardim-em-piracicaba/142437;Frias Neto;Cidade Jardim;2023-11-01;2023-11-01
+5500.0;291.27;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/142339;Frias Neto;Centro;2023-11-01;2023-11-01
+5200.0;262.8;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/verde/comercial-alugar-verde-em-piracicaba/142247;Frias Neto;Verde;2023-11-01;2023-11-01
+1900.0;379.4;6;0;8;https://www.friasneto.com.br/alugar/residencial/piracicaba/centro/residencial-alugar-centro-em-piracicaba/142226;Frias Neto;Centro;2023-11-01;2023-11-01
+19000.0;633.82;0;0;6;https://www.friasneto.com.br/alugar/comercial/piracicaba/monte-alegre/comercial-alugar-monte-alegre-em-piracicaba/142198;Frias Neto;Monte Alegre;2023-11-01;2023-11-01
+3900.0;103.0;3;2;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/alemaes/residencial-alugar-alemaes-em-piracicaba/142165;Frias Neto;Alemães;2023-11-01;2023-11-01
+2200.0;65.0;0;1;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/142153;Frias Neto;Alto;2023-11-01;2023-11-01
+4000.0;307.44;0;3;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/142069;Frias Neto;Centro;2023-11-01;2023-11-01
+600.0;202.5;1;0;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/ondas/residencial-alugar-ondas-em-piracicaba/141975;Frias Neto;Ondas;2023-11-01;2023-11-01
+650.0;202.5;1;0;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/ondas/residencial-alugar-ondas-em-piracicaba/141974;Frias Neto;Ondas;2023-11-01;2023-11-01
+5500.0;692.23;0;0;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/141894;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+2700.0;83.7;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/141863;Frias Neto;Alto;2023-11-01;2023-11-01
+750.0;270.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-prudente/comercial-alugar-vila-prudente-em-piracicaba/141810;Frias Neto;Vila Prudente;2023-11-01;2023-11-01
+1100.0;274.18;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/141753;Frias Neto;Centro;2023-11-01;2023-11-01
+2700.0;690.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/141739;Frias Neto;Centro;2023-11-01;2023-11-01
+5500.0;300.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/piracicamirim/comercial-alugar-piracicamirim-em-piracicaba/141737;Frias Neto;Piracicamirim;2023-11-01;2023-11-01
+3000.0;315.0;0;4;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-terezinha/comercial-alugar-santa-terezinha-em-piracicaba/141473;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+9900.0;330.0;0;0;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/141452;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+4200.0;803.5;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/areiao/comercial-alugar-areiao-em-piracicaba/141438;Frias Neto;Areião;2023-11-01;2023-11-01
+1600.0;36.2;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/cidade-alta/residencial-alugar-cidade-alta-em-piracicaba/141411;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+4000.0;300.0;0;7;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/algodoal/comercial-alugar-algodoal-em-piracicaba/141405;Frias Neto;Algodoal;2023-11-01;2023-11-01
+1500.0;300.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-petropolis/comercial-alugar-jardim-petropolis-em-piracicaba/141365;Frias Neto;Jardim Petrópolis;2023-11-01;2023-11-01
+6000.0;440.02;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alemaes/comercial-alugar-alemaes-em-piracicaba/141311;Frias Neto;Alemães;2023-11-01;2023-11-01
+850.0;260.4;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/141267;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+2600.0;200.0;3;2;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/campestre/residencial-alugar-campestre-em-piracicaba/141226;Frias Neto;Campestre;2023-11-01;2023-11-01
+16000.0;306.46;0;9;6;https://www.friasneto.com.br/alugar/comercial/piracicaba/pompeia/comercial-alugar-pompeia-em-piracicaba/141219;Frias Neto;Pompeia;2023-11-01;2023-11-01
+3400.0;186.0;3;2;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/alto/residencial-alugar-alto-em-piracicaba/141198;Frias Neto;Alto;2023-11-01;2023-11-01
+1750.0;58.41;2;1;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/vila-rezende/residencial-alugar-vila-rezende-em-piracicaba/141158;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+30000.0;860.0;0;0;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/141116;Frias Neto;Centro;2023-11-01;2023-11-01
+1782.0;42.43;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/141098;Frias Neto;Alto;2023-11-01;2023-11-01
+1746.0;41.59;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/141090;Frias Neto;Alto;2023-11-01;2023-11-01
+1900.0;291.98;4;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-costa-rica/residencial-alugar-jardim-costa-rica-em-piracicaba/140544;Frias Neto;Jardim Costa Rica;2023-11-01;2023-11-01
+2500.0;49.83;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-alta/comercial-alugar-cidade-alta-em-piracicaba/140486;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+8500.0;2439.0;5;5;6;https://www.friasneto.com.br/alugar/residencial/piracicaba/artemis/residencial-alugar-artemis-em-piracicaba/140485;Frias Neto;Ártemis;2023-11-01;2023-11-01
+2000.0;300.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/morumbi/comercial-alugar-morumbi-em-piracicaba/140306;Frias Neto;Morumbi;2023-11-01;2023-11-01
+5000.0;300.0;4;4;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-europa/comercial-alugar-jardim-europa-em-piracicaba/140275;Frias Neto;Jardim Europa;2023-11-01;2023-11-01
+450.0;306.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/monte-rey/comercial-alugar-monte-rey-em-piracicaba/140244;Frias Neto;Monte Rey;2023-11-01;2023-11-01
+300.0;150.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/monte-rey/comercial-alugar-monte-rey-em-piracicaba/140243;Frias Neto;Monte Rey;2023-11-01;2023-11-01
+650.0;1264.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/140144;Frias Neto;Centro;2023-11-01;2023-11-01
+650.0;1264.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/140143;Frias Neto;Centro;2023-11-01;2023-11-01
+6000.0;220.5;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/alemaes/comercial-alugar-alemaes-em-piracicaba/140121;Frias Neto;Alemães;2023-11-01;2023-11-01
+2000.0;225.0;0;10;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/139644;Frias Neto;Centro;2023-11-01;2023-11-01
+920.0;420.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/paulista/comercial-alugar-paulista-em-piracicaba/139592;Frias Neto;Paulista;2023-11-01;2023-11-01
+15000.0;612.0;0;14;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-industrial/comercial-alugar-vila-industrial-em-piracicaba/139461;Frias Neto;Vila Industrial;2023-11-01;2023-11-01
+1050.0;135.88;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/paulista/comercial-alugar-paulista-em-piracicaba/139458;Frias Neto;Paulista;2023-11-01;2023-11-01
+5000.0;374.65;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/139225;Frias Neto;Centro;2023-11-01;2023-11-01
+1800.0;86.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/139222;Frias Neto;Centro;2023-11-01;2023-11-01
+4000.0;110.0;6;3;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/139172;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+1500.0;35.0;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/cidade-alta/residencial-alugar-cidade-alta-em-piracicaba/139114;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+2500.0;46.55;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/centro/residencial-alugar-centro-em-piracicaba/139084;Frias Neto;Centro;2023-11-01;2023-11-01
+22000.0;8700.0;0;30;10;https://www.friasneto.com.br/alugar/comercial/piracicaba/sao-jorge/comercial-alugar-sao-jorge-em-piracicaba/138331;Frias Neto;São Jorge;2023-11-01;2023-11-01
+1000.0;321.43;2;0;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-dimas/residencial-alugar-sao-dimas-em-piracicaba/138301;Frias Neto;São Dimas;2023-11-01;2023-11-01
+2500.0;481.95;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/138150;Frias Neto;Centro;2023-11-01;2023-11-01
+2400.0;51.0;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-europa/residencial-alugar-jardim-europa-em-piracicaba/137864;Frias Neto;Jardim Europa;2023-11-01;2023-11-01
+1500.0;45.0;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-dimas/residencial-alugar-sao-dimas-em-piracicaba/137811;Frias Neto;São Dimas;2023-11-01;2023-11-01
+3000.0;260.0;4;0;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-monumento/residencial-alugar-jardim-monumento-em-piracicaba/137722;Frias Neto;Jardim Monumento;2023-11-01;2023-11-01
+4900.0;295.0;3;4;4;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-europa/residencial-alugar-jardim-europa-em-piracicaba/137574;Frias Neto;Jardim Europa;2023-11-01;2023-11-01
+1300.0;168.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/piracicamirim/residencial-alugar-piracicamirim-em-piracicaba/137515;Frias Neto;Piracicamirim;2023-11-01;2023-11-01
+1450.0;125.0;2;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-petropolis/residencial-alugar-jardim-petropolis-em-piracicaba/137369;Frias Neto;Jardim Petrópolis;2023-11-01;2023-11-01
+8000.0;440.0;4;7;5;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-europa/comercial-alugar-jardim-europa-em-piracicaba/137307;Frias Neto;Jardim Europa;2023-11-01;2023-11-01
+2500.0;363.0;3;1;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/paulista/residencial-alugar-paulista-em-piracicaba/137284;Frias Neto;Paulista;2023-11-01;2023-11-01
+45000.0;2600.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/morumbi/comercial-alugar-morumbi-em-piracicaba/137227;Frias Neto;Morumbi;2023-11-01;2023-11-01
+7500.0;215.0;0;0;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/137213;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+3000.0;222.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/137172;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+13000.0;420.0;0;5;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/nova-piracicaba/comercial-alugar-nova-piracicaba-em-piracicaba/137132;Frias Neto;Nova Piracicaba;2023-11-01;2023-11-01
+54000.0;67800.0;0;0;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/unileste/comercial-alugar-unileste-em-piracicaba/137074;Frias Neto;Unileste;2023-11-01;2023-11-01
+6300.0;569.65;3;4;5;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-europa/comercial-alugar-jardim-europa-em-piracicaba/137071;Frias Neto;Jardim Europa;2023-11-01;2023-11-01
+1700.0;65.0;0;2;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/136958;Frias Neto;Alto;2023-11-01;2023-11-01
+15000.0;271.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/136869;Frias Neto;Centro;2023-11-01;2023-11-01
+2500.0;120.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/areiao/comercial-alugar-areiao-em-piracicaba/136630;Frias Neto;Areião;2023-11-01;2023-11-01
+2500.0;169.6;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/136250;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+3100.0;120.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/sao-dimas/comercial-alugar-sao-dimas-em-piracicaba/136103;Frias Neto;São Dimas;2023-11-01;2023-11-01
+500.0;15.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/areiao/comercial-alugar-areiao-em-piracicaba/135005;Frias Neto;Areião;2023-11-01;2023-11-01
+11900.0;471.9;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/134753;Frias Neto;Centro;2023-11-01;2023-11-01
+1500.0;46.55;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/centro/residencial-alugar-centro-em-piracicaba/133319;Frias Neto;Centro;2023-11-01;2023-11-01
+1500.0;41.25;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/cidade-jardim/residencial-alugar-cidade-jardim-em-piracicaba/133247;Frias Neto;Cidade Jardim;2023-11-01;2023-11-01
+1500.0;46.55;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/cidade-jardim/residencial-alugar-cidade-jardim-em-piracicaba/133115;Frias Neto;Cidade Jardim;2023-11-01;2023-11-01
+15000.0;1590.78;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/130040;Frias Neto;Centro;2023-11-01;2023-11-01
+13000.0;523.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/129599;Frias Neto;Centro;2023-11-01;2023-11-01
+2500.0;236.0;3;3;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-dimas/residencial-alugar-sao-dimas-em-piracicaba/125027;Frias Neto;São Dimas;2023-11-01;2023-11-01
+8500.0;410.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/87074;Frias Neto;Centro;2023-11-01;2023-11-01
+4500.0;199.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/82439;Frias Neto;Centro;2023-11-01;2023-11-01
+3800.0;152.85;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/69107;Frias Neto;Alto;2023-11-01;2023-11-01
+18000.0;740.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/areiao/comercial-alugar-areiao-em-piracicaba/69068;Frias Neto;Areião;2023-11-01;2023-11-01
+3500.0;348.7;4;2;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-europa/comercial-alugar-jardim-europa-em-piracicaba/67427;Frias Neto;Jardim Europa;2023-11-01;2023-11-01
+13000.0;3268.0;0;3;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/caxambu/comercial-alugar-caxambu-em-piracicaba/63422;Frias Neto;Caxambú;2023-11-01;2023-11-01
+950.0;125.4;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-industrial/comercial-alugar-vila-industrial-em-piracicaba/54455;Frias Neto;Vila Industrial;2023-11-01;2023-11-01
+2600.0;132.0;0;0;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/nova-america/comercial-alugar-nova-america-em-piracicaba/50207;Frias Neto;Nova América;2023-11-01;2023-11-01
+18000.0;464.65;0;10;11;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/49256;Frias Neto;Centro;2023-11-01;2023-11-01
+10000.0;2210.0;5;0;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-piracicaba/residencial-alugar-nova-piracicaba-em-piracicaba/49193;Frias Neto;Nova Piracicaba;2023-11-01;2023-11-01
+2000.0;127.13;4;1;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/cidade-alta/residencial-alugar-cidade-alta-em-piracicaba/48637;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+1900.0;22.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/48532;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+3100.0;103.84;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/sao-dimas/comercial-alugar-sao-dimas-em-piracicaba/48499;Frias Neto;São Dimas;2023-11-01;2023-11-01
+12000.0;400.0;15;12;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/morumbi/comercial-alugar-morumbi-em-piracicaba/48352;Frias Neto;Morumbi;2023-11-01;2023-11-01
+950.0;40.0;1;0;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/santa-rosa/residencial-alugar-santa-rosa-em-piracicaba/48070;Frias Neto;Santa Rosa;2023-11-01;2023-11-01
+3000.0;9378.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/santa-terezinha/residencial-alugar-santa-terezinha-em-piracicaba/47530;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+1980.0;96.25;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/sao-dimas/comercial-alugar-sao-dimas-em-piracicaba/47512;Frias Neto;São Dimas;2023-11-01;2023-11-01
+500.0;0.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/vila-independencia/residencial-alugar-vila-independencia-em-piracicaba/47407;Frias Neto;Vila Independência;2023-11-01;2023-11-01
+400.0;0.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/parque-conceicao/residencial-alugar-parque-conceicao-em-piracicaba/47404;Frias Neto;Parque Conceição;2023-11-01;2023-11-01
+300.0;0.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/parque-conceicao/residencial-alugar-parque-conceicao-em-piracicaba/47401;Frias Neto;Parque Conceição;2023-11-01;2023-11-01
+4900.0;301.0;0;0;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/47062;Frias Neto;Centro;2023-11-01;2023-11-01
+1100.0;24.5;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/46969;Frias Neto;Centro;2023-11-01;2023-11-01
+650.0;0.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/46921;Frias Neto;Centro;2023-11-01;2023-11-01
+650.0;0.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/46918;Frias Neto;Centro;2023-11-01;2023-11-01
+10000.0;4229.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/sao-matheus/comercial-alugar-sao-matheus-em-piracicaba/46753;Frias Neto;São Matheus;2023-11-01;2023-11-01
+650.0;0.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/alto/residencial-alugar-alto-em-piracicaba/46672;Frias Neto;Alto;2023-11-01;2023-11-01
+900.0;0.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/46666;Frias Neto;Alto;2023-11-01;2023-11-01
+1600.0;0.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/46624;Frias Neto;Alto;2023-11-01;2023-11-01
+10500.0;0.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/chapadao/comercial-alugar-chapadao-em-piracicaba/46486;Frias Neto;Chapadão;2023-11-01;2023-11-01
+2000.0;0.0;0;1;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/46246;Frias Neto;Alto;2023-11-01;2023-11-01
+2700.0;65.0;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/45565;Frias Neto;Centro;2023-11-01;2023-11-01
+2700.0;65.0;0;2;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/45562;Frias Neto;Centro;2023-11-01;2023-11-01
+7500.0;676.5;3;2;5;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-jardim/comercial-alugar-cidade-jardim-em-piracicaba/45499;Frias Neto;Cidade Jardim;2023-11-01;2023-11-01
+550.0;0.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/45424;Frias Neto;Centro;2023-11-01;2023-11-01
+20000.0;4016.18;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/45376;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+850.0;31.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/areiao/comercial-alugar-areiao-em-piracicaba/45361;Frias Neto;Areião;2023-11-01;2023-11-01
+850.0;32.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/areiao/comercial-alugar-areiao-em-piracicaba/45358;Frias Neto;Areião;2023-11-01;2023-11-01
+946.0;35.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/capim-fino/comercial-alugar-capim-fino-em-piracicaba/45256;Frias Neto;Capim Fino;2023-11-01;2023-11-01
+946.0;35.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/capim-fino/comercial-alugar-capim-fino-em-piracicaba/45250;Frias Neto;Capim Fino;2023-11-01;2023-11-01
+946.0;35.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/capim-fino/comercial-alugar-capim-fino-em-piracicaba/45247;Frias Neto;Capim Fino;2023-11-01;2023-11-01
+946.0;35.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/capim-fino/comercial-alugar-capim-fino-em-piracicaba/45241;Frias Neto;Capim Fino;2023-11-01;2023-11-01
+2770.0;175.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/capim-fino/comercial-alugar-capim-fino-em-piracicaba/45235;Frias Neto;Capim Fino;2023-11-01;2023-11-01
+946.0;35.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/capim-fino/comercial-alugar-capim-fino-em-piracicaba/45232;Frias Neto;Capim Fino;2023-11-01;2023-11-01
+946.0;35.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/capim-fino/comercial-alugar-capim-fino-em-piracicaba/45226;Frias Neto;Capim Fino;2023-11-01;2023-11-01
+946.0;0.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/capim-fino/comercial-alugar-capim-fino-em-piracicaba/45214;Frias Neto;Capim Fino;2023-11-01;2023-11-01
+9577.0;620.2;0;10;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/capim-fino/comercial-alugar-capim-fino-em-piracicaba/45208;Frias Neto;Capim Fino;2023-11-01;2023-11-01
+2000.0;33.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-terezinha/comercial-alugar-santa-terezinha-em-piracicaba/45169;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+2000.0;1344.02;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-terezinha/comercial-alugar-santa-terezinha-em-piracicaba/45166;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+3000.0;0.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/44797;Frias Neto;Alto;2023-11-01;2023-11-01
+1990.0;65.0;0;2;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/44791;Frias Neto;Alto;2023-11-01;2023-11-01
+800.0;35.0;1;0;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/irmaos-camolesi/residencial-alugar-irmaos-camolesi-em-piracicaba/44137;Frias Neto;Irmãos Camolesi;2023-11-01;2023-11-01
+1850.0;51.0;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/centro/residencial-alugar-centro-em-piracicaba/43807;Frias Neto;Centro;2023-11-01;2023-11-01
+2000.0;800.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/agua-seca/residencial-alugar-agua-seca-em-piracicaba/40747;Frias Neto;Água Seca;2023-11-01;2023-11-01
+3000.0;900.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-petropolis/comercial-alugar-jardim-petropolis-em-piracicaba/40558;Frias Neto;Jardim Petrópolis;2023-11-01;2023-11-01
+3000.0;128.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/campestre/comercial-alugar-campestre-em-piracicaba/40285;Frias Neto;Campestre;2023-11-01;2023-11-01
+20800.0;16000.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/cruz-caiada/residencial-alugar-cruz-caiada-em-piracicaba/39973;Frias Neto;Cruz Caiada;2023-11-01;2023-11-01
+14250.0;7500.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/cruz-caiada/residencial-alugar-cruz-caiada-em-piracicaba/39970;Frias Neto;Cruz Caiada;2023-11-01;2023-11-01
+2500.0;70.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/38962;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+3500.0;185.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/38866;Frias Neto;Alto;2023-11-01;2023-11-01
+4000.0;157.3;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/38446;Frias Neto;Centro;2023-11-01;2023-11-01
+13000.0;799.0;4;6;6;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/38416;Frias Neto;Centro;2023-11-01;2023-11-01
+5800.0;188.34;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/38407;Frias Neto;Centro;2023-11-01;2023-11-01
+3000.0;252.35;3;4;4;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-monumento/residencial-alugar-jardim-monumento-em-piracicaba/37819;Frias Neto;Jardim Monumento;2023-11-01;2023-11-01
+2600.0;175.0;0;2;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/agua-branca/comercial-alugar-agua-branca-em-piracicaba/43387;Frias Neto;Água Branca;2023-11-01;2023-11-01
+2600.0;175.0;0;2;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/agua-branca/comercial-alugar-agua-branca-em-piracicaba/43324;Frias Neto;Água Branca;2023-11-01;2023-11-01
+3500.0;300.0;3;2;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-elite/residencial-alugar-jardim-elite-em-piracicaba/43231;Frias Neto;Jardim Elite;2023-11-01;2023-11-01
+760.0;294.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/higienopolis/comercial-alugar-higienopolis-em-piracicaba/42796;Frias Neto;Higienópolis;2023-11-01;2023-11-01
+1800.0;48.0;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/vila-independencia/residencial-alugar-vila-independencia-em-piracicaba/42688;Frias Neto;Vila Independência;2023-11-01;2023-11-01
+900.0;76.0;3;1;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-america/residencial-alugar-nova-america-em-piracicaba/42433;Frias Neto;Nova América;2023-11-01;2023-11-01
+12000.0;600.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/unileste/comercial-alugar-unileste-em-piracicaba/42187;Frias Neto;Unileste;2023-11-01;2023-11-01
+1300.0;28.6;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/41593;Frias Neto;Alto;2023-11-01;2023-11-01
+450.0;55.0;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/41311;Frias Neto;Centro;2023-11-01;2023-11-01
+1600.0;0.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/41131;Frias Neto;Centro;2023-11-01;2023-11-01
+7900.0;296.0;0;0;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/40990;Frias Neto;Alto;2023-11-01;2023-11-01
+2200.0;45.0;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/37561;Frias Neto;Alto;2023-11-01;2023-11-01
+850.0;35.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-terezinha/comercial-alugar-santa-terezinha-em-piracicaba/37180;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+850.0;40.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-terezinha/comercial-alugar-santa-terezinha-em-piracicaba/37177;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+3800.0;210.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-terezinha/comercial-alugar-santa-terezinha-em-piracicaba/37174;Frias Neto;Santa Terezinha;2023-11-01;2023-11-01
+700.0;42.18;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-rosa/comercial-alugar-santa-rosa-em-piracicaba/36817;Frias Neto;Santa Rosa;2023-11-01;2023-11-01
+7900.0;270.0;0;3;6;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/36451;Frias Neto;Centro;2023-11-01;2023-11-01
+1500.0;420.12;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/agua-branca/residencial-alugar-agua-branca-em-piracicaba/36175;Frias Neto;Água Branca;2023-11-01;2023-11-01
+800.0;130.0;1;0;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/santa-rosa/residencial-alugar-santa-rosa-em-piracicaba/35116;Frias Neto;Santa Rosa;2023-11-01;2023-11-01
+2500.0;45.76;0;2;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/34438;Frias Neto;Centro;2023-11-01;2023-11-01
+5128.0;78.89;0;2;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/34390;Frias Neto;Centro;2023-11-01;2023-11-01
+2000.0;87.55;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/34384;Frias Neto;Centro;2023-11-01;2023-11-01
+6500.0;1050.0;4;0;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/centro/residencial-alugar-centro-em-piracicaba/34195;Frias Neto;Centro;2023-11-01;2023-11-01
+2000.0;2534.5;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/santa-rita/residencial-alugar-santa-rita-em-piracicaba/33454;Frias Neto;Santa Rita;2023-11-01;2023-11-01
+5000.0;24500.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/tupi/residencial-alugar-tupi-em-piracicaba/32698;Frias Neto;Tupi;2023-11-01;2023-11-01
+215000.0;52214.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/unileste/comercial-alugar-unileste-em-piracicaba/32629;Frias Neto;Unileste;2023-11-01;2023-11-01
+15000.0;0.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/santa-rosa/comercial-alugar-santa-rosa-em-piracicaba/31780;Frias Neto;Santa Rosa;2023-11-01;2023-11-01
+6500.0;190.0;3;3;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/areiao/residencial-alugar-areiao-em-piracicaba/31630;Frias Neto;Areião;2023-11-01;2023-11-01
+4700.0;500.0;20;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/30769;Frias Neto;Centro;2023-11-01;2023-11-01
+1200.0;100.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/30736;Frias Neto;Centro;2023-11-01;2023-11-01
+5000.0;10000.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/artemis/comercial-alugar-artemis-em-piracicaba/29509;Frias Neto;Ártemis;2023-11-01;2023-11-01
+5000.0;402.0;3;4;4;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-piracicaba/residencial-alugar-nova-piracicaba-em-piracicaba/29287;Frias Neto;Nova Piracicaba;2023-11-01;2023-11-01
+17810.0;600.0;0;0;5;https://www.friasneto.com.br/alugar/comercial/piracicaba/sao-dimas/comercial-alugar-sao-dimas-em-piracicaba/29011;Frias Neto;São Dimas;2023-11-01;2023-11-01
+670.0;15.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/nova-america/comercial-alugar-nova-america-em-piracicaba/27976;Frias Neto;Nova América;2023-11-01;2023-11-01
+1900.0;198.0;2;2;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-alta/comercial-alugar-cidade-alta-em-piracicaba/27019;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+14000.0;602.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/26185;Frias Neto;Centro;2023-11-01;2023-11-01
+1300.0;0.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/26098;Frias Neto;Centro;2023-11-01;2023-11-01
+1250.0;30.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/26014;Frias Neto;Alto;2023-11-01;2023-11-01
+1050.0;20.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/26011;Frias Neto;Alto;2023-11-01;2023-11-01
+3200.0;80.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/25792;Frias Neto;Alto;2023-11-01;2023-11-01
+1900.0;173.84;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/25531;Frias Neto;Centro;2023-11-01;2023-11-01
+1300.0;150.0;0;1;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/24646;Frias Neto;Centro;2023-11-01;2023-11-01
+1500.0;135.59;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/12449;Frias Neto;Centro;2023-11-01;2023-11-01
+5500.0;1090.0;3;2;4;https://www.friasneto.com.br/alugar/residencial/piracicaba/artemis/residencial-alugar-artemis-em-piracicaba/12436;Frias Neto;Ártemis;2023-11-01;2023-11-01
+790.0;20.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/higienopolis/comercial-alugar-higienopolis-em-piracicaba/12322;Frias Neto;Higienópolis;2023-11-01;2023-11-01
+2450.0;153.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/pauliceia/comercial-alugar-pauliceia-em-piracicaba/11980;Frias Neto;Pauliceia;2023-11-01;2023-11-01
+1950.0;40.0;0;1;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/11701;Frias Neto;Centro;2023-11-01;2023-11-01
+7600.0;300.0;4;3;6;https://www.friasneto.com.br/alugar/residencial/piracicaba/terras-de-piracicaba/residencial-alugar-terras-de-piracicaba-em-piracicaba/10942;Frias Neto;Terras de Piracicaba;2023-11-01;2023-11-01
+6000.0;300.0;4;2;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-agua-viva/residencial-alugar-jardim-agua-viva-em-piracicaba/10783;Frias Neto;Jardim Água Viva;2023-11-01;2023-11-01
+1400.0;0.0;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-elite/residencial-alugar-jardim-elite-em-piracicaba/10234;Frias Neto;Jardim Elite;2023-11-01;2023-11-01
+4500.0;0.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/10165;Frias Neto;Alto;2023-11-01;2023-11-01
+593.0;26.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/capim-fino/comercial-alugar-capim-fino-em-piracicaba/10117;Frias Neto;Capim Fino;2023-11-01;2023-11-01
+946.0;35.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/capim-fino/comercial-alugar-capim-fino-em-piracicaba/9973;Frias Neto;Capim Fino;2023-11-01;2023-11-01
+2770.0;175.0;0;6;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/capim-fino/comercial-alugar-capim-fino-em-piracicaba/9967;Frias Neto;Capim Fino;2023-11-01;2023-11-01
+1600.0;46.0;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/centro/residencial-alugar-centro-em-piracicaba/9748;Frias Neto;Centro;2023-11-01;2023-11-01
+3000.0;0.0;3;2;4;https://www.friasneto.com.br/alugar/residencial/piracicaba/jardim-elite/residencial-alugar-jardim-elite-em-piracicaba/9523;Frias Neto;Jardim Elite;2023-11-01;2023-11-01
+850.0;0.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-america/residencial-alugar-nova-america-em-piracicaba/9337;Frias Neto;Nova América;2023-11-01;2023-11-01
+850.0;45.0;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/alto/residencial-alugar-alto-em-piracicaba/9010;Frias Neto;Alto;2023-11-01;2023-11-01
+1800.0;192.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/8980;Frias Neto;Centro;2023-11-01;2023-11-01
+1500.0;0.0;1;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-dimas/residencial-alugar-sao-dimas-em-piracicaba/8836;Frias Neto;São Dimas;2023-11-01;2023-11-01
+1050.0;0.0;1;0;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-dimas/residencial-alugar-sao-dimas-em-piracicaba/8248;Frias Neto;São Dimas;2023-11-01;2023-11-01
+4500.0;102.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/6781;Frias Neto;Alto;2023-11-01;2023-11-01
+1800.0;45.0;0;1;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/6442;Frias Neto;Alto;2023-11-01;2023-11-01
+4500.0;398.45;3;4;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-dimas/residencial-alugar-sao-dimas-em-piracicaba/6439;Frias Neto;São Dimas;2023-11-01;2023-11-01
+900.0;55.33;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/dois-corregos/residencial-alugar-dois-corregos-em-piracicaba/6247;Frias Neto;Dois Córregos ;2023-11-01;2023-11-01
+3500.0;240.0;0;5;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/agua-branca/comercial-alugar-agua-branca-em-piracicaba/5923;Frias Neto;Água Branca;2023-11-01;2023-11-01
+8000.0;300.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/sao-dimas/comercial-alugar-sao-dimas-em-piracicaba/5908;Frias Neto;São Dimas;2023-11-01;2023-11-01
+700.0;0.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/pompeia/residencial-alugar-pompeia-em-piracicaba/7939;Frias Neto;Pompeia;2023-11-01;2023-11-01
+2500.0;348.0;2;2;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/centro/residencial-alugar-centro-em-piracicaba/7834;Frias Neto;Centro;2023-11-01;2023-11-01
+600.0;45.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/pompeia/residencial-alugar-pompeia-em-piracicaba/7480;Frias Neto;Pompeia;2023-11-01;2023-11-01
+20000.0;800.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/dois-corregos/comercial-alugar-dois-corregos-em-piracicaba/7090;Frias Neto;Dois Córregos ;2023-11-01;2023-11-01
+600.0;22.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/alemaes/comercial-alugar-alemaes-em-piracicaba/6889;Frias Neto;Alemães;2023-11-01;2023-11-01
+2900.0;244.94;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/4618;Frias Neto;Alto;2023-11-01;2023-11-01
+2000.0;316.24;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/4561;Frias Neto;Alto;2023-11-01;2023-11-01
+1300.0;100.0;0;1;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-monteiro/comercial-alugar-vila-monteiro-em-piracicaba/4549;Frias Neto;Vila Monteiro;2023-11-01;2023-11-01
+850.0;20.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/higienopolis/comercial-alugar-higienopolis-em-piracicaba/4510;Frias Neto;Higienópolis;2023-11-01;2023-11-01
+1300.0;140.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/4456;Frias Neto;Centro;2023-11-01;2023-11-01
+2250.0;154.0;3;2;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/alto/residencial-alugar-alto-em-piracicaba/4387;Frias Neto;Alto;2023-11-01;2023-11-01
+1400.0;130.0;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/santa-rosa/residencial-alugar-santa-rosa-em-piracicaba/4255;Frias Neto;Santa Rosa;2023-11-01;2023-11-01
+2400.0;566.68;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/3907;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+1500.0;121.77;2;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/paulista/residencial-alugar-paulista-em-piracicaba/3658;Frias Neto;Paulista;2023-11-01;2023-11-01
+1050.0;54.0;3;1;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-america/residencial-alugar-nova-america-em-piracicaba/5659;Frias Neto;Nova América;2023-11-01;2023-11-01
+2200.0;252.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-alta/comercial-alugar-cidade-alta-em-piracicaba/5635;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+2200.0;175.0;2;2;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/parque-taquaral/residencial-alugar-parque-taquaral-em-piracicaba/5404;Frias Neto;Parque Taquaral;2023-11-01;2023-11-01
+2200.0;41.0;0;1;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/5215;Frias Neto;Centro;2023-11-01;2023-11-01
+4200.0;384.05;0;2;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/5197;Frias Neto;Centro;2023-11-01;2023-11-01
+3900.0;264.43;3;1;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/4879;Frias Neto;Alto;2023-11-01;2023-11-01
+550.0;204.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/higienopolis/comercial-alugar-higienopolis-em-piracicaba/4759;Frias Neto;Higienópolis;2023-11-01;2023-11-01
+1200.0;11.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-rezende/comercial-alugar-vila-rezende-em-piracicaba/3574;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+2200.0;191.4;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/3382;Frias Neto;Centro;2023-11-01;2023-11-01
+1200.0;57.0;2;4;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/sao-dimas/residencial-alugar-sao-dimas-em-piracicaba/3370;Frias Neto;São Dimas;2023-11-01;2023-11-01
+4000.0;183.0;0;0;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/3145;Frias Neto;Alto;2023-11-01;2023-11-01
+2000.0;130.0;3;2;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/centro/residencial-alugar-centro-em-piracicaba/3055;Frias Neto;Centro;2023-11-01;2023-11-01
+2700.0;248.0;0;3;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/pauliceia/comercial-alugar-pauliceia-em-piracicaba/2995;Frias Neto;Pauliceia;2023-11-01;2023-11-01
+2500.0;0.0;0;2;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-independencia/comercial-alugar-vila-independencia-em-piracicaba/2902;Frias Neto;Vila Independência;2023-11-01;2023-11-01
+2700.0;150.0;3;2;3;https://www.friasneto.com.br/alugar/residencial/piracicaba/nova-america/residencial-alugar-nova-america-em-piracicaba/2683;Frias Neto;Nova América;2023-11-01;2023-11-01
+670.0;15.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/alemaes/comercial-alugar-alemaes-em-piracicaba/2512;Frias Neto;Alemães;2023-11-01;2023-11-01
+7000.0;579.51;3;4;4;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-alta/comercial-alugar-cidade-alta-em-piracicaba/2413;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+1700.0;105.6;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/2347;Frias Neto;Centro;2023-11-01;2023-11-01
+1150.0;198.12;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-alta/comercial-alugar-cidade-alta-em-piracicaba/2122;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+1150.0;0.0;0;0;1;https://www.friasneto.com.br/alugar/comercial/piracicaba/cidade-alta/comercial-alugar-cidade-alta-em-piracicaba/2119;Frias Neto;Cidade Alta;2023-11-01;2023-11-01
+3500.0;423.05;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/2104;Frias Neto;Centro;2023-11-01;2023-11-01
+850.0;75.0;3;1;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/vila-rezende/residencial-alugar-vila-rezende-em-piracicaba/2053;Frias Neto;Vila Rezende;2023-11-01;2023-11-01
+900.0;26.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/1978;Frias Neto;Centro;2023-11-01;2023-11-01
+3200.0;300.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/pauliceia/comercial-alugar-pauliceia-em-piracicaba/1885;Frias Neto;Pauliceia;2023-11-01;2023-11-01
+1400.0;79.0;3;0;2;https://www.friasneto.com.br/alugar/residencial/piracicaba/alto/residencial-alugar-alto-em-piracicaba/1837;Frias Neto;Alto;2023-11-01;2023-11-01
+2300.0;260.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/jardim-california/comercial-alugar-jardim-california-em-piracicaba/1588;Frias Neto;Jardim Califórnia;2023-11-01;2023-11-01
+2800.0;249.1;0;0;3;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/1504;Frias Neto;Centro;2023-11-01;2023-11-01
+1300.0;100.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/1465;Frias Neto;Alto;2023-11-01;2023-11-01
+2800.0;673.36;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/1069;Frias Neto;Centro;2023-11-01;2023-11-01
+1100.0;207.07;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/979;Frias Neto;Centro;2023-11-01;2023-11-01
+2000.0;100.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/vila-monteiro/comercial-alugar-vila-monteiro-em-piracicaba/940;Frias Neto;Vila Monteiro;2023-11-01;2023-11-01
+1100.0;80.0;2;0;1;https://www.friasneto.com.br/alugar/residencial/piracicaba/centro/residencial-alugar-centro-em-piracicaba/637;Frias Neto;Centro;2023-11-01;2023-11-01
+4500.0;1166.0;0;0;0;https://www.friasneto.com.br/alugar/residencial/piracicaba/centro/residencial-alugar-centro-em-piracicaba/577;Frias Neto;Centro;2023-11-01;2023-11-01
+900.0;64.0;0;0;0;https://www.friasneto.com.br/alugar/comercial/piracicaba/alto/comercial-alugar-alto-em-piracicaba/457;Frias Neto;Alto;2023-11-01;2023-11-01
+1950.0;194.0;0;0;2;https://www.friasneto.com.br/alugar/comercial/piracicaba/centro/comercial-alugar-centro-em-piracicaba/436;Frias Neto;Centro;2023-11-01;2023-11-01
+680.0;30.0;1;0;1;https://www.duoimoveis.com.br/imovel/kitnet-de-30-m-com-1-quarto-conjunto-residencial-mario-dedini-piracicaba/kn0136-003?from=sale;duo imoveis;Conjunto Residencial Mário Dedini;2023-11-01;2023-11-01
+680.0;30.0;1;0;1;https://www.duoimoveis.com.br/imovel/kitnet-de-30-m-com-1-quarto-conjunto-residencial-mario-dedini-piracicaba/kn0132-003?from=sale;duo imoveis;Conjunto Residencial Mário Dedini;2023-11-01;2023-11-01
+680.0;30.0;1;0;1;https://www.duoimoveis.com.br/imovel/kitnet-de-30-m-com-1-quarto-conjunto-residencial-mario-dedini-piracicaba/kn0134-003?from=sale;duo imoveis;Conjunto Residencial Mário Dedini;2023-11-01;2023-11-01
+680.0;30.0;1;0;1;https://www.duoimoveis.com.br/imovel/kitnet-de-30-m-com-1-quarto-conjunto-residencial-mario-dedini-piracicaba/kn0131-003?from=sale;duo imoveis;Conjunto Residencial Mário Dedini;2023-11-01;2023-11-01
+2900.0;72.0;2;2;3;https://www.duoimoveis.com.br/imovel/apartamento-de-72-m-com-2-quartos-centro-piracicaba/ap5913-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3000.0;80.25;3;2;3;https://www.duoimoveis.com.br/imovel/casa-de-80-m-com-3-quartos-piracicamirim-piracicaba/ca5327-003?from=sale;duo imoveis;Piracicamirim;2023-11-01;2023-11-01
+3100.0;84.0;3;2;3;https://www.duoimoveis.com.br/imovel/apartamento-de-84-m-com-3-quartos-sao-dimas-piracicaba/ap5912-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+1450.0;87.39;3;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-87-m-com-3-quartos-jardim-elite-piracicaba/ap5914-003?from=sale;duo imoveis;Jardim Elite;2023-11-01;2023-11-01
+5200.0;305.0;4;3;5;https://www.duoimoveis.com.br/imovel/casa-de-305-m-com-4-quartos-terra-rica-iii-piracicaba/ca2028-003?from=sale;duo imoveis;Terra Rica III;2023-11-01;2023-11-01
+3200.0;198.0;3;2;3;https://www.duoimoveis.com.br/imovel/casa-de-198-m-com-3-quartos-vila-independencia-piracicaba/ca5333-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+1900.0;127.5;3;4;2;https://www.duoimoveis.com.br/imovel/casa-de-128-m-com-3-quartos-piracicamirim-piracicaba/ca5334-003?from=sale;duo imoveis;Piracicamirim;2023-11-01;2023-11-01
+5000.0;109.79;3;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-110-m-com-3-quartos-sao-judas-piracicaba/ap5816-003?from=sale;duo imoveis;São Judas;2023-11-01;2023-11-01
+1300.0;69.31;2;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-69-m-com-2-quartos-campestre-piracicaba/ap5265-003?from=sale;duo imoveis;Campestre;2023-11-01;2023-11-01
+1700.0;75.0;0;1;3;https://www.duoimoveis.com.br/imovel/sala-de-75-m-alto-piracicaba/sa0503-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+1200.0;92.0;3;1;3;https://www.duoimoveis.com.br/imovel/apartamento-de-92-m-com-3-quartos-centro-piracicaba/ap5884-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1600.0;70.0;2;1;2;https://www.duoimoveis.com.br/imovel/apartamento-de-70-m-com-2-quartos-parque-conceicao-ii-piracicaba/ap3618-003?from=sale;duo imoveis;Parque Conceição II;2023-11-01;2023-11-01
+3000.0;55.0;0;12;1;https://www.duoimoveis.com.br/imovel/loja-de-55-m-vila-independencia-piracicaba/lo0101-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+5500.0;493.0;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-493-m-paulista-piracicaba/sl0489-003?from=sale;duo imoveis;Paulista;2023-11-01;2023-11-01
+1300.0;54.8;2;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-55-m-com-2-quartos-nova-america-piracicaba/ap5844-003?from=sale;duo imoveis;Nova América;2023-11-01;2023-11-01
+4900.0;460.0;3;4;4;https://www.duoimoveis.com.br/imovel/casa-de-460-m-com-3-quartos-sao-dimas-piracicaba/ca2475-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+1300.0;62.5;2;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-63-m-com-2-quartos-pauliceia-piracicaba/ap5355-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+1300.0;62.5;2;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-63-m-com-2-quartos-pauliceia-piracicaba/ap5354-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+650.0;66.0;2;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-66-m-com-2-quartos-alto-piracicaba/ap3659-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+1800.0;67.54;3;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-68-m-com-3-quartos-gleba-california-piracicaba/ap5928-003?from=sale;duo imoveis;Gleba Califórnia;2023-11-01;2023-11-01
+1250.0;55.0;2;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-55-m-com-2-quartos-nova-america-piracicaba/ap1591-003?from=sale;duo imoveis;Nova América;2023-11-01;2023-11-01
+2300.0;54.0;1;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-54-m-com-1-quarto-jardim-europa-piracicaba/ap2323-003?from=sale;duo imoveis;Jardim Europa;2023-11-01;2023-11-01
+6000.0;167.92;0;1;3;https://www.duoimoveis.com.br/imovel/salao-de-168-m-centro-piracicaba/sl0010-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+600.0;52.68;2;0;1;https://www.duoimoveis.com.br/imovel/apartamento-de-53-m-com-2-quartos-jardim-primavera-piracicaba/ap4407-003?from=sale;duo imoveis;Jardim Primavera;2023-11-01;2023-11-01
+600.0;56.0;2;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-56-m-com-2-quartos-gleba-california-piracicaba/ap5799-003?from=sale;duo imoveis;Gleba Califórnia;2023-11-01;2023-11-01
+4200.0;157.0;3;3;5;https://www.duoimoveis.com.br/imovel/apartamento-de-157-m-com-3-quartos-alto-piracicaba/ap5892-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+1800.0;47.0;1;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-47-m-com-1-quarto-sao-dimas-piracicaba/ap5552-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+2500.0;86.0;3;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-86-m-com-3-quartos-pauliceia-piracicaba/ap3317-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+2500.0;86.0;3;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-86-m-com-3-quartos-pauliceia-piracicaba/ap4607-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+1000.0;57.0;2;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-57-m-com-2-quartos-nova-america-piracicaba/ap5901-003?from=sale;duo imoveis;Nova América;2023-11-01;2023-11-01
+2400.0;114.0;4;0;3;https://www.duoimoveis.com.br/imovel/apartamento-de-114-m-com-4-quartos-sao-judas-piracicaba/ap5899-003?from=sale;duo imoveis;São Judas;2023-11-01;2023-11-01
+1500.0;48.0;1;1;2;https://www.duoimoveis.com.br/imovel/apartamento-de-48-m-com-1-quarto-alto-piracicaba/ap5902-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+1000.0;45.0;2;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-45-m-com-2-quartos-jardim-sao-francisco-piracicaba/ap5870-003?from=sale;duo imoveis;Jardim São Francisco;2023-11-01;2023-11-01
+2400.0;74.54;2;1;2;https://www.duoimoveis.com.br/imovel/apartamento-de-75-m-com-2-quartos-vila-independencia-piracicaba/ap5900-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+2400.0;71.97;2;1;2;https://www.duoimoveis.com.br/imovel/apartamento-de-72-m-com-2-quartos-vila-independencia-piracicaba/ap5898-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+1800.0;37.7;1;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-38-m-com-1-quarto-vila-independencia-piracicaba/ap2451-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+2200.0;46.83;1;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-47-m-com-1-quarto-sao-dimas-piracicaba/ap5909-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+3000.0;196.25;3;2;4;https://www.duoimoveis.com.br/imovel/apartamento-de-196-m-com-3-quartos-centro-piracicaba/ap5919-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+650.0;45.95;2;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-46-m-com-2-quartos-piracicamirim-piracicaba/ap5151-003?from=sale;duo imoveis;Piracicamirim;2023-11-01;2023-11-01
+650.0;45.95;2;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-46-m-com-2-quartos-piracicamirim-piracicaba/ap5150-003?from=sale;duo imoveis;Piracicamirim;2023-11-01;2023-11-01
+550.0;54.0;2;0;1;https://www.duoimoveis.com.br/imovel/apartamento-de-54-m-com-2-quartos-gleba-california-piracicaba/ap4284-003?from=sale;duo imoveis;Gleba Califórnia;2023-11-01;2023-11-01
+1300.0;29.91;1;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-30-m-com-1-quarto-jardim-europa-piracicaba/ap5923-003?from=sale;duo imoveis;Jardim Europa;2023-11-01;2023-11-01
+2700.0;240.0;3;3;5;https://www.duoimoveis.com.br/imovel/apartamento-de-240-m-com-3-quartos-sao-dimas-piracicaba/ap5083-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+9000.0;415.0;3;5;5;https://www.duoimoveis.com.br/imovel/casa-de-415-m-com-3-quartos-colinas-do-piracicaba-artemis-piracicaba/ca4996-003?from=sale;duo imoveis;Colinas do Piracicaba (Ártemis);2023-11-01;2023-11-01
+6000.0;356.0;3;7;4;https://www.duoimoveis.com.br/imovel/casa-de-356-m-com-3-quartos-vila-independencia-piracicaba/ca5116-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+3100.0;101.0;3;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-101-m-com-3-quartos-vila-independencia-piracicaba/ap2070-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+1800.0;72.0;3;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-72-m-com-3-quartos-nova-america-piracicaba/ap5925-003?from=sale;duo imoveis;Nova América;2023-11-01;2023-11-01
+5000.0;346.0;4;3;5;https://www.duoimoveis.com.br/imovel/casa-de-346-m-com-4-quartos-nova-piracicaba-piracicaba/ca1504-003?from=sale;duo imoveis;Nova Piracicaba;2023-11-01;2023-11-01
+2100.0;70.0;2;2;2;https://www.duoimoveis.com.br/imovel/casa-de-70-m-com-2-quartos-jardim-asturias-ii-piracicaba/ca5330-003?from=sale;duo imoveis;Jardim Astúrias II;2023-11-01;2023-11-01
+2900.0;226.0;3;2;3;https://www.duoimoveis.com.br/imovel/casa-de-226-m-com-3-quartos-vila-rezende-piracicaba/ca3045-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+6000.0;500.0;2;10;5;https://www.duoimoveis.com.br/imovel/casa-de-500-m-com-2-quartos-dois-corregos-piracicaba/ca5331-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+2500.0;190.0;3;2;3;https://www.duoimoveis.com.br/imovel/apartamento-de-190-m-com-3-quartos-vila-rezende-piracicaba/ap2839-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+1800.0;120.0;0;1;3;https://www.duoimoveis.com.br/imovel/salao-de-120-m-agua-branca-piracicaba/sl0538-003?from=sale;duo imoveis;Água Branca;2023-11-01;2023-11-01
+1300.0;80.0;0;1;2;https://www.duoimoveis.com.br/imovel/salao-de-80-m-agua-branca-piracicaba/sl0539-003?from=sale;duo imoveis;Água Branca;2023-11-01;2023-11-01
+18000.0;600.0;0;4;2;https://www.duoimoveis.com.br/imovel/salao-de-600-m-santa-terezinha-piracicaba/sl0549-003?from=sale;duo imoveis;Santa Terezinha;2023-11-01;2023-11-01
+5500.0;147.0;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-147-m-centro-piracicaba/sl0364-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+7500.0;422.11;3;2;3;https://www.duoimoveis.com.br/imovel/casa-de-422-m-com-3-quartos-jardim-europa-piracicaba/ca2266-003?from=sale;duo imoveis;Jardim Europa;2023-11-01;2023-11-01
+4800.0;270.0;3;2;4;https://www.duoimoveis.com.br/imovel/casa-de-270-m-com-3-quartos-vila-prudente-piracicaba/ca0319-003?from=sale;duo imoveis;Vila Prudente;2023-11-01;2023-11-01
+55000.0;3375.0;0;50;20;https://www.duoimoveis.com.br/imovel/barracao-de-3-375-m-vila-pacaembu-piracicaba/ba0302-003?from=sale;duo imoveis;Vila Pacaembu;2023-11-01;2023-11-01
+2300.0;47.0;1;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-47-m-com-1-quarto-sao-dimas-piracicaba/ap2009-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+1450.0;100.0;0;1;3;https://www.duoimoveis.com.br/imovel/sala-de-100-m-vila-monteiro-piracicaba/sa0509-003?from=sale;duo imoveis;Vila Monteiro;2023-11-01;2023-11-01
+1450.0;100.0;0;1;3;https://www.duoimoveis.com.br/imovel/sala-de-100-m-vila-monteiro-piracicaba/sa0510-003?from=sale;duo imoveis;Vila Monteiro;2023-11-01;2023-11-01
+19000.0;609.31;5;3;9;https://www.duoimoveis.com.br/imovel/casa-de-609-m-com-5-quartos-colinas-do-piracicaba-artemis-piracicaba/ca2656-003?from=sale;duo imoveis;Colinas do Piracicaba (Ártemis);2023-11-01;2023-11-01
+2900.0;54.0;1;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-54-m-com-1-quarto-jardim-europa-piracicaba/ap2322-003?from=sale;duo imoveis;Jardim Europa;2023-11-01;2023-11-01
+2300.0;41.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-41-m-cidade-jardim-piracicaba/sa0333-003?from=sale;duo imoveis;Cidade Jardim;2023-11-01;2023-11-01
+2200.0;42.0;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-42-m-cidade-jardim-piracicaba/sa0341-003?from=sale;duo imoveis;Cidade Jardim;2023-11-01;2023-11-01
+2100.0;40.0;0;0;1;https://www.duoimoveis.com.br/imovel/salao-de-40-m-alemaes-piracicaba/sl0551-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+6300.0;240.0;3;4;5;https://www.duoimoveis.com.br/imovel/casa-de-240-m-com-3-quartos-ondas-piracicaba/ca5282-003?from=sale;duo imoveis;Ondas;2023-11-01;2023-11-01
+8000.0;1250.0;0;5;7;https://www.duoimoveis.com.br/imovel/salao-de-1-250-m-alto-piracicaba/sl0348-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+9577.66;620.2;0;1;1;https://www.duoimoveis.com.br/imovel/galpao-de-620-m-capim-fino-piracicaba/ga0011-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01
+8000.0;189.0;0;4;3;https://www.duoimoveis.com.br/imovel/salao-de-189-m-sao-dimas-piracicaba/sl0469-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+15000.0;520.0;0;5;5;https://www.duoimoveis.com.br/imovel/barracao-de-520-m-parque-chapadao-piracicaba/ba0470-003?from=sale;duo imoveis;Parque Chapadão;2023-11-01;2023-11-01
+4000.0;160.0;3;6;5;https://www.duoimoveis.com.br/imovel/casa-de-160-m-com-3-quartos-nova-piracicaba-piracicaba/ca2198-003?from=sale;duo imoveis;Nova Piracicaba;2023-11-01;2023-11-01
+8000.0;175.0;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-175-m-centro-piracicaba/sl0459-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1400.0;73.0;3;1;2;https://www.duoimoveis.com.br/imovel/apartamento-de-73-m-com-3-quartos-agua-seca-piracicaba/ap5351-003?from=sale;duo imoveis;Água Seca;2023-11-01;2023-11-01
+1700.0;54.0;1;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-54-m-com-1-quarto-centro-piracicaba/ap5889-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+4500.0;268.39;0;8;3;https://www.duoimoveis.com.br/imovel/salao-de-268-m-centro-piracicaba/sl0354-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+2600.0;108.0;0;0;1;https://www.duoimoveis.com.br/imovel/salao-de-108-m-piracicamirim-piracicaba/sl0475-003?from=sale;duo imoveis;Piracicamirim;2023-11-01;2023-11-01
+2000.0;60.0;0;0;1;https://www.duoimoveis.com.br/imovel/salao-de-60-m-piracicamirim-piracicaba/sl0476-003?from=sale;duo imoveis;Piracicamirim;2023-11-01;2023-11-01
+2000.0;60.0;0;0;1;https://www.duoimoveis.com.br/imovel/salao-de-60-m-piracicamirim-piracicaba/sl0477-003?from=sale;duo imoveis;Piracicamirim;2023-11-01;2023-11-01
+880.0;31.0;0;0;1;https://www.duoimoveis.com.br/imovel/salao-de-31-m-vila-independencia-piracicaba/sl0409-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+Aluguelsobconsulta;60.0;1;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-60-m-com-1-quarto-jardim-europa-piracicaba/ap2675-003?from=sale;duo imoveis;Jardim Europa;2023-11-01;2023-11-01
+2800.0;63.0;2;2;1;https://www.duoimoveis.com.br/imovel/apartamento-de-63-m-com-2-quartos-alto-piracicaba/ap5046-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+2500.0;183.47;3;2;1;https://www.duoimoveis.com.br/imovel/casa-de-183-m-com-3-quartos-vila-rezende-piracicaba/ca5301-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+2300.0;150.0;3;2;3;https://www.duoimoveis.com.br/imovel/casa-de-150-m-com-3-quartos-vila-independencia-piracicaba/ca5332-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+1300.0;450.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-450-m-jardim-sao-luiz-piracicaba/te1143-003?from=sale;duo imoveis;Jardim São Luiz;2023-11-01;2023-11-01
+2700.0;142.0;3;3;3;https://www.duoimoveis.com.br/imovel/casa-de-142-m-com-3-quartos-sao-dimas-piracicaba/ca5030-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+2000.0;114.53;3;1;1;https://www.duoimoveis.com.br/imovel/casa-de-115-m-com-3-quartos-jardim-algodoal-piracicaba/ca4675-003?from=sale;duo imoveis;Jardim Algodoal;2023-11-01;2023-11-01
+7900.0;140.0;3;3;4;https://www.duoimoveis.com.br/imovel/apartamento-de-140-m-com-3-quartos-sao-dimas-piracicaba/ap5906-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+1900.0;66.7;2;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-67-m-com-2-quartos-pauliceia-piracicaba/ap4997-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+7200.0;279.0;3;4;5;https://www.duoimoveis.com.br/imovel/casa-de-279-m-com-3-quartos-pompeia-piracicaba/ca2867-003?from=sale;duo imoveis;Pompéia;2023-11-01;2023-11-01
+3400.0;192.0;3;2;3;https://www.duoimoveis.com.br/imovel/casa-de-192-m-com-3-quartos-alto-piracicaba/ca1765-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+38000.0;1122.91;0;3;6;https://www.duoimoveis.com.br/imovel/salao-de-1-123-m-alto-piracicaba/sl0547-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+3000.0;152.0;0;1;2;https://www.duoimoveis.com.br/imovel/casa-de-152-m-centro-piracicaba/ca5066-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+2700.0;200.0;0;0;2;https://www.duoimoveis.com.br/imovel/barracao-de-200-m-verde-piracicaba/ba0469-003?from=sale;duo imoveis;Verde;2023-11-01;2023-11-01
+6200.0;531.45;4;6;5;https://www.duoimoveis.com.br/imovel/casa-de-531-m-com-4-quartos-park-campestre-piracicaba/ca1679-003?from=sale;duo imoveis;Park Campestre;2023-11-01;2023-11-01
+2800.0;185.0;0;0;2;https://www.duoimoveis.com.br/imovel/barracao-de-185-m-vila-pacaembu-piracicaba/ba0451-003?from=sale;duo imoveis;Vila Pacaembu;2023-11-01;2023-11-01
+1000.0;50.0;0;0;1;https://www.duoimoveis.com.br/imovel/salao-de-50-m-jardim-algodoal-piracicaba/sl0455-003?from=sale;duo imoveis;Jardim Algodoal;2023-11-01;2023-11-01
+4500.0;89.5;2;2;3;https://www.duoimoveis.com.br/imovel/apartamento-de-90-m-com-2-quartos-sao-judas-piracicaba/ap5651-003?from=sale;duo imoveis;São Judas;2023-11-01;2023-11-01
+1800.0;70.0;3;2;1;https://www.duoimoveis.com.br/imovel/apartamento-de-70-m-com-3-quartos-agua-branca-piracicaba/ap5842-003?from=sale;duo imoveis;Água Branca;2023-11-01;2023-11-01
+1400.0;72.5;3;1;2;https://www.duoimoveis.com.br/imovel/apartamento-de-73-m-com-3-quartos-parque-taquaral-piracicaba/ap5693-003?from=sale;duo imoveis;Parque Taquaral;2023-11-01;2023-11-01
+2800.0;227.0;3;2;4;https://www.duoimoveis.com.br/imovel/apartamento-de-227-m-com-3-quartos-higienopolis-piracicaba/ap1799-003?from=sale;duo imoveis;Higienópolis;2023-11-01;2023-11-01
+800.0;305.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-305-m-dois-corregos-piracicaba/te2674-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+2200.0;40.0;0;0;1;https://www.duoimoveis.com.br/imovel/salao-de-40-m-centro-piracicaba/sl0490-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+2000.0;129.18;3;0;5;https://www.duoimoveis.com.br/imovel/casa-de-129-m-com-3-quartos-centro-piracicaba/ca4697-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+800.0;37.17;1;0;1;https://www.duoimoveis.com.br/imovel/casa-de-37-m-com-1-quarto-jardim-monumento-piracicaba/ca5265-003?from=sale;duo imoveis;Jardim Monumento;2023-11-01;2023-11-01
+700.0;22.15;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-22-m-centro-piracicaba/sa0516-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3500.0;226.0;0;3;2;https://www.duoimoveis.com.br/imovel/barracao-de-226-m-jardim-brasil-piracicaba/ba0458-003?from=sale;duo imoveis;Jardim Brasil;2023-11-01;2023-11-01
+1250.0;83.93;2;1;1;https://www.duoimoveis.com.br/imovel/casa-de-84-m-com-2-quartos-jardim-algodoal-piracicaba/ca3205-003?from=sale;duo imoveis;Jardim Algodoal;2023-11-01;2023-11-01
+12000.0;249.03;0;10;4;https://www.duoimoveis.com.br/imovel/salao-de-249-m-piracicamirim-piracicaba/sl0543-003?from=sale;duo imoveis;Piracicamirim;2023-11-01;2023-11-01
+590.0;55.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-55-m-centro-piracicaba/sa0524-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+5000.0;173.0;0;6;2;https://www.duoimoveis.com.br/imovel/salao-de-173-m-vila-areiao-piracicaba/sl0548-003?from=sale;duo imoveis;Vila Areião;2023-11-01;2023-11-01
+4000.0;87.85;3;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-88-m-com-3-quartos-sao-judas-piracicaba/ap5895-003?from=sale;duo imoveis;São Judas;2023-11-01;2023-11-01
+1600.0;157.0;2;0;1;https://www.duoimoveis.com.br/imovel/casa-de-157-m-com-2-quartos-centro-piracicaba/ca5197-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+6800.0;323.0;4;6;7;https://www.duoimoveis.com.br/imovel/casa-de-323-m-com-4-quartos-condominio-fechado-piracicaba/ca0164-003?from=sale;duo imoveis;Condomínio Fechado;2023-11-01;2023-11-01
+5500.0;180.82;4;2;3;https://www.duoimoveis.com.br/imovel/casa-de-181-m-com-4-quartos-sao-judas-piracicaba/ca4963-003?from=sale;duo imoveis;São Judas;2023-11-01;2023-11-01
+3500.0;130.0;3;0;0;https://www.duoimoveis.com.br/imovel/casa-de-130-m-com-3-quartos-centro-piracicaba/ca5017-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+2800.0;120.0;3;0;2;https://www.duoimoveis.com.br/imovel/casa-de-120-m-com-3-quartos-centro-piracicaba/ca5042-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1200.0;55.0;0;0;1;https://www.duoimoveis.com.br/imovel/casa-de-55-m-sao-judas-piracicaba/ca5180-003?from=sale;duo imoveis;São Judas;2023-11-01;2023-11-01
+5000.0;180.0;3;0;3;https://www.duoimoveis.com.br/imovel/casa-de-180-m-com-3-quartos-centro-piracicaba/ca5010-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3000.0;100.0;0;7;1;https://www.duoimoveis.com.br/imovel/barracao-de-100-m-vila-rezende-piracicaba/ba0438-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+5000.0;104.56;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-105-m-centro-piracicaba/sl0219-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3500.0;222.0;0;0;4;https://www.duoimoveis.com.br/imovel/salao-de-222-m-alto-piracicaba/sl0501-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+550.0;47.0;2;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-47-m-com-2-quartos-jardim-noiva-da-colina-piracicaba/ap4192-003?from=sale;duo imoveis;Jardim Noiva da Colina;2023-11-01;2023-11-01
+2500.0;92.4;0;3;2;https://www.duoimoveis.com.br/imovel/salao-de-92-m-pauliceia-piracicaba/sl0542-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+1911.0;45.5;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-46-m-alemaes-piracicaba/sa0424-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+800.0;54.0;2;0;1;https://www.duoimoveis.com.br/imovel/apartamento-de-54-m-com-2-quartos-dois-corregos-piracicaba/ap1134-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+5500.0;219.0;6;3;4;https://www.duoimoveis.com.br/imovel/casa-de-219-m-com-6-quartos-alemaes-piracicaba/ca4932-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+4500.0;215.0;0;0;3;https://www.duoimoveis.com.br/imovel/casa-de-215-m-centro-piracicaba/ca1749-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3000.0;304.21;0;3;5;https://www.duoimoveis.com.br/imovel/salao-de-304-m-agua-branca-piracicaba/sl0540-003?from=sale;duo imoveis;Água Branca;2023-11-01;2023-11-01
+16000.0;230.0;3;4;2;https://www.duoimoveis.com.br/imovel/casa-de-230-m-com-3-quartos-terras-de-artemis-piracicaba/ca5278-003?from=sale;duo imoveis;Terras de Artemis;2023-11-01;2023-11-01
+2500.0;150.3;3;1;2;https://www.duoimoveis.com.br/imovel/apartamento-de-150-m-com-3-quartos-pauliceia-piracicaba/ap5856-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+1000.0;74.0;3;1;2;https://www.duoimoveis.com.br/imovel/apartamento-de-74-m-com-3-quartos-nova-america-piracicaba/ap1560-003?from=sale;duo imoveis;Nova América;2023-11-01;2023-11-01
+5500.0;310.0;4;4;4;https://www.duoimoveis.com.br/imovel/casa-de-310-m-com-4-quartos-jardim-caxambu-piracicaba/ca2063-003?from=sale;duo imoveis;Jardim Caxambu;2023-11-01;2023-11-01
+6800.0;379.14;4;3;2;https://www.duoimoveis.com.br/imovel/casa-de-379-m-com-4-quartos-parque-santa-cecilia-piracicaba/ca5280-003?from=sale;duo imoveis;Parque Santa Cecília;2023-11-01;2023-11-01
+3000.0;84.72;0;0;3;https://www.duoimoveis.com.br/imovel/salao-de-85-m-centro-piracicaba/sl0532-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1300.0;2200.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-2-200-m-glebas-natalinas-piracicaba/te1038-003?from=sale;duo imoveis;Glebas Natalinas;2023-11-01;2023-11-01
+3900.0;120.0;0;1;3;https://www.duoimoveis.com.br/imovel/salao-de-120-m-paulista-piracicaba/sl0433-003?from=sale;duo imoveis;Paulista;2023-11-01;2023-11-01
+650.0;49.0;2;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-49-m-com-2-quartos-jardim-sao-francisco-piracicaba/ap5829-003?from=sale;duo imoveis;Jardim São Francisco;2023-11-01;2023-11-01
+3750.0;144.9;0;2;2;https://www.duoimoveis.com.br/imovel/salao-de-145-m-nova-pompeia-piracicaba/sl0534-003?from=sale;duo imoveis;Nova Pompéia;2023-11-01;2023-11-01
+6500.0;140.0;3;3;4;https://www.duoimoveis.com.br/imovel/apartamento-de-140-m-com-3-quartos-sao-dimas-piracicaba/ap5846-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+2300.0;112.43;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-112-m-jardim-flamboyant-piracicaba/sl0544-003?from=sale;duo imoveis;Jardim Flamboyant;2023-11-01;2023-11-01
+2650.0;145.76;3;4;2;https://www.duoimoveis.com.br/imovel/casa-de-146-m-com-3-quartos-jardim-monumento-piracicaba/ca5292-003?from=sale;duo imoveis;Jardim Monumento;2023-11-01;2023-11-01
+12000.0;648.0;0;4;4;https://www.duoimoveis.com.br/imovel/barracao-de-648-m-algodoal-piracicaba/ba0468-003?from=sale;duo imoveis;Algodoal;2023-11-01;2023-11-01
+7500.0;360.0;0;2;4;https://www.duoimoveis.com.br/imovel/barracao-de-360-m-algodoal-piracicaba/ba0465-003?from=sale;duo imoveis;Algodoal;2023-11-01;2023-11-01
+6500.0;324.0;0;2;2;https://www.duoimoveis.com.br/imovel/barracao-de-324-m-algodoal-piracicaba/ba0467-003?from=sale;duo imoveis;Algodoal;2023-11-01;2023-11-01
+6500.0;324.0;0;2;2;https://www.duoimoveis.com.br/imovel/barracao-de-324-m-algodoal-piracicaba/ba0466-003?from=sale;duo imoveis;Algodoal;2023-11-01;2023-11-01
+690.0;55.0;2;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-55-m-com-2-quartos-vila-monteiro-piracicaba/ap2289-003?from=sale;duo imoveis;Vila Monteiro;2023-11-01;2023-11-01
+4000.0;275.0;0;3;2;https://www.duoimoveis.com.br/imovel/barracao-de-275-m-castelinho-piracicaba/ba0221-003?from=sale;duo imoveis;Castelinho;2023-11-01;2023-11-01
+1350.0;180.0;2;0;1;https://www.duoimoveis.com.br/imovel/casa-de-180-m-com-2-quartos-nova-america-piracicaba/ca4097-003?from=sale;duo imoveis;Nova América;2023-11-01;2023-11-01
+2800.0;160.0;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-160-m-centro-piracicaba/sl0541-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+5500.0;176.91;3;2;1;https://www.duoimoveis.com.br/imovel/casa-de-177-m-com-3-quartos-ondas-piracicaba/ca3870-003?from=sale;duo imoveis;Ondas;2023-11-01;2023-11-01
+3750.0;144.9;0;2;2;https://www.duoimoveis.com.br/imovel/salao-de-145-m-nova-pompeia-piracicaba/sl0536-003?from=sale;duo imoveis;Nova Pompéia;2023-11-01;2023-11-01
+3750.0;143.1;0;2;2;https://www.duoimoveis.com.br/imovel/salao-de-143-m-nova-pompeia-piracicaba/sl0535-003?from=sale;duo imoveis;Nova Pompéia;2023-11-01;2023-11-01
+900.0;40.0;1;0;1;https://www.duoimoveis.com.br/imovel/casa-de-40-m-com-1-quarto-vila-monteiro-piracicaba/ca5275-003?from=sale;duo imoveis;Vila Monteiro;2023-11-01;2023-11-01
+5000.0;319.9;0;4;4;https://www.duoimoveis.com.br/imovel/casa-de-320-m-cidade-jardim-piracicaba/ca3522-003?from=sale;duo imoveis;Cidade Jardim;2023-11-01;2023-11-01
+6000.0;470.0;0;4;3;https://www.duoimoveis.com.br/imovel/barracao-de-470-m-altos-do-sao-francisco-piracicaba/ba0464-003?from=sale;duo imoveis;Altos do São Francisco;2023-11-01;2023-11-01
+2900.0;183.0;3;2;2;https://www.duoimoveis.com.br/imovel/casa-de-183-m-com-3-quartos-vila-rezende-piracicaba/ca4131-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+800.0;30.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-30-m-alto-piracicaba/sa0529-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+800.0;30.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-30-m-alto-piracicaba/sa0528-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+800.0;34.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-34-m-alto-piracicaba/sa0527-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+3000.0;95.52;0;2;2;https://www.duoimoveis.com.br/imovel/salao-de-96-m-nova-pompeia-piracicaba/sl0537-003?from=sale;duo imoveis;Nova Pompéia;2023-11-01;2023-11-01
+2600.0;240.37;4;1;1;https://www.duoimoveis.com.br/imovel/casa-de-240-m-com-4-quartos-centro-piracicaba/ca3965-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+2100.0;70.0;3;2;1;https://www.duoimoveis.com.br/imovel/apartamento-de-70-m-com-3-quartos-agua-branca-piracicaba/ap5795-003?from=sale;duo imoveis;Água Branca;2023-11-01;2023-11-01
+10000.0;200.0;0;3;3;https://www.duoimoveis.com.br/imovel/salao-de-200-m-sao-judas-piracicaba/sl0533-003?from=sale;duo imoveis;São Judas;2023-11-01;2023-11-01
+6000.0;316.0;0;0;3;https://www.duoimoveis.com.br/imovel/salao-de-316-m-alemaes-piracicaba/sl0319-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+13000.0;236.08;3;4;0;https://www.duoimoveis.com.br/imovel/casa-de-236-m-com-3-quartos-santa-rosa-piracicaba/ca5252-003?from=sale;duo imoveis;Santa Rosa;2023-11-01;2023-11-01
+5100.0;78.89;0;2;2;https://www.duoimoveis.com.br/imovel/sala-de-79-m-centro-piracicaba/sa0487-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3000.0;70.0;0;5;3;https://www.duoimoveis.com.br/imovel/salao-de-70-m-pauliceia-piracicaba/sl0413-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+1600.0;164.6;3;2;3;https://www.duoimoveis.com.br/imovel/apartamento-de-165-m-com-3-quartos-centro-piracicaba/ap4869-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1900.0;45.5;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-46-m-alemaes-piracicaba/sa0526-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+950.0;120.0;2;1;1;https://www.duoimoveis.com.br/imovel/casa-de-120-m-com-2-quartos-monte-libano-piracicaba/ca5224-003?from=sale;duo imoveis;Monte Líbano;2023-11-01;2023-11-01
+8500.0;327.0;4;4;5;https://www.duoimoveis.com.br/imovel/casa-de-327-m-com-4-quartos-reserva-do-engenho-piracicaba/ca3477-003?from=sale;duo imoveis;Reserva do Engenho;2023-11-01;2023-11-01
+7900.0;253.34;4;4;5;https://www.duoimoveis.com.br/imovel/casa-de-253-m-com-4-quartos-terras-de-piracicaba-piracicaba/ca1577-003?from=sale;duo imoveis;Terras de Piracicaba;2023-11-01;2023-11-01
+4300.0;278.75;0;0;6;https://www.duoimoveis.com.br/imovel/salao-de-279-m-centro-piracicaba/sl0392-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+2500.0;86.0;3;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-86-m-com-3-quartos-pauliceia-piracicaba/ap3306-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+1900.0;61.0;2;2;1;https://www.duoimoveis.com.br/imovel/apartamento-de-61-m-com-2-quartos-pauliceia-piracicaba/ap5826-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+1000.0;42.72;0;0;2;https://www.duoimoveis.com.br/imovel/casa-de-43-m-centro-piracicaba/ca5234-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1900.0;62.5;2;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-63-m-com-2-quartos-pauliceia-piracicaba/ap5825-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+1200.0;70.55;3;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-71-m-com-3-quartos-dois-corregos-piracicaba/ap5819-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+1500.0;48.0;1;0;1;https://www.duoimoveis.com.br/imovel/apartamento-de-48-m-com-1-quarto-alto-piracicaba/ap4318-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+2200.0;96.0;0;0;0;https://www.duoimoveis.com.br/imovel/salao-de-96-m-centro-piracicaba/sl0460-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1000.0;50.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-50-m-sao-vicente-piracicaba/te2676-003?from=sale;duo imoveis;São Vicente;2023-11-01;2023-11-01
+1900.0;112.0;0;1;1;https://www.duoimoveis.com.br/imovel/salao-de-112-m-alto-piracicaba/sl0509-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+3500.0;40.63;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-41-m-centro-piracicaba/sa0520-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+15000.0;670.0;0;20;4;https://www.duoimoveis.com.br/imovel/barracao-de-670-m-piracicamirim-piracicaba/ba0462-003?from=sale;duo imoveis;Piracicamirim;2023-11-01;2023-11-01
+Aluguelsobconsulta;2950.0;0;0;0;https://www.duoimoveis.com.br/imovel/area-de-2-950-m-nova-piracicaba-piracicaba/ar0251-003?from=sale;duo imoveis;Nova Piracicaba;2023-11-01;2023-11-01
+680.0;12.0;0;0;2;https://www.duoimoveis.com.br/imovel/sala-de-12-m-centro-piracicaba/sa0339-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1800.0;37.7;1;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-38-m-com-1-quarto-vila-independencia-piracicaba/ap3757-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+10000.0;350.0;0;20;3;https://www.duoimoveis.com.br/imovel/salao-de-350-m-alemaes-piracicaba/sl0248-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+3500.0;152.0;3;0;3;https://www.duoimoveis.com.br/imovel/casa-de-152-m-com-3-quartos-centro-piracicaba/ca4820-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+600.0;35.0;1;0;1;https://www.duoimoveis.com.br/imovel/casa-de-35-m-com-1-quarto-centro-piracicaba/ca5189-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+5500.0;449.0;0;4;4;https://www.duoimoveis.com.br/imovel/salao-de-449-m-alto-piracicaba/sl0528-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+18000.0;721.13;0;5;4;https://www.duoimoveis.com.br/imovel/barracao-de-721-m-uninorte-ii-piracicaba/ba0456-003?from=sale;duo imoveis;Uninorte II;2023-11-01;2023-11-01
+2000.0;95.58;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-96-m-centro-piracicaba/sl0527-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+58000.0;2864.84;0;50;4;https://www.duoimoveis.com.br/imovel/barracao-de-2-865-m-jardim-pacaembu-piracicaba/ba0460-003?from=sale;duo imoveis;Jardim Pacaembu;2023-11-01;2023-11-01
+705.3;35.0;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-35-m-capim-fino-piracicaba/sa0247-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01
+4500.0;200.0;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-200-m-centro-piracicaba/sl0419-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+700.0;25.0;0;0;0;https://www.duoimoveis.com.br/imovel/sala-de-25-m-jardim-petropolis-piracicaba/sa0390-003?from=sale;duo imoveis;Jardim Petrópolis;2023-11-01;2023-11-01
+3980.0;180.0;0;1;1;https://www.duoimoveis.com.br/imovel/salao-de-180-m-alto-piracicaba/sl0526-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+1000.0;257.58;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-258-m-pauliceia-piracicaba/te2329-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+1990.0;65.0;0;2;2;https://www.duoimoveis.com.br/imovel/sala-de-65-m-alto-piracicaba/sa0314-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+4000.0;156.3;4;6;2;https://www.duoimoveis.com.br/imovel/casa-de-156-m-com-4-quartos-vila-independencia-piracicaba/ca2769-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+980.0;45.0;0;0;2;https://www.duoimoveis.com.br/imovel/sala-de-45-m-centro-piracicaba/sa0460-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+5100.0;109.79;3;2;3;https://www.duoimoveis.com.br/imovel/apartamento-de-110-m-com-3-quartos-sao-judas-piracicaba/ap5766-003?from=sale;duo imoveis;São Judas;2023-11-01;2023-11-01
+1000.0;47.0;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-47-m-sao-judas-piracicaba/sa0082-003?from=sale;duo imoveis;São Judas;2023-11-01;2023-11-01
+2000.0;20.0;0;0;2;https://www.duoimoveis.com.br/imovel/sala-de-20-m-sao-judas-piracicaba/sa0455-003?from=sale;duo imoveis;São Judas;2023-11-01;2023-11-01
+2500.0;104.0;0;0;0;https://www.duoimoveis.com.br/imovel/casa-de-104-m-centro-piracicaba/ca5157-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+9500.0;215.0;0;0;4;https://www.duoimoveis.com.br/imovel/salao-de-215-m-vila-rezende-piracicaba/sl0260-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+8000.0;659.0;0;0;3;https://www.duoimoveis.com.br/imovel/barracao-de-659-m-algodoal-piracicaba/ba0453-003?from=sale;duo imoveis;Algodoal;2023-11-01;2023-11-01
+2000.0;191.7;3;2;4;https://www.duoimoveis.com.br/imovel/apartamento-de-192-m-com-3-quartos-centro-piracicaba/ap3710-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+2200.0;117.4;0;1;2;https://www.duoimoveis.com.br/imovel/casa-de-117-m-centro-piracicaba/ca4931-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+850.0;27.22;0;1;1;https://www.duoimoveis.com.br/imovel/salao-de-27-m-vila-monteiro-piracicaba/sl0339-003?from=sale;duo imoveis;Vila Monteiro;2023-11-01;2023-11-01
+750.0;27.22;0;1;1;https://www.duoimoveis.com.br/imovel/salao-de-27-m-vila-monteiro-piracicaba/sl0340-003?from=sale;duo imoveis;Vila Monteiro;2023-11-01;2023-11-01
+1800.0;18.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-18-m-cidade-jardim-piracicaba/sa0482-003?from=sale;duo imoveis;Cidade Jardim;2023-11-01;2023-11-01
+3200.0;40.0;0;0;1;https://www.duoimoveis.com.br/imovel/salao-de-40-m-centro-piracicaba/sl0520-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3200.0;40.0;0;0;1;https://www.duoimoveis.com.br/imovel/salao-de-40-m-centro-piracicaba/sl0519-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+2800.0;256.06;0;2;2;https://www.duoimoveis.com.br/imovel/salao-de-256-m-vila-rezende-piracicaba/sl0521-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+6000.0;188.2;0;4;5;https://www.duoimoveis.com.br/imovel/casa-de-188-m-sao-dimas-piracicaba/ca4583-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+1700.0;64.0;0;1;2;https://www.duoimoveis.com.br/imovel/sala-de-64-m-alto-piracicaba/sa0154-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+600.0;35.57;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-36-m-centro-piracicaba/sa0282-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+4300.0;151.0;0;0;2;https://www.duoimoveis.com.br/imovel/sala-de-151-m-sao-dimas-piracicaba/sa0501-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+6000.0;195.0;3;4;4;https://www.duoimoveis.com.br/imovel/casa-de-195-m-com-3-quartos-terras-de-piracicaba-piracicaba/ca4630-003?from=sale;duo imoveis;Terras de Piracicaba;2023-11-01;2023-11-01
+1200.0;28.0;1;0;1;https://www.duoimoveis.com.br/imovel/apartamento-de-28-m-com-1-quarto-alto-piracicaba/ap4320-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+1775.0;76.46;3;1;2;https://www.duoimoveis.com.br/imovel/apartamento-de-76-m-com-3-quartos-centro-piracicaba/ap5800-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+9000.0;316.0;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-316-m-centro-piracicaba/sl0482-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3600.0;75.0;0;0;2;https://www.duoimoveis.com.br/imovel/sala-de-75-m-alto-piracicaba/sa0522-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+1500.0;70.0;0;1;2;https://www.duoimoveis.com.br/imovel/sala-de-70-m-centro-piracicaba/sa0287-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+850.0;20.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-20-m-centro-piracicaba/sa0343-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1100.0;20.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-20-m-centro-piracicaba/sa0521-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1000.0;20.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-20-m-centro-piracicaba/sa0433-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1350.0;36.0;1;1;1;https://www.duoimoveis.com.br/imovel/kitnet-de-36-m-com-1-quarto-dois-corregos-piracicaba/kn0142-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+1350.0;36.0;1;1;1;https://www.duoimoveis.com.br/imovel/kitnet-de-36-m-com-1-quarto-dois-corregos-piracicaba/kn0143-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+1250.0;31.0;1;1;1;https://www.duoimoveis.com.br/imovel/apartamento-de-31-m-com-1-quarto-dois-corregos-piracicaba/ap5058-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+7500.0;380.0;5;6;8;https://www.duoimoveis.com.br/imovel/casa-de-380-m-com-5-quartos-nova-piracicaba-piracicaba/ca2692-003?from=sale;duo imoveis;Nova Piracicaba;2023-11-01;2023-11-01
+18000.0;703.8;0;4;4;https://www.duoimoveis.com.br/imovel/barracao-de-704-m-agua-santa-piracicaba/ba0461-003?from=sale;duo imoveis;Agua  Santa;2023-11-01;2023-11-01
+1200.0;40.0;1;0;1;https://www.duoimoveis.com.br/imovel/apartamento-de-40-m-com-1-quarto-alto-piracicaba/ap4315-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+3000.0;130.27;3;2;2;https://www.duoimoveis.com.br/imovel/casa-de-130-m-com-3-quartos-nova-piracicaba-piracicaba/ca3283-003?from=sale;duo imoveis;Nova Piracicaba;2023-11-01;2023-11-01
+3000.0;937.11;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-937-m-santa-terezinha-piracicaba/te2666-003?from=sale;duo imoveis;Santa Terezinha;2023-11-01;2023-11-01
+2800.0;100.0;3;1;2;https://www.duoimoveis.com.br/imovel/casa-de-100-m-com-3-quartos-centro-piracicaba/ca5134-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+25000.0;16293.8;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-16-294-m-agua-branca-piracicaba/te2006-003?from=sale;duo imoveis;Água Branca;2023-11-01;2023-11-01
+11000.0;650.0;0;10;2;https://www.duoimoveis.com.br/imovel/barracao-de-650-m-dois-corregos-piracicaba/ba0448-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+4500.0;44.0;0;6;1;https://www.duoimoveis.com.br/imovel/galpao-de-44-m-cruz-caiada-piracicaba/ga0024-003?from=sale;duo imoveis;Cruz Caiada;2023-11-01;2023-11-01
+2500.0;120.68;3;3;1;https://www.duoimoveis.com.br/imovel/casa-de-121-m-com-3-quartos-vila-rezende-piracicaba/ca3235-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+52000.0;937.0;0;18;4;https://www.duoimoveis.com.br/imovel/salao-de-937-m-centro-piracicaba/sl0457-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3800.0;144.76;0;0;1;https://www.duoimoveis.com.br/imovel/barracao-de-145-m-vila-rezende-piracicaba/ba0444-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+26500.0;380.0;0;8;4;https://www.duoimoveis.com.br/imovel/salao-de-380-m-alto-piracicaba/sl0516-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+7000.0;295.21;0;4;3;https://www.duoimoveis.com.br/imovel/casa-de-295-m-cidade-jardim-piracicaba/ca4818-003?from=sale;duo imoveis;Cidade Jardim;2023-11-01;2023-11-01
+18000.0;912.07;4;6;3;https://www.duoimoveis.com.br/imovel/casa-de-912-m-com-4-quartos-centro-piracicaba/ca5102-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1580.0;1600.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-1-600-m-dois-corregos-piracicaba/te0886-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+600.0;45.37;2;1;1;https://www.duoimoveis.com.br/imovel/casa-de-45-m-com-2-quartos-nova-suica-piracicaba/ca4690-003?from=sale;duo imoveis;Nova Suiça;2023-11-01;2023-11-01
+3000.0;155.31;3;2;3;https://www.duoimoveis.com.br/imovel/casa-de-155-m-com-3-quartos-vila-rezende-piracicaba/ca4497-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+980.0;60.0;1;0;1;https://www.duoimoveis.com.br/imovel/casa-de-60-m-com-1-quarto-alto-piracicaba/ca4006-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+4500.0;300.0;3;2;3;https://www.duoimoveis.com.br/imovel/casa-de-300-m-com-3-quartos-colinas-do-piracicaba-artemis-piracicaba/ca5082-003?from=sale;duo imoveis;Colinas do Piracicaba (Ártemis);2023-11-01;2023-11-01
+2065.0;270.0;3;3;5;https://www.duoimoveis.com.br/imovel/apartamento-de-270-m-com-3-quartos-centro-piracicaba/ap5685-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3500.0;93.84;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-94-m-higienopolis-piracicaba/sl0505-003?from=sale;duo imoveis;Higienópolis;2023-11-01;2023-11-01
+4200.0;202.29;3;0;4;https://www.duoimoveis.com.br/imovel/casa-de-202-m-com-3-quartos-alto-piracicaba/ca4889-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+2000.0;346.0;4;6;5;https://www.duoimoveis.com.br/imovel/apartamento-de-346-m-com-4-quartos-vila-independencia-piracicaba/ap2371-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+2500.0;169.4;0;0;3;https://www.duoimoveis.com.br/imovel/salao-de-169-m-alto-piracicaba/sl0441-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+1500.0;200.0;0;1;4;https://www.duoimoveis.com.br/imovel/barracao-de-200-m-jardim-gloria-piracicaba/ba0266-003?from=sale;duo imoveis;Jardim Glória;2023-11-01;2023-11-01
+10000.0;482.56;4;6;0;https://www.duoimoveis.com.br/imovel/casa-de-483-m-com-4-quartos-sao-dimas-piracicaba/ca3784-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+2500.0;70.32;2;1;2;https://www.duoimoveis.com.br/imovel/casa-de-70-m-com-2-quartos-alto-piracicaba/ca4474-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+5000.0;224.0;0;0;1;https://www.duoimoveis.com.br/imovel/casa-de-224-m-centro-piracicaba/ca1827-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+15000.0;563.0;4;8;5;https://www.duoimoveis.com.br/imovel/casa-de-563-m-com-4-quartos-centro-piracicaba/ca2773-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+8000.0;258.0;0;3;3;https://www.duoimoveis.com.br/imovel/casa-de-258-m-alto-piracicaba/ca1545-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+2000.0;104.17;1;0;0;https://www.duoimoveis.com.br/imovel/casa-de-104-m-com-1-quarto-alto-piracicaba/ca4410-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+12000.0;375.0;6;0;2;https://www.duoimoveis.com.br/imovel/casa-de-375-m-com-6-quartos-monte-alegre-piracicaba/ca3583-003?from=sale;duo imoveis;Monte Alegre;2023-11-01;2023-11-01
+20000.0;634.38;5;16;2;https://www.duoimoveis.com.br/imovel/casa-de-634-m-com-5-quartos-alto-piracicaba/ca4159-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+1000.0;30.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-30-m-alto-piracicaba/sa0324-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+12000.0;169.0;0;0;1;https://www.duoimoveis.com.br/imovel/salao-de-169-m-centro-piracicaba/sl0414-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+2112.0;44.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-44-m-paulista-piracicaba/sa0437-003?from=sale;duo imoveis;Paulista;2023-11-01;2023-11-01
+1728.0;36.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-36-m-paulista-piracicaba/sa0032-003?from=sale;duo imoveis;Paulista;2023-11-01;2023-11-01
+2500.0;287.5;0;2;2;https://www.duoimoveis.com.br/imovel/barracao-de-288-m-jardim-gloria-piracicaba/ba0307-003?from=sale;duo imoveis;Jardim Glória;2023-11-01;2023-11-01
+4000.0;450.0;0;2;7;https://www.duoimoveis.com.br/imovel/salao-de-450-m-jardim-gloria-piracicaba/sl0494-003?from=sale;duo imoveis;Jardim Glória;2023-11-01;2023-11-01
+1200.0;42.18;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-42-m-loteamento-santa-rosa-piracicaba/sa0369-003?from=sale;duo imoveis;Loteamento Santa Rosa;2023-11-01;2023-11-01
+850.0;50.0;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-50-m-vila-monteiro-piracicaba/sa0511-003?from=sale;duo imoveis;Vila Monteiro;2023-11-01;2023-11-01
+3400.0;55.0;0;12;1;https://www.duoimoveis.com.br/imovel/loja-de-55-m-vila-independencia-piracicaba/lo0103-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+3000.0;55.0;0;12;1;https://www.duoimoveis.com.br/imovel/loja-de-55-m-vila-independencia-piracicaba/lo0100-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+5000.0;115.0;0;12;2;https://www.duoimoveis.com.br/imovel/loja-de-115-m-vila-independencia-piracicaba/lo0099-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+5500.0;140.0;0;12;2;https://www.duoimoveis.com.br/imovel/loja-de-140-m-vila-independencia-piracicaba/lo0098-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+3000.0;55.0;0;12;1;https://www.duoimoveis.com.br/imovel/loja-de-55-m-vila-independencia-piracicaba/lo0097-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+3400.0;55.0;0;12;1;https://www.duoimoveis.com.br/imovel/loja-de-55-m-vila-independencia-piracicaba/lo0096-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+3000.0;55.0;0;12;1;https://www.duoimoveis.com.br/imovel/loja-de-55-m-vila-independencia-piracicaba/lo0095-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+2100.0;65.0;0;2;2;https://www.duoimoveis.com.br/imovel/sala-de-65-m-alto-piracicaba/sa0229-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+2100.0;40.0;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-40-m-cidade-jardim-piracicaba/sa0187-003?from=sale;duo imoveis;Cidade Jardim;2023-11-01;2023-11-01
+2500.0;57.48;0;0;0;https://www.duoimoveis.com.br/imovel/loja-de-57-m-centro-piracicaba/lo0067-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+5000.0;374.0;3;3;1;https://www.duoimoveis.com.br/imovel/casa-de-374-m-com-3-quartos-nova-piracicaba-piracicaba/ca2060-003?from=sale;duo imoveis;Nova Piracicaba;2023-11-01;2023-11-01
+4000.0;84.0;0;0;2;https://www.duoimoveis.com.br/imovel/sala-de-84-m-cidade-jardim-piracicaba/sa0513-003?from=sale;duo imoveis;Cidade Jardim;2023-11-01;2023-11-01
+1200.0;40.0;1;0;1;https://www.duoimoveis.com.br/imovel/apartamento-de-40-m-com-1-quarto-alto-piracicaba/ap4313-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+3200.0;100.0;0;1;2;https://www.duoimoveis.com.br/imovel/salao-de-100-m-nova-pompeia-piracicaba/sl0504-003?from=sale;duo imoveis;Nova Pompéia;2023-11-01;2023-11-01
+1900.0;62.5;2;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-63-m-com-2-quartos-pauliceia-piracicaba/ap5681-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+1900.0;62.5;2;2;2;https://www.duoimoveis.com.br/imovel/apartamento-de-63-m-com-2-quartos-pauliceia-piracicaba/ap5682-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+13000.0;568.0;0;38;3;https://www.duoimoveis.com.br/imovel/salao-de-568-m-castelinho-piracicaba/sl0458-003?from=sale;duo imoveis;Castelinho;2023-11-01;2023-11-01
+14000.0;394.12;5;6;6;https://www.duoimoveis.com.br/imovel/casa-de-394-m-com-5-quartos-damha-i-piracicaba/ca4466-003?from=sale;duo imoveis;Damha I;2023-11-01;2023-11-01
+6000.0;320.0;0;4;5;https://www.duoimoveis.com.br/imovel/casa-de-320-m-alemaes-piracicaba/ca4828-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+Aluguelsobconsulta;107000.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-107-000-m-comendador-mario-dedini-piracicaba/te2105-003?from=sale;duo imoveis;Comendador Mário Dedini;2023-11-01;2023-11-01
+8000.0;409.56;0;20;4;https://www.duoimoveis.com.br/imovel/salao-de-410-m-pauliceia-piracicaba/sl0307-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+700.0;20.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-20-m-santa-terezinha-piracicaba/sa0372-003?from=sale;duo imoveis;Santa Terezinha;2023-11-01;2023-11-01
+700.0;20.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-20-m-santa-terezinha-piracicaba/sa0378-003?from=sale;duo imoveis;Santa Terezinha;2023-11-01;2023-11-01
+700.0;20.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-20-m-santa-terezinha-piracicaba/sa0379-003?from=sale;duo imoveis;Santa Terezinha;2023-11-01;2023-11-01
+700.0;20.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-20-m-santa-terezinha-piracicaba/sa0374-003?from=sale;duo imoveis;Santa Terezinha;2023-11-01;2023-11-01
+700.0;20.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-20-m-santa-terezinha-piracicaba/sa0373-003?from=sale;duo imoveis;Santa Terezinha;2023-11-01;2023-11-01
+750.0;25.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-25-m-santa-terezinha-piracicaba/sa0377-003?from=sale;duo imoveis;Santa Terezinha;2023-11-01;2023-11-01
+700.0;20.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-20-m-santa-terezinha-piracicaba/sa0375-003?from=sale;duo imoveis;Santa Terezinha;2023-11-01;2023-11-01
+1152.0;24.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-24-m-paulista-piracicaba/sa0438-003?from=sale;duo imoveis;Paulista;2023-11-01;2023-11-01
+2352.0;49.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-49-m-paulista-piracicaba/sa0040-003?from=sale;duo imoveis;Paulista;2023-11-01;2023-11-01
+6000.0;420.0;0;0;0;https://www.duoimoveis.com.br/imovel/salao-de-420-m-centro-piracicaba/sl0125-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+20000.0;1200.0;0;6;2;https://www.duoimoveis.com.br/imovel/barracao-de-1-200-m-vale-do-sol-piracicaba/ba0384-003?from=sale;duo imoveis;Vale do Sol;2023-11-01;2023-11-01
+4000.0;1000.0;1;4;2;https://www.duoimoveis.com.br/imovel/chacara-de-1-000-m-com-1-quarto-santa-rita-piracicaba/ch0161-003?from=sale;duo imoveis;Santa Rita;2023-11-01;2023-11-01
+4000.0;1383.45;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-1-383-m-alto-piracicaba/te2561-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+3400.0;215.0;0;3;2;https://www.duoimoveis.com.br/imovel/barracao-de-215-m-algodoal-piracicaba/ba0399-003?from=sale;duo imoveis;Algodoal;2023-11-01;2023-11-01
+1600.0;32.0;0;0;1;https://www.duoimoveis.com.br/imovel/salao-de-32-m-alto-piracicaba/sl0427-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+3350.0;244.0;0;0;4;https://www.duoimoveis.com.br/imovel/salao-de-244-m-vila-rezende-piracicaba/sl0383-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+3800.0;205.82;0;0;3;https://www.duoimoveis.com.br/imovel/salao-de-206-m-centro-piracicaba/sl0407-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+16000.0;461.73;0;0;4;https://www.duoimoveis.com.br/imovel/salao-de-462-m-nova-pompeia-piracicaba/sl0473-003?from=sale;duo imoveis;Nova Pompéia;2023-11-01;2023-11-01
+3120.0;65.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-65-m-paulista-piracicaba/sa0037-003?from=sale;duo imoveis;Paulista;2023-11-01;2023-11-01
+1650.0;43.85;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-44-m-piracicamirim-piracicaba/sa0496-003?from=sale;duo imoveis;Piracicamirim;2023-11-01;2023-11-01
+2200.0;17.0;0;0;2;https://www.duoimoveis.com.br/imovel/sala-de-17-m-centro-piracicaba/sa0142-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1000.0;1800.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-1-800-m-jardim-irapua-piracicaba/te1512-003?from=sale;duo imoveis;Jardim Irapuã;2023-11-01;2023-11-01
+1000.0;1600.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-1-600-m-jardim-irapua-piracicaba/te1513-003?from=sale;duo imoveis;Jardim Irapuã;2023-11-01;2023-11-01
+30000.0;365.0;4;5;6;https://www.duoimoveis.com.br/imovel/apartamento-de-365-m-com-4-quartos-nova-piracicaba-piracicaba/ap5524-003?from=sale;duo imoveis;Nova Piracicaba;2023-11-01;2023-11-01
+11987.0;239.74;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-240-m-piracicamirim-piracicaba/sl0474-003?from=sale;duo imoveis;Piracicamirim;2023-11-01;2023-11-01
+14000.0;3100.0;4;12;4;https://www.duoimoveis.com.br/imovel/chacara-de-3-100-m-com-4-quartos-campestre-piracicaba/ch0154-003?from=sale;duo imoveis;Campestre;2023-11-01;2023-11-01
+400.0;6.3;0;0;0;https://www.duoimoveis.com.br/imovel/sala-de-6-m-vila-independencia-piracicaba/sa0492-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+630.0;17.05;0;0;0;https://www.duoimoveis.com.br/imovel/sala-de-17-m-vila-independencia-piracicaba/sa0491-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+600.0;15.3;0;0;0;https://www.duoimoveis.com.br/imovel/sala-de-15-m-vila-independencia-piracicaba/sa0490-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+570.0;13.5;0;0;0;https://www.duoimoveis.com.br/imovel/sala-de-14-m-vila-independencia-piracicaba/sa0489-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+15000.0;1568.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-1-568-m-centro-piracicaba/te2552-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+38000.0;1900.0;0;15;6;https://www.duoimoveis.com.br/imovel/barracao-de-1-900-m-unileste-piracicaba/ba0425-003?from=sale;duo imoveis;Unileste;2023-11-01;2023-11-01
+8000.0;5400.0;3;20;3;https://www.duoimoveis.com.br/imovel/chacara-de-5-400-m-com-3-quartos-campestre-piracicaba/ch0148-003?from=sale;duo imoveis;Campestre;2023-11-01;2023-11-01
+6000.0;366.0;0;4;3;https://www.duoimoveis.com.br/imovel/barracao-de-366-m-chacara-nazare-piracicaba/ba0416-003?from=sale;duo imoveis;Chácara Nazaré;2023-11-01;2023-11-01
+3500.0;200.0;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-200-m-alto-piracicaba/sl0449-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+1500.0;31.83;0;0;1;https://www.duoimoveis.com.br/imovel/salao-de-32-m-alto-piracicaba/sl0203-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+3500.0;198.37;0;3;3;https://www.duoimoveis.com.br/imovel/salao-de-198-m-loteamento-santa-rosa-piracicaba/sl0430-003?from=sale;duo imoveis;Loteamento Santa Rosa;2023-11-01;2023-11-01
+10000.0;534.15;6;9;5;https://www.duoimoveis.com.br/imovel/casa-de-534-m-com-6-quartos-nova-piracicaba-piracicaba/ca3224-003?from=sale;duo imoveis;Nova Piracicaba;2023-11-01;2023-11-01
+2112.0;44.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-44-m-paulista-piracicaba/sa0446-003?from=sale;duo imoveis;Paulista;2023-11-01;2023-11-01
+1950.0;41.0;0;0;0;https://www.duoimoveis.com.br/imovel/sala-de-41-m-centro-piracicaba/sa0257-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1950.0;41.0;0;1;0;https://www.duoimoveis.com.br/imovel/sala-de-41-m-centro-piracicaba/sa0383-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3000.0;227.0;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-227-m-centro-piracicaba/sl0472-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3500.0;145.0;0;3;2;https://www.duoimoveis.com.br/imovel/salao-de-145-m-vila-rezende-piracicaba/sl0424-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+4500.0;225.04;3;1;2;https://www.duoimoveis.com.br/imovel/casa-de-225-m-com-3-quartos-agua-branca-piracicaba/ca3684-003?from=sale;duo imoveis;Água Branca;2023-11-01;2023-11-01
+999.7;35.0;0;1;0;https://www.duoimoveis.com.br/imovel/loja-de-35-m-reserva-jequitiba-piracicaba/lo0069-003?from=sale;duo imoveis;Reserva Jequitibá;2023-11-01;2023-11-01
+1782.06;42.43;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-42-m-alemaes-piracicaba/sa0499-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+12000.0;816.48;0;50;4;https://www.duoimoveis.com.br/imovel/sala-de-816-m-parque-sao-jorge-piracicaba/sa0498-003?from=sale;duo imoveis;Parque São Jorge;2023-11-01;2023-11-01
+6000.0;320.0;0;13;2;https://www.duoimoveis.com.br/imovel/barracao-de-320-m-vila-independencia-piracicaba/ba0413-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+600.0;7.05;0;0;0;https://www.duoimoveis.com.br/imovel/sala-de-7-m-alto-piracicaba/sa0466-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+650.0;7.05;0;0;0;https://www.duoimoveis.com.br/imovel/sala-de-7-m-alto-piracicaba/sa0465-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+700.0;8.8;0;0;0;https://www.duoimoveis.com.br/imovel/sala-de-9-m-alto-piracicaba/sa0463-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+1000.0;258.8;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-259-m-monte-feliz-piracicaba/te2488-003?from=sale;duo imoveis;Monte Feliz;2023-11-01;2023-11-01
+1900.0;700.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-700-m-pauliceia-piracicaba/te2431-003?from=sale;duo imoveis;Paulicéia;2023-11-01;2023-11-01
+6000.0;207.78;0;2;6;https://www.duoimoveis.com.br/imovel/salao-de-208-m-nova-piracicaba-piracicaba/sl0425-003?from=sale;duo imoveis;Nova Piracicaba;2023-11-01;2023-11-01
+4000.0;1242.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-1-242-m-piracicamirim-piracicaba/te2393-003?from=sale;duo imoveis;Piracicamirim;2023-11-01;2023-11-01
+400.0;8.0;0;0;0;https://www.duoimoveis.com.br/imovel/sala-de-8-m-alto-piracicaba/sa0442-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+2640.0;55.0;0;0;0;https://www.duoimoveis.com.br/imovel/sala-de-55-m-paulista-piracicaba/sa0439-003?from=sale;duo imoveis;Paulista;2023-11-01;2023-11-01
+2200.0;64.0;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-64-m-centro-piracicaba/sl0404-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3300.0;5119.14;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-5-119-m-dois-corregos-piracicaba/te2337-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+10000.0;600.0;0;3;2;https://www.duoimoveis.com.br/imovel/barracao-de-600-m-vale-do-sol-piracicaba/ba0383-003?from=sale;duo imoveis;Vale do Sol;2023-11-01;2023-11-01
+1944.46;51.17;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-51-m-alemaes-piracicaba/sa0428-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+1944.46;51.17;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-51-m-alemaes-piracicaba/sa0427-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+1944.46;51.17;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-51-m-alemaes-piracicaba/sa0426-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+1911.0;45.5;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-46-m-alemaes-piracicaba/sa0425-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+1911.0;45.5;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-46-m-alemaes-piracicaba/sa0423-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+1782.06;42.43;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-42-m-alemaes-piracicaba/sa0422-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+1782.06;42.43;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-42-m-alemaes-piracicaba/sa0421-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+1782.06;42.43;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-42-m-alemaes-piracicaba/sa0420-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+1782.06;42.43;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-42-m-alemaes-piracicaba/sa0419-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+1746.78;41.59;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-42-m-alemaes-piracicaba/sa0417-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+1746.78;41.59;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-42-m-alemaes-piracicaba/sa0416-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+700.0;20.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-20-m-santa-terezinha-piracicaba/sa0380-003?from=sale;duo imoveis;Santa Terezinha;2023-11-01;2023-11-01
+750.0;25.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-25-m-santa-terezinha-piracicaba/sa0376-003?from=sale;duo imoveis;Santa Terezinha;2023-11-01;2023-11-01
+6500.0;24200.0;0;0;0;https://www.duoimoveis.com.br/imovel/area-de-24-200-m-vila-nova-piracicaba/ar0177-003?from=sale;duo imoveis;Vila Nova;2023-11-01;2023-11-01
+90000.0;4587.18;0;20;40;https://www.duoimoveis.com.br/imovel/predio-de-4-587-m-sao-dimas-piracicaba/pr0033-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+150000.0;10000.0;0;20;2;https://www.duoimoveis.com.br/imovel/barracao-de-10-000-m-vila-belem-piracicaba/ba0329-003?from=sale;duo imoveis;Vila Belém;2023-11-01;2023-11-01
+800.0;300.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-300-m-vila-independencia-piracicaba/te2078-003?from=sale;duo imoveis;Vila Independência;2023-11-01;2023-11-01
+600.0;10.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-10-m-nova-america-piracicaba/sa0356-003?from=sale;duo imoveis;Nova América;2023-11-01;2023-11-01
+600.0;15.75;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-16-m-nova-america-piracicaba/sa0354-003?from=sale;duo imoveis;Nova América;2023-11-01;2023-11-01
+9000.0;574.41;0;6;4;https://www.duoimoveis.com.br/imovel/barracao-de-574-m-chacara-nazare-piracicaba/ba0319-003?from=sale;duo imoveis;Chácara Nazaré;2023-11-01;2023-11-01
+18000.0;2600.28;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-2-600-m-morumbi-piracicaba/te1996-003?from=sale;duo imoveis;Morumbi;2023-11-01;2023-11-01
+8000.0;218.0;0;3;5;https://www.duoimoveis.com.br/imovel/salao-de-218-m-piracicamirim-piracicaba/sl0316-003?from=sale;duo imoveis;Piracicamirim;2023-11-01;2023-11-01
+2000.0;85.75;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-86-m-centro-piracicaba/sl0312-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1746.78;41.59;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-42-m-alemaes-piracicaba/sa0415-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+1746.78;41.59;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-42-m-alemaes-piracicaba/sa0414-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+625.34;26.0;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-26-m-capim-fino-piracicaba/sa0408-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01
+705.3;35.0;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-35-m-capim-fino-piracicaba/sa0406-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01
+705.3;35.0;0;1;1;https://www.duoimoveis.com.br/imovel/sala-de-35-m-capim-fino-piracicaba/sa0405-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01
+999.7;35.0;0;1;0;https://www.duoimoveis.com.br/imovel/loja-de-35-m-capim-fino-piracicaba/lo0092-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01
+2000.0;89.5;0;0;3;https://www.duoimoveis.com.br/imovel/salao-de-90-m-vila-areiao-piracicaba/sl0387-003?from=sale;duo imoveis;Vila Areião;2023-11-01;2023-11-01
+Aluguelsobconsulta;122.4;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-122-m-vila-rezende-piracicaba/te2259-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+9900.0;379.0;0;0;5;https://www.duoimoveis.com.br/imovel/salao-de-379-m-vila-rezende-piracicaba/sl0384-003?from=sale;duo imoveis;Vila Rezende;2023-11-01;2023-11-01
+3000.0;191.02;0;1;2;https://www.duoimoveis.com.br/imovel/salao-de-191-m-paulista-piracicaba/sl0377-003?from=sale;duo imoveis;Paulista;2023-11-01;2023-11-01
+15000.0;710.7;0;0;8;https://www.duoimoveis.com.br/imovel/salao-de-711-m-centro-piracicaba/sl0365-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+700.0;20.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-20-m-santa-terezinha-piracicaba/sa0381-003?from=sale;duo imoveis;Santa Terezinha;2023-11-01;2023-11-01
+4500.0;176.25;0;5;2;https://www.duoimoveis.com.br/imovel/salao-de-176-m-cecap-piracicaba/sl0175-003?from=sale;duo imoveis;Cecap;2023-11-01;2023-11-01
+999.7;35.0;0;1;0;https://www.duoimoveis.com.br/imovel/loja-de-35-m-capim-fino-piracicaba/lo0040-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01
+22000.0;10460.76;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-10-461-m-loteamento-sao-francisco-piracicaba/te1281-003?from=sale;duo imoveis;Loteamento São Francisco;2023-11-01;2023-11-01
+90000.0;4500.0;0;0;0;https://www.duoimoveis.com.br/imovel/predio-de-4-500-m-alemaes-piracicaba/pr0020-003?from=sale;duo imoveis;Alemães;2023-11-01;2023-11-01
+2500.0;146.0;3;3;2;https://www.duoimoveis.com.br/imovel/apartamento-de-146-m-com-3-quartos-sao-dimas-piracicaba/ap2445-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+7000.0;553.0;0;6;7;https://www.duoimoveis.com.br/imovel/casa-de-553-m-jardim-europa-piracicaba/ca1602-003?from=sale;duo imoveis;Jardim Europa;2023-11-01;2023-11-01
+2000.0;60.0;0;0;2;https://www.duoimoveis.com.br/imovel/sala-de-60-m-centro-piracicaba/sa0089-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+2000.0;80.0;0;0;2;https://www.duoimoveis.com.br/imovel/sala-de-80-m-centro-piracicaba/sa0088-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+6300.0;736.0;0;0;6;https://www.duoimoveis.com.br/imovel/salao-de-736-m-centro-piracicaba/sl0034-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+3120.0;65.0;0;0;1;https://www.duoimoveis.com.br/imovel/sala-de-65-m-paulista-piracicaba/sa0039-003?from=sale;duo imoveis;Paulista;2023-11-01;2023-11-01
+5000.0;219.4;0;0;4;https://www.duoimoveis.com.br/imovel/salao-de-219-m-paulista-piracicaba/sl0012-003?from=sale;duo imoveis;Paulista;2023-11-01;2023-11-01
+5500.0;250.0;0;1;2;https://www.duoimoveis.com.br/imovel/salao-de-250-m-centro-piracicaba/sl0468-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+15000.0;240.0;0;6;7;https://www.duoimoveis.com.br/imovel/salao-de-240-m-sao-dimas-piracicaba/sl0277-003?from=sale;duo imoveis;São Dimas;2023-11-01;2023-11-01
+2600.0;148.4;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-148-m-alto-piracicaba/sl0242-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+2600.0;169.54;0;0;1;https://www.duoimoveis.com.br/imovel/salao-de-170-m-alto-piracicaba/sl0240-003?from=sale;duo imoveis;Alto;2023-11-01;2023-11-01
+6500.0;258.89;0;0;3;https://www.duoimoveis.com.br/imovel/salao-de-259-m-jaragua-piracicaba/sl0221-003?from=sale;duo imoveis;Jaraguá;2023-11-01;2023-11-01
+6500.0;432.0;0;0;4;https://www.duoimoveis.com.br/imovel/salao-de-432-m-sao-judas-piracicaba/sl0217-003?from=sale;duo imoveis;São Judas;2023-11-01;2023-11-01
+6000.0;2859.0;0;0;0;https://www.duoimoveis.com.br/imovel/area-de-2-859-m-dois-corregos-piracicaba/ar0126-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+5000.0;4860.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-4-860-m-dois-corregos-piracicaba/te1534-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+999.7;35.0;0;1;1;https://www.duoimoveis.com.br/imovel/loja-de-35-m-capim-fino-piracicaba/lo0054-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01
+2500.0;2280.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-2-280-m-dois-corregos-piracicaba/te1499-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+2500.0;126.5;0;0;2;https://www.duoimoveis.com.br/imovel/salao-de-127-m-parque-taquaral-piracicaba/sl0195-003?from=sale;duo imoveis;Parque Taquaral;2023-11-01;2023-11-01
+3800.0;4000.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-4-000-m-parque-sao-matheus-piracicaba/te1452-003?from=sale;duo imoveis;Parque São Matheus;2023-11-01;2023-11-01
+23000.0;832.93;0;0;12;https://www.duoimoveis.com.br/imovel/salao-de-833-m-centro-piracicaba/sl0178-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+4900.0;218.29;0;0;2;https://www.duoimoveis.com.br/imovel/loja-de-218-m-centro-piracicaba/lo0084-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+2000.0;2025.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-2-025-m-dois-corregos-piracicaba/te1852-003?from=sale;duo imoveis;Dois Córregos;2023-11-01;2023-11-01
+2000.0;498.0;0;0;0;https://www.duoimoveis.com.br/imovel/terreno-de-498-m-chacara-nazare-piracicaba/te1811-003?from=sale;duo imoveis;Chácara Nazaré;2023-11-01;2023-11-01
+1300.0;100.0;0;0;0;https://www.duoimoveis.com.br/imovel/sala-de-100-m-centro-piracicaba/sa0318-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+1400.0;100.0;0;0;2;https://www.duoimoveis.com.br/imovel/sala-de-100-m-centro-piracicaba/sa0317-003?from=sale;duo imoveis;Centro;2023-11-01;2023-11-01
+26000.0;820.0;0;2;6;https://www.duoimoveis.com.br/imovel/predio-de-820-m-paulista-piracicaba/pr0029-003?from=sale;duo imoveis;Paulista;2023-11-01;2023-11-01
+999.7;35.0;0;1;0;https://www.duoimoveis.com.br/imovel/loja-de-35-m-capim-fino-piracicaba/lo0075-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01
+999.7;35.0;0;1;0;https://www.duoimoveis.com.br/imovel/loja-de-35-m-capim-fino-piracicaba/lo0074-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01
+999.7;35.0;0;1;0;https://www.duoimoveis.com.br/imovel/loja-de-35-m-capim-fino-piracicaba/lo0073-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01
+3350.0;175.0;0;1;0;https://www.duoimoveis.com.br/imovel/loja-de-175-m-capim-fino-piracicaba/lo0072-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01
+3350.0;175.0;0;1;0;https://www.duoimoveis.com.br/imovel/loja-de-175-m-capim-fino-piracicaba/lo0071-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01
+999.7;35.0;0;1;0;https://www.duoimoveis.com.br/imovel/loja-de-35-m-capim-fino-piracicaba/lo0070-003?from=sale;duo imoveis;Capim Fino;2023-11-01;2023-11-01

@@ -1,0 +1,62 @@
+{
+  "websites":{
+    "FriasNeto": {
+      "url": "https://www.friasneto.com.br/imoveis/todos-os-imoveis/comprar-ou-alugar/piracicaba/?locacao_venda=V&id_cidade=2&pag=",
+      "scrape_interval": 3600,
+      "step": 1,
+      "Ativo": true
+    },
+    "Duo": {
+      "url": "https://www.duoimoveis.com.br/imoveis/a-venda/piracicaba?pagina=",
+      "scrape_interval": 3600,
+      "step": 1,
+      "Ativo": true
+    },
+    "Junqueira": {
+      "url": "https://www.imobiliariajunqueira.com.br/comprar/todas?page=",
+      "scrape_interval": 3600,
+      "step": 1,
+      "Ativo": true
+    },
+    "SaoJudas": {
+      "url": "https://www.imobiliariasjudas.com.br/venda-de-casa/",
+      "scrape_interval": 3600,
+      "step": 1,
+      "Ativo": false
+    },
+    "Ato": {
+      "url": "https://imobiliariaato.com.br/imovel/venda?pagina=",
+      "scrape_interval": 3600,
+      "step": 1,
+      "Ativo": true
+    }
+  },
+  "BlackList": ["condominio", "chacara", "conjunto", "edificio", "convivio", "residencial", "vivendas", "terra", "recanto", "loteamento", "-", "park", "parque", "nucleo"],
+  "database": {
+    "database_name": "postgres",
+    "host": "db.nwzkurdubbeykhehskzp.supabase.co",
+    "password": "Aldedani!23",
+    "port": 5432,
+    "username": "postgres",
+    "url": "https://nwzkurdubbeykhehskzp.supabase.co",
+    "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im53emt1cmR1YmJleWtoZWhza3pwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTc5MTU2OTUsImV4cCI6MjAxMzQ5MTY5NX0.E2oCh91ibPLqd0juewKlh7iELtzCxygwsKa6NyanKDc"
+  },
+  "other_settings": {
+    "Periodicity": 24,
+    "Log_file": "log.txt",
+    "log_level": "INFO",
+    "max_retries": 3
+  },
+
+  "remetente": {
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "usuario": "h.soares@aluno.ifsp.edu.br",
+    "senha": "He4yd3v9f5!",
+    "from": "humbertoaldemir@gmail.com",
+    "subject": "Subject of the Email",
+    "body": "Body content of the email."
+  }
+}
+
+

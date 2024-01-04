@@ -1,34 +1,34 @@
-import Tratamento.Nome_Bairro, Tratamento.Duplicatas
+import old.Tratamento.Nome_Bairro, old.Tratamento.Duplicatas
 
-filename = 'imoveis.csv'
+filename = '../imoveis.csv'
 
 print('Iniciando tratamento de nomes de bairros')
 try:
-    Tratamento.Nome_Bairro.run(filename)
+    old.Tratamento.Nome_Bairro.run(filename)
     print('Fim de tratamento de nomes de bairros')
 except Exception as e:
     print('Nome_Bairro', e)
 
 print('Iniciando tratamento de duplicatas')
 try:
-    Tratamento.Duplicatas.run(filename)
+    old.Tratamento.Duplicatas.run(filename)
     print('Fim de tratamento de duplicatas')
 except Exception as e:
     print('Duplicata', e)
 
 
-filename = 'imoveis_aluguel.csv'
+filename = '../imoveis_aluguel.csv'
 
 print('Iniciando tratamento aluguel de nomes de bairros')
 try:
-    Tratamento.Nome_Bairro.run(filename)
+    old.Tratamento.Nome_Bairro.run(filename)
     print('Fim de tratamento de nomes de bairros')
 except Exception as e:
     print('Nome_Bairro', e)
 
 print('Iniciando tratamento aluguel de duplicatas')
 try:
-    Tratamento.Duplicatas.run(filename)
+    old.Tratamento.Duplicatas.run(filename)
     print('Fim de tratamento de duplicatas')
 except Exception as e:
     print('Duplicata', e)

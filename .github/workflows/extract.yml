@@ -25,7 +25,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run Orchestrator Extract
         run: |
-          python orchestrator_extract.py
+          python main.py
       - name: Configure Git
         run: |
           git config --global user.email "humbertoaldemir@gmail.com"

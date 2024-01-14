@@ -26,12 +26,3 @@ jobs:
       - name: Run Orchestrator Extract
         run: |
           python main.py
-      - name: Configure Git
-        run: |
-          git config --global user.email "humbertoaldemir@gmail.com"
-          git config --global user.name "aldemirneto"
-      - name: Commit and push changes to main branch
-        run: |
-          git add .
-          git commit -m "extraindo dados"
-          git push https://${{ secrets.GH_TOKEN }}@github.com/aldemirneto/Real-Estate-Predictor.git main

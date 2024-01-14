@@ -13,4 +13,4 @@ plotly==5.13.1
 streamlit-modal
 streamlit-js-eval
 sqlalchemy
-
+psycopg2

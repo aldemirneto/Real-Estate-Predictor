@@ -1,14 +1,13 @@
 import pandas as pd
 from config.ConfigManager import ConfigManager
 from sqlalchemy import create_engine, event, engine, text
-
+import os
 from sqlalchemy.engine import url
 
 
 class DataStorage:
     def __init__(self):
         config = ConfigManager().get_config()
-        self.config = config["database"]
         self.engine = None
         self.connection = None
         self.bairros = None
@@ -18,11 +17,11 @@ class DataStorage:
     def connect_to_database(self):
         string_con = url.URL(
             'postgresql+psycopg2',  # Using psycopg2 as the driver for connecting to PostgreSQL
-            username=self.config['username'],
-            password=self.config['password'],
-            host=self.config['host'],
-            port=self.config['port'],
-            database=self.config['database_name'],
+            username=os.environ['db_username'],
+            password=os.environ['db_password'],
+            host=os.environ['db_host'],
+            port=os.environ['db_port'],
+            database=os.environ['db_database_name'],
             query={
                 'sslmode': 'require'
             }

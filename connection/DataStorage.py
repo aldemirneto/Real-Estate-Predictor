@@ -17,11 +17,11 @@ class DataStorage:
     def connect_to_database(self):
         string_con = url.URL(
             'postgresql+psycopg2',  # Using psycopg2 as the driver for connecting to PostgreSQL
-            username=os.environ['db_username'],
-            password=os.environ['db_password'],
-            host=os.environ['db_host'],
-            port=os.environ['db_port'],
-            database=os.environ['db_database_name'],
+            username=os.environ['DB_USERNAME'],
+            password=os.environ['DB_PASSWORD'],
+            host=os.environ['DB_HOST'],
+            port=os.environ['DB_PORT'],
+            database=os.environ['DB_DATABASE_NAME'],
             query={
                 'sslmode': 'require'
             }

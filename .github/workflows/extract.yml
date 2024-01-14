@@ -24,5 +24,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run Orchestrator Extract
-        run: |
-          python main.py
+        run: python main.py
+        env:
+          DB_USERNAME: ${{ vars.DB_USERNAME }}
+          DB_PASSWORD: ${{ vars.DB_PASSWORD }}
+          DB_DATABASE_NAME: ${{ vars.DB_DATABASE_NAME }}
+          DB_PORT: ${{ VARS.DB_PORT }}
+          DB_HOST: ${{ VARS.DB_HOST }}
+          
+          

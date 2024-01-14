@@ -15,7 +15,7 @@ class DataStorage:
         self.imobiliarias = None
 
     def connect_to_database(self):
-        string_con = f'postgresql+psycopg2://postgres.{os.environ['DB_ID'}:.{os.environ['DB_PASSWORD'}@aws-0-.{os.environ['DB_REGION'}.pooler.supabase.com:.{os.environ['DB_PORT'}/postgres'
+        string_con = f'postgresql+psycopg2://postgres.{os.environ['DB_ID'}:{os.environ['DB_PASSWORD'}@aws-0-{os.environ['DB_REGION'}.pooler.supabase.com:{os.environ['DB_PORT'}/postgres'
         e = create_engine(string_con)
         self.connection = e.connect()
         self.engine = e

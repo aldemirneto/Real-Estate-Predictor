@@ -7,7 +7,16 @@ on:
   
 
 jobs:
+
   run_orchestrator:
+    env:
+        DB_USERNAME: ${{ vars.DB_USERNAME }}
+        DB_PASSWORD: ${{ vars.DB_PASSWORD }}
+        DB_DATABASE_NAME: ${{ vars.DB_DATABASE_NAME }}
+        DB_PORT: ${{ vars.DB_PORT }}
+        DB_HOST: ${{ vars.DB_HOST }}
+        DB_ID: ${{ vars.DB_ID }}
+        DB_REGION: ${{ vars.DB_REGION}}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -25,15 +34,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run Orchestrator Extract
         run: | 
-            echo   ${{ vars.DB_PORT }}
-            echo   ${{ vars.DB_USERNAME }}
-        env:
-          DB_USERNAME: ${{ vars.DB_USERNAME }}
-          DB_PASSWORD: ${{ vars.DB_PASSWORD }}
-          DB_DATABASE_NAME: ${{ vars.DB_DATABASE_NAME }}
-          DB_PORT: ${{ vars.DB_PORT }}
-          DB_HOST: ${{ vars.DB_HOST }}
-          DB_ID: ${{ vars.DB_ID }}
-          DB_REGION: ${{ vars.DB_REGION}}
+            echo   $DB_USERNAME 
+            echo   $DB_PORT
           
           

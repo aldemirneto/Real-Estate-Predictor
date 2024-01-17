@@ -33,7 +33,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run Orchestrator Extract
-        run: echo "Hello $DB_USERNAME. $BUILD. Using Java Version $DB_PORT"
+        run: echo "Hello $DB_USERNAME. $BUILD. Using $DB_HOST $DB_PORT"
         env:
           BUILD: 'We are currently running the Build job'
           

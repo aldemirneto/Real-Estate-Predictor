@@ -9,14 +9,6 @@ on:
 jobs:
 
   run_orchestrator:
-    env:
-        DB_USERNAME: ${{ vars.DB_USERNAME }}
-        DB_PASSWORD: ${{ vars.DB_PASSWORD }}
-        DB_DATABASE_NAME: ${{ vars.DB_DATABASE_NAME }}
-        DB_PORT: ${{ secrets.DB_PORT }}
-        DB_HOST: ${{ vars.DB_HOST }}
-        DB_ID: ${{ vars.DB_ID }}
-        DB_REGION: ${{ vars.DB_REGION}}
     runs-on: ubuntu-latest
     environment: deploy
     steps:
@@ -34,5 +26,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
      - name: Run Orchestrator Extract
-       run: echo "Hello $DB_USERNAME. $DB_ID. Using $DB_HOST $DB_PORT"
-       
+       run: |
+         python main.py
+       env:
+         DB_USERNAME: ${{ vars.DB_USERNAME }}
+         DB_PASSWORD: ${{ vars.DB_PASSWORD }}
+         DB_DATABASE_NAME: ${{ vars.DB_DATABASE_NAME }}
+         DB_PORT: ${{ vars.DB_PORT }}
+         DB_HOST: ${{ vars.DB_HOST }}
+         DB_ID: ${{ vars.DB_ID }}
+         DB_REGION: ${{ vars.DB_REGION}}
+         

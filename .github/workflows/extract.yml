@@ -27,7 +27,6 @@ jobs:
         run: | 
             echo   ${{ vars.DB_PORT }}
             echo   ${{ vars.DB_USERNAME }}
-            # python main.py
         env:
           DB_USERNAME: ${{ vars.DB_USERNAME }}
           DB_PASSWORD: ${{ vars.DB_PASSWORD }}

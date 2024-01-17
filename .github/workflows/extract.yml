@@ -13,7 +13,7 @@ jobs:
         DB_USERNAME: ${{ vars.DB_USERNAME }}
         DB_PASSWORD: ${{ vars.DB_PASSWORD }}
         DB_DATABASE_NAME: ${{ vars.DB_DATABASE_NAME }}
-        DB_PORT: ${{ vars.DB_PORT }}
+        DB_PORT: ${{ secrets.DB_PORT }}
         DB_HOST: ${{ vars.DB_HOST }}
         DB_ID: ${{ vars.DB_ID }}
         DB_REGION: ${{ vars.DB_REGION}}

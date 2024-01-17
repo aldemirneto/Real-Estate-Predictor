@@ -18,6 +18,7 @@ jobs:
         DB_ID: ${{ vars.DB_ID }}
         DB_REGION: ${{ vars.DB_REGION}}
     runs-on: ubuntu-latest
+    environment: deploy
     steps:
       - name: Checkout code
         uses: actions/checkout@v2

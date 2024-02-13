@@ -68,8 +68,6 @@ if Compra:
 
         st.rerun()
 
-a = folium.map
-
 
 container_2 = c2.empty()
 if st.session_state.fonte == 'Aluguel':

@@ -95,9 +95,8 @@ if Aluguel:
         st.rerun()
 
 
-df = pd.read_csv('imoveis.csv', sep=';')
-if st.session_state.fonte == 'Aluguel':
-    df = pd.read_csv('imoveis_aluguel.csv', sep=';')
+df = pd.read_csv('imovel.csv', sep=';')
+
 
 
 
@@ -278,7 +277,7 @@ if pesquisa:
 #write all the st.session_state variables to a dictionary
 if 'bairro' in st.session_state and 'preco' in st.session_state:
     def cor_sinc(df):
-        ultima_data_scrape = df['Data_scrape'].max()
+        ultima_data_scrape = df['data_scrape'].max()
         ultima_data_scrape = datetime.strptime(ultima_data_scrape, '%Y-%m-%d').date()
         today = datetime.today().date()
         diff = today - ultima_data_scrape
@@ -298,7 +297,7 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
                                 padding-left: 12px;
                                 padding-top: 18px;
                                 padding-bottom: 18px;'>"""
-                f"Ultima Atualização: {df['Data_scrape'].max()}"
+                f"Ultima Atualização: {df['data_scrape'].max()}"
                 "</div>", unsafe_allow_html=True)
 
     bairro_condition = (df['bairro'] == st.session_state.bairro.replace(' ', '_')) | (st.session_state.bairro == '_Todos')
@@ -335,14 +334,14 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
         #if bairro = 'Todos' then show the bairro column
         if bairro == ' Todos':
 
-            resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'last_seen', 'Imobiliaria'], axis=1).reset_index(drop=True)
+            resultados_sem_data_scrape = resultados.drop(['data_scrape', 'last_seen', 'imobiliaria'], axis=1).reset_index(drop=True)
             #replace the _ for space in the column 'bairro'
             resultados_sem_data_scrape['bairro'] = resultados_sem_data_scrape['bairro'].str.replace('_', ' ')
             resultados_sem_data_scrape = resultados_sem_data_scrape[['bairro', 'preco', 'area', 'quartos', 'banheiros', 'vagas', 'link']]
 
         else:
-            resultados_sem_data_scrape = resultados.drop(['Data_scrape', 'bairro', 'last_seen' ], axis=1).reset_index(drop=True)
-            resultados_sem_data_scrape = resultados_sem_data_scrape[['Imobiliaria' ,'preco', 'area', 'quartos', 'banheiros', 'vagas', 'link']]
+            resultados_sem_data_scrape = resultados.drop(['data_scrape', 'bairro', 'last_seen' ], axis=1).reset_index(drop=True)
+            resultados_sem_data_scrape = resultados_sem_data_scrape[['imobiliaria' ,'preco', 'area', 'quartos', 'banheiros', 'vagas', 'link']]
 
         resultados_sem_data_scrape['preco'] = resultados_sem_data_scrape['preco'].apply(lambda x: format_brl(x))
 

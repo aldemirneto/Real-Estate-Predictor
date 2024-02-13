@@ -14,20 +14,11 @@ from streamlit_modal import Modal
 
 
 
-@st.cache_data
-def convert_df(df):
-    # IMPORTANT: Cache the conversion to prevent computation on every rerun
-    return df.to_csv().encode('utf-8')
 
 def format_brl(amount):
     formatted_amount = f'{amount:,.2f}'.replace(',', 'x').replace('.', ',').replace('x', '.')
     return formatted_amount
 
-
- # hidden iframe to run the script
-# Get the screen height
-screen_height = streamlit_js_eval(js_expressions='screen.height')
-window_width = streamlit_js_eval(js_expressions='window.innerWidth')
 
 
 

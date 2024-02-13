@@ -15,10 +15,9 @@ class JunqueiraScraper(BaseScraper):
 
     def set_breakpoint(self):
         content = self.get_page_content(f'{self.website_path}{0}')
-        bp = content.find('div', class_='total').text
-
-        first_non_digit_index = next((i for i, char in enumerate(bp) if not char.isdigit()), None)
-        bp = bp[:first_non_digit_index]
+        bp = content.find('div', class_='desktop-navigation').text
+        bp = [n for n in bp.split(' ') if n.isdigit()][-1]
+        print(bp)
         self.breakpoint = ceil(int(bp) / 12)
         return 1
 

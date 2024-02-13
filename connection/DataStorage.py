@@ -1,14 +1,13 @@
 import pandas as pd
 from config.ConfigManager import ConfigManager
 from sqlalchemy import create_engine, event, engine, text
-
+import os
 from sqlalchemy.engine import url
 
 
 class DataStorage:
     def __init__(self):
         config = ConfigManager().get_config()
-        self.config = config["database"]
         self.engine = None
         self.connection = None
         self.bairros = None
@@ -16,18 +15,7 @@ class DataStorage:
         self.imobiliarias = None
 
     def connect_to_database(self):
-        string_con = url.URL(
-            'postgresql+psycopg2',  # Using psycopg2 as the driver for connecting to PostgreSQL
-            username=self.config['username'],
-            password=self.config['password'],
-            host=self.config['host'],
-            port=self.config['port'],
-            database=self.config['database_name'],
-            query={
-                'sslmode': 'require'
-            }
-        )
-
+        string_con = f'postgresql+psycopg2://postgres.{os.environ["DB_ID"]}:{os.environ["DB_PASSWORD"]}@aws-0-{os.environ["DB_REGION"]}.pooler.supabase.com:{os.environ["DB_PORT"]}/postgres'
         e = create_engine(string_con)
         self.connection = e.connect()
         self.engine = e
@@ -82,51 +70,10 @@ class DataStorage:
         df['Status'] = df['Status'].apply(lambda x: self.get_status_id(x))
         df['Data_scrape'] = pd.to_datetime('today').strftime('%Y-%m-%d')
         df['last_seen'] = pd.to_datetime('today').strftime('%Y-%m-%d')
-        df.to_sql('temp_imovel', con=self.engine, if_exists='replace', index=False,
-                  schema='public')  # Changed schema to 'public'
+        self.connection.execute(text('TRUNCATE TABLE temp_imovel'))
         self.connection.execute(text('commit'))
-        self.connection.execute(text("""
-        INSERT INTO
-          imovel (
-            bairroid,
-            imobiliariaid,
-            statusid,
-            preco,
-            area,
-            quartos,
-            vagas,
-            banheiros,
-            link,
-            Data_scrape,
-            last_seen,
-            tipo
-          )
-        SELECT distinct
-          temp_imovel.bairro,
-          temp_imovel."Imobiliaria",
-          temp_imovel."Status",
-          CASE WHEN preco ~ E'^\\d+(\\.\\d+)?$' THEN CAST(preco AS FLOAT) ELSE 0 END AS preco,
-          CASE WHEN area ~ E'^\\d+(\\.\\d+)?$' THEN CAST(area AS FLOAT) ELSE 0 END AS area,
-          CASE WHEN quartos ~ E'^\\d+$' THEN CAST(quartos AS INT) ELSE 0 END AS quartos,
-          CASE WHEN vagas ~ E'^\\d+$' THEN CAST(vagas AS INT) ELSE 0 END AS vagas,
-          CASE WHEN banheiros ~ E'^\\d+$' THEN CAST(banheiros AS INT) ELSE 0 END AS banheiros,
-          link,
-          CAST(temp_imovel."Data_scrape" AS DATE) AS "Data_scrape",
-          CURRENT_DATE,
-          temp_imovel.tipo
-        FROM
-          temp_imovel 
-        WHERE
-          preco IS NOT NULL   
-          ON CONFLICT ON CONSTRAINT unique_imovel_constraint
-        DO
-        UPDATE
-        SET
-          tipo = excluded.tipo,
-          last_seen = CURRENT_DATE;
-
-        """))
-
+        df.to_sql('temp_imovel', con=self.engine, if_exists='append', index=False,
+                  schema='public')  # Changed schema to 'public'
         self.connection.execute(text('commit'))
         self.connection.close()
         return 'Salvo Com Sucesso!'

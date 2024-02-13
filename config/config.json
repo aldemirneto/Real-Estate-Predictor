@@ -34,12 +34,12 @@
   "BlackList": ["condominio", "chacara", "conjunto", "edificio", "convivio", "residencial", "vivendas", "terra", "recanto", "loteamento", "-", "park", "parque", "nucleo"],
   "database": {
     "database_name": "postgres",
-    "host": "db.nwzkurdubbeykhehskzp.supabase.co",
-    "password": "Aldedani!23",
+    "host": "",
+    "password": "",
     "port": 5432,
     "username": "postgres",
-    "url": "https://nwzkurdubbeykhehskzp.supabase.co",
-    "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im53emt1cmR1YmJleWtoZWhza3pwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTc5MTU2OTUsImV4cCI6MjAxMzQ5MTY5NX0.E2oCh91ibPLqd0juewKlh7iELtzCxygwsKa6NyanKDc"
+    "url": "",
+    "key": ""
   },
   "other_settings": {
     "Periodicity": 24,
@@ -52,7 +52,7 @@
     "smtp_server": "smtp.gmail.com",
     "smtp_port": 587,
     "usuario": "h.soares@aluno.ifsp.edu.br",
-    "senha": "He4yd3v9f5!",
+    "senha": "",
     "from": "humbertoaldemir@gmail.com",
     "subject": "Subject of the Email",
     "body": "Body content of the email."

@@ -95,7 +95,7 @@ class JunqueiraScraper(BaseScraper):
                 link = property_html.find("div", class_="theInfos").find('a')['href']
 
                 self.raw_data.append({
-                    'preco': price/100 if price else 0,
+                    'preco': float(price)/100 if price else 0,
                     'area': area,
                     'quartos': quartos,
                     'vagas': vagas,

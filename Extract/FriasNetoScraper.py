@@ -64,7 +64,7 @@ class FriasNetoScraper(BaseScraper):
                 location = location_element.text.strip().replace(', Piracicaba', '') if location_element else None
 
                 self.raw_data.append({
-                    'preco': price/1000 if price else None,
+                    'preco': float(price)/1000 if price else None,
                     'area': area,
                     'quartos': quartos,
                     'vagas': vagas,

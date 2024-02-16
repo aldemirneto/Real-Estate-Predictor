@@ -84,9 +84,9 @@ if Aluguel:
         st.rerun()
 
 
-df = pd.read_csv('imovel.csv', sep=';')
+df1 = pd.read_csv('imovel.csv', sep=';')
 
-
+df = df1.dropna(subset=['preco'])
 
 
 df = df[((datetime.today().date() - pd.to_datetime(df['last_seen']).dt.date) < timedelta(days=4))]

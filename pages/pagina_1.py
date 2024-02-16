@@ -246,7 +246,7 @@ else:
 
 #value will be the middle value of the dataframe
 if 'preco' not in st.session_state:
-    preco = st.slider("Preço máximo", min_value=0, max_value=int(df['preco'].max()), value=1000, step=100)
+    preco = st.slider("Preço máximo", min_value=0, max_value=1000000000, value=1000, step=100)
     st.session_state['preco'] = preco
 else:
     #the max value will be the max value of the dataframe with the characteristics selected

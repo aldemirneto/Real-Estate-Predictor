@@ -89,7 +89,7 @@ df1 = pd.read_csv('imovel.csv', sep=';')
 df = df1.dropna(subset=['preco'])
 
 
-df = df[((datetime.today().date() - pd.to_datetime(df['last_seen']).dt.date) < timedelta(days=4))]
+
 
 bairro_options = sorted(df['bairro'].unique())
 #appending the value todos to the bairro_options
@@ -246,12 +246,11 @@ else:
 
 #value will be the middle value of the dataframe
 if 'preco' not in st.session_state:
-    preco = st.slider("Preço máximo", min_value=0, max_value=1000000000, value=1000, step=100)
+    preco = st.slider("Preço máximo", min_value=0, max_value=int(df['preco'].max()), value=1000, step=100)
     st.session_state['preco'] = preco
 else:
     #the max value will be the max value of the dataframe with the characteristics selected
     max_value = df[(df['quartos'] == quartos) & (df['banheiros'] >= banheiros) & (df['vagas'] == vagas) & (df['area'] >= area)]['preco'].max()
-    st.toast(len(df[(df['quartos'] == quartos) & (df['banheiros'] >= banheiros) & (df['vagas'] == vagas) & (df['area'] >= area)]))
     preco = st.slider("Preço máximo", min_value=0, max_value=int(max_value), value=st.session_state['preco'], step=100)
 
 pesquisa = st.button('Pesquisar', use_container_width=True)

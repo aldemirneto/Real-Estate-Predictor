@@ -86,7 +86,7 @@ if Aluguel:
 
 df = pd.read_csv('imovel.csv', sep=';')
 
-st.toast(len(df))
+
 
 
 

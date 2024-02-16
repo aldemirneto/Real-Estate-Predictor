@@ -84,9 +84,9 @@ if Aluguel:
         st.rerun()
 
 
-df1 = pd.read_csv('imovel.csv', sep=';')
+df = pd.read_csv('imovel.csv', sep=';')
 
-df = df1.dropna(subset=['preco'])
+st.toast(len(df))
 
 
 

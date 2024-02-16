@@ -274,7 +274,7 @@ if 'bairro' in st.session_state and 'preco' in st.session_state:
             return '#a8d8b9'  # green
         elif diff <= timedelta(days=3):
             return '#f3d38c'  # yellow
-        elif diff <= timedelta(days=5):
+        else:
             return '#f9b4ab'  # red
 
     bg = cor_sinc(df)

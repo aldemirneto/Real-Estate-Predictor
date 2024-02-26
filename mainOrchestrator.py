@@ -25,14 +25,17 @@ class MainOrchestrator:
             self.get_websites()
 
         for website in self.websites:
-            Scraper = website + "Scraper"
-            module_name = f"Extract.{Scraper}"
-            module = importlib.import_module(module_name)
-            class_ = getattr(module, Scraper)
-            instance = class_()
-            dt = instance.scrape()
-            data.append(dt)
-            self.log.log(f"{len(dt)}Imoveis extraidos do site {website}")
+            try:
+                Scraper = website + "Scraper"
+                module_name = f"Extract.{Scraper}"
+                module = importlib.import_module(module_name)
+                class_ = getattr(module, Scraper)
+                instance = class_()
+                dt = instance.scrape()
+                data.append(dt)
+                self.log.log(f"{len(dt)}Imoveis extraidos do site {website}")
+            except Exception as e:
+                self.log.log(f"Erro ao extrair do site {website}: {e}")
         self.log.log(f"{len(data)}Imoveis extraídos")
         return self.Transform(data)
 

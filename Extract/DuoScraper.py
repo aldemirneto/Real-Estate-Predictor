@@ -54,9 +54,9 @@ class DuoScraper(BaseScraper):
                 location = location.text.strip() if location else 'Sem Bairro'
                 location = location.split('-')[0].strip()
                 tipo = property_html.find('p', class_='card-with-buttons__title').text
-                price = property_html.find('p', class_='card-with-buttons__value').text
+                price = property_html.find('p', class_='card-with-buttons__value')
                 try:
-                    price = float(price.replace('R$', '')
+                    price = float(price.text.replace('R$', '')
                                   .replace('.', '')
                                   .replace(',', '.')
                                   .replace(' ', '')

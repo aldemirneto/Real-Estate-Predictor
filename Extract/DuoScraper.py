@@ -64,18 +64,19 @@ class DuoScraper(BaseScraper):
                                   .replace(',00', '')) if price else None
                 except:
                     pass
-                self.raw_data.append({
-                    'preco': price,
-                    'area': area,
-                    'quartos': quartos,
-                    'vagas': vagas,
-                    'banheiros': banheiros,
-                    'bairro': location,
-                    'tipo': tipo,
-                    'Status': 'Compra',
-                    'link': f"https://www.duoimoveis.com.br{property_html['href']}?from=sale",
-                    'Imobiliaria':'Duo_imoveis'
-                })
+                if isinstance(price, float):
+                    self.raw_data.append({
+                        'preco': price,
+                        'area': area,
+                        'quartos': quartos,
+                        'vagas': vagas,
+                        'banheiros': banheiros,
+                        'bairro': location,
+                        'tipo': tipo,
+                        'Status': 'Compra',
+                        'link': f"https://www.duoimoveis.com.br{property_html['href']}?from=sale",
+                        'Imobiliaria':'Duo_imoveis'
+                    })
 
         self.raw_websites = []
         return 1

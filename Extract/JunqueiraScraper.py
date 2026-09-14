@@ -1,3 +1,4 @@
+import re
 from math import ceil
 
 from bs4 import Tag
@@ -17,7 +18,6 @@ class JunqueiraScraper(BaseScraper):
         content = self.get_page_content(f'{self.website_path}{0}')
         bp = content.find('div', class_='desktop-navigation').text
         bp = [n for n in bp.split(' ') if n.isdigit()][-1]
-        print(bp)
         self.breakpoint = ceil(int(bp) / 12)
         return 1
 
@@ -29,16 +29,7 @@ class JunqueiraScraper(BaseScraper):
             for property_html in raw:
                 try:
                     info_list = property_html.find("div", class_="theInfos").find('ul', class_='attr').find_all('li')
-                except:
-                    self.raw_data.append({
-                        'preco': 0,
-                        'area': 0,
-                        'quartos': 0,
-                        'vagas': 0,
-                        'banheiros': 0,
-                        'bairro': 'Sem Bairro',
-                        'link': 'Sem link'
-                    })
+                except Exception:
                     continue
 
                 quartos = None
@@ -77,15 +68,19 @@ class JunqueiraScraper(BaseScraper):
                         area = info.text.strip().replace('\n', '') \
                             .replace(' ', '') \
                             .replace('m²', '') \
-                            .replace(',', '.') \
-
-                        area = float(area) if area else None
+                            .replace(',', '.')
+                        try:
+                            area = float(area) if area else None
+                        except (ValueError, TypeError):
+                            area = None
                         continue
 
                 price_element = property_html.find('span', class_='price')
-                price = price_element.text.strip().replace('Venda:R$ ',
-                                                           '') if price_element and 'consultar' not in price_element.text else None
-                price = price.replace(',', '.').replace('.', '') if price else None
+                price = None
+                if price_element and 'consultar' not in price_element.text.lower():
+                    m = re.search(r'[\d.,]+', price_element.text.replace('\n', '').replace(' ', ''))
+                    if m:
+                        price = m.group().replace('.', '').replace(',', '')
 
                 location_element = property_html.find_all('span', class_='extra')
                 tipo = location_element[0].text.split(' ')[0]

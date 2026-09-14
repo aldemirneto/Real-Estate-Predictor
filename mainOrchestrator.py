@@ -32,7 +32,8 @@ class MainOrchestrator:
                 class_ = getattr(module, Scraper)
                 instance = class_()
                 dt = instance.scrape()
-                data.append(dt)
+                if dt:
+                    data.append(dt)
                 self.log.log(f"{len(dt)}Imoveis extraidos do site {website}")
             except Exception as e:
                 self.log.log(f"Erro ao extrair do site {website}: {e}")
@@ -49,6 +50,8 @@ class MainOrchestrator:
     def Load(self, data):
         #transform this list of dicts into a dataframe
         #then, load it into the database
+        if not data:
+            raise RuntimeError("Extração vazia; banco preservado")
         dataf = pd.DataFrame(data)
         Loader = DataStorage()
         Loader.connect_to_database()

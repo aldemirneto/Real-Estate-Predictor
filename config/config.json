@@ -1,7 +1,7 @@
 {
-  "websites":{
+  "websites": {
     "FriasNeto": {
-      "url": "https://www.friasneto.com.br/imoveis/todos-os-imoveis/comprar-ou-alugar/piracicaba/?locacao_venda=V&id_cidade=2&pag=",
+      "url": "https://www.friasneto.com.br/comprar/Piracicaba/Residencial",
       "scrape_interval": 3600,
       "step": 1,
       "Ativo": true
@@ -29,9 +29,46 @@
       "scrape_interval": 3600,
       "step": 1,
       "Ativo": true
+    },
+    "Miguel": {
+      "url": "https://miguelimoveis.com.br/venda/residencial/?page=",
+      "scrape_interval": 3600,
+      "step": 1,
+      "Ativo": true
+    },
+    "Premier": {
+      "url": "https://premierimoveispiracicaba.com.br/imoveis/pagina-",
+      "scrape_interval": 3600,
+      "step": 1,
+      "Ativo": true
+    },
+    "LopesLT": {
+      "url": "https://www.lopesltbrokers.com.br/imoveis/comprar",
+      "Ativo": false,
+      "max_pages": 2
+    },
+    "LopesRTG": {
+      "url": "https://www.lopesrtg.com.br/",
+      "Ativo": false,
+      "max_properties": 10
     }
   },
-  "BlackList": ["condominio", "chacara", "conjunto", "edificio", "convivio", "residencial", "vivendas", "terra", "recanto", "loteamento", "-", "park", "parque", "nucleo"],
+  "BlackList": [
+    "condominio",
+    "chacara",
+    "conjunto",
+    "edificio",
+    "convivio",
+    "residencial",
+    "vivendas",
+    "terra",
+    "recanto",
+    "loteamento",
+    "-",
+    "park",
+    "parque",
+    "nucleo"
+  ],
   "database": {
     "database_name": "postgres",
     "host": "",
@@ -47,7 +84,6 @@
     "log_level": "INFO",
     "max_retries": 3
   },
-
   "remetente": {
     "smtp_server": "smtp.gmail.com",
     "smtp_port": 587,
@@ -58,5 +94,3 @@
     "body": "Body content of the email."
   }
 }
-
-

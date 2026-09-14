@@ -1,79 +1,85 @@
+import re
+
 from config.ConfigManager import ConfigManager
-from bs4 import Tag
 from .BaseScraper import BaseScraper
+
+BASE_URL = "https://www.friasneto.com.br"
 
 
 class FriasNetoScraper(BaseScraper):
     def __init__(self):
         super().__init__()
-
         config_manager = ConfigManager().get_config()
         self.website_path = config_manager['websites']['FriasNeto']['url']
         self.set_breakpoint()
 
     def set_breakpoint(self):
-        bp = self.get_page_content(f'{self.website_path}{0}')
-        content = bp.find('ul', class_="pagination").find_all('a', {'data-page': True})
-        self.breakpoint = int(content[-1].text.strip())
+        content = self.get_page_content(self.website_path)
+        self.breakpoint = 1
+        if content:
+            pages = []
+            for a in content.find_all('a', href=True):
+                m = re.search(r'pag=(\d+)', a['href'])
+                if m:
+                    pages.append(int(m.group(1)))
+            if pages:
+                self.breakpoint = max(pages)
         return 1
 
+    def fetch_page(self):
+        urls = [f"{self.website_path}?pag={n}" for n in range(1, self.breakpoint + 1)]
+        from concurrent.futures import ThreadPoolExecutor
+        with ThreadPoolExecutor(max_workers=5) as ex:
+            pages = list(ex.map(self.get_page_content, urls))
+        self.raw_websites = [p for p in pages if p]
 
     def parse_page(self):
-        raw_property_info = [item for sublist in self.raw_websites for item in sublist if isinstance(item, Tag)]
-        for page in raw_property_info:
-
-            raw = page.find_all('div', class_='col-xs-12 col-sm-4 col-md-3 container-enterprises-item')
-            for property_html in raw:
-                info_list = property_html.find_all("div", class_="caption-line full")
-                info_list = info_list[1].find_all('li')
-
-                quartos = None
-                vagas = None
-                banheiros = None
-
-                for info in info_list:
-                    if 'Quarto' in info.text:
-                        quartos = info.find('span').text.strip().replace('\n', '').replace('Quartos', '').replace('Quarto',
-                                                                                                                  '').replace(
-                            ' ', '').replace('2Quartos', '2')
-                        continue
-                    elif 'Vaga' in info.text:
-                        vagas = info.find('span').text.strip().replace('Vagas', '').replace('Vaga', '').replace(' ', '')
-                        continue
-                    elif 'Banheiro' in info.text:
-                        banheiros = info.find('span').text.strip().replace('Banheiros', '').replace('Banheiro', '').replace(
-                            ' ', '')
-                        continue
-
-                price_element = property_html.find('p', class_='price')
-                price = price_element.text.strip().replace(',', '.').replace(' ', '').replace('Venda:R$',
-                                                                                              '') if 'Loca' not in price_element.text and 'Consulte' not in price_element.text and 'Quartos' not in price_element.text else None
-                price = price.replace('.', '') if price else None
-                price = price[:-2] + '000' if price else None
-                tipo = property_html.find("div", class_="info_busca_imovel")
-                tipo = 'Apartamento' if tipo else 'Casa'
-
-                area_element = property_html.find('li').find('span')
-                area = area_element.text.strip().replace(',', '.').replace('M²', '').replace(' ', '') if area_element and 'Quartos' not in area_element.text and 'Quarto' not in area_element.text else None
+        for page in self.raw_websites:
+            for card in page.find_all('div', class_='card-imo'):
                 try:
-                    price = float(price) if price else None
-                    area = float(area) if area else None
-                except:
-                    pass
-                location_element = property_html.find('p', class_='neighborhood-city-titles')
-                location = location_element.text.strip().replace(', Piracicaba', '') if location_element else None
+                    a_tag = card.find('a', href=True)
+                    href = a_tag['href'] if a_tag else None
+                    if not href:
+                        continue
+                    link = href if href.startswith('http') else f"{BASE_URL}/{href.lstrip('/')}"
 
-                self.raw_data.append({
-                    'preco': float(price)/1000 if price else None,
-                    'area': area,
-                    'quartos': quartos,
-                    'vagas': vagas,
-                    'banheiros': banheiros,
-                    'bairro': location,
-                    'tipo': tipo,
-                    'Status': 'Compra',
-                    'link': 'https://www.friasneto.com.br' + property_html.find('a')['href'],
-                    'Imobiliaria': 'Frias_neto'
-                })
+                    price = None
+                    valores = card.find('div', class_='card-valores')
+                    if valores:
+                        m = re.search(r'R\$\s*([\d.,]+)', valores.text)
+                        if m:
+                            try:
+                                price = float(m.group(1).replace('.', '').replace(',', '.'))
+                            except ValueError:
+                                pass
+
+                    loc_tag = card.find('div', class_='card-bairro-cidade-texto')
+                    bairro = loc_tag.text.split(' - ')[0].strip() if loc_tag else 'Sem Bairro'
+
+                    titulo = card.find('h2', class_='card-titulo')
+                    tipo = titulo.text.strip().split()[0] if titulo else 'Indefinido'
+
+                    def _num(cls):
+                        tag = card.find('div', class_=cls)
+                        if not tag:
+                            return None
+                        m = re.search(r'\d+', tag.text)
+                        return m.group() if m else None
+
+                    self.raw_data.append({
+                        'preco':      price,
+                        'area':       None,
+                        'quartos':    _num('dorm-ico'),
+                        'vagas':      _num('gar-ico'),
+                        'banheiros':  _num('banh-ico'),
+                        'bairro':     bairro,
+                        'tipo':       tipo,
+                        'Status':     'Compra',
+                        'link':       link,
+                        'Imobiliaria': 'Frias_neto',
+                    })
+                except Exception:
+                    continue
+
         self.raw_websites = []
         return 1

@@ -1,0 +1,1 @@
+from .SaoPauloScraper import LopesLTScraper

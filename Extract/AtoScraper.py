@@ -1,3 +1,5 @@
+import re
+
 from config.ConfigManager import ConfigManager
 from .BaseScraper import BaseScraper
 
@@ -9,7 +11,14 @@ class AtoScraper(BaseScraper):
         self.set_breakpoint()
 
     def set_breakpoint(self):
-        self.breakpoint = 255
+        content = self.get_page_content(f'{self.website_path}1')
+        pages = []
+        if content:
+            for a in content.find_all('a', href=True):
+                m = re.search(r'pagina=(\d+)', a['href'])
+                if m:
+                    pages.append(int(m.group(1)))
+        self.breakpoint = max(pages) if pages else 255
         return 1
 
     def parse_page(self):

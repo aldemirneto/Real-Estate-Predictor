@@ -1,26 +1,29 @@
-from config.ConfigManager import ConfigManager
+import logging
+import sys
+
+
+def _setup_logger() -> logging.Logger:
+    logger = logging.getLogger("real_estate")
+    if logger.handlers:
+        return logger
+    logger.setLevel(logging.DEBUG)
+    handler = logging.StreamHandler(sys.stdout)
+    handler.setFormatter(
+        logging.Formatter("%(asctime)s [%(levelname)s] %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+    )
+    logger.addHandler(handler)
+    return logger
+
 
 class Logging:
     def __init__(self):
-        self.config_manager = ConfigManager().get_config()
-        self.log_file = self.config_manager['other_settings']['Log_file']
-
-    def _write_to_log(self, message):
-        with open(self.log_file, 'a') as f:
-            f.write(message + '\n')
+        self._logger = _setup_logger()
 
     def log(self, message):
-        formatted_message = f"[INFO] {message}"
-        self._write_to_log(formatted_message)
+        self._logger.info(message)
 
     def error(self, message):
-        formatted_message = f"[ERROR] {message}"
-        self._write_to_log(formatted_message)
+        self._logger.error(message)
 
     def log_email(self, email):
-        formatted_message = f"[EMAIL] {email}"
-        self._write_to_log(formatted_message)
-
-
-
-
+        self._logger.info(f"[EMAIL] {email}")

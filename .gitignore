@@ -161,3 +161,6 @@ cython_debug/
 
 # secrets
 secrets.toml
+
+# postgres bind-mount data (local volume)
+data/
